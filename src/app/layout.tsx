@@ -37,6 +37,8 @@ export default function RootLayout({
       <body>
         <Header />
         <main>{children}</main>
+        {/* sns-float */}
+        {/* page-top */}
         <Footer />
       </body>
     </html>
