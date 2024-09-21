@@ -1,0 +1,18 @@
+table.project-table td{
+    width: 60%;
+}
+
+table.project-table a{
+    color: white !important;
+}
+@media screen and (min-width: 768px) {
+    .information-block-flex{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .information-block-flex > div{
+        width: 45%;
+    }
+}

@@ -1,0 +1,37 @@
+header, main, footer{
+    transition: opacity 1s ease .3s;
+}
+body{
+    overflow: hidden;
+}
+main{
+    padding-top: var(--main-padding-top);
+}
+img{
+    object-fit: contain;
+}
+
+.canvas{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: -100;
+    transition: 1s;
+    opacity: 0;
+}
+.canvas-background{
+    width: 100vw;
+    height: calc(100vh - var(--main-padding-top));
+    object-fit: cover;
+    z-index: -100;
+}
+.canvas-img{
+    --max-height: 60vh;
+    position: absolute;
+    top: calc(53% - var(--max-height) / 2);
+    max-height: var(--max-height);
+}
+
+.countdown{
+    margin: 5vh 0 5vh 0;
+}

@@ -1,0 +1,10 @@
+@media screen and (min-width: 768px) {
+    .information-navigator{
+        margin: 0 7%;
+        justify-content: space-evenly;
+    }
+    .information-navigator .information-block{
+        width: 32%;
+        margin: 0;
+    }
+}

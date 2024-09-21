@@ -1,0 +1,13 @@
+.information-img img{
+    max-height: 20vh;
+}
+
+.map-img{
+    display: flex;
+    justify-content: center;
+}
+.map-img img{
+    max-width: 80%;
+    max-height: 70vh;
+    border: thin solid black;
+}
