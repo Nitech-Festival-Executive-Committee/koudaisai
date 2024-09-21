@@ -1,0 +1,58 @@
+.countdown{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    z-index: -10 !important;
+}
+.countdown-title > h1, .wrapper{
+    transition: opacity .5s;
+}
+.countdown a{
+    pointer-events: none;
+}
+.countdown-title{
+    margin: 0 2vw 5vh 2vw;
+    text-align: center;
+    text-shadow: 4px 2px 6px rgba(80, 80, 80, 0.5);
+}
+.countdown-timer{
+    display: flex;
+    justify-content: center;
+}
+.flip-clock-label{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.message{
+    display: none;
+    position: absolute;
+    top: -80%;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    font-size: 85px;
+    text-align: center;
+    text-shadow: 4px 2px 6px rgba(80, 80, 80, 0.5);
+}
+canvas{
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: .8;
+}
+.hide{
+    display: none;
+}
+#confetti
+{  
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 767px){
+    .message{
+        font-size: 3.8rem;
+    }
+}

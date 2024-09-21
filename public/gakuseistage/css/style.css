@@ -1,0 +1,9 @@
+:root{
+    --background-color: #fffef9;
+}
+body{
+    background: var(--background-color);
+}
+.information-title > span, .information-box > span, .big-title > span {
+    background: var(--background-color);
+}

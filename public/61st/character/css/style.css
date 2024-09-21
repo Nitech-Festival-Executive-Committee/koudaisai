@@ -1,0 +1,7 @@
+.sticker_img{
+    flex-wrap: wrap;
+}
+.sticker_img img{
+    max-width: 30%;
+    padding: 0;
+}

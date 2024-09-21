@@ -1,0 +1,11 @@
+.canvas-background{
+    width: 100vw;
+}
+.canvas-img{
+    width: 95%;
+    top: calc(63% - var(--max-height) / 2);
+}
+
+.canvas-container{
+    margin-bottom: 10%;
+}
