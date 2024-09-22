@@ -1,1 +1,3 @@
-export default function Access() {}
+export default function Access() {
+  return <div />;
+}

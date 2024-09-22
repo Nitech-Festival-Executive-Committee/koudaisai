@@ -1,1 +1,3 @@
-export default function Character() {}
+export default function Character() {
+  return <div />;
+}

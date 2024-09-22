@@ -1,1 +1,3 @@
-export default function ProjectTemplate() {}
+export default function ProjectTemplate() {
+  return <div />;
+}
