@@ -1,2 +1,1 @@
-export default function Timetable() {
-}
+export default function Timetable() {}

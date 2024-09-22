@@ -1,2 +1,1 @@
-export default function Faq() {
-}
+export default function Faq() {}

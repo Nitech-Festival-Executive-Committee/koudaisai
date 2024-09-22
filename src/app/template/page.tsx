@@ -1,2 +1,1 @@
-export default function Template() {
-}
+export default function Template() {}

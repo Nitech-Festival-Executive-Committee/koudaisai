@@ -1,2 +1,1 @@
-export default function Sponsor() {
-}
+export default function Sponsor() {}
