@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
-import "@/styles/globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import "@/styles/animations.css";
+import "@/styles/button.css";
+import "@/styles/phone.css";
+import "@/styles/style.css";
+import "@/styles/swiper.css";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 // TODO: authorとcopyrightを作成
 // author: "名古屋工業大学第62回工大祭実行委員会",
