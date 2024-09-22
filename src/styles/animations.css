@@ -1,0 +1,141 @@
+main {
+  overflow-x: hidden;
+}
+
+.fadeCenterTrigger,
+.fadeUpTrigger,
+.fadeDownTrigger,
+.fadeRightTrigger,
+.fadeLeftTrigger,
+.fadeRightLeftTrigger,
+.fadeLeftRightTrigger {
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+.brochure-img > .fadeCenterTrigger {
+  animation-delay: 0.1s;
+}
+
+.fadeCenter {
+  animation-name: fadeCenterAnime;
+  animation-duration: 1s;
+}
+
+@keyframes fadeCenterAnime {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+}
+
+@keyframes fadeUpAnime {
+  0% {
+    opacity: 0;
+    transform: translateY(var(--animation-range));
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeDown {
+  animation-name: fadeDownAnime;
+}
+
+@keyframes fadeDownAnime {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(-0.5 * var(--animation-range)));
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeRight {
+  animation-name: fadeRightAnime;
+}
+
+@keyframes fadeRightAnime {
+  0% {
+    opacity: 0;
+    transform: translateX(calc(-1 * var(--animation-range)));
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeLeft {
+  animation-name: fadeLeftAnime;
+}
+
+@keyframes fadeLeftAnime {
+  0% {
+    opacity: 0;
+    transform: translateX(var(--animation-range));
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --animation-range: 40px;
+  }
+  .fadeRightLeft {
+    animation-name: fadeLeftAnime;
+  }
+  .fadeLeftRight {
+    animation-name: fadeRightAnime;
+  }
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --animation-range: 80px;
+  }
+  .fadeRightLeft {
+    animation-name: fadeRightAnime;
+  }
+  .fadeLeftRight {
+    animation-name: fadeLeftAnime;
+  }
+}
