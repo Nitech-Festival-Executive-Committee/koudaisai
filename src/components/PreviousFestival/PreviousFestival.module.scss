@@ -1,0 +1,35 @@
+.preFestival {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 1% 1% 0 1%;
+  width: 85%;
+}
+.preFestival span {
+  font-size: 30px !important;
+}
+.preFestival > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+.preFestival > h1 {
+  margin: 0;
+}
+
+.preFestivalThum {
+  display: flex;
+  max-height: 65px;
+  height: 4.5vw;
+  margin: 0.5%;
+  align-items: center;
+  border: thin solid black;
+  border-radius: 5px;
+}
+.preFestivalThum img {
+  object-fit: cover;
+  height: 100%;
+}

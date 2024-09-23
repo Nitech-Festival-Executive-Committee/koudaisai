@@ -6,6 +6,7 @@ import "@/styles/style.css";
 import "@/styles/swiper.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 
 // TODO: authorとcopyrightを作成
 // author: "名古屋工業大学第62回工大祭実行委員会",
@@ -44,6 +45,7 @@ export default function RootLayout({
         <main>{children}</main>
         {/* sns-float */}
         {/* page-top */}
+        <PreviousFestival />
         <Footer />
       </body>
     </html>
