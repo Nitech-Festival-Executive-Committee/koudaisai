@@ -46,15 +46,15 @@ export default function PreviousFestival() {
           thisImage="./img/54th.webp"
         />
         <TemplatePrevFestival
-          thisHref="https://www.koudaisai.com/53th"
+          thisHref="https://www.koudaisai.com/53rd"
           thisImage="./img/53th.webp"
         />
         <TemplatePrevFestival
-          thisHref="https://www.koudaisai.com/52th"
+          thisHref="https://www.koudaisai.com/52nd"
           thisImage="./img/52th.webp"
         />
         <TemplatePrevFestival
-          thisHref="https://www.koudaisai.com/51th"
+          thisHref="https://www.koudaisai.com/51st"
           thisImage="./img/51th.webp"
         />
       </div>
