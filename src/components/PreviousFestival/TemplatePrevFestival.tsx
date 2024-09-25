@@ -20,9 +20,9 @@ const TemplatePrevFestival: React.FC<SiteData> = ({ thisHref, thisImage }) => {
         <Image
           src={thisImage}
           alt="工大祭の画像"
-          width={150} // widthを調整
-          height={150} // heightを調整
-          style={{ objectFit: "contain" }} // objectFitをstyleで設定
+          width={150}
+          height={150}
+          style={{ objectFit: "contain" }}
         />
       </a>
     </div>

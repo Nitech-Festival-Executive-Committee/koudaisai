@@ -5,13 +5,13 @@ import TemplatePrevFestival from "./TemplatePrevFestival";
 export default function PreviousFestival() {
   return (
     <div className={styles.preFestival} id="preFestival">
-      {/* 下のh4にfadeDownTriggerをあとで追加*/}
+      {/*TODO 下のh4にfadeDownTriggerをあとで追加*/}
       <h4
         className={`${styles.bigTitle} ${styles.preFestivalTitle} ${styles.fontEffect} ${styles.retroshadow}`}
       >
         <span>過去のページ</span>
       </h4>
-      {/* 下のdivにfadeDownTriggerをあとで追加*/}
+      {/*TODO 下のdivにfadeDownTriggerをあとで追加*/}
       <div>
         <TemplatePrevFestival
           thisHref="https://www.koudaisai.com/61st"
