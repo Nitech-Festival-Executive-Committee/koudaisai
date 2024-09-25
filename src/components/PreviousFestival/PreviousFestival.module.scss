@@ -27,8 +27,8 @@
 .preFestivalThum {
   display: flex;
   width: auto;
-  height: 80px;
-  margin: 1.5%;
+  height: 60px;
+  margin: 5px;
   align-items: center;
   justify-content: center;
   border: thin solid black;
@@ -63,4 +63,16 @@
   text-shadow:
     1.5px 1.5px 0px #d5d5d5,
     2.3px 2.3px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 767px) {
+  .preFestival {
+    margin-top: 10%;
+    width: 98%;
+  }
+  .preFestivalThum {
+    max-height: 7vh;
+    height: 13vw;
+    margin: 3px;
+  }
 }
