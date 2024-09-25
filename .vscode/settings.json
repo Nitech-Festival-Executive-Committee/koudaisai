@@ -11,5 +11,10 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true, 
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "vs-code-prettier-eslint.prettierLast": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
 }

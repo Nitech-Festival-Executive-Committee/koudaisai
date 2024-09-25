@@ -7,29 +7,60 @@
   padding: 1% 1% 0 1%;
   width: 85%;
 }
+
+.preFestivalTitle {
+  text-align: center;
+  margin: 3vh 20vw 1vh;
+  font-weight: 800;
+}
+
 .preFestival span {
   font-size: 30px !important;
 }
+
 .preFestival > div {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 10px;
 }
-.preFestival > h1 {
-  margin: 0;
-}
-
 .preFestivalThum {
   display: flex;
-  max-height: 65px;
-  height: 4.5vw;
-  margin: 0.5%;
+  width: auto;
+  height: 80px;
+  margin: 1.5%;
   align-items: center;
+  justify-content: center;
   border: thin solid black;
   border-radius: 5px;
+  overflow: hidden;
+  background-color: white;
 }
+
 .preFestivalThum img {
-  object-fit: cover;
+  object-fit: contain;
+  width: auto;
   height: 100%;
+}
+
+.bigTitle {
+  text-align: center;
+  margin: 3vh 20vw 1vh;
+  font-weight: 800;
+}
+
+.fontEffect {
+  font-family: sans-serif !important;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  color: #2c2c2c;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.retroshadow {
+  text-shadow:
+    1.5px 1.5px 0px #d5d5d5,
+    2.3px 2.3px 0px rgba(0, 0, 0, 0.2);
 }
