@@ -1,104 +1,12 @@
 main {
   padding-top: calc(var(--main-padding-top) + 8vw);
 }
-.start-header {
-  padding: 0 !important;
-}
-.start-header.scroll-on {
-  border-radius: 15px;
-}
-.banner-link {
-  width: 75vw;
-  margin: 0 2vw 0 auto;
-}
-.banner {
-  max-height: 6vh;
-  width: 100%;
-  margin: 3% auto 2% auto;
-}
-.navigation-wrap:not(.scroll-on) {
-  border-radius: 0 0 15px 15px;
-}
-.navbar-collapse {
-  padding: 1.3rem;
-  transition: height 0.4s linear !important;
-}
-.navbar-collapse:not(.show) .nav-item {
-  opacity: 0;
-}
-.navbar-collapse[style*="height: auto"]:not(.show) {
-  padding: 0 !important;
-  background-color: red;
-}
 .collapse:not(.show):not(.collapsing) {
   height: 0;
   padding: 0;
 }
 .collapse:not(.show):not(.collapsing)[style] > div {
   display: none;
-}
-.navbar-nav {
-  padding: 0;
-}
-.nav-item > a {
-  font-size: 1.3rem;
-}
-.nav-item:after {
-  display: none;
-}
-.nav-item::before {
-  position: absolute;
-  display: block;
-  top: 24px;
-  left: 1px;
-  width: 15px;
-  height: 1px;
-  content: "";
-  border: none;
-  background-color: #000;
-}
-.nav-item:not(.non-expandable):hover .dropdown-toggle::after {
-  transform: rotate(90deg);
-  opacity: 0;
-}
-.nav-item:not(.non-expandable):hover .dropdown-toggle + .dropdown-menu {
-  margin-top: 10px !important;
-  margin-bottom: 20px !important;
-}
-.nav-link {
-  padding: 0;
-}
-.non-expandable:before {
-  opacity: 0;
-}
-.dropdown-toggle::after {
-  position: absolute;
-  display: block;
-  top: 17px;
-  left: -21px;
-  width: 1px;
-  height: 16px;
-  content: "";
-  border: none;
-  background-color: #000;
-  transition: all 200ms linear;
-}
-.dropdown-toggle[aria-expanded="true"]::after {
-  transform: rotate(90deg);
-  opacity: 0;
-}
-.dropdown-menu {
-  padding: 0 !important;
-  background-color: transparent;
-  box-shadow: none;
-  transition: all 200ms linear;
-}
-.dropdown-item {
-  font-size: 1.1rem;
-}
-.dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
-  margin-top: 10px !important;
-  margin-bottom: 20px !important;
 }
 
 h1.font-effect > span {

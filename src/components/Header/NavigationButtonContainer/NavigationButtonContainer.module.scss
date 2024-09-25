@@ -1,0 +1,16 @@
+.navbarNav {
+  padding: 0 5% 0 0%;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navbarNav {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .textButtonContainer {
+    display: none;
+  }
+}

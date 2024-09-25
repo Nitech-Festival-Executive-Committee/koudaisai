@@ -1,9 +1,20 @@
-.banner-link {
-  position: relative;
+.bannerLink {
   width: 45vw;
 }
 .banner {
-  object-fit: contain;
+  display: inline;
   max-height: 3vw;
   margin: 0.8vh 3% 0.5vh 3%;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    max-height: 6vh;
+    width: 100%;
+    margin: 3% auto 2% auto;
+  }
+  .bannerLink {
+    width: 75vw;
+    margin: 0 2vw 0 auto;
+  }
 }
