@@ -4,7 +4,7 @@ import styles from "./NavigationButtonContainer.module.scss";
 
 export default function NavigationButtonContainer() {
   return (
-    <div className={`${styles.textButtonContainer}`}>
+    <div className={`${styles.textButtonContainer} `}>
       <div className={`${styles.navbarNav} navbar-nav`}>
         <NavigationButton text="工大祭とは" url="/about/" />
         <NavigationDropDown
