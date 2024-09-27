@@ -1,3 +1,9 @@
+import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
+
 export default function About() {
-  return <div />;
+  return (
+    <>
+      <PreviousFestival />
+    </>
+  );
 }
