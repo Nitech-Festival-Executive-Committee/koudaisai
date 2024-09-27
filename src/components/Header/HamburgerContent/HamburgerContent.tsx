@@ -11,6 +11,12 @@ interface Props {
 export default function HamburgerContent({ open }: Props) {
   const [contentIsVisible, setContentIsVisible] = useState(false);
 
+  /*
+   * アニメーションを三段階で実装している
+   * closed : ハンバーガーメニューが閉じている
+   * open && !contentIsVisible : ハンバーガーメニューが開いている途中で、コンテンツが表示されていない
+   * open && contentIsVisible : ハンバーガーメニューが開いていて、コンテンツが表示されている
+   */
   return (
     <motion.div
       initial={{ height: 0 }}

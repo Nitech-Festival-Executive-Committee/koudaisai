@@ -7,7 +7,7 @@ import NavigationButtonContainer from "./NavigationButtonContainer/NavigationBut
 import HamburgerContent from "./HamburgerContent/HamburgerContent";
 
 export default function Header() {
-  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
+  const [hamburgerMenuIsOpen, setHamburgerMenuOpen] = useState(false);
   const [headerClass, setHeaderClass] = useState("start-style");
   function toggleHamburgerMenu() {
     setHamburgerMenuOpen((prev) => !prev);
@@ -32,15 +32,18 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={styles.header}>
+    <header>
       <div className={`${styles.navigationContainer} ${headerClass} bg-light`}>
         <nav
           className={`${styles.navigation} navbar navbar-expand-md navbar-light`}
         >
           <BannerImage />
-          <HamburgerIcon toggleHamburgerMenu={toggleHamburgerMenu} />
+          <HamburgerIcon
+            hamburgerMenuIsOpen={hamburgerMenuIsOpen}
+            toggleHamburgerMenu={toggleHamburgerMenu}
+          />
           <NavigationButtonContainer />
-          <HamburgerContent open={hamburgerMenuOpen} />
+          <HamburgerContent open={hamburgerMenuIsOpen} />
         </nav>
       </div>
     </header>

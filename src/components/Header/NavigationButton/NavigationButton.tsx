@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styles from "./NavigationItem.module.scss";
 
 interface NavigationButtonProps {
@@ -7,8 +8,10 @@ interface NavigationButtonProps {
 
 export default function NavigationButton(props: NavigationButtonProps) {
   return (
-    <div
+    <motion.div
       className={`${styles.navItem} ${styles.nonExpandable} nav-item non-expandable pl-4 pl-md-0`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
     >
       <a
         className={`${styles.navLink} nav-link`}
@@ -17,6 +20,6 @@ export default function NavigationButton(props: NavigationButtonProps) {
       >
         {props.text}
       </a>
-    </div>
+    </motion.div>
   );
 }
