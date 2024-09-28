@@ -1,17 +1,17 @@
 .preFestival {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0 auto;
-  padding: 1% 1% 0 1%;
+  justify-content: center;
   width: 85%;
+  padding: 1% 1% 0 1%;
+  margin: 0 auto;
 }
 
 .preFestivalTitle {
-  text-align: center;
   margin: 3vh 20vw 1vh;
   font-weight: 800;
+  text-align: center;
 }
 
 .preFestival span {
@@ -26,37 +26,37 @@
 }
 .preFestivalThum {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: auto;
   height: 60px;
   margin: 5px;
-  align-items: center;
-  justify-content: center;
-  border: thin solid black;
-  border-radius: 5px;
   overflow: hidden;
   background-color: white;
+  border: thin solid black;
+  border-radius: 5px;
 }
 
 .preFestivalThum img {
-  object-fit: contain;
   width: auto;
   height: 100%;
+  object-fit: contain;
 }
 
 .bigTitle {
-  text-align: center;
   margin: 3vh 20vw 1vh;
   font-weight: 800;
+  text-align: center;
 }
 
 .fontEffect {
   font-family: sans-serif !important;
+  color: #2c2c2c;
   text-align: center;
   text-transform: uppercase;
-  text-rendering: optimizeLegibility;
-  color: #2c2c2c;
   letter-spacing: 0.05em;
   white-space: nowrap;
+  text-rendering: optimizeLegibility;
 }
 
 .retroshadow {
@@ -67,12 +67,12 @@
 
 @media screen and (max-width: 767px) {
   .preFestival {
-    margin-top: 10%;
     width: 98%;
+    margin-top: 10%;
   }
   .preFestivalThum {
-    max-height: 7vh;
     height: 13vw;
+    max-height: 7vh;
     margin: 3px;
   }
 }

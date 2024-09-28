@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"src/**/*.tsx\" \"src/**/*.ts\" \"src/**/*.css\" \"src/**/*.scss\""
+    "format": "prettier --write \"src/**/*.tsx\" \"src/**/*.ts\" \"src/**/*.css\" \"src/**/*.scss\"",
+    "stylelint": "stylelint --fix \"src/**/*.scss\""
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -25,6 +26,8 @@
     "eslint-config-next": "14.2.13",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
+    "stylelint": "^16.9.0",
+    "stylelint-config-recess-order": "^5.1.1",
     "typescript": "^5"
   }
 }

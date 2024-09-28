@@ -3,14 +3,14 @@
 }
 .banner {
   display: inline;
+  width: 100%;
   max-height: 3vw;
   margin: 0.8vh 3% 0.5vh 3%;
-  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .banner {
-    max-height: 6vh;
     width: 100%;
+    max-height: 6vh;
     margin: 3% auto 2% auto;
   }
   .bannerLink {
