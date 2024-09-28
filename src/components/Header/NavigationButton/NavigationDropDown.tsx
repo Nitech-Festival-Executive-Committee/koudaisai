@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import styles from "./NavigationItem.module.scss";
 import { useState } from "react";
 
@@ -9,17 +9,6 @@ interface NavigationDropDownProps {
     url: string;
   }[];
 }
-
-const dropdownMenuVariants = {
-  hidden: {
-    opacity: 0,
-    height: 0,
-  },
-  visible: {
-    opacity: 1,
-    height: "auto",
-  },
-};
 
 function DropdownIcon({ isOpen }: { isOpen: boolean }) {
   const lineProps = {
@@ -63,26 +52,30 @@ export default function NavigationDropDown(props: NavigationDropDownProps) {
       <a className={`${styles.navLink} nav-link`} aria-label={props.text}>
         {props.text}
       </a>
-      <motion.div
-        className={styles.dropdownMenu}
-        initial="hidden"
-        variants={dropdownMenuVariants}
-        animate={dropdownMenuIsVisible ? "visible" : "hidden"}
-        transition={{ duration: 0.5 }}
-      >
-        <div className={styles.dropdownItemContainer}>
-          {props.items.map((item) => (
-            <a
-              key={item.url}
-              className={`${styles.dropdownItem} dropdown-item`}
-              href={item.url}
-              aria-label={item.text}
-            >
-              {item.text}
-            </a>
-          ))}
-        </div>
-      </motion.div>
+      <AnimatePresence>
+        {dropdownMenuIsVisible && (
+          <motion.div
+            className={styles.dropdownMenu}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className={styles.dropdownItemsContainer}>
+              {props.items.map((item) => (
+                <a
+                  key={item.url}
+                  className={`${styles.dropdownItem} dropdown-item`}
+                  href={item.url}
+                  aria-label={item.text}
+                >
+                  {item.text}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }
