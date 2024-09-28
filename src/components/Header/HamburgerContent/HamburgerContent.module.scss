@@ -4,6 +4,10 @@
   padding: 1.3rem;
 }
 
+.flex {
+  display: flex;
+}
+
 @media screen and (max-width: 768px) {
   .hamburgerContent {
     display: flex;

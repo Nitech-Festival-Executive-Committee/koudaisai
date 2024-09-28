@@ -1,13 +1,28 @@
-.hamburgerIcon {
+.hamburgerIconContainer {
+  position: relative;
+  display: none;
+  justify-content: center;
   width: 12vw;
-  font-size: 24px;
+  margin-right: 1vw;
+}
+
+.hamburgerIconButton {
+  position: absolute;
+  top: -18px;
+  z-index: 4;
+  width: 36px;
+  height: 36px;
   background: none;
   border: none;
 }
 
-// PCの時
-@media screen and (min-width: 768px) {
-  .hamburgerIcon {
-    display: none;
+.hamburgerIcon {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburgerIconContainer {
+    display: flex;
   }
 }

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BannerImage from "./BannerImage/BannerImage";
 import styles from "./Header.module.scss";
 import HamburgerIcon from "./HamburgerIcon/HamburgerIcon";
@@ -7,22 +7,43 @@ import NavigationButtonContainer from "./NavigationButtonContainer/NavigationBut
 import HamburgerContent from "./HamburgerContent/HamburgerContent";
 
 export default function Header() {
-  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
+  const [hamburgerMenuIsOpen, setHamburgerMenuOpen] = useState(false);
+  const [headerClass, setHeaderClass] = useState("start-style");
   function toggleHamburgerMenu() {
     setHamburgerMenuOpen((prev) => !prev);
   }
 
-  // TODO: styles.scrollOn を当てる
+  // スクロールイベントを追加
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY >= 200) {
+        setHeaderClass(styles.scrollOn);
+        console.log("scrollOn");
+      } else {
+        setHeaderClass("");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={styles.header}>
-      <div className={`${styles.navigationContainer} bg-light`}>
+    <header>
+      <div className={`${styles.navigationContainer} ${headerClass} bg-light`}>
         <nav
           className={`${styles.navigation} navbar navbar-expand-md navbar-light`}
         >
           <BannerImage />
+          <HamburgerIcon
+            hamburgerMenuIsOpen={hamburgerMenuIsOpen}
+            toggleHamburgerMenu={toggleHamburgerMenu}
+          />
           <NavigationButtonContainer />
-          <HamburgerIcon toggleHamburgerMenu={toggleHamburgerMenu} />
-          {hamburgerMenuOpen && <HamburgerContent />}
+          <HamburgerContent open={hamburgerMenuIsOpen} />
         </nav>
       </div>
     </header>
