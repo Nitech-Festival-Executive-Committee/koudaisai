@@ -1,24 +1,24 @@
 .hamburgerIconContainer {
-  display: none;
   position: relative;
-  margin-right: 1vw;
-  width: 12vw;
+  display: none;
   justify-content: center;
+  width: 12vw;
+  margin-right: 1vw;
 }
 
 .hamburgerIconButton {
   position: absolute;
-  background: none;
-  border: none;
-  height: 36px;
-  width: 36px;
   top: -18px;
   z-index: 4;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
 }
 
 .hamburgerIcon {
-  height: 24px;
   width: 24px;
+  height: 24px;
 }
 
 @media screen and (max-width: 768px) {
