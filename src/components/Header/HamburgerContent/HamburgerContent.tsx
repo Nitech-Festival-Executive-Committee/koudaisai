@@ -4,28 +4,23 @@ import NavigationButton from "../NavigationButton/NavigationButton";
 import NavigationDropDown from "../NavigationButton/NavigationDropDown";
 import styles from "./HamburgerContent.module.scss";
 
-interface Props {
-  open: boolean;
-}
-
-export default function HamburgerContent({ open }: Props) {
+export default function HamburgerContent() {
   const [contentIsVisible, setContentIsVisible] = useState(false);
 
   /*
    * アニメーションを三段階で実装している
-   * closed : ハンバーガーメニューが閉じている
-   * open && !contentIsVisible : ハンバーガーメニューが開いている途中で、コンテンツが表示されていない
-   * open && contentIsVisible : ハンバーガーメニューが開いていて、コンテンツが表示されている
+   * initial = 要素がレンダリングされていない状態
+   * !contentIsVisible = ハンバーガーメニューが開いている途中で、コンテンツが表示されていない
+   * contentIsVisible = ハンバーガーメニューが開いていて、コンテンツが表示されている
    */
   return (
     <motion.div
       initial={{ height: 0 }}
-      animate={{
-        height: open ? "auto" : 0,
-      }}
+      animate={{ height: "auto" }}
+      exit={{ height: 0 }}
       transition={{ duration: 0.5 }}
       onAnimationStart={() => setContentIsVisible(false)}
-      onAnimationComplete={() => setContentIsVisible(open)}
+      onAnimationComplete={() => setContentIsVisible(true)}
     >
       <motion.div
         variants={{
