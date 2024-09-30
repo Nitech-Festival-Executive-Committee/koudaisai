@@ -5,9 +5,5 @@ export default function PageWrapper({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div className={styles.wrapper}>
-      {children}
-    </div>
-  );
+  return <div className={styles.wrapper}>{children}</div>;
 }

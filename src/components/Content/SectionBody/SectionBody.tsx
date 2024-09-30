@@ -7,9 +7,7 @@ export default function SectionBody({
 }>) {
   return (
     <div className={styles.contentBlock}>
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </div>
   );
 }

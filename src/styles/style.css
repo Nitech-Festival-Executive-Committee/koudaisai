@@ -33,9 +33,6 @@ header {
   margin: 2vh auto 0 auto;
 }
 
-
-
-
 .brochure-img {
   display: flex;
   flex-direction: row;
@@ -148,8 +145,6 @@ table.project-table td span {
 .setTimer {
   display: none;
 }
-
-
 
 .sns-float {
   z-index: 1;

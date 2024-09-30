@@ -9,12 +9,6 @@ main {
   display: none;
 }
 
-
-
-
-
-
-
 .brochure-img {
   justify-content: center;
   padding: 3vh 0 1vh 0;
@@ -22,8 +16,6 @@ main {
 .project-tag {
   margin: 5% 1% 0 1%;
 }
-
-
 
 .pc-only {
   display: none;

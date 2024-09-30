@@ -1,4 +1,3 @@
-
 .contentImage {
   display: flex;
   flex-direction: row;
@@ -18,11 +17,12 @@
     }
   }
 }
-// a .contentImage img.decoration:hover,
-// a .contentImage img.decoration:active {
-//   box-shadow: 12px 11px 5px 0px rgb(140 140 140 / 25%);box-shadow
-//   transform: translate(-2px, -3px);transform
-// }
+// TODO: 廃止するかも
+a .contentImage img.decoration:hover,
+a .contentImage img.decoration:active {
+  box-shadow: 12px 11px 5px 0px rgb(140 140 140 / 25%);
+  transform: translate(-2px, -3px);
+}
 
 @media screen and (max-width: 767px) {
   .contentBox > span {
