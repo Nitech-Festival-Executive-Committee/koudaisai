@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "@/styles/animations.css";
 import "@/styles/style.css";
 
 import Header from "@/components/Header/Header";
