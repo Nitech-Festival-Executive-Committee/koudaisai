@@ -19,7 +19,6 @@ export default function Header() {
       const scrollY = window.scrollY;
       if (scrollY >= 200) {
         setHeaderClass(styles.scrollOn);
-        console.log("scrollOn");
       } else {
         setHeaderClass("");
       }
