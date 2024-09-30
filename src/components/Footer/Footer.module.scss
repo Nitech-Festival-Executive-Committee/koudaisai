@@ -1,12 +1,9 @@
 .copyright {
   margin: 3vh 5% 2vh;
   text-align: center;
-}
-.copyright > p {
-  margin: 0;
-}
-.copyright span {
-  display: inline-block;
+  span {
+    display: inline-block;
+  }
 }
 
 @media screen and (max-width: 767px) {
