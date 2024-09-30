@@ -1,0 +1,30 @@
+.contentBlock {
+  width: 36%;
+  margin: 0 2%;
+  font-weight: 600;
+}
+// TODO: 廃止するかも
+.information-block-wider {
+  width: 70%;
+  .information-content-flex > div {
+    width: 24%;
+  }
+}
+.information-block:not(.information-block-flex)
+  > div:first-child
+  > .information-title {
+  margin-top: 3vh;
+}
+
+@media screen and (max-width: 767px) {
+  .contentBlock {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .information-block-wider {
+    width: 98%;
+  }
+  .information-block-wider .information-content-flex > div {
+    width: 47%;
+  }
+}

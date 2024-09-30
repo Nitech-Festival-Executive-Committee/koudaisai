@@ -9,52 +9,12 @@ main {
   display: none;
 }
 
-h1.font-effect > span {
-  font-size: 3rem;
-}
-h2.font-effect > span {
-  font-size: 2.5rem;
-}
-h3.font-effect > span {
-  font-size: 2rem;
-}
-h4.font-effect > span {
-  font-size: 1.5rem;
-}
-h5.font-effect > span {
-  font-size: 1rem;
-}
 
-.big-title {
-  margin: 5% 3%;
-}
-.information {
-  flex-direction: column;
-}
-.information-block {
-  width: 95%;
-  margin: 0 auto;
-}
-.information-block-wider {
-  width: 98%;
-}
-.information-block-wider .information-content-flex > div {
-  width: 47%;
-}
-.information-box > span {
-  font-size: 1.1rem;
-}
-.information-box p {
-  font-size: 1rem;
-}
-.information-box ul {
-  padding-left: 15px;
-  font-size: 1rem;
-}
-.information-img img {
-  max-width: 95%;
-  max-height: 58vh;
-}
+
+
+
+
+
 .brochure-img {
   justify-content: center;
   padding: 3vh 0 1vh 0;
@@ -63,9 +23,7 @@ h5.font-effect > span {
   margin: 5% 1% 0 1%;
 }
 
-.copyright {
-  margin: 3vh 0 3vh 0;
-}
+
 
 .pc-only {
   display: none;
