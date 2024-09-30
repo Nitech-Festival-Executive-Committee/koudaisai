@@ -12,7 +12,8 @@
   "stylelint.validate" : ["scss"],
   "stylelint.configFile": "./.stylelintrc.json",
   "[scss]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": { 
       "source.fixAll.stylelint": true
     }

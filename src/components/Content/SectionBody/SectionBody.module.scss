@@ -1,3 +1,5 @@
+@import "variables";
+
 .contentBlock {
   width: 36%;
   margin: 0 2%;
@@ -16,7 +18,7 @@
   margin-top: 3vh;
 }
 
-@media screen and (max-width: 767px) {
+@include phone {
   .contentBlock {
     width: 95%;
     margin: 0 auto;

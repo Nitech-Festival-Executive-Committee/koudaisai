@@ -1,3 +1,5 @@
+@import "variables";
+
 .copyright {
   margin: 3vh 5% 2vh;
   text-align: center;
@@ -6,7 +8,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@include phone {
   .copyright {
     margin: 3vh 0 3vh 0;
   }

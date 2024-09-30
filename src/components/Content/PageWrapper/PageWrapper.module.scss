@@ -1,3 +1,5 @@
+@import "variables";
+
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -21,7 +23,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@include phone {
   .wrapper {
     flex-direction: column;
   }
