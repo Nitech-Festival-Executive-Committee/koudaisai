@@ -1,0 +1,13 @@
+@import "variables";
+
+.projectLogo {
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 90%;
+    max-height: 20vh;
+  }
+}
+
+@include phone {
+}
