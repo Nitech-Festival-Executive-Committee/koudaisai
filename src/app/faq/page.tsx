@@ -54,7 +54,7 @@ export default function Faq() {
         <ContentTitle title="お問い合わせ" size={1} bigTitle={true} />
         <PageWrapper>
         <SectionBody>
-          <ContentTitle title="お問合せ先" size={1} />
+          <ContentTitle title="お問合せ先" size={2} />
           <ContentBox title={""}>
             <p>お問い合わせの前に、このページに同じ内容が無いか確認の後、お問い合わせいただくようよろしくお願いします。
               <br/>工大祭についてのお問い合わせは以下の連絡先にて承っております。
@@ -66,7 +66,7 @@ export default function Faq() {
         </SectionBody>
 
         <SectionBody>
-          <ContentTitle title="郵便" size={1} />
+          <ContentTitle title="郵便" size={2} />
           <ContentBox title={"住所"}>
             <p>〒466-8555
               <br/>愛知県名古屋市昭和区御器所町大学会館地下一階
