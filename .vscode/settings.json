@@ -9,13 +9,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "scss.validate": false,
-  "stylelint.validate" : ["scss"],
+  "stylelint.validate": ["scss"],
   "stylelint.configFile": "./.stylelintrc.json",
   "[scss]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": { 
-      "source.fixAll.stylelint": true
+      "source.fixAll.stylelint": "explicit"
     }
   },
   "editor.formatOnSave": true,
@@ -23,6 +23,7 @@
   "vs-code-prettier-eslint.prettierLast": true,
   "files.insertFinalNewline": true,
   "editor.codeActionsOnSave": {
+    "source.addMissingImports": "always",
     "source.fixAll.eslint": "explicit"
   }
 }
