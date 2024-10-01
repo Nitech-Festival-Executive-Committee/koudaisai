@@ -1,0 +1,36 @@
+@import "variables";
+
+.canvas {
+  position: relative;
+  z-index: -100;
+  display: flex;
+  justify-content: center;
+  transition: 1s;
+}
+.canvasBackground {
+  z-index: -100;
+  width: 100vw;
+  height: calc(100vh - var(--main-padding-top));
+  object-fit: cover;
+}
+.canvasImg {
+  --max-height: 60vh;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  width: 95vw;
+  max-height: var(--max-height);
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+@include phone {
+  .canvasBackground {
+    width: 100vw;
+  }
+
+  .canvasImg {
+    --max-height: 50vh;
+    width: 100vw;
+  }
+}
