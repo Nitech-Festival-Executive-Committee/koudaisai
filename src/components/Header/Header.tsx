@@ -32,7 +32,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header>
+    <header className={styles.header}>
       <div className={`${styles.navigationContainer} ${headerClass} bg-light`}>
         <nav
           className={`${styles.navigation} navbar navbar-expand-md navbar-light`}
