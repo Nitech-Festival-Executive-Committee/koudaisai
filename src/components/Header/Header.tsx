@@ -37,12 +37,14 @@ export default function Header() {
         <nav
           className={`${styles.navigation} navbar navbar-expand-md navbar-light`}
         >
-          <BannerImage />
-          <HamburgerIcon
-            hamburgerMenuIsOpen={hamburgerMenuIsOpen}
-            toggleHamburgerMenu={toggleHamburgerMenu}
-          />
-          <NavigationButtonContainer />
+          <div className={styles.headerMain}>
+            <BannerImage />
+            <HamburgerIcon
+              hamburgerMenuIsOpen={hamburgerMenuIsOpen}
+              toggleHamburgerMenu={toggleHamburgerMenu}
+            />
+            <NavigationButtonContainer />
+          </div>
           <AnimatePresence>
             {hamburgerMenuIsOpen && <HamburgerContent />}
           </AnimatePresence>

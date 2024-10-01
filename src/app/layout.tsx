@@ -4,6 +4,7 @@ import "@/styles/style.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import SnsIconList from "@/components/Sns/SnsIconList";
 
 // TODO: authorとcopyrightを作成
 // author: "名古屋工業大学第62回工大祭実行委員会",
@@ -40,7 +41,7 @@ export default function RootLayout({
       <body>
         <Header />
         <main>{children}</main>
-        {/* sns-float */}
+        <SnsIconList pcOnly />
         {/* page-top */}
         <Footer />
       </body>

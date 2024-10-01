@@ -3,6 +3,7 @@ import { useState } from "react";
 import NavigationButton from "../NavigationButton/NavigationButton";
 import NavigationDropDown from "../NavigationButton/NavigationDropDown";
 import styles from "./HamburgerContent.module.scss";
+import SnsIconList from "@/components/Sns/SnsIconList";
 
 export default function HamburgerContent() {
   const [contentIsVisible, setContentIsVisible] = useState(false);
@@ -49,6 +50,7 @@ export default function HamburgerContent() {
         <NavigationButton text="キャラクター" url="/character/" />
         <NavigationButton text="スポンサー" url="/sponsor" />
         <NavigationButton text="FAQ" url="/faq/" />
+        <SnsIconList />
       </motion.div>
     </motion.div>
   );
