@@ -27,6 +27,7 @@ function DropdownIcon({ isOpen }: { isOpen: boolean }) {
           closed: { rotate: -90, opacity: 1 },
           opened: { rotate: 0, opacity: 0 },
         }}
+        initial="closed"
         animate={isOpen ? "opened" : "closed"}
         transition={{ duration: 0.3 }}
         style={{ originX: "center", originY: "center" }}

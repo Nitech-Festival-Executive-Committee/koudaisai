@@ -1,3 +1,5 @@
+@import "variables";
+
 .preFestival {
   display: flex;
   flex-direction: column;
@@ -65,7 +67,7 @@
     2.3px 2.3px 0px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 767px) {
+@include phone {
   .preFestival {
     width: 98%;
     margin-top: 10%;

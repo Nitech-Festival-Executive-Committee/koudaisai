@@ -1,3 +1,5 @@
+@import "variables";
+
 // navItem
 .navItem {
   position: relative;
@@ -32,7 +34,7 @@
   bottom: 3px;
   opacity: 1;
 }
-@media screen and (max-width: 768px) {
+@include phone {
   .navItem {
     padding-left: 1.5rem;
   }
@@ -57,7 +59,7 @@
   width: 24px;
   height: 24px;
 }
-@media screen and (max-width: 767px) {
+@include phone {
   .dropdownIcon {
     display: block;
   }
@@ -81,7 +83,7 @@
 .navItem:not(.nonExpandable) > .navLink {
   cursor: default;
 }
-@media screen and (max-width: 768px) {
+@include phone {
   .navLink {
     padding: 0;
   }
@@ -93,7 +95,7 @@
   display: block;
   background-color: rgba(255, 255, 255, 0.9);
 }
-@media screen and (max-width: 768px) {
+@include phone {
   .dropdownMenu {
     position: relative;
     background-color: var(--light);
@@ -123,7 +125,7 @@
 .dropdownItem:focus {
   color: var(--theme-color) !important;
 }
-@media screen and (max-width: 768px) {
+@include phone {
   .dropdownItem {
     font-size: 1.1rem;
   }

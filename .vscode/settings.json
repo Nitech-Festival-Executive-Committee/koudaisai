@@ -12,9 +12,9 @@
   "stylelint.validate": ["scss"],
   "stylelint.configFile": "./.stylelintrc.json",
   "[scss]": {
-    "editor.formatOnSave": false,
-    "editor.codeActionsOnSave": {
-      "source.addMissingImports": "always",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": { 
       "source.fixAll.stylelint": "explicit"
     }
   },
