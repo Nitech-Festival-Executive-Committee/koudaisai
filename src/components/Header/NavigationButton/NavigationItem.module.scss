@@ -75,6 +75,7 @@
   padding: 0.5rem 0.3vw !important;
   font-size: 18px;
   color: black !important;
+  text-decoration: none;
   transition: all 200ms linear;
 }
 .navItem:not(.nonExpandable) > .navLink:active {
@@ -108,13 +109,14 @@
 
 // dropdown-item
 .dropdownItem {
+  display: grid;
   padding: 3px 5px !important;
   margin: 3px 10px;
   font-size: 15px;
   font-weight: 600 !important;
   line-height: 1.5;
-  line-height: 1.5;
   color: #212121;
+  text-decoration: none;
   background-color: transparent !important;
   border-radius: 2px;
 }
