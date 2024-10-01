@@ -326,13 +326,6 @@ table.project-table td span {
   height: 100%;
 }
 
-.highlight-underline {
-  border-bottom: solid 2px #3eafff;
-}
-a.highlight-underline {
-  color: #16a085;
-}
-
 .pc-only {
   display: block;
 }
