@@ -5,6 +5,7 @@ import styles from "./Header.module.scss";
 import HamburgerIcon from "./HamburgerIcon/HamburgerIcon";
 import NavigationButtonContainer from "./NavigationButtonContainer/NavigationButtonContainer";
 import HamburgerContent from "./HamburgerContent/HamburgerContent";
+import { AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [hamburgerMenuIsOpen, setHamburgerMenuOpen] = useState(false);
@@ -42,7 +43,9 @@ export default function Header() {
             toggleHamburgerMenu={toggleHamburgerMenu}
           />
           <NavigationButtonContainer />
-          <HamburgerContent open={hamburgerMenuIsOpen} />
+          <AnimatePresence>
+            {hamburgerMenuIsOpen && <HamburgerContent />}
+          </AnimatePresence>
         </nav>
       </div>
     </header>
