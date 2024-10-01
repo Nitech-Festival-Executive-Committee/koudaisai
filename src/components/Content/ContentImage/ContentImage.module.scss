@@ -1,3 +1,5 @@
+@import "variables";
+
 .contentImage {
   display: flex;
   flex-direction: row;
@@ -24,7 +26,7 @@ a .contentImage img.decoration:active {
   transform: translate(-2px, -3px);
 }
 
-@media screen and (max-width: 767px) {
+@include phone {
   .contentBox > span {
     font-size: 1.1rem;
   }

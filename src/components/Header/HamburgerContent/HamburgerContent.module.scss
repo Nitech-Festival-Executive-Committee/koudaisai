@@ -1,3 +1,5 @@
+@import "variables";
+
 .hamburgerContent {
   display: none;
   flex-direction: column;
@@ -8,7 +10,7 @@
   display: flex;
 }
 
-@media screen and (max-width: 768px) {
+@include phone {
   .hamburgerContent {
     display: flex;
   }
