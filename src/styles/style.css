@@ -12,6 +12,9 @@
 }
 body {
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 main {
   --main-padding-top: calc(3vw + 14px + 1.3vh);
@@ -230,13 +233,6 @@ table.project-table td span {
 .pre-festival-thum img {
   object-fit: cover;
   height: 100%;
-}
-
-.highlight-underline {
-  border-bottom: solid 2px #3eafff;
-}
-a.highlight-underline {
-  color: #16a085;
 }
 
 .pc-only {
