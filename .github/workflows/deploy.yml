@@ -22,9 +22,40 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Install sshpass
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass
+
+      - name: Set up SSH for Xserver
+        run: |
+          # ~/.sshディレクトリを作成
+          mkdir -p ~/.ssh
+
+          # 秘密鍵を保存
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_xserver_rsa
+
+          # パーミッションの設定
+          chmod 600 ~/.ssh/id_xserver_rsa
+
+          # known_hostsにホスト情報を追加
+          ssh-keyscan -p 10022 ${{ secrets.SFTP_HOST }} >> ~/.ssh/known_hosts
+
+          # known_hostsのパーミッションを設定
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: SSH and check directory
+        run: |
+          # SSHで接続してディレクトリを確認
+          ssh -i ~/.ssh/id_xserver_rsa -p 10022 -o StrictHostKeyChecking=no ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_HOST }} "pwd"
+        env:
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+
       - name: Sync files with rsync
         run: |
-          echo "Syncing files via rsync..."
-          rsync -avz --delete -e "ssh -p 10022 -o StrictHostKeyChecking=no" ./out/ ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}:/saki118.xsrv.jp/public_html
+          # rsyncでファイルを同期
+          rsync -avz --delete -e "ssh -p 10022 -o StrictHostKeyChecking=no" ./out/ ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_HOST }}:/saki118.xsrv.jp/public_html
         env:
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
