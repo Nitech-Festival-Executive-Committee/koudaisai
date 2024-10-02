@@ -5,7 +5,11 @@ import NavigationDropDown from "../NavigationButton/NavigationDropDown";
 import styles from "./HamburgerContent.module.scss";
 import SnsIconList from "@/components/Sns/SnsIconList";
 
-export default function HamburgerContent() {
+export default function HamburgerContent({
+  setOnTransition,
+}: {
+  setOnTransition: (value: boolean) => void;
+}) {
   const [contentIsVisible, setContentIsVisible] = useState(false);
 
   /*
@@ -20,8 +24,14 @@ export default function HamburgerContent() {
       animate={{ height: "auto" }}
       exit={{ height: 0 }}
       transition={{ duration: 0.5 }}
-      onAnimationStart={() => setContentIsVisible(false)}
-      onAnimationComplete={() => setContentIsVisible(true)}
+      onAnimationStart={() => {
+        setContentIsVisible(false);
+        setOnTransition(true);
+      }}
+      onAnimationComplete={() => {
+        setContentIsVisible(true);
+        setOnTransition(false);
+      }}
     >
       <motion.div
         variants={{

@@ -10,7 +10,10 @@ import { AnimatePresence } from "framer-motion";
 export default function Header() {
   const [hamburgerMenuIsOpen, setHamburgerMenuOpen] = useState(false);
   const [headerClass, setHeaderClass] = useState("start-style");
+  const [onTransition, setOnTransition] = useState(false);
+
   function toggleHamburgerMenu() {
+    if (onTransition) return;
     setHamburgerMenuOpen((prev) => !prev);
   }
 
@@ -46,7 +49,9 @@ export default function Header() {
             <NavigationButtonContainer />
           </div>
           <AnimatePresence>
-            {hamburgerMenuIsOpen && <HamburgerContent />}
+            {hamburgerMenuIsOpen && (
+              <HamburgerContent setOnTransition={setOnTransition} />
+            )}
           </AnimatePresence>
         </nav>
       </div>
