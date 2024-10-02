@@ -16,32 +16,19 @@ jobs:
         with:
           node-version: "18.17.0"
 
-      - name: Install dependencies
-        run: npm install
+      # - name: Install dependencies
+      #   run: npm install
 
-      - name: Build project
-        run: npm run build
-
-      # - name: Upload via FTP
-      #   uses: SamKirkland/FTP-Deploy-Action@4.3.0
-      #   with:
-      #     server: ${{ secrets.FTP_HOST }}
-      #     username: ${{ secrets.FTP_USERNAME }}
-      #     password: ${{ secrets.FTP_PASSWORD }}
-      #     local-dir: ./out
-      #     server-dir: /path/on/server
-      #     protocol: ftp
-      #     state-name: .ftp-deploy-sync-state.json
-      #     dry-run: false
-      #     dangerous-clean-slate: false
+      # - name: Build project
+      #   run: npm run build
 
       - name: Test FTP login
         run: |
           echo "Checking FTP login..."
           curl --ftp-ssl -v --user ${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }} ftp://${{ secrets.FTP_HOST }} || echo "FTP login failed"
 
-      - name: Download and display index.txt
+      - name: Delete index.txt
+        continue-on-error: true
         run: |
-          echo "Downloading index.txt..."
-          curl --ftp-ssl -v --user ${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }} ftp://${{ secrets.FTP_HOST }}/public_html/index.txt -o index.txt
-          cat index.txt
+          echo "Deleting index.txt..."
+          curl --ftp-ssl -v --user ${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }} ftp://${{ secrets.FTP_HOST }}/saki118.xsrv.jp/public_html/index.txt -Q "DELE /saki118.xsrv.jp/public_html/index.html"
