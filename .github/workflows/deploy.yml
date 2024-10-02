@@ -34,3 +34,14 @@ jobs:
       #     state-name: .ftp-deploy-sync-state.json
       #     dry-run: false
       #     dangerous-clean-slate: false
+
+      - name: Test FTP login
+        run: |
+          echo "Checking FTP login..."
+          curl --ftp-ssl -v --user ${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }} ftp://${{ secrets.FTP_HOST }} || echo "FTP login failed"
+
+      - name: Download and display index.txt
+        run: |
+          echo "Downloading index.txt..."
+          curl --ftp-ssl -v --user ${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }} ftp://${{ secrets.FTP_HOST }}/public_html/index.txt -o index.txt
+          cat index.txt
