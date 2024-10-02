@@ -1,4 +1,4 @@
-name: Deploy via FTP
+name: Deploy via SFTP and rsync
 
 on:
   workflow_dispatch:
@@ -16,19 +16,15 @@ jobs:
         with:
           node-version: "18.17.0"
 
-      # - name: Install dependencies
-      #   run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      # - name: Build project
-      #   run: npm run build
+      - name: Build project
+        run: npm run build
 
-      - name: Test FTP login
+      - name: Sync files with rsync
         run: |
-          echo "Checking FTP login..."
-          curl --ftp-ssl -v --user ${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }} ftp://${{ secrets.FTP_HOST }} || echo "FTP login failed"
-
-      - name: Delete index.txt
-        continue-on-error: true
-        run: |
-          echo "Deleting index.txt..."
-          curl --ftp-ssl -v --user ${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }} ftp://${{ secrets.FTP_HOST }}/saki118.xsrv.jp/public_html/index.txt -Q "DELE /saki118.xsrv.jp/public_html/index.html"
+          echo "Syncing files via rsync..."
+          rsync -avz --delete -e "ssh -p 10022 -o StrictHostKeyChecking=no" ./out/ ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}:/saki118.xsrv.jp/public_html
+        env:
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
