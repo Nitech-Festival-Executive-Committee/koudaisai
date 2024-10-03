@@ -1,0 +1,10 @@
+@import "variables";
+.highlightUnderline {
+  border-bottom: solid 2px #3eafff;
+}
+a.highlightUnderline {
+  color: #16a085;
+}
+
+@include phone {
+}

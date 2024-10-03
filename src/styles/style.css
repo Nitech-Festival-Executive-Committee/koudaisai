@@ -12,6 +12,9 @@
 }
 body {
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 main {
   --main-padding-top: calc(3vw + 14px + 1.3vh);
@@ -21,102 +24,8 @@ img {
   object-fit: contain;
 }
 
-header {
-  position: fixed;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-.header-sns {
-  min-width: 60vw;
-  margin: 2vh auto 0 auto;
-}
-
 .setTimer {
   display: none;
-}
-
-.sns-float {
-  z-index: 1;
-  position: fixed;
-  left: 3%;
-  bottom: 8%;
-}
-.sns-float-list,
-.header-sns-float-list {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-}
-.header-sns-float-list {
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.follow-me {
-  list-style: none;
-  margin: 0 0 -8px;
-  overflow: visible;
-  padding: 0;
-}
-.follow-me li {
-  position: relative;
-  top: 0;
-  transition: top 0.5s;
-  float: left;
-  margin: 0 8px 13px 0;
-  padding: 0;
-  opacity: 0;
-}
-.header-sns > .follow-me li {
-  margin: 0;
-}
-.follow-me li:hover {
-  top: 5px;
-}
-.follow-me li a::before {
-  background-color: #fff;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  color: #fff;
-  display: inline-block;
-  font-family: FontAwesome;
-  font-size: 18px;
-  height: 45px;
-  line-height: 45px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  text-align: center;
-  width: 45px;
-}
-.follow-me li a[href*="twitter.com"]::before {
-  border-color: var(--twitter);
-  color: var(--twitter);
-  content: "\e61b";
-}
-.follow-me li a[href*="twitter.com"]:hover::before {
-  background-color: var(--twitter);
-  color: #ffffff;
-}
-.follow-me li a[href*="instagram.com"]::before {
-  border-color: var(--instagram);
-  color: var(--instagram);
-  content: "\f16d";
-}
-.follow-me li a[href*="instagram.com"]:hover::before {
-  background-color: var(--instagram);
-  color: #ffffff;
-}
-.follow-me li a[href*="youtube.com"]::before {
-  border-color: var(--youtube);
-  color: var(--youtube);
-  content: "\f16a";
-}
-.follow-me li a[href*="youtube.com"]:hover::before {
-  background-color: var(--youtube);
-  color: #ffffff;
 }
 
 .page_top {
@@ -215,13 +124,6 @@ header {
 .pre-festival-thum img {
   object-fit: cover;
   height: 100%;
-}
-
-.highlight-underline {
-  border-bottom: solid 2px #3eafff;
-}
-a.highlight-underline {
-  color: #16a085;
 }
 
 .pc-only {
