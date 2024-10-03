@@ -3,57 +3,50 @@
 table.projectTable {
   width: 100%;
   margin: 1vh auto 0 auto;
+  text-align: center;
   border-collapse: collapse;
-}
-table.projectTable tr {
-  border-bottom: medium solid white;
-}
-table.projectTable tr:first-child th,
-table.projectTable tr:first-child td {
-  color: white;
-  background-color: var(--theme-color);
-}
-table.projectTable tr:first-child td {
-  border-left: thick solid white;
-}
-table.projectTable tr td:nth-child(3) {
-  border-left: medium solid white;
-}
-table.projectTable tr:first-child th:after {
-  border-left: 10px solid var(--theme-color);
-}
-table.projectTable tr:last-child {
-  border-bottom: none;
-}
-table.projectTable th {
-  position: relative;
-  padding: 10px 8px;
-  color: white;
-  text-align: left;
-  text-align: center;
-  background-color: #29c6da;
-}
-table.projectTable tr:not(:first-child) th:after {
-  position: absolute;
-  top: calc(50% - 10px);
-  right: -10px;
-  display: block;
-  width: 0px;
-  height: 0px;
-  content: "";
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid #29c6da;
-}
-table.projectTable td {
-  min-width: 60%;
-  padding: 3px 5px 3px 13px;
-  text-align: left;
-  text-align: center;
-  background-color: #eee;
-}
-table.projectTable td span {
-  font-size: 0.95rem;
+  tr {
+    border-bottom: medium solid white;
+  }
+  th {
+    padding: 10px 8px;
+  }
+  thead th {
+    color: white;
+    background-color: var(--theme-color);
+    &:not(:first-child) {
+      border-left: medium solid white;
+    }
+  }
+  tbody {
+    --aqua: #09bdd3;
+    th {
+      position: relative;
+      color: white;
+      background-color: var(--aqua);
+      &:after {
+        position: absolute;
+        top: calc(50% - 10px);
+        right: -10px;
+        display: block;
+        width: 0px;
+        height: 0px;
+        content: "";
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid var(--aqua);
+      }
+    }
+    td {
+      min-width: 60%;
+      padding: 3px 5px 3px 13px;
+      font-size: 0.95em;
+      text-align: left;
+      text-align: center;
+      background-color: #eee;
+      border-left: medium solid white;
+    }
+  }
 }
 
 @include phone {
