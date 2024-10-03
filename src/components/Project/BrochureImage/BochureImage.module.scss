@@ -1,0 +1,19 @@
+@import "variables";
+
+.brochureImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 8vh 0 3vh 0;
+  img {
+    max-width: 90%;
+    max-height: 70vh;
+  }
+}
+
+@include phone {
+  .brochureImg {
+    justify-content: center;
+    padding: 3vh 0 1vh 0;
+  }
+}

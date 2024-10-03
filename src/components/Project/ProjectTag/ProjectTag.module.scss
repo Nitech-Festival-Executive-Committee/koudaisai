@@ -1,0 +1,37 @@
+@import "variables";
+
+.projectTag {
+  span {
+  }
+}
+.project {
+  &Tag {
+    margin: 13px 10px 0;
+    span {
+      padding: 5px 18px;
+      margin: 2px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: white;
+      border-radius: 20px;
+    }
+  }
+  &BothTag {
+    background: var(--day-both);
+  }
+  &Day1Tag {
+    background: var(--day1);
+  }
+  &Day2Tag {
+    background: var(--day2);
+  }
+  &ExclusiveTag {
+    background: var(--exclusive);
+  }
+}
+
+@include phone {
+  .projectTag {
+    margin: 20px 4px 0;
+  }
+}
