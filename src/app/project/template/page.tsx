@@ -20,6 +20,7 @@ const timeScheduleDay1 = {
     ["11:49〜11:51", "転換"],
     ["11:51〜12:11", "金城学院大学ダンス部 BEAT", "ダンス"],
   ],
+  widthWeight: [2, 5, 3],
 };
 
 const timeScheduleDay2 = {
@@ -30,6 +31,7 @@ const timeScheduleDay2 = {
     ["15:40〜15:50", "WONDER SNAKE"],
     ["15:55〜16:10", "幻"],
   ],
+  widthWeight: [1, 2],
 };
 
 export default function ProjectTemplate() {
