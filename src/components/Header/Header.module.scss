@@ -6,6 +6,10 @@
   left: 0;
   z-index: 1000;
   width: 100vw;
+  transition: all 0.3s ease-out;
+  &:has(.scrollOn) {
+    top: 15px;
+  }
 }
 .navigationContainer {
   padding: 8px 0 6px 0;
@@ -13,23 +17,24 @@
   opacity: 1;
   transition: all 0.3s ease-out;
   transform: translateY(0);
-}
-.navigationContainer.scrollOn {
-  padding: 4px 0 2px 0;
-  margin: 1.5vh 3vw 0 2vw;
-  border-radius: 50px;
-  box-shadow: 5px 10px 20px 0 rgb(150 150 150 / 50%);
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  &.scrollOn {
+    padding: 4px 0 2px 0;
+    margin: 0 3vw 0;
+    border-radius: 50px;
+    box-shadow: 5px 10px 20px 0 rgb(150 150 150 / 50%);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
 }
 
 @include phone {
   .navigationContainer {
     padding: 0 !important;
+    &.navigationContainer.scrollOn {
+      border-radius: 15px;
+    }
   }
-  .navigationContainer.scrollOn {
-    border-radius: 15px;
-  }
+
   .navigationContainer:not(.scrollOn) {
     border-radius: 0 0 15px 15px;
   }

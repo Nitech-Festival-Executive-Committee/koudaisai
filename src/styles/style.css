@@ -14,8 +14,9 @@ body {
   margin: 0;
 }
 main {
-  --main-padding-top: calc(3vw + 14px + 1.3vh);
-  padding-top: calc(var(--main-padding-top) + 2vw);
+  overflow-x: hidden;
+  --main-padding-top: 30px;
+  padding-top: calc(var(--main-padding-top));
 }
 img {
   object-fit: contain;
