@@ -1,0 +1,32 @@
+@import "variables";
+
+.snsIconList {
+  position: fixed;
+  bottom: 8%;
+  left: 3%;
+  display: block;
+
+  @include phone {
+    position: static;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+}
+
+.snsIconContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px;
+  margin-top: 12px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 10%;
+}
+
+.pcOnly {
+  @include phone {
+    display: none;
+  }
+}
