@@ -1,16 +1,13 @@
 import React from "react";
 import styles from "./PreviousFestival.module.scss";
 import PrevFestivalCard from "./PrevFestivalCard";
+import ContentTitle from "../Content/ContentTitle/ContentTitle";
 
 export default function PreviousFestival() {
   return (
     <div className={styles.preFestival} id="preFestival">
       {/*TODO 下のh4にfadeDownTriggerをあとで追加*/}
-      <h4
-        className={`${styles.bigTitle} ${styles.preFestivalTitle} ${styles.fontEffect} ${styles.retroshadow}`}
-      >
-        <span>過去のページ</span>
-      </h4>
+      <ContentTitle title="過去のページ" size={1} bigTitle />
       {/*TODO 下のdivにfadeDownTriggerをあとで追加*/}
       <div>
         <PrevFestivalCard

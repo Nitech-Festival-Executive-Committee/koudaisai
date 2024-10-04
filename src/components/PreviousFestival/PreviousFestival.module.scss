@@ -10,12 +10,6 @@
   margin: 0 auto;
 }
 
-.preFestivalTitle {
-  margin: 3vh 20vw 1vh;
-  font-weight: 800;
-  text-align: center;
-}
-
 .preFestival span {
   font-size: 30px !important;
 }
@@ -43,28 +37,6 @@
   width: auto;
   height: 100%;
   object-fit: contain;
-}
-
-.bigTitle {
-  margin: 3vh 20vw 1vh;
-  font-weight: 800;
-  text-align: center;
-}
-
-.fontEffect {
-  font-family: sans-serif !important;
-  color: #2c2c2c;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
-  text-rendering: optimizeLegibility;
-}
-
-.retroshadow {
-  text-shadow:
-    1.5px 1.5px 0px #d5d5d5,
-    2.3px 2.3px 0px rgba(0, 0, 0, 0.2);
 }
 
 @include phone {
