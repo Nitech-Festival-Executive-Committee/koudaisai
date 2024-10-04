@@ -1,3 +1,5 @@
+@import "variables";
+
 :root {
   --theme-color: #f7791e;
 
@@ -14,9 +16,12 @@ body {
   margin: 0;
 }
 main {
-  overflow-x: hidden;
-  --main-padding-top: 30px;
   padding-top: calc(var(--main-padding-top));
+  overflow-x: hidden;
+  --main-padding-top: 60px;
+  @include phone {
+    --main-padding-top: 30px;
+  }
 }
 img {
   object-fit: contain;
@@ -25,8 +30,8 @@ img {
 .brochure-img {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
   padding: 8vh 0 3vh 0;
 }
 .brochure-img img {
@@ -34,9 +39,9 @@ img {
   max-height: 70vh;
 }
 .brochure-img img.decoration {
-  box-shadow: 9px 8px 5px 0px rgb(140 140 140 / 25%);
-  border-radius: 10px;
   border: thin solid #7d7d7da3;
+  border-radius: 10px;
+  box-shadow: 9px 8px 5px 0px rgb(140 140 140 / 25%);
   transition: 0.5s;
 }
 /* a .brochure-img img.decoration:hover,
@@ -50,8 +55,8 @@ a .brochure-img img.decoration:active {
   justify-content: center;
 }
 .project-logo img {
-  max-height: 20vh;
   max-width: 90%;
+  max-height: 20vh;
 }
 table.project-table {
   width: 100%;
@@ -63,8 +68,8 @@ table.project-table tr {
 }
 table.project-table tr:first-child th,
 table.project-table tr:first-child td {
-  background-color: var(--theme-color);
   color: white;
+  background-color: var(--theme-color);
 }
 table.project-table tr:first-child td {
   border-left: thick solid white;
@@ -80,30 +85,30 @@ table.project-table tr:last-child {
 }
 table.project-table th {
   position: relative;
-  text-align: left;
-  background-color: #29c6da;
-  color: white;
-  text-align: center;
   padding: 10px 8px;
+  color: white;
+  text-align: left;
+  text-align: center;
+  background-color: #29c6da;
 }
 table.project-table tr:not(:first-child) th:after {
-  display: block;
-  content: "";
-  width: 0px;
-  height: 0px;
   position: absolute;
   top: calc(50% - 10px);
   right: -10px;
-  border-left: 10px solid #29c6da;
+  display: block;
+  width: 0px;
+  height: 0px;
+  content: "";
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
+  border-left: 10px solid #29c6da;
 }
 table.project-table td {
   min-width: 60%;
+  padding: 3px 5px 3px 13px;
   text-align: left;
   text-align: center;
   background-color: #eee;
-  padding: 3px 5px 3px 13px;
 }
 table.project-table td span {
   font-size: 0.95rem;
@@ -112,11 +117,11 @@ table.project-table td span {
   margin: 0 1%;
 }
 .project-tag span {
-  margin: 2px;
   padding: 5px 18px 5px 18px;
-  color: white;
+  margin: 2px;
   font-size: 1.2rem;
   font-weight: 800;
+  color: white;
   border-radius: 20px;
 }
 .project-day1-tag {
@@ -136,12 +141,12 @@ table.project-table td span {
 }
 
 .page_top {
+  position: fixed;
+  right: 1.5%;
+  bottom: 3%;
   display: none;
   width: 90px;
   height: 90px;
-  position: fixed;
-  bottom: 3%;
-  right: 1.5%;
   border-radius: 50px;
 }
 .page_top a {
@@ -152,38 +157,38 @@ table.project-table td span {
   text-decoration: none;
 }
 .page_top a::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f102";
-  font-size: 25px;
-  color: var(--theme-color);
   position: absolute;
+  top: -38px;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 25px;
   height: 25px;
-  top: -38px;
-  bottom: 0;
-  right: 0;
-  left: 0;
   margin: auto;
+  font-family: "Font Awesome 5 Free";
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--theme-color);
   text-align: center;
+  content: "\f102";
   transition: 0.3s;
 }
 .page_top a:hover::before {
   top: -50px;
 }
 .page_top a::after {
-  content: "PAGE TOP";
-  font-size: 13px;
-  color: #fff;
   position: absolute;
   top: 48px;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   left: 0;
   margin: auto;
-  text-align: center;
-  color: var(--theme-color);
+  font-size: 13px;
   font-weight: 700;
+  color: #fff;
+  color: var(--theme-color);
+  text-align: center;
+  content: "PAGE TOP";
 }
 
 .sponsor {
@@ -194,18 +199,18 @@ table.project-table td span {
   width: 100%;
 }
 .sponsor img {
-  object-fit: contain;
   width: 100%;
+  object-fit: contain;
 }
 
 .pre-festival {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0 auto;
-  padding: 1% 1% 0 1%;
+  justify-content: center;
   width: 85%;
+  padding: 1% 1% 0 1%;
+  margin: 0 auto;
 }
 .pre-festival span {
   font-size: 30px !important;
@@ -221,16 +226,16 @@ table.project-table td span {
 }
 .pre-festival-thum {
   display: flex;
-  max-height: 65px;
-  height: 4.5vw;
-  margin: 0.5%;
   align-items: center;
+  height: 4.5vw;
+  max-height: 65px;
+  margin: 0.5%;
   border: thin solid black;
   border-radius: 5px;
 }
 .pre-festival-thum img {
-  object-fit: cover;
   height: 100%;
+  object-fit: cover;
 }
 
 .highlight-underline {
