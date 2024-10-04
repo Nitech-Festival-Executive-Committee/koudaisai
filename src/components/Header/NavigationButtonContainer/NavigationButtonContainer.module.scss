@@ -2,6 +2,7 @@
 
 .navigationButtonList {
   display: flex;
+  align-items: center;
 
   @include phone {
     display: none;
