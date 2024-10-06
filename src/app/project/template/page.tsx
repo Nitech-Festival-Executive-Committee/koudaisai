@@ -1,7 +1,6 @@
 import React from "react";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
-import ContentImage from "@/components/Content/ContentImage/ContentImage";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import BochureImage from "@/components/Project/BrochureImage/BochureImage";
@@ -50,6 +49,9 @@ export default function ProjectTemplate() {
 
           {Object.keys(projectData).map((key) => {
             const data = projectData[key];
+            if (data?.isHidden) {
+              return null;
+            }
             if (data && typeof data.content === "string") {
               return (
                 <ContentBox key={key} title={data.title}>
@@ -70,11 +72,6 @@ export default function ProjectTemplate() {
               return null;
             }
           })}
-
-          {/* 静的なコンテンツもそのまま */}
-          <ContentBox title={"aiueo"}>
-            <ContentImage img="/img/62ndLogo.png" />
-          </ContentBox>
         </SectionBody>
         <SectionBody>
           <ContentTitle title="1日目" size={2} />

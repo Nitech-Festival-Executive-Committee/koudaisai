@@ -1,6 +1,7 @@
 interface contentBox {
   title: string;
   content: string | HTMLElement | (string | HTMLElement)[];
+  isHidden?: boolean;
 }
 
 // 期待するフィード
@@ -26,14 +27,15 @@ export const createProjectData = (data: {
   [key: string]: string | contentBox | HTMLElement | undefined;
 }): baseProjectData => {
   return {
-    link: { title: "リンク", content: data.link },
+    // 必須フィードを設定
+    link: { title: "リンク", content: data.link, isHidden: true },
     name: { title: "プロジェクト名", content: data.name },
     description: { title: "企画紹介", content: data.description },
     day1: data.day1 ? { title: "1日目", content: data.day1 } : undefined,
     day2: data.day2 ? { title: "2日目", content: data.day2 } : undefined,
     place: { title: "開催場所", content: data.place },
     contact: { title: "お問合せ先", content: data.contact },
-    // 任意のフィールドにも同様に title を設定
+    // 任意のフィールドにも同様に設定
     ...Object.keys(data).reduce(
       (acc, key) => {
         if (
