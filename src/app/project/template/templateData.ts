@@ -1,9 +1,6 @@
 import { createProjectData } from "../projectInterface";
 
-// const precautionParagraph = Object.assign(document.createElement("Underline"), {
-//   textContent:
-//     "電卓やスマートフォンの使用は禁止です。カンニングが見つかった場合は掲示板に掲載・停学処分となります。",
-// });
+const isHidden = true;
 
 export const projectData = createProjectData({
   link: "human-mining",
@@ -24,12 +21,16 @@ export const projectData = createProjectData({
       "マイニングは熱を発生します。熱中症には十分気をつけてください。",
       "ハッシュ値はSHA-256です。正しいハッシュ値が見つかる確率は1/2^256です。前日に神社にお参りをしてください。",
       "電卓やスマートフォンの使用は禁止です。カンニングが見つかった場合は掲示板に掲載・停学処分となります。",
-      // precautionParagraph,
     ],
   },
   prize: {
     title: "景品",
     content: "1BTC (900万円相当)",
+  },
+  mienai: {
+    title: "見えない",
+    content: "なぜ見えるのだ?",
+    isHidden,
   },
 });
 
