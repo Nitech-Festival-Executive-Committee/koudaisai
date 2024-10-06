@@ -1,4 +1,4 @@
-interface contentBox {
+export interface projectBox {
   title: string;
   content: string | HTMLElement | (string | HTMLElement)[];
   isHidden?: boolean;
@@ -6,14 +6,14 @@ interface contentBox {
 
 // 期待するフィード
 export interface baseProjectData {
-  link: contentBox; // project以下のリンク(ex. seiyu)
-  name: contentBox; // プロジェクト名
-  description: contentBox; // 企画紹介
-  day1?: contentBox; // 開催時刻。開催しない場合は空欄
-  day2?: contentBox; // 開催時刻。開催しない場合は空欄
-  place: contentBox; // 開催場所
-  contact: contentBox; // お問合せ先
-  [key: string]: contentBox | undefined; // 任意のフィード
+  link: projectBox; // project以下のリンク(ex. seiyu)
+  name: projectBox; // プロジェクト名
+  description: projectBox; // 企画紹介
+  day1?: projectBox; // 開催時刻。開催しない場合は空欄
+  day2?: projectBox; // 開催時刻。開催しない場合は空欄
+  place: projectBox; // 開催場所
+  contact: projectBox; // お問合せ先
+  [key: string]: projectBox | undefined; // 任意のフィード
 }
 
 export const createProjectData = (data: {
@@ -24,7 +24,7 @@ export const createProjectData = (data: {
   day2?: string;
   place: string | HTMLElement;
   contact: string | HTMLElement;
-  [key: string]: string | contentBox | HTMLElement | undefined;
+  [key: string]: string | projectBox | HTMLElement | undefined;
 }): baseProjectData => {
   return {
     // 必須フィードを設定
@@ -49,7 +49,7 @@ export const createProjectData = (data: {
             "contact",
           ].includes(key)
         ) {
-          const customField = data[key] as contentBox;
+          const customField = data[key] as projectBox;
           acc[key] = {
             title: customField.title,
             content: customField.content,
@@ -58,7 +58,7 @@ export const createProjectData = (data: {
         }
         return acc;
       },
-      {} as Record<string, contentBox | undefined>
+      {} as Record<string, projectBox | undefined>
     ),
   };
 };

@@ -8,6 +8,7 @@ import ProjectLogo from "@/components/Project/ProjectLogo/ProjectLogo";
 import ProjectTag from "@/components/Project/ProjectTag/ProjectTag";
 import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
 import { projectData } from "./templateData";
+import ProjectContent from "@/components/Project/ProjectContent/ProjectContent";
 
 const timeScheduleDay1 = {
   column: ["時間", "団体名", "内容"],
@@ -46,32 +47,7 @@ export default function ProjectTemplate() {
         <SectionBody>
           <ContentTitle title="hoge" size={2} />
           <ProjectTag day1 day2 exclusive exclusiveText="抽選券" />
-
-          {Object.keys(projectData).map((key) => {
-            const data = projectData[key];
-            if (data?.isHidden) {
-              return null;
-            }
-            if (data && typeof data.content === "string") {
-              return (
-                <ContentBox key={key} title={data.title}>
-                  <p>{data.content}</p>
-                </ContentBox>
-              );
-            } else if (data && Array.isArray(data.content)) {
-              return (
-                <ContentBox key={key} title={data.title}>
-                  {data.content.map((item, index) => (
-                    <p key={index}>
-                      {typeof item === "string" ? item : item.outerHTML}
-                    </p>
-                  ))}
-                </ContentBox>
-              );
-            } else {
-              return null;
-            }
-          })}
+          <ProjectContent projectData={projectData} />
         </SectionBody>
         <SectionBody>
           <ContentTitle title="1日目" size={2} />
