@@ -27,6 +27,11 @@
   }
 }
 
+.headerMain {
+  display: flex;
+  justify-content: space-between;
+}
+
 @include phone {
   .navigationContainer {
     padding: 0 !important;
@@ -41,5 +46,7 @@
 }
 
 .navigation {
+  display: block !important;
+  width: 100%;
   padding: 0 !important;
 }

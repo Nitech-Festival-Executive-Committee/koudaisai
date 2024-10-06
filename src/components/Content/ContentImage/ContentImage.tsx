@@ -1,3 +1,4 @@
+import DecoratedImage from "../DecoratedImage/DecoratedImage";
 import styles from "./ContentImage.module.scss";
 
 interface ContentImageProps {
@@ -8,12 +9,7 @@ interface ContentImageProps {
 export default function ContentImage({ img, alt }: ContentImageProps) {
   return (
     <div className={styles.contentImage}>
-      <img
-        className={styles.decoration}
-        src={img}
-        alt={alt || ""}
-        loading="lazy"
-      />
+      <DecoratedImage img={img} alt={alt} />
     </div>
   );
 }

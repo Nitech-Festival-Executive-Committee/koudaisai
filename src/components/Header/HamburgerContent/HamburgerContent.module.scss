@@ -3,6 +3,7 @@
 .hamburgerContent {
   display: none;
   flex-direction: column;
+  width: auto;
   padding: 1.3rem;
 }
 
@@ -12,6 +13,6 @@
 
 @include phone {
   .hamburgerContent {
-    display: flex;
+    display: block;
   }
 }
