@@ -9,15 +9,11 @@ interface NavigationButtonProps {
 export default function NavigationButton(props: NavigationButtonProps) {
   return (
     <motion.div
-      className={`${styles.navItem} ${styles.nonExpandable} nav-item non-expandable pl-4 pl-md-0`}
+      className={`${styles.navItem} ${styles.nonExpandable}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <a
-        className={`${styles.navLink} nav-link`}
-        href={props.url}
-        aria-label={props.text}
-      >
+      <a className={styles.navLink} href={props.url} aria-label={props.text}>
         {props.text}
       </a>
     </motion.div>

@@ -9,7 +9,7 @@ import { AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [hamburgerMenuIsOpen, setHamburgerMenuOpen] = useState(false);
-  const [headerClass, setHeaderClass] = useState("start-style");
+  const [isScrolled, setIsScrolled] = useState(false);
   const [onTransition, setOnTransition] = useState(false);
 
   function toggleHamburgerMenu() {
@@ -22,9 +22,9 @@ export default function Header() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       if (scrollY >= 200) {
-        setHeaderClass(styles.scrollOn);
+        setIsScrolled(true);
       } else {
-        setHeaderClass("");
+        setIsScrolled(false);
       }
     };
 
@@ -36,10 +36,10 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={`${styles.navigationContainer} ${headerClass} bg-light`}>
-        <nav
-          className={`${styles.navigation} navbar navbar-expand-md navbar-light`}
-        >
+      <div
+        className={`${styles.navigationContainer} ${isScrolled && styles.scrollOn}`}
+      >
+        <nav className={styles.navigation}>
           <div className={styles.headerMain}>
             <BannerImage />
             <HamburgerIcon
