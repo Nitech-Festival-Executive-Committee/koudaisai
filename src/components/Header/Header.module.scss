@@ -11,8 +11,15 @@
     top: 15px;
   }
 }
+
+.headerMain {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .navigationContainer {
   padding: 8px 0 6px 0;
+  background-color: #f8f8f8;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
   opacity: 1;
   transition: all 0.3s ease-out;
@@ -25,23 +32,13 @@
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
   }
-}
-
-.headerMain {
-  display: flex;
-  justify-content: space-between;
-}
-
-@include phone {
-  .navigationContainer {
+  @include phone {
     padding: 0 !important;
-    &.navigationContainer.scrollOn {
+    border-radius: 0 0 15px 15px;
+
+    &.scrollOn {
       border-radius: 15px;
     }
-  }
-
-  .navigationContainer:not(.scrollOn) {
-    border-radius: 0 0 15px 15px;
   }
 }
 

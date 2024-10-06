@@ -41,7 +41,7 @@ export default function NavigationDropDown(props: NavigationDropDownProps) {
   const [dropdownMenuIsVisible, setDropdownMenuIsVisible] = useState(false);
   return (
     <motion.div
-      className={`${styles.navItem} nav-item pl-4 pl-md-0`}
+      className={styles.navItem}
       // hover時、クリック時にドロップダウンを表示する
       onHoverStart={() => setDropdownMenuIsVisible(true)}
       onClick={() => setDropdownMenuIsVisible(!dropdownMenuIsVisible)}
@@ -50,7 +50,7 @@ export default function NavigationDropDown(props: NavigationDropDownProps) {
       animate={{ opacity: 1 }}
     >
       <DropdownIcon isOpen={dropdownMenuIsVisible} />
-      <a className={`${styles.navLink} nav-link`} aria-label={props.text}>
+      <a className={styles.navLink} aria-label={props.text}>
         {props.text}
       </a>
       <AnimatePresence>
@@ -66,7 +66,7 @@ export default function NavigationDropDown(props: NavigationDropDownProps) {
               {props.items.map((item) => (
                 <a
                   key={item.url}
-                  className={`${styles.dropdownItem} dropdown-item`}
+                  className={styles.dropdownItem}
                   href={item.url}
                   aria-label={item.text}
                 >
