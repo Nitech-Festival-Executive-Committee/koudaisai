@@ -45,7 +45,15 @@ export default function ProjectTemplate() {
         </SectionBody>
         <SectionBody>
           <ContentTitle title="hoge" size={2} />
-          <ProjectTag day1 day2 exclusive exclusiveText="抽選券" />
+          <ProjectTag
+            day1={projectData.day1 ? true : false}
+            day2={projectData.day2 ? true : false}
+            exclusiveText={
+              Array.isArray(projectData.projectTag?.content)
+                ? projectData.projectTag?.content
+                : []
+            }
+          />
           <ProjectContent projectData={projectData} />
         </SectionBody>
         <SectionBody>
