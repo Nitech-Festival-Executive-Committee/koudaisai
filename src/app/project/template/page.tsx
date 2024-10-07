@@ -8,6 +8,7 @@ import ProjectTag from "@/components/Project/ProjectTag/ProjectTag";
 import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
 import { projectData } from "./templateData";
 import ProjectContent from "@/components/Project/ProjectContent/ProjectContent";
+import { projectBox } from "../projectInterface";
 
 const timeScheduleDay1 = {
   column: ["時間", "団体名", "内容"],
@@ -54,15 +55,17 @@ export default function ProjectTemplate() {
                 : []
             }
           />
-          <ProjectContent projectData={projectData} />
+          <ProjectContent
+            projectData={projectData as Record<string, projectBox>}
+          />
         </SectionBody>
         <SectionBody>
           <ContentTitle title="1日目" size={2} />
-          <ProjectTable tableObject={timeScheduleDay1}></ProjectTable>
+          <ProjectTable tableObject={timeScheduleDay1} />
         </SectionBody>
         <SectionBody>
           <ContentTitle title="2日目" size={2} />
-          <ProjectTable tableObject={timeScheduleDay2}></ProjectTable>
+          <ProjectTable tableObject={timeScheduleDay2} />
         </SectionBody>
       </PageWrapper>
     </>
