@@ -1,5 +1,4 @@
 import React from "react";
-import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";

@@ -1,6 +1,7 @@
 import styles from "./ProjectContent.module.scss";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import { projectBox } from "@/app/project/projectInterface";
+import { ReactNode } from "react";
 
 interface ProjectContentProps {
   projectData: Record<string, projectBox>;
@@ -17,28 +18,28 @@ export default function ProjectContent({ projectData }: ProjectContentProps) {
           return null;
         }
 
-        // contentが文字列の場合
-        if (data?.content && typeof data.content === "string") {
+        // contentが配列の場合
+        if (Array.isArray(data?.content)) {
           return (
             <ContentBox key={key} title={data.title}>
-              <p>{data.content}</p>
+              <ul>
+                {data.content.map((item: string | ReactNode, index: number) => (
+                  <li key={index}>{typeof item === "string" ? item : item}</li>
+                ))}
+              </ul>
             </ContentBox>
           );
         }
 
-        // contentが配列の場合
-        if (data?.content && Array.isArray(data.content)) {
+        // contentが文字列またはReactNodeの場合
+        if (data?.content) {
           return (
             <ContentBox key={key} title={data.title}>
-              <ul>
-                {data.content.map(
-                  (item: string | { outerHTML: string }, index: number) => (
-                    <li key={index}>
-                      {typeof item === "string" ? item : item.outerHTML}
-                    </li>
-                  )
-                )}
-              </ul>
+              {typeof data.content === "string" ? (
+                <p>{data.content}</p>
+              ) : (
+                data.content
+              )}
             </ContentBox>
           );
         }
