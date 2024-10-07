@@ -11,12 +11,9 @@
     max-width: 90%;
     max-height: 65vh;
     object-fit: cover;
-  }
-}
-
-@include phone {
-  .contentImage img {
-    max-width: 95%;
-    max-height: 58vh;
+    @include phone {
+      max-width: 95%;
+      max-height: 58vh;
+    }
   }
 }

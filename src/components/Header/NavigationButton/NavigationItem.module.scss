@@ -12,12 +12,18 @@
   text-shadow: 2px 2px 1px rgb(180 180 180 / 40%);
   white-space: nowrap;
   transition: all 200ms linear;
+  @include phone {
+    padding-left: 1.5rem;
+  }
 }
 .navItem:hover > a {
   text-shadow: 2px 2px 2px rgb(247 121 30 / 30%);
 }
 .navItem > a {
   font-size: 1.4rem;
+  @include phone {
+    font-size: 1.3rem;
+  }
 }
 .navItem:after {
   position: absolute;
@@ -29,25 +35,13 @@
   background-color: var(--theme-color);
   opacity: 0;
   transition: all 200ms linear;
+  @include phone {
+    display: none;
+  }
 }
 .navItem:hover:after {
   bottom: 3px;
   opacity: 1;
-}
-@include phone {
-  .navItem {
-    padding-left: 1.5rem;
-  }
-  .navItem > a {
-    font-size: 1.3rem;
-  }
-  .navItem:after {
-    display: none;
-  }
-  .navItem:not(.nonExpandable):hover .dropdown-toggle + .dropdownMenu {
-    margin-top: 10px !important;
-    margin-bottom: 20px !important;
-  }
 }
 
 // dropdownIcon
@@ -58,9 +52,7 @@
   display: none;
   width: 24px;
   height: 24px;
-}
-@include phone {
-  .dropdownIcon {
+  @include phone {
     display: block;
   }
 }
@@ -77,6 +69,9 @@
   color: black !important;
   text-decoration: none;
   transition: all 200ms linear;
+  @include phone {
+    padding: 0;
+  }
 }
 .navItem:not(.nonExpandable) > .navLink:active {
   pointer-events: none;
@@ -84,20 +79,13 @@
 .navItem:not(.nonExpandable) > .navLink {
   cursor: default;
 }
-@include phone {
-  .navLink {
-    padding: 0;
-  }
-}
 
 // dropdownMenu
 .dropdownMenu {
   position: absolute;
   display: block;
   background-color: rgba(255, 255, 255, 0.9);
-}
-@include phone {
-  .dropdownMenu {
+  @include phone {
     position: relative;
     background-color: var(--light);
   }
@@ -119,6 +107,9 @@
   text-decoration: none;
   background-color: transparent !important;
   border-radius: 2px;
+  @include phone {
+    font-size: 1.1rem;
+  }
 }
 .dropdownItem:hover {
   text-shadow: 2px 2px 2px rgb(247 121 30 / 30%);
@@ -126,9 +117,4 @@
 .dropdownItem:hover,
 .dropdownItem:focus {
   color: var(--theme-color) !important;
-}
-@include phone {
-  .dropdownItem {
-    font-size: 1.1rem;
-  }
 }

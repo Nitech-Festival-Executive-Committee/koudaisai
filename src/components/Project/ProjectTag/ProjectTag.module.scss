@@ -1,9 +1,5 @@
 @import "variables";
 
-.projectTag {
-  span {
-  }
-}
 .project {
   &Tag {
     margin: 13px 10px 0;
@@ -14,6 +10,9 @@
       font-weight: 800;
       color: white;
       border-radius: 20px;
+    }
+    @include phone {
+      margin: 20px 4px 0;
     }
   }
   &BothTag {
@@ -27,11 +26,5 @@
   }
   &ExclusiveTag {
     background: var(--exclusive);
-  }
-}
-
-@include phone {
-  .projectTag {
-    margin: 20px 4px 0;
   }
 }

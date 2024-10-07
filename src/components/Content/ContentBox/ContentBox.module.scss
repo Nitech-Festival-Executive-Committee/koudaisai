@@ -23,10 +23,16 @@
     text-shadow: 1px 1px 1px rgb(247 121 30 / 20%);
     white-space: nowrap;
     background: #fff;
+    @include phone {
+      font-size: 1.1rem;
+    }
   }
   p {
     padding: 0;
     margin: 0;
+    @include phone {
+      font-size: 1rem;
+    }
   }
   a {
     text-decoration: underline;
@@ -35,6 +41,10 @@
 .contentBox ul {
   padding-left: 20px;
   margin-bottom: 0;
+  @include phone {
+    padding-left: 15px;
+    font-size: 1rem;
+  }
 }
 
 // TODO: 廃止するかも
@@ -57,17 +67,4 @@
 }
 .information-live-news div p {
   margin: 0;
-}
-
-@include phone {
-  .contentBox > span {
-    font-size: 1.1rem;
-  }
-  .contentBox p {
-    font-size: 1rem;
-  }
-  .contentBox ul {
-    padding-left: 15px;
-    font-size: 1rem;
-  }
 }
