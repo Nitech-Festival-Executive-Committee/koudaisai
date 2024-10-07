@@ -16,6 +16,7 @@ export const projectData = createProjectData({
   day1: "10:00～16:00",
   place: "2号館前ステージ",
   contact: "局 @koudaisai.com",
+  projectTag: ["抽選券", "予約"],
   // 追加項目
   capacity: {
     title: "定員",
@@ -48,5 +49,3 @@ export const projectData = createProjectData({
     content: "",
   },
 });
-
-console.log(projectData);
