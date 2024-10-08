@@ -1,7 +1,7 @@
 import styles from "./ContentBox.module.scss";
 
 interface ContentBoxProps {
-  title: string;
+  title: React.ReactNode;
   children: React.ReactNode;
 }
 
