@@ -20,8 +20,8 @@ export interface baseProjectData {
 }
 
 export const createProjectData = (data: {
-  link: string | ReactNode;
-  name: string | ReactNode;
+  link: string;
+  name: string;
   description: string | ReactNode;
   day1?: string | ReactNode;
   day2?: string | ReactNode;
