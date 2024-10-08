@@ -1,13 +1,14 @@
 import React from "react";
-import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
-import ContentImage from "@/components/Content/ContentImage/ContentImage";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import BochureImage from "@/components/Project/BrochureImage/BochureImage";
 import ProjectLogo from "@/components/Project/ProjectLogo/ProjectLogo";
 import ProjectTag from "@/components/Project/ProjectTag/ProjectTag";
 import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
+import { projectData } from "./templateData";
+import ProjectContent from "@/components/Project/ProjectContent/ProjectContent";
+import { projectBox } from "../projectInterface";
 
 const timeScheduleDay1 = {
   column: ["時間", "団体名", "内容"],
@@ -45,21 +46,26 @@ export default function ProjectTemplate() {
         </SectionBody>
         <SectionBody>
           <ContentTitle title="hoge" size={2} />
-          <ProjectTag day1 day2 exclusive exclusiveText="抽選券" />
-          <ContentBox title={"test"}>
-            <p>aiueo</p>
-          </ContentBox>
-          <ContentBox title={"aiueo"}>
-            <ContentImage img="/img/62ndLogo.png" />
-          </ContentBox>
+          <ProjectTag
+            day1={projectData.day1 ? true : false}
+            day2={projectData.day2 ? true : false}
+            exclusiveText={
+              Array.isArray(projectData.projectTag?.content)
+                ? projectData.projectTag?.content
+                : []
+            }
+          />
+          <ProjectContent
+            projectData={projectData as Record<string, projectBox>}
+          />
         </SectionBody>
         <SectionBody>
           <ContentTitle title="1日目" size={2} />
-          <ProjectTable tableObject={timeScheduleDay1}></ProjectTable>
+          <ProjectTable tableObject={timeScheduleDay1} />
         </SectionBody>
         <SectionBody>
           <ContentTitle title="2日目" size={2} />
-          <ProjectTable tableObject={timeScheduleDay2}></ProjectTable>
+          <ProjectTable tableObject={timeScheduleDay2} />
         </SectionBody>
       </PageWrapper>
     </>
