@@ -5,14 +5,11 @@
   flex-direction: column;
   width: auto;
   padding: 1.3rem;
+  @include phone {
+    display: block;
+  }
 }
 
 .flex {
   display: flex;
-}
-
-@include phone {
-  .hamburgerContent {
-    display: block;
-  }
 }

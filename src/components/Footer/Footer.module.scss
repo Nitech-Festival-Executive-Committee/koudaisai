@@ -6,10 +6,7 @@
   span {
     display: inline-block;
   }
-}
-
-@include phone {
-  .copyright {
+  @include phone {
     margin: 3vh 0 3vh 0;
   }
 }
