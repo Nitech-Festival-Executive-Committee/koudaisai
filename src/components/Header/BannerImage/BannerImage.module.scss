@@ -1,12 +1,5 @@
 @import "variables";
 
-.bannerLink {
-  width: 45vw;
-  @include phone {
-    width: 75vw;
-    margin: 0 2vw 0 auto;
-  }
-}
 .banner {
   display: inline;
   width: 100%;
