@@ -4,6 +4,7 @@
   position: fixed;
   bottom: 8%;
   left: 3%;
+  z-index: 10;
   display: block;
 
   @include phone {
