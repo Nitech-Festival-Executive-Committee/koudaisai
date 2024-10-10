@@ -1,0 +1,130 @@
+@import "variables";
+
+.swiperContainer {
+  :global {
+    .swiper {
+      width: 85vw;
+      padding-bottom: 60px;
+      margin: 0 auto;
+    }
+
+    .swiper-wrapper {
+      align-items: center;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: self-start;
+      justify-content: end;
+      filter: blur(2px);
+      border-right: 1px solid rgba(200, 200, 200, 0.8);
+      border-bottom: 1px solid rgba(200, 200, 200, 0.8);
+      border-radius: 10px;
+      box-shadow: 15px 13px 8px 3px rgb(85 85 85 / 50%);
+      /* tagなどで使用するスタイル */
+      & span {
+        display: inline-block;
+        padding: 7px 18px 7px 25px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.8rem;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: #1b7402;
+        border-radius: 0 20px 20px 0px;
+      }
+
+      & h2 {
+        padding: 25px 45px 0 25px;
+        margin-bottom: 15px;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.4;
+        color: #fff;
+      }
+
+      & p {
+        display: flex;
+        align-items: center;
+        padding: 0 25px 35px 25px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        color: #fff;
+      }
+
+      & svg {
+        width: 22px;
+        height: 22px;
+        margin-right: 7px;
+        color: #fff;
+      }
+
+      & img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+
+    .swiper-slide-vertical {
+      width: auto;
+      max-width: 50vw;
+      height: 63vh;
+      max-height: 100%;
+    }
+    .swiper-slide-horizontal {
+      width: auto;
+      max-width: 58vw;
+      height: 45vh;
+      max-height: 100%;
+    }
+
+    .swiper-slide-active {
+      filter: blur(0px);
+    }
+
+    .swiper-pagination-bullet {
+      width: 15px !important;
+      height: 15px !important;
+      margin: 0 0 0 10px !important;
+      background: var(--theme-color);
+      transition: 0.5s;
+    }
+
+    .swiper-3d .swiper-slide-shadow-left,
+    .swiper-3d .swiper-slide-shadow-right {
+      background-image: none;
+    }
+
+    @include phone {
+      .swiper {
+        width: 100vw;
+      }
+
+      .swiper-wrapper {
+        margin-bottom: 8px;
+      }
+
+      .swiper-slide-vertical {
+        width: 85vw;
+        max-width: 85vw;
+        height: auto;
+        max-height: 100%;
+      }
+      .swiper-slide-horizontal {
+        width: 85vw;
+        max-width: 85vw;
+        height: auto;
+        max-height: 100%;
+      }
+      .swiper-pagination-bullet {
+        width: 20px !important;
+        height: 20px !important;
+        background: var(--theme-color);
+      }
+    }
+  }
+}
