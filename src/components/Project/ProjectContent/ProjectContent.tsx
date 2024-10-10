@@ -1,4 +1,3 @@
-import styles from "./ProjectContent.module.scss";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import { projectBox } from "@/app/project/projectInterface";
 import { ReactNode } from "react";
@@ -9,7 +8,7 @@ interface ProjectContentProps {
 
 export default function ProjectContent({ projectData }: ProjectContentProps) {
   return (
-    <div className={styles.brochureImg}>
+    <>
       {Object.keys(projectData).map((key) => {
         const data = projectData[key];
 
@@ -46,6 +45,6 @@ export default function ProjectContent({ projectData }: ProjectContentProps) {
 
         return null;
       })}
-    </div>
+    </>
   );
 }

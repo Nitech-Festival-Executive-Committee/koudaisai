@@ -7,14 +7,17 @@
 .project {
   &Tag {
     display: flex;
+    display: flex;
+    flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 13px 10px 0;
     span {
-      padding: 5px 18px;
+      padding: 5px 18px 3px;
       margin: 3px 5px;
       font-size: 1.2rem;
       font-weight: 800;
       color: white;
+      white-space: nowrap;
       white-space: nowrap;
       border-radius: 20px;
     }

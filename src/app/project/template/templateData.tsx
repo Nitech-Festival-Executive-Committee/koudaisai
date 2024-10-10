@@ -1,30 +1,24 @@
 /* eslint-disable react/jsx-key */
 import React from "react";
 import Underline from "@/components/Content/Underline/Underline";
-import { createProjectData } from "../projectInterface";
+import { createProjectData, projectBox } from "../projectInterface";
 
-export const projectData = createProjectData({
-  // 必須項目
-  link: "human-mining",
-  name: <span>人力でビットコインのマイニングしてみた</span>,
-  description: (
-    <p>
-      仮想通貨ビットコインを人力でマイニングします。GPUより高速でハッシュを見つけよう。
-      <Underline>SGDsに貢献したとてもエコな企画です。</Underline>
-    </p>
-  ),
-  day1: "10:00～16:00",
-  place: "2号館前ステージ",
-  contact: "局 @koudaisai.com",
-  projectTag: ["抽選券", "予約"],
-  // 追加項目
-  capacity: {
-    title: "定員",
-    content: "100人",
-  },
-  precautions: {
-    title: "注意事項",
-    content: [
+export const templateData: Record<string, projectBox | undefined> =
+  createProjectData({
+    // 必須項目
+    link: "human-mining",
+    name: "人力ビットコインマイニング",
+    day1: "10:00～16:00",
+    projectTag: ["抽選券", "予約"],
+    description: (
+      <p>
+        仮想通貨ビットコインを人力でマイニングします。GPUより高速でハッシュを見つけよう。
+        <Underline>SGDsに貢献したとてもエコな企画です。</Underline>
+      </p>
+    ),
+    place: "2号館前ステージ",
+    capacity: "100人",
+    precautions: [
       <Underline>
         マイニングは熱を発生します。熱中症には十分気をつけてください。
       </Underline>,
@@ -34,18 +28,20 @@ export const projectData = createProjectData({
         電卓やスマートフォンの使用は禁止です。カンニングが見つかった場合は掲示板に掲載・停学処分となります。
       </Underline>,
     ],
-  },
-  prize: {
-    title: "景品",
-    content: "1BTC (900万円相当)",
-  },
-  mienai: {
-    title: "見えない",
-    content: "なぜ見えるのだ?",
-    isHidden: true,
-  },
-  kara: {
-    title: "中身空っぽだから見えないはず",
-    content: "",
-  },
-});
+    prize: "1BTC (900万円相当)",
+    contact: "局 @koudaisai.com",
+    // 追加項目
+    mienai: {
+      title: "見えない",
+      content: "なぜ見えるのだ?",
+      isHidden: true,
+    },
+    kara: {
+      title: "中身空っぽだから見えないはず",
+      content: "",
+    },
+    hoge: {
+      title: "ほげ",
+      content: "ほげ",
+    },
+  });
