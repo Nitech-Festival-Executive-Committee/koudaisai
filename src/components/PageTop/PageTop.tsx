@@ -26,13 +26,13 @@ export default function PageTop() {
   }, []);
 
   return (
-    <div
+    <button
       className={styles.pageTop}
       style={isScrolled ? {} : { opacity: "0" }}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       <FontAwesomeIcon icon={faAnglesUp} />
       <span>PAGE TOP</span>
-    </div>
+    </button>
   );
 }
