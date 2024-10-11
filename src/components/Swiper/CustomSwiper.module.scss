@@ -69,19 +69,6 @@
       }
     }
 
-    .swiper-slide-vertical {
-      width: auto;
-      max-width: 50vw;
-      height: 63vh;
-      max-height: 100%;
-    }
-    .swiper-slide-horizontal {
-      width: auto;
-      max-width: 58vw;
-      height: 45vh;
-      max-height: 100%;
-    }
-
     .swiper-slide-active {
       filter: blur(0px);
     }
@@ -108,23 +95,38 @@
         margin-bottom: 8px;
       }
 
-      .swiper-slide-vertical {
-        width: 85vw;
-        max-width: 85vw;
-        height: auto;
-        max-height: 100%;
-      }
-      .swiper-slide-horizontal {
-        width: 85vw;
-        max-width: 85vw;
-        height: auto;
-        max-height: 100%;
-      }
       .swiper-pagination-bullet {
         width: 20px !important;
         height: 20px !important;
+        cursor: default !important;
         background: var(--theme-color);
       }
     }
+  }
+}
+.swiperSlideVertical {
+  width: auto !important;
+  max-width: 50vw;
+  height: 63vh !important;
+  max-height: 100%;
+
+  @include phone {
+    width: 85vw !important;
+    max-width: 85vw;
+    height: auto !important;
+    max-height: 100%;
+  }
+}
+.swiperSlideHorizontal {
+  width: auto !important;
+  max-width: 58vw;
+  height: 45vh !important;
+  max-height: 100%;
+
+  @include phone {
+    width: 85vw !important;
+    max-width: 85vw;
+    height: auto !important;
+    max-height: 100%;
   }
 }

@@ -42,28 +42,28 @@ export default function CustomSwiper({ title }: { title: string }) {
         modules={[Pagination, EffectCoverflow]}
       >
         <SwiperPrev />
-        <SwiperSlide className="swiper-slide-vertical">
+        <SwiperSlide className={styles.swiperSlideVertical}>
           <Card url="/61st/project/haunted-house/brochure.webp" />
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide-vertical">
+        <SwiperSlide className={styles.swiperSlideVertical}>
           <Card url="/61st/img/guest.webp" />
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide-vertical">
+        <SwiperSlide className={styles.swiperSlideVertical}>
           <Card url="/61st/project/haunted-house/brochure.webp" />
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide-vertical">
+        <SwiperSlide className={styles.swiperSlideVertical}>
           <Card url="/61st/img/guest.webp" />
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide-vertical">
+        <SwiperSlide className={styles.swiperSlideVertical}>
           <Card url="/61st/project/haunted-house/brochure.webp" />
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide-vertical">
+        <SwiperSlide className={styles.swiperSlideVertical}>
           <Card url="/61st/img/guest.webp" />
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide-vertical">
+        <SwiperSlide className={styles.swiperSlideVertical}>
           <Card url="/61st/project/haunted-house/brochure.webp" />
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide-horizontal">
+        <SwiperSlide className={styles.swiperSlideHorizontal}>
           <Card url="/61st/project/gatikohun/brochure.webp" />
         </SwiperSlide>
         <SwiperNext />
