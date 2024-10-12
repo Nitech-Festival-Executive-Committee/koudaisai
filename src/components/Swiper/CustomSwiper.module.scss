@@ -86,7 +86,7 @@
       background-image: none;
     }
 
-    @include phone {
+    @media screen and (max-aspect-ratio: 1/1) {
       .swiper {
         width: 100vw;
       }
@@ -109,7 +109,7 @@
   height: 63vh !important;
   max-height: 100%;
 
-  @media screen and (max-aspect-ratio: 1/1) {
+  @include phone {
     width: 85vw !important;
     max-width: 85vw;
     height: auto !important;
@@ -121,7 +121,7 @@
   height: 45vh !important;
   max-height: 100%;
 
-  @media screen and (max-aspect-ratio: 1/1) {
+  @include phone {
     width: 85vw !important;
     max-width: 85vw;
     height: auto !important;
