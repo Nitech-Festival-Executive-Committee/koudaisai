@@ -8,7 +8,7 @@ interface ContentBoxProps {
 export default function ContentBox({ title, children }: ContentBoxProps) {
   return (
     <div className={styles.contentBox}>
-      <span>{title}</span>
+      <span className={styles.contentBoxTitle}>{title}</span>
       {children}
     </div>
   );
