@@ -106,11 +106,10 @@
 }
 .swiperSlideVertical {
   width: auto !important;
-  max-width: 50vw;
   height: 63vh !important;
   max-height: 100%;
 
-  @include phone {
+  @media screen and (max-aspect-ratio: 1/1) {
     width: 85vw !important;
     max-width: 85vw;
     height: auto !important;
@@ -119,11 +118,10 @@
 }
 .swiperSlideHorizontal {
   width: auto !important;
-  max-width: 58vw;
   height: 45vh !important;
   max-height: 100%;
 
-  @include phone {
+  @media screen and (max-aspect-ratio: 1/1) {
     width: 85vw !important;
     max-width: 85vw;
     height: auto !important;
