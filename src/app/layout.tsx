@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import "@/styles/style.css";
+import "@/styles/style.scss";
 
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import SnsIconList from "@/components/Sns/SnsIconList";
+import PageTop from "@/components/PageTop/PageTop";
 
 // TODO: authorとcopyrightを作成
 // author: "名古屋工業大学第62回工大祭実行委員会",
@@ -41,7 +42,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <SnsIconList pcOnly />
-        {/* page-top */}
+        <PageTop />
         <Footer />
       </body>
     </html>
