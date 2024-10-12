@@ -165,15 +165,12 @@ export default function About() {
           </ContentBox>
           <ContentBox title={"7月"}>
             <p>納涼祭り</p>
-            <ContentImage img="/62nd/about/img/nouryou1.webp"></ContentImage>
-            <ContentImage img="/62nd/about/img/nouryou2.webp"></ContentImage>
-            <ContentImage img="/62nd/about/img/nouryou3.webp"></ContentImage>
+            <ContentImage img="/62nd/about/img/nouryou.webp"></ContentImage>
           </ContentBox>
           <ContentBox title={"8月"}>
             <p>備品制作</p>
             <p>にっぽんど真ん中祭り当日ボランティア</p>
             <p>子供企画</p>
-            <ContentImage img="/62nd/about/img/kodomokikaku.webp"></ContentImage>
           </ContentBox>
           <ContentBox title={"9月"}>
             <p>備品制作</p>
@@ -218,6 +215,8 @@ export default function About() {
           </ContentBox>
           <ContentBox title={"11/18(土), 19(日)"}>
             <p>工大祭当日</p>
+            <ContentImage img="/62nd/about/img/koudaisai1.webp"></ContentImage>
+            <ContentImage img="/62nd/about/img/koudaisai2.webp"></ContentImage>
           </ContentBox>
         </SectionBody>
       </PageWrapper>

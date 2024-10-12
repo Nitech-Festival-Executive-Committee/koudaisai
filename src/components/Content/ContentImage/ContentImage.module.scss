@@ -7,10 +7,10 @@
   justify-content: space-around;
   padding: 1.5vh 0;
   img {
-    width: 90%;
     max-width: 90%;
-    max-height: 65vh;
-    object-fit: cover;
+    height: auto;
+    max-height: 40vh;
+    object-fit: contain;
   }
 }
 
