@@ -1,3 +1,5 @@
+@import "variables";
+
 :root {
   --theme-color: #f7791e;
 
@@ -17,8 +19,12 @@ body {
     "Segoe UI Symbol", "Noto Color Emoji";
 }
 main {
-  --main-padding-top: calc(3vw + 14px + 1.3vh);
-  padding-top: calc(var(--main-padding-top) + 2vw);
+  padding-top: calc(var(--main-padding-top));
+  overflow-x: hidden;
+  --main-padding-top: 60px;
+  @include phone {
+    --main-padding-top: 30px;
+  }
 }
 img {
   object-fit: contain;
@@ -26,57 +32,6 @@ img {
 
 .setTimer {
   display: none;
-}
-
-.page_top {
-  display: none;
-  width: 90px;
-  height: 90px;
-  position: fixed;
-  bottom: 3%;
-  right: 1.5%;
-  border-radius: 50px;
-}
-.page_top a {
-  position: relative;
-  display: block;
-  width: 90px;
-  height: 90px;
-  text-decoration: none;
-}
-.page_top a::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f102";
-  font-size: 25px;
-  color: var(--theme-color);
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  top: -38px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-  transition: 0.3s;
-}
-.page_top a:hover::before {
-  top: -50px;
-}
-.page_top a::after {
-  content: "PAGE TOP";
-  font-size: 13px;
-  color: #fff;
-  position: absolute;
-  top: 48px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-  color: var(--theme-color);
-  font-weight: 700;
 }
 
 .sponsor {
@@ -87,18 +42,18 @@ img {
   width: 100%;
 }
 .sponsor img {
-  object-fit: contain;
   width: 100%;
+  object-fit: contain;
 }
 
 .pre-festival {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0 auto;
-  padding: 1% 1% 0 1%;
+  justify-content: center;
   width: 85%;
+  padding: 1% 1% 0 1%;
+  margin: 0 auto;
 }
 .pre-festival span {
   font-size: 30px !important;
@@ -114,16 +69,16 @@ img {
 }
 .pre-festival-thum {
   display: flex;
-  max-height: 65px;
-  height: 4.5vw;
-  margin: 0.5%;
   align-items: center;
+  height: 4.5vw;
+  max-height: 65px;
+  margin: 0.5%;
   border: thin solid black;
   border-radius: 5px;
 }
 .pre-festival-thum img {
-  object-fit: cover;
   height: 100%;
+  object-fit: cover;
 }
 
 .pc-only {
