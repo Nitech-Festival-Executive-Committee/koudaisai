@@ -52,6 +52,11 @@ export default function About() {
               <a href="../access/">アクセス</a>をご覧ください。
             </p>
           </ContentBox>
+          <p style={{ textAlign: "right" }}>
+            <a href="../faq/" aria-label="アクセス">
+              その他のよくある質問はこちらから
+            </a>
+          </p>
 
           <ContentTitle title="役割分担" size={2} />
           <ContentBox title={"委員長会"}>
