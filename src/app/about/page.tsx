@@ -149,16 +149,7 @@ export default function About() {
             <ContentImage img="/62nd/about/img/sinkan.webp"></ContentImage>
           </ContentBox>
           <ContentBox title={"5月"}>
-            <p>
-              <a
-                href="https://www.instagram.com/daidodaisai/"
-                target="_blank"
-                aria-label="大同大学大学祭公式Instagramを開く"
-              >
-                大同大学
-              </a>
-              当日ボランティア
-            </p>
+            <p>他大学祭当日ボランティア</p>
           </ContentBox>
           <ContentBox title={"6月"}>
             <p>水無月杯</p>
@@ -169,51 +160,22 @@ export default function About() {
           </ContentBox>
           <ContentBox title={"8月"}>
             <p>備品制作</p>
-            <p>にっぽんど真ん中祭り当日ボランティア</p>
+            <p>外部祭ボランティア</p>
             <p>子供企画</p>
           </ContentBox>
           <ContentBox title={"9月"}>
             <p>備品制作</p>
-            <p>名古屋女子大学当日ボランティア</p>
+            <p>他大学祭当日ボランティア</p>
           </ContentBox>
           <ContentBox title={"10月"}>
             <p>秋祭り</p>
             <ContentImage img="/62nd/about/img/akimaturi.webp"></ContentImage>
-            <p>
-              <a
-                href="https://www.kinjo-fes.com/"
-                target="_blank"
-                aria-label="金城学院大学大学大学祭公式ページを開く"
-              >
-                金城学院大学
-              </a>
-              当日ボランティア
-            </p>
-            <p>椙山女学園大学当日ボランティア</p>
-            <p>
-              <a
-                href="https://twitter.com/toukaisai"
-                target="_blank"
-                aria-label="東海学園大学公式twitterを開く"
-              >
-                東海学園大学
-              </a>
-              当日ボランティア
-            </p>
+            <p>他大学祭当日ボランティア</p>
           </ContentBox>
           <ContentBox title={"11月"}>
-            <p>
-              <a
-                href="https://twitter.com/shidaisai_ncu"
-                target="_blank"
-                aria-label="名古屋市立大学大学祭公式twitterを開く"
-              >
-                名古屋市立大学
-              </a>
-              当日ボランティア
-            </p>
+            <p>他大学祭当日ボランティア</p>
           </ContentBox>
-          <ContentBox title={"11/18(土), 19(日)"}>
+          <ContentBox title={"11月中旬"}>
             <p>工大祭当日</p>
             <ContentImage img="/62nd/about/img/koudaisai1.webp"></ContentImage>
             <ContentImage img="/62nd/about/img/koudaisai2.webp"></ContentImage>
