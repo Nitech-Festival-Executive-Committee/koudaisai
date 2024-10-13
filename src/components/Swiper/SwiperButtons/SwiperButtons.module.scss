@@ -1,0 +1,34 @@
+@import "variables";
+
+.swiperButton {
+  position: absolute;
+  top: 44%;
+  z-index: 50;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (max-aspect-ratio: 1/1) {
+    display: none;
+  }
+}
+.swiperNext {
+  right: 5%;
+}
+.swiperPrev {
+  left: 5%;
+}
+
+.shaderLeft {
+  box-shadow: -150px -20px 100px 240px white;
+}
+.shaderRight {
+  box-shadow: 150px -20px 100px 240px white;
+}
+
+.buttonIcon {
+  color: var(--theme-color);
+}
