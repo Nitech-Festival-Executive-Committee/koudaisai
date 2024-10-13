@@ -51,7 +51,7 @@ export default function Access() {
           <ContentBox title={"どのエリアを回ることができますか?"}>
             <p>準備中</p>
           </ContentBox>
-          <p style={{ textAlign: "right", paddingTop: "1vh" }}>
+          <p style={{ textAlign: "right" }}>
             <a href="../faq/" aria-label="アクセス">
               その他のよくある質問はこちらから
             </a>

@@ -1,13 +1,16 @@
 @import "variables";
 
 .contentTitle {
-  margin-top: 4vh;
+  margin: 10px 0 5px;
   font-weight: 800;
   text-align: center;
   & > span {
     position: relative;
     padding: 0 2vw;
     background: #fff;
+  }
+  @include phone {
+    margin: 10px 10px 5px;
   }
 }
 
@@ -16,7 +19,7 @@
   font-weight: 800;
   text-align: center;
   @include phone {
-    margin: 5% 3%;
+    margin: 23px 10px 5px;
   }
 }
 .fontEffect {
