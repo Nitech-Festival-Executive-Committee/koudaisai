@@ -9,8 +9,14 @@
   img {
     max-width: 90%;
     height: auto;
+    max-height: 65vh;
     max-height: 40vh;
+    object-fit: cover;
     object-fit: contain;
+    @include phone {
+      max-width: 95%;
+      max-height: 58vh;
+    }
   }
 }
 

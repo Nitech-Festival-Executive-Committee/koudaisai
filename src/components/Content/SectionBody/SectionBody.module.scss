@@ -4,29 +4,26 @@
   width: 36%;
   margin: 0 2%;
   font-weight: 600;
+  @include phone {
+    width: 95%;
+    margin: 0 auto;
+  }
 }
 // TODO: 廃止するかも
 .information-block-wider {
   width: 70%;
+  @include phone {
+    width: 98%;
+  }
   .information-content-flex > div {
     width: 24%;
+    @include phone {
+      width: 47%;
+    }
   }
 }
 .information-block:not(.information-block-flex)
   > div:first-child
   > .information-title {
   margin-top: 3vh;
-}
-
-@include phone {
-  .contentBlock {
-    width: 95%;
-    margin: 0 auto;
-  }
-  .information-block-wider {
-    width: 98%;
-  }
-  .information-block-wider .information-content-flex > div {
-    width: 47%;
-  }
 }

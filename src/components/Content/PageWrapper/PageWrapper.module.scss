@@ -4,6 +4,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @include phone {
+    flex-direction: column;
+  }
 }
 
 // TODO: 廃止するかも
@@ -20,11 +23,5 @@
     img {
       max-width: 100%;
     }
-  }
-}
-
-@include phone {
-  .wrapper {
-    flex-direction: column;
   }
 }

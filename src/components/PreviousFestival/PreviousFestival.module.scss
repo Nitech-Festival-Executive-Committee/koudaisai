@@ -8,6 +8,10 @@
   width: 85%;
   padding: 1% 1% 0 1%;
   margin: 0 auto;
+  @include phone {
+    width: 98%;
+    margin-top: 10%;
+  }
 }
 
 .preFestival span {
@@ -31,22 +35,15 @@
   background-color: white;
   border: thin solid black;
   border-radius: 5px;
+  @include phone {
+    height: 13vw;
+    max-height: 7vh;
+    margin: 3px;
+  }
 }
 
 .preFestivalThum img {
   width: auto;
   height: 100%;
   object-fit: contain;
-}
-
-@include phone {
-  .preFestival {
-    width: 98%;
-    margin-top: 10%;
-  }
-  .preFestivalThum {
-    height: 13vw;
-    max-height: 7vh;
-    margin: 3px;
-  }
 }

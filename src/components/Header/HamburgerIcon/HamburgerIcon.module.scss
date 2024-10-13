@@ -6,6 +6,9 @@
   align-items: center;
   justify-content: center;
   width: 12vw;
+  @include phone {
+    display: flex;
+  }
 }
 
 .hamburgerIconButton {
@@ -21,10 +24,4 @@
   position: absolute;
   width: 24px;
   height: 24px;
-}
-
-@include phone {
-  .hamburgerIconContainer {
-    display: flex;
-  }
 }
