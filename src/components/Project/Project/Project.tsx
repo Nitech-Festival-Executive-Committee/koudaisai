@@ -1,5 +1,4 @@
 import React from "react";
-import { projectBox } from "@/app/project/projectInterface";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
@@ -7,9 +6,10 @@ import ProjectContent from "../ProjectContent/ProjectContent";
 import ProjectLogo from "../ProjectLogo/ProjectLogo";
 import ProjectTag from "../ProjectTag/ProjectTag";
 import BochureImage from "../BrochureImage/BochureImage";
+import { ProjectBox } from "@/types/types";
 
 interface ProjectProps {
-  projectData: Record<string, projectBox | undefined>;
+  projectData: Record<string, ProjectBox | undefined>;
   logoPath?: string; // 指定が無い場合は logo.webp
   brochurePath?: string; // 指定が無い場合は brochure.webp
   children: React.ReactNode;
@@ -41,7 +41,7 @@ export default function Project({
             }
           />
           <ProjectContent
-            projectData={projectData as Record<string, projectBox>}
+            projectData={projectData as Record<string, ProjectBox>}
           />
         </SectionBody>
         {children}

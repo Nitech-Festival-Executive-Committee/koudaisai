@@ -1,15 +1,15 @@
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
-import { projectBox } from "@/app/project/projectInterface";
+import { NITFES_DATE } from "@/const/const";
+import { ProjectBox } from "@/types/types";
 import { ReactNode } from "react";
 
 interface ProjectContentProps {
-  projectData: Record<string, projectBox>;
+  projectData: Record<string, ProjectBox>;
 }
 
 export default function ProjectContent({ projectData }: ProjectContentProps) {
   let isDateAlreadyGenerated = false;
   // 開催日時
-  const date = ["11/16(土)", "11/17(日)"];
 
   return (
     <>
@@ -28,13 +28,13 @@ export default function ProjectContent({ projectData }: ProjectContentProps) {
             <ContentBox key={key} title="開催日時">
               {projectData?.day1 && (
                 <>
-                  1日目{`(${date[0]})`}: {projectData.day1.content}
+                  1日目{`(${NITFES_DATE.DAY1})`}: {projectData.day1.content}
                   <br />
                 </>
               )}
               {projectData?.day2 && (
                 <>
-                  2日目{`(${date[1]})`}: {projectData.day2.content}
+                  2日目{`(${NITFES_DATE.DAY2})`}: {projectData.day2.content}
                   <br />
                 </>
               )}

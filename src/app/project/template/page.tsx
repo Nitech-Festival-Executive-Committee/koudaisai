@@ -5,10 +5,11 @@ import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Project from "@/components/Project/Project/Project";
 import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
 import Underline from "@/components/Content/Underline/Underline";
-import { createProjectData, projectBox } from "../projectInterface";
+import { ProjectBox } from "@/types/types";
+import { createProjectData } from "../projectInterface";
 
 // データの順番通りに生成されます
-export const templateData: Record<string, projectBox | undefined> =
+export const templateData: Record<string, ProjectBox | undefined> =
   createProjectData({
     // 必須項目
     link: "human-mining",
