@@ -15,7 +15,7 @@ import {
 export default function Faq() {
   return (
     <>
-      <ContentTitle title="よくある質問" size={1} bigTitle={true} />
+      <ContentTitle title="よくある質問" size={1} bigTitle />
       <PageWrapper>
         <SectionBody>
           <ContentBox title={`第${NITFES_EDITION}回工大祭の開催日時は?`}>
@@ -98,7 +98,7 @@ export default function Faq() {
         </SectionBody>
       </PageWrapper>
 
-      <ContentTitle title="お問い合わせ" size={1} bigTitle={true} />
+      <ContentTitle title="お問い合わせ" size={1} bigTitle />
       <PageWrapper>
         <SectionBody>
           <ContentTitle title="お問合せ先" size={2} />

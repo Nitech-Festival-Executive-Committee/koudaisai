@@ -8,6 +8,7 @@
   width: 12vw;
   @include phone {
     display: flex;
+    padding: 1px 3px 0px 3px;
   }
 }
 
