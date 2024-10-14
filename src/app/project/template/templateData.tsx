@@ -1,14 +1,13 @@
 /* eslint-disable react/jsx-key */
-import React from "react";
 import Underline from "@/components/Content/Underline/Underline";
-import { createProjectData, projectBox } from "../projectInterface";
+import { projectBox, createProjectData } from "../projectInterface";
 
+// データの順番通りに生成されます
 export const templateData: Record<string, projectBox | undefined> =
   createProjectData({
     // 必須項目
     link: "human-mining",
     name: "人力ビットコインマイニング",
-    day1: "10:00～16:00",
     projectTag: ["抽選券", "予約"],
     description: (
       <p>
@@ -16,6 +15,7 @@ export const templateData: Record<string, projectBox | undefined> =
         <Underline>SGDsに貢献したとてもエコな企画です。</Underline>
       </p>
     ),
+    day1: "10:00～16:00",
     place: "2号館前ステージ",
     capacity: "100人",
     precautions: [

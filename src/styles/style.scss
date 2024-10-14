@@ -23,7 +23,7 @@ main {
   overflow-x: hidden;
   --main-padding-top: 60px;
   @include phone {
-    --main-padding-top: 30px;
+    --main-padding-top: 50px;
   }
 }
 img {

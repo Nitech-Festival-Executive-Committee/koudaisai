@@ -3,9 +3,8 @@ import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Project from "@/components/Project/Project/Project";
 import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
-
 import { templateData } from "./templateData";
-import { timeScheduleDay1, timeScheduleDay2 } from "./templateTable";
+import { timeScheduleDay1, timeScheduleDay2 } from "./templateSchedule";
 
 export default function ProjectTemplate() {
   return (

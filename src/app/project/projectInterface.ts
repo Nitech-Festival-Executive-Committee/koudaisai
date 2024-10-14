@@ -4,7 +4,7 @@ import { ReactNode, isValidElement, cloneElement } from "react";
 export interface projectBox {
   title: string;
   content: string | ReactNode | (string | ReactNode)[];
-  isHidden: boolean;
+  isHidden: boolean; // データを企画ページに通常通り標示するのではなく、加工したり他のページに表示する場合
 }
 
 export interface optionalProjectBox {
@@ -17,10 +17,10 @@ export interface optionalProjectBox {
 export interface baseProjectData {
   link: projectBox; // project以下のリンク(ex. seiyu)
   name: projectBox; // プロジェクト名
-  day1: projectBox | undefined; // 開催時刻。開催しない場合は空欄
-  day2: projectBox | undefined; // 開催時刻。開催しない場合は空欄
   projectTag: projectBox | undefined; // 企画タグ(追加分)
   description: projectBox; // 企画紹介
+  day1: projectBox | undefined; // 開催時刻。開催しない場合は空欄
+  day2: projectBox | undefined; // 開催時刻。開催しない場合は空欄
   place: projectBox; // 開催場所
   capacity: projectBox | undefined; // 定員
   precautions: projectBox; // 注意事項
@@ -32,10 +32,10 @@ export interface baseProjectData {
 export const createProjectData = (data: {
   link: string;
   name: string;
-  day1?: string | ReactNode;
-  day2?: string | ReactNode;
   projectTag?: (string | ReactNode)[];
   description: string | ReactNode;
+  day1?: string | ReactNode;
+  day2?: string | ReactNode;
   place: string | ReactNode;
   capacity?: string | ReactNode;
   precautions?: string | ReactNode | (string | ReactNode)[];
@@ -47,10 +47,10 @@ export const createProjectData = (data: {
   const requiredFields: Record<string, { title: string; hidden: boolean }> = {
     link: { title: "リンク", hidden: true },
     name: { title: "プロジェクト名", hidden: true },
-    day1: { title: "1日目", hidden: false },
-    day2: { title: "2日目", hidden: false },
     projectTag: { title: "企画タグ", hidden: true },
     description: { title: "企画紹介", hidden: false },
+    day1: { title: "1日目", hidden: false },
+    day2: { title: "2日目", hidden: false },
     place: { title: "開催場所", hidden: false },
     capacity: { title: "定員", hidden: false },
     precautions: { title: "注意事項", hidden: false },

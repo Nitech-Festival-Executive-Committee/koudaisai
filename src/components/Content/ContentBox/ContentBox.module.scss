@@ -5,12 +5,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3% 3.5% 2.5% 3.5%;
+  padding: 13px 13px 8px;
   margin-top: 1.8em;
   font-size: 1rem;
   border: solid 2px var(--theme-color);
   border-radius: 8px;
-  & > span {
+  .contentBoxTitle {
     position: absolute;
     top: -13px;
     left: 10px;
