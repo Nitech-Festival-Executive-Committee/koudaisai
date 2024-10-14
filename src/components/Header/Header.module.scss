@@ -34,10 +34,8 @@
   }
   @include phone {
     padding: 0 !important;
-    border-radius: 0 0 15px 15px;
-
     &.scrollOn {
-      border-radius: 15px;
+      border-radius: 13px;
     }
   }
 }
