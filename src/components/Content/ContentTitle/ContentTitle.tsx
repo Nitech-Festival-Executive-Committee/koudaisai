@@ -3,7 +3,7 @@ import styles from "./ContentTitle.module.scss";
 interface ContentTitleProps {
   title: string;
   size: number;
-  bigTitle?: boolean;
+  bigTitle?: boolean; // タイトルを横幅いっぱいに表示するかどうか
   style?: React.CSSProperties;
 }
 
