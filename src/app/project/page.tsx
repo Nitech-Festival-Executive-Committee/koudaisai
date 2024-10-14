@@ -1,9 +1,9 @@
-import RecommendedFeatures from "@/components/RecommendedFeatures/RecommendedFeatures";
+import RecommendedProjects from "@/components/RecommendedProjects/RecommendedProjects";
 
 export default function Project() {
   return (
     <>
-      <RecommendedFeatures />
+      <RecommendedProjects />
     </>
   );
 }
