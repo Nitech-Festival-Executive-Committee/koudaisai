@@ -3,6 +3,12 @@ import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
+import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
+
+export const metadata = {
+  title: `協賛 - 第${NITFES_EDITION}回工大祭`,
+  description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭の協賛一覧です。`,
+};
 
 export default function Sponsor() {
   return (

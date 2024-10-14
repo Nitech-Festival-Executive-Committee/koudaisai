@@ -12,6 +12,11 @@ import {
   NITFES_YEAR,
 } from "@/const/const";
 
+export const metadata = {
+  title: `よくある質問 - 第${NITFES_EDITION}回工大祭`,
+  description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭 - 工大祭でよくある質問について掲載しています。`,
+};
+
 export default function Faq() {
   return (
     <>

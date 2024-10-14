@@ -7,6 +7,12 @@ import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
 import Underline from "@/components/Content/Underline/Underline";
 import { ProjectBox } from "@/types/types";
 import { createProjectData } from "../projectInterface";
+import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
+
+export const metadata = {
+  title: `企画名 - 第${NITFES_EDITION}回工大祭`, // TODO: 企画名をprojectDataから取得する
+  description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭開催「企画名」の詳細ページです`, // TODO: 企画名をprojectDataから取得する
+};
 
 // データの順番通りに生成されます
 export const templateData: Record<string, ProjectBox | undefined> =
