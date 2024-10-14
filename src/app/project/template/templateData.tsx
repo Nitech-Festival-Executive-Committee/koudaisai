@@ -1,9 +1,10 @@
 /* eslint-disable react/jsx-key */
 import Underline from "@/components/Content/Underline/Underline";
-import { projectBox, createProjectData } from "../projectInterface";
+import { createProjectData } from "../projectInterface";
+import { ProjectBox } from "@/types/types";
 
 // データの順番通りに生成されます
-export const templateData: Record<string, projectBox | undefined> =
+export const templateData: Record<string, ProjectBox | undefined> =
   createProjectData({
     // 必須項目
     link: "human-mining",
