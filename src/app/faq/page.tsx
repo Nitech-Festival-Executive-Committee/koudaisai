@@ -22,7 +22,7 @@ export default function Faq() {
             <p>
               第{NITFES_EDITION}回工大祭「{NITFES_THEME}」は
               <Underline>
-                {NITFES_YEAR}年{NITFES_DATE_TEXT} {NITFES_TIME}
+                {NITFES_YEAR}年{NITFES_DATE_TEXT.BOTH} {NITFES_TIME}
               </Underline>
               に開催予定!!
             </p>
