@@ -13,7 +13,7 @@ export const createDate = (
   const date = new Date();
 
   date.setFullYear(NITFES_YEAR);
-  date.setMonth(NITFES_MONTH);
+  date.setMonth(NITFES_MONTH - 1);
   date.setDate(dayNumber === 1 ? NITFES_DATE1 : NITFES_DATE2);
   date.setHours(hour);
   date.setMinutes(minute);
