@@ -1,11 +1,11 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Underline from "@/components/Content/Underline/Underline";
 
-const StyledIframe = {
+const StyledIframe: CSSProperties = {
   width: "100%",
   height: "50vh",
   margin: "1vh 0",
