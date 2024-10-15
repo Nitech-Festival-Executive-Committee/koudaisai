@@ -11,6 +11,7 @@ import {
   NITFES_TIME,
   NITFES_YEAR,
 } from "@/const/const";
+import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
 
 export default function Faq() {
   return (
@@ -49,7 +50,10 @@ export default function Faq() {
             </p>
           </ContentBox>
           <ContentBox title={"どのエリアを回ることができますか?"}>
-            <p>準備中</p>
+            <p>
+              <a href="../project">企画一覧はこちらから</a>
+            </p>
+            <DecoratedImage img="/62nd/img/map.webp" alt="エリア" />
           </ContentBox>
         </SectionBody>
         <SectionBody>

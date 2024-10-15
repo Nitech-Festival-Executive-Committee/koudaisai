@@ -4,6 +4,7 @@ import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Underline from "@/components/Content/Underline/Underline";
+import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
 
 const StyledIframe = {
   width: "100%",
@@ -49,7 +50,10 @@ export default function Access() {
             </p>
           </ContentBox>
           <ContentBox title={"どのエリアを回ることができますか?"}>
-            <p>準備中</p>
+            <p>
+              <a href="../project">企画一覧はこちらから</a>
+            </p>
+            <DecoratedImage img="/62nd/img/map.webp" alt="エリア" />
           </ContentBox>
           <p style={{ textAlign: "right" }}>
             <a href="../faq/" aria-label="アクセス">

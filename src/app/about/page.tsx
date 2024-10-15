@@ -6,6 +6,7 @@ import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import Underline from "@/components/Content/Underline/Underline";
 import ContentImage from "@/components/Content/ContentImage/ContentImage";
+import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
 
 export default function About() {
   return (
@@ -44,7 +45,10 @@ export default function About() {
             </p>
           </ContentBox>
           <ContentBox title={"どのエリアを回ることができますか?"}>
-            <p>準備中</p>
+            <p>
+              <a href="../project">企画一覧はこちらから</a>
+            </p>
+            <DecoratedImage img="/62nd/img/map.webp" alt="エリア" />
           </ContentBox>
           <ContentBox title={"駐車場はありますか?"}>
             <p>
