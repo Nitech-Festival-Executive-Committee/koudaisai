@@ -6,7 +6,7 @@ export const metadata = {
   description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭の企画一覧です。`,
 };
 
-export default function Project() {
+export default function ProjectPage() {
   return (
     <>
       <CustomSwiper title="ゲスト企画" />
