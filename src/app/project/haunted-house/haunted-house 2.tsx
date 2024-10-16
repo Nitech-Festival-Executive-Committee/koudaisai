@@ -10,8 +10,8 @@ const schedule = {
     endDate: createDate(1, 16, 0),
   },
   day2: {
-    startDate: createDate(2, 10, 0),
-    endDate: createDate(2, 15, 30),
+    startDate: createDate(1, 10, 0),
+    endDate: createDate(1, 15, 30),
   },
 };
 
@@ -34,9 +34,7 @@ export const hauntedHouseProjectData: ProjectData = {
       title: "企画紹介",
       content: (
         <p>
-          今年は仕掛けのレベル別にコースをふたつに分けました！
-          <br />
-          子供から大人まで、幅広い年齢層の方に楽しんでいただけると思います♪
+          今年は仕掛けのレベル別にコースをふたつに分けました！子供から大人まで、幅広い年齢層の方に楽しんでいただけると思います♪
           <br />
           工大祭での思い出の一つになればうれしいです！
         </p>
