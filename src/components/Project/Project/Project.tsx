@@ -44,7 +44,7 @@ export default function Project({
           />
         </SectionBody>
         <SectionBody>
-          <ContentTitle title="hoge" size={2} />
+          <ContentTitle title="企画詳細" size={2} />
           <ProjectTag
             day1={projectData.schedule.day1 ? true : false}
             day2={projectData.schedule.day2 ? true : false}
