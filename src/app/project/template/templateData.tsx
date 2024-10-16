@@ -20,7 +20,7 @@ const place = "2号館前ステージ";
 
 export const templateProjectData: ProjectData = {
   // ContentBoxに含まないデータ
-  link: "human-mining",
+  link: "template",
   name: "人力ビットコインマイニング",
   tags: ["抽選券", "予約"],
   category: CATEGORY.EXPERIENCE,
