@@ -10,67 +10,15 @@
 
     .swiper-wrapper {
       align-items: center;
+      pointer-events: none;
     }
 
     .swiper-slide {
-      display: flex;
-      flex-direction: column;
-      align-items: self-start;
-      justify-content: flex-end;
+      width: auto;
       filter: blur(2px);
-      border-right: 1px solid rgba(200, 200, 200, 0.8);
-      border-bottom: 1px solid rgba(200, 200, 200, 0.8);
-      border-radius: 10px;
-      box-shadow: 15px 13px 8px 3px rgb(85 85 85 / 50%);
-      /* tagなどで使用するスタイル */
-      & span {
-        display: inline-block;
-        padding: 7px 18px 7px 25px;
-        font-family: "Open Sans", sans-serif;
-        font-size: 0.8rem;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        background: #1b7402;
-        border-radius: 0 20px 20px 0px;
-      }
-
-      & h2 {
-        padding: 25px 45px 0 25px;
-        margin-bottom: 15px;
-        font-family: "Roboto", sans-serif;
-        font-size: 1.3rem;
-        font-weight: 400;
-        line-height: 1.4;
-        color: #fff;
-      }
-
-      & p {
-        display: flex;
-        align-items: center;
-        padding: 0 25px 35px 25px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        color: #fff;
-      }
-
-      & svg {
-        width: 22px;
-        height: 22px;
-        margin-right: 7px;
-        color: #fff;
-      }
-
-      & img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-      }
     }
-
     .swiper-slide-active {
-      filter: blur(0px);
+      filter: blur(0);
     }
 
     .swiper-pagination-bullet {
@@ -79,11 +27,6 @@
       margin: 0 0 0 10px !important;
       background: var(--theme-color);
       transition: 0.5s;
-    }
-
-    .swiper-3d .swiper-slide-shadow-left,
-    .swiper-3d .swiper-slide-shadow-right {
-      background-image: none;
     }
 
     @media screen and (max-aspect-ratio: 1/1) {
@@ -102,29 +45,5 @@
         background: var(--theme-color);
       }
     }
-  }
-}
-.swiperSlideVertical {
-  width: auto !important;
-  height: 63vh !important;
-  max-height: 100%;
-
-  @include phone {
-    width: 85vw !important;
-    max-width: 85vw;
-    height: auto !important;
-    max-height: 100%;
-  }
-}
-.swiperSlideHorizontal {
-  width: auto !important;
-  height: 45vh !important;
-  max-height: 100%;
-
-  @include phone {
-    width: 85vw !important;
-    max-width: 85vw;
-    height: auto !important;
-    max-height: 100%;
   }
 }

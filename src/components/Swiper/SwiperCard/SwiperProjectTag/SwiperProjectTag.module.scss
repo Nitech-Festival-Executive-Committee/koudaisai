@@ -1,0 +1,25 @@
+.swiperTag {
+  display: inline-block;
+  padding: 5px 18px 5px 18px;
+  margin-bottom: 4px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 2px;
+  border-radius: 0 20px 20px 0px;
+}
+
+.swiperProjectTag {
+  background: rgb(255 142 10 / 80%);
+}
+
+.swiperDay1Tag {
+  background: var(--day1);
+}
+
+.swiperDay2Tag {
+  background: var(--day2);
+}
+.swiperDayBothTag {
+  background: var(--day-both);
+}
