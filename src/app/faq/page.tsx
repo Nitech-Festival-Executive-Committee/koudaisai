@@ -4,17 +4,31 @@ import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Underline from "@/components/Content/Underline/Underline";
+import {
+  NITFES_DATE_TEXT,
+  NITFES_EDITION,
+  NITFES_THEME,
+  NITFES_TIME,
+  NITFES_YEAR,
+} from "@/const/const";
+
+export const metadata = {
+  title: `よくある質問 - 第${NITFES_EDITION}回工大祭`,
+  description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭 - 工大祭でよくある質問について掲載しています。`,
+};
 
 export default function Faq() {
   return (
     <>
-      <ContentTitle title="よくある質問" size={1} bigTitle={true} />
+      <ContentTitle title="よくある質問" size={1} bigTitle />
       <PageWrapper>
         <SectionBody>
-          <ContentBox title={"第62回工大祭の開催日時は?"}>
+          <ContentBox title={`第${NITFES_EDITION}回工大祭の開催日時は?`}>
             <p>
-              第62回工大祭「Ignition」は
-              <Underline>2024年11月16日(土)・17日(日) 10:00-18:00</Underline>
+              第{NITFES_EDITION}回工大祭「{NITFES_THEME}」は
+              <Underline>
+                {NITFES_YEAR}年{NITFES_DATE_TEXT.BOTH} {NITFES_TIME}
+              </Underline>
               に開催予定!!
             </p>
           </ContentBox>
@@ -45,7 +59,9 @@ export default function Faq() {
         </SectionBody>
         <SectionBody>
           <ContentBox title={"今年の工大祭のテーマは何ですか?"}>
-            <p>第62回工大祭のテーマは「Ignition」!</p>
+            <p>
+              第{NITFES_EDITION}回工大祭のテーマは「{NITFES_THEME}」!
+            </p>
           </ContentBox>
           <ContentBox title={"企画一覧/タイムテーブル"}>
             <p>
@@ -87,7 +103,7 @@ export default function Faq() {
         </SectionBody>
       </PageWrapper>
 
-      <ContentTitle title="お問い合わせ" size={1} bigTitle={true} />
+      <ContentTitle title="お問い合わせ" size={1} bigTitle />
       <PageWrapper>
         <SectionBody>
           <ContentTitle title="お問合せ先" size={2} />
@@ -114,8 +130,7 @@ export default function Faq() {
               〒466-8555
               <br />
               愛知県名古屋市昭和区御器所町大学会館地下一階
-              <br />
-              第62回名古屋工業大学工大祭実行委員会
+              <br />第{NITFES_EDITION}回名古屋工業大学工大祭実行委員会
             </p>
           </ContentBox>
         </SectionBody>

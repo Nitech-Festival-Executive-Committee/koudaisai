@@ -18,18 +18,12 @@ const schedule = {
 
 const place = "2号館前ステージ";
 
-export const templateProjectData: ProjectData = {
+export const templateProjectData1: ProjectData = {
   // ContentBoxに含まないデータ
-  link: "template",
-  name: "人力ビットコインマイニング",
+  link: "horror",
+  name: "horror",
   tags: ["抽選券", "予約"],
-  category: [
-    CATEGORY.STAGE_PROJECT,
-    CATEGORY.FAMILY,
-    CATEGORY.STUDENT,
-    CATEGORY.EXPERIENCE,
-    CATEGORY.EXHIBITION,
-  ],
+  category: [CATEGORY.STAGE_PROJECT, CATEGORY.STUDENT],
   summary:
     "仮想通貨ビットコインを人力でマイニングします。GPUより高速でハッシュを見つけよう。",
 

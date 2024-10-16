@@ -4,157 +4,160 @@ import ContentBox from "../Content/ContentBox/ContentBox";
 import styles from "./RecommendedProjects.module.scss";
 import ContentImage from "../Content/ContentImage/ContentImage";
 import SectionBody from "../Content/SectionBody/SectionBody";
+import { ProjectData } from "@/types/projectInterface";
+import { templateProjectData1 } from "./TemplateRecomProjects/templateData1";
+import { templateProjectData2 } from "./TemplateRecomProjects/templateData2";
+import { templateProjectData3 } from "./TemplateRecomProjects/templateData3";
+import { templateProjectData4 } from "./TemplateRecomProjects/templateData4";
+import { templateProjectData5 } from "./TemplateRecomProjects/templateData5";
+import { templateProjectData6 } from "./TemplateRecomProjects/templateData6";
+import { Schedule } from "@/types/types";
 
-interface Stage {
-  startTime: string;
-  endTime: string;
-}
-
-interface Project {
-  id: number;
-  name: string;
-  category: string;
-  targetAge: string;
-  location: string;
-  img: string;
-  url: string;
-  stage: Stage | null;
-}
-
-const ProjectData: Project[] = [
-  {
-    id: 1,
-    name: "名工大王",
-    category: "体験型",
-    targetAge: "全年齢",
-    location: "2号館前ステージ",
-    img: "/61st/project/the-king-of-nitech/logo.webp",
-    url: "https://www.koudaisai.com/61st/project/the-king-of-nitech/",
-    stage: {
-      startTime: "10:00",
-      endTime: "16:00",
-    },
-  },
-  {
-    id: 2,
-    name: "ZIP-FM",
-    category: "体験型",
-    targetAge: "子供向け",
-    location: "1号館ホール",
-    img: "/61st/project/zip-fm/logo.webp",
-    url: "https://www.koudaisai.com/61st/project/zip-fm/",
-    stage: null,
-  },
-  {
-    id: 3,
-    name: "ガチコフン",
-    category: "体験型",
-    targetAge: "小学生以上",
-    location: "体育館",
-    img: "/61st/project/gatikohun/logo.webp",
-    url: "https://www.koudaisai.com/61st/project/gatikohun/",
-    stage: {
-      startTime: "11:00",
-      endTime: "14:00",
-    },
-  },
-  {
-    id: 4,
-    name: "お化け屋敷",
-    category: "食べ物",
-    targetAge: "子供向け",
-    location: "1号館ホール",
-    img: "/61st/project/haunted-house/logo.webp",
-    url: "https://www.koudaisai.com/61st/project/haunted-house/",
-    stage: {
-      startTime: "16:30",
-      endTime: "17:30",
-    },
-  },
+const projects = [
+  templateProjectData1,
+  templateProjectData2,
+  templateProjectData3,
+  templateProjectData4,
+  templateProjectData5,
+  templateProjectData6,
 ];
 
-//似てる企画
-const getSimilarProjects = (CurrentProject: Project): Project[] => {
-  return ProjectData.filter(
+// 似てる企画
+const getSimilarProjects = (currentProject: ProjectData): ProjectData[] => {
+  return projects.filter(
     (project) =>
-      project.id !== CurrentProject.id &&
-      (project.category === CurrentProject.category ||
-        project.location === CurrentProject.location)
+      project.link !== currentProject.link &&
+      project.category.some((cat) => currentProject.category.includes(cat))
   );
 };
 
-//時間が近い企画（前後１時間）
 const getNearbyStageProjects = (
-  projects: Project[],
-  currentProject: Project
-): Project[] => {
-  if (!currentProject.stage) return [];
+  projects: ProjectData[],
+  currentProject: ProjectData
+): ProjectData[] => {
+  if (!currentProject.schedule) return [];
+
+  const oneHour = 3600000;
+
+  const getStartEndTimes = (schedule: Schedule | undefined) => {
+    if (!schedule) return null;
+
+    // day1 のスケジュール
+    const day1Start = schedule.day1
+      ? new Date(
+          `2024-11-01T${schedule.day1.startDate.toISOString().slice(11, 16)}:00`
+        ).getTime()
+      : null;
+    const day1End = schedule.day1
+      ? new Date(
+          `2024-11-01T${schedule.day1.endDate.toISOString().slice(11, 16)}:00`
+        ).getTime()
+      : null;
+
+    // day2 のスケジュール
+    const day2Start = schedule.day2
+      ? new Date(
+          `2024-11-02T${schedule.day2.startDate.toISOString().slice(11, 16)}:00`
+        ).getTime()
+      : null;
+    const day2End = schedule.day2
+      ? new Date(
+          `2024-11-02T${schedule.day2.endDate.toISOString().slice(11, 16)}:00`
+        ).getTime()
+      : null;
+
+    return { day1Start, day1End, day2Start, day2End };
+  };
+
+  const currentTimes = getStartEndTimes(currentProject.schedule);
+  if (!currentTimes) return [];
+
   return projects.filter((project) => {
-    if (!project.stage) return false;
-    if (project.id === currentProject.id) return false;
-    const currentStart = new Date(
-      `2024-11-01T${currentProject.stage?.startTime}:00`
-    ).getTime();
-    const currentEnd = new Date(
-      `2024-11-01T${currentProject.stage?.endTime}:00`
-    ).getTime();
+    if (!project.schedule) return false;
+    if (project.link === currentProject.link) return false;
 
-    const oneHour = 3600000;
-    const startWindow = currentStart - oneHour;
-    const endWindow = currentEnd + oneHour;
+    const projectTimes = getStartEndTimes(project.schedule);
+    if (!projectTimes) return false;
 
-    const projectStart = new Date(
-      `2024-11-01T${project.stage.startTime}:00`
-    ).getTime();
-    const projectEnd = new Date(
-      `2024-11-01T${project.stage.endTime}:00`
-    ).getTime();
+    const {
+      day1Start: currentDay1Start,
+      day1End: currentDay1End,
+      day2Start: currentDay2Start,
+      day2End: currentDay2End,
+    } = currentTimes;
+    const {
+      day1Start: projectDay1Start,
+      day1End: projectDay1End,
+      day2Start: projectDay2Start,
+      day2End: projectDay2End,
+    } = projectTimes;
+
+    const startWindowDay1 = currentDay1Start
+      ? currentDay1Start - oneHour
+      : null;
+    const endWindowDay1 = currentDay1End ? currentDay1End + oneHour : null;
+
+    const startWindowDay2 = currentDay2Start
+      ? currentDay2Start - oneHour
+      : null;
+    const endWindowDay2 = currentDay2End ? currentDay2End + oneHour : null;
+
     return (
-      (projectStart >= startWindow && projectStart <= endWindow) ||
-      (projectEnd >= startWindow && projectEnd <= endWindow)
+      (projectDay1Start &&
+        startWindowDay1 &&
+        projectDay1Start >= startWindowDay1 &&
+        projectDay1Start <= endWindowDay1) ||
+      (projectDay1End &&
+        startWindowDay1 &&
+        projectDay1End >= startWindowDay1 &&
+        projectDay1End <= endWindowDay1) ||
+      (projectDay2Start &&
+        startWindowDay2 &&
+        projectDay2Start >= startWindowDay2 &&
+        projectDay2Start <= endWindowDay2) ||
+      (projectDay2End &&
+        startWindowDay2 &&
+        projectDay2End >= startWindowDay2 &&
+        projectDay2End <= endWindowDay2)
     );
   });
 };
 
-//似ていない企画
-const excludeSimilarProjects = (currentProject: Project): Project[] => {
+// 似ていない企画
+const excludeSimilarProjects = (currentProject: ProjectData): ProjectData[] => {
   const similarProjects = getSimilarProjects(currentProject);
-  const similarProjectsIds = similarProjects.map((project) => project.id);
-  return ProjectData.filter(
-    (project) => !similarProjectsIds.includes(project.id)
+  const similarProjectsLinks = similarProjects.map((project) => project.link);
+  return projects.filter(
+    (project) => !similarProjectsLinks.includes(project.link)
   );
 };
 
-//おすすめ企画のリスト
-const RecommendedProjectsList = (currentProject: Project): Project[] => {
+const RecommendedProjectsList = (
+  currentProject: ProjectData
+): ProjectData[] => {
   const similarProjects = getSimilarProjects(currentProject);
   const nonSimilarProjects = excludeSimilarProjects(currentProject);
   const nearbyStageProjects = getNearbyStageProjects(
     nonSimilarProjects,
     currentProject
   );
-
   return similarProjects.concat(nearbyStageProjects);
 };
 
 export default function RecommendedProjects() {
-  const currentProject = ProjectData[0];
-  const recommendedProject = RecommendedProjectsList(currentProject);
+  const currentProject = templateProjectData1;
+  const recommendedProjects = RecommendedProjectsList(currentProject);
   return (
     <div>
-      <ContentTitle title="おすすめ" size={2} bigTitle />
+      <ContentTitle title="おすすめ" size={2} />
       <div className={`${styles.informationBlock}`}>
         <SectionBody
           style={{ display: "flex", width: "95%", padding: "0vh 0" }}
         >
-          {recommendedProject.map((project) => (
-            <ContentBox
-              key={project.id}
-              title={project.name}
-              style={{ padding: "10px 2px 5px" }}
-            >
-              <a href={project.url}>
-                <ContentImage img={project.img} style={{ padding: "0vh 0" }} />
+          {recommendedProjects.slice(0, 4).map((project) => (
+            <ContentBox key={project.link} title={project.name}>
+              <a href={project.link}>
+                <ContentImage img={`/62nd/project/template/brochure.webp`} />
               </a>
             </ContentBox>
           ))}
