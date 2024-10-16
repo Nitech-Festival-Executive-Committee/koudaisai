@@ -20,10 +20,16 @@ const place = "2号館前ステージ";
 
 export const templateProjectData: ProjectData = {
   // ContentBoxに含まないデータ
-  link: "human-mining",
+  link: "template",
   name: "人力ビットコインマイニング",
   tags: ["抽選券", "予約"],
-  category: CATEGORY.EXPERIENCE,
+  category: [
+    CATEGORY.STAGE_PROJECT,
+    CATEGORY.FAMILY,
+    CATEGORY.STUDENT,
+    CATEGORY.EXPERIENCE,
+    CATEGORY.EXHIBITION,
+  ],
   summary:
     "仮想通貨ビットコインを人力でマイニングします。GPUより高速でハッシュを見つけよう。",
 
