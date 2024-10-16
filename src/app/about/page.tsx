@@ -6,6 +6,12 @@ import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import Underline from "@/components/Content/Underline/Underline";
 import ContentImage from "@/components/Content/ContentImage/ContentImage";
+import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
+
+export const metadata = {
+  title: `工大祭について - 第${NITFES_EDITION}回工大祭`,
+  description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭 - 工大祭ではどのようなことを行っているのかを掲載しています。`,
+};
 
 export default function About() {
   return (
