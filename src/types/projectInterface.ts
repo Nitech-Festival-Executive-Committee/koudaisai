@@ -12,7 +12,7 @@ export interface ProjectData {
   link: string;
   name: string;
   tags?: string[];
-  category: CategoryType; // ENUM
+  category: CategoryType[]; // ENUM
   summary: string;
 
   // ProjectBoxに変換する必要があるデータ
