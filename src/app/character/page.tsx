@@ -58,25 +58,25 @@ export default function Character() {
               <br />
               名工大の一本松古墳に登ると落単するという噂から、「落単古墳マン」が誕生したよ!
               <br />
-              <ContentImage img="/62nd/character/img/kohunman2.webp"></ContentImage>
-              <ContentBox title={"自己紹介"}>
-                <p>
-                  僕は落単古墳マン!!
-                  <br />
-                  名古屋工業大学の一本松古墳の中ではにわ君たちと一緒に暮らしてるんだ～
-                  <br />
-                  いつも寝てばっかりの僕と違ってはにわ君たちはちゃんと授業に出て充実した名工LIFEを送っているんだ...
-                  <br />
-                  寝てばっかりのせいなのかわからないけど僕は今年も単位が足りなくて卒業できないみたい...
-                  <br />
-                  他の大学に編入しようかな...
-                  <br />
-                  でもそのおかげで今年も工大祭に参加できるんだ!
-                  <br />
-                  今年も盛り上げていくよ～!
-                </p>
-              </ContentBox>
             </p>
+            <ContentImage img="/62nd/character/img/kohunman2.webp"></ContentImage>
+            <ContentBox title={"自己紹介"}>
+              <p>
+                僕は落単古墳マン!!
+                <br />
+                名古屋工業大学の一本松古墳の中ではにわ君たちと一緒に暮らしてるんだ～
+                <br />
+                いつも寝てばっかりの僕と違ってはにわ君たちはちゃんと授業に出て充実した名工LIFEを送っているんだ...
+                <br />
+                寝てばっかりのせいなのかわからないけど僕は今年も単位が足りなくて卒業できないみたい...
+                <br />
+                他の大学に編入しようかな...
+                <br />
+                でもそのおかげで今年も工大祭に参加できるんだ!
+                <br />
+                今年も盛り上げていくよ～!
+              </p>
+            </ContentBox>
           </ContentBox>
 
           <ContentBox title={"X(旧Twitter)"}>
