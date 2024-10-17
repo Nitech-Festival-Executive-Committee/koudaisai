@@ -4,6 +4,12 @@ import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Underline from "@/components/Content/Underline/Underline";
+import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
+
+export const metadata = {
+  title: `アクセス - 第${NITFES_EDITION}回工大祭`,
+  description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭 - 最寄り駅は鶴舞駅で、JR中央線でお越しの方は名大病院口から徒歩約8分、地下鉄鶴舞線でお越しの方は鶴舞公園口から徒歩11分です。`,
+};
 
 const StyledIframe: CSSProperties = {
   width: "100%",
