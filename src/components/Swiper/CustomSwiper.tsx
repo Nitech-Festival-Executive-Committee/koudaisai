@@ -11,17 +11,17 @@ import SwiperCard from "./SwiperCard/SwiperCard";
 import SwiperNext from "./SwiperButtons/SwiperNext";
 import SwiperPrev from "./SwiperButtons/SwiperPrev";
 import ContentTitle from "../Content/ContentTitle/ContentTitle";
-import { templateProjectData } from "@/app/project/template/templateData";
+import { templateProject } from "@/app/project/template/templateProject";
 
 const projects = [
-  templateProjectData,
-  templateProjectData,
-  templateProjectData,
-  templateProjectData,
-  templateProjectData,
-  templateProjectData,
-  templateProjectData,
-  templateProjectData,
+  templateProject,
+  templateProject,
+  templateProject,
+  templateProject,
+  templateProject,
+  templateProject,
+  templateProject,
+  templateProject,
 ];
 
 export default function CustomSwiper({ title }: { title: string }) {

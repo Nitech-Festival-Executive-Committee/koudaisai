@@ -13,7 +13,7 @@ export const metadata = {
   description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭開催「${templateProject.name}」の詳細ページです`,
 };
 
-// 関数名を変更(ex. TemplateProject -> MiniGame)
+// 関数名を変更(ex. MiniGame)
 export default function TemplateProject() {
   return (
     <Project projectData={templateProject}>
