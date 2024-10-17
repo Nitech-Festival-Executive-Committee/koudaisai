@@ -20,9 +20,12 @@ export default function ProjectTag({
             <span className={styles.projectBothTag}>1・2日目</span>
           ) : day1 ? (
             <span className={styles.projectDay1Tag}>1日目</span>
-          ) : (
+          ) : day2 ? (
             <span className={styles.projectDay2Tag}>2日目</span>
+          ) : (
+            <></>
           )}
+
           {exclusiveText.map((text, index) => (
             <span key={index} className={styles.projectExclusiveTag}>
               {text}

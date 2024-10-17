@@ -8,13 +8,15 @@ import SwiperInfoContent from "./SwiperInfoContent";
 // スライドがホバーされたときのCSSはSwiperCard.module.scssで定義
 // クラス名を受け取ってスタイルを変更する
 interface SwiperInfoProps {
+  title: string;
   place?: string;
-  schedule: ReactNode;
+  schedule?: ReactNode;
   swiperNameHoveredClassName: string;
   swiperArrowHoveredClassName: string;
 }
 
 export default function SwiperInfo({
+  title,
   place,
   schedule,
   swiperNameHoveredClassName,
@@ -24,7 +26,7 @@ export default function SwiperInfo({
     <>
       {/* スライドタイトル */}
       <span className={`${styles.swiperName} ${swiperNameHoveredClassName}`}>
-        企画一覧
+        {title}
         <ImArrowUpRight2
           className={`${styles.swiperArrow} ${swiperArrowHoveredClassName}`}
         />
@@ -33,7 +35,9 @@ export default function SwiperInfo({
       {/* Place */}
       {place && <SwiperInfoContent icon={FiMapPin} content={[place]} />}
       {/* Date */}
-      <SwiperInfoContent icon={FaRegCalendarAlt} content={schedule} />
+      {schedule && (
+        <SwiperInfoContent icon={FaRegCalendarAlt} content={schedule} />
+      )}
     </>
   );
 }
