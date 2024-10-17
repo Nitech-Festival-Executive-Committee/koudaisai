@@ -34,8 +34,8 @@ const schedule = {
 
 const place = "2号館前ステージ";
 
-// 変数名を変更(ex. templateProject -> miniGame)
-// ファイル名も変更(ex. templateProject.tsx -> miniGame.tsx)
+// 変数名を変更(ex. miniGame)
+// ファイル名も変更(ex. miniGame.tsx)
 export const templateProject: ProjectData = {
   // ContentBoxに含まないデータ
   link: "template", // 複数単語の場合はハイフンつなぎで記述
