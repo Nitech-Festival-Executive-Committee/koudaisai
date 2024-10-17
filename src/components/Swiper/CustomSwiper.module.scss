@@ -29,6 +29,10 @@
       transition: 0.5s;
     }
 
+    .swiper-slide-shadow-coverflow {
+      background-image: none !important;
+    }
+
     @media screen and (max-aspect-ratio: 1/1) {
       .swiper {
         width: 100vw;
