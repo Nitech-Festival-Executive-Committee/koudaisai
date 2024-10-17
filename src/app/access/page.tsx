@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
@@ -11,7 +11,7 @@ export const metadata = {
   description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭 - 最寄り駅は鶴舞駅で、JR中央線でお越しの方は名大病院口から徒歩約8分、地下鉄鶴舞線でお越しの方は鶴舞公園口から徒歩11分です。`,
 };
 
-const StyledIframe = {
+const StyledIframe: CSSProperties = {
   width: "100%",
   height: "50vh",
   margin: "1vh 0",
