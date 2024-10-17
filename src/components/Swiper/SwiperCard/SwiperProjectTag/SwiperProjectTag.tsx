@@ -1,24 +1,25 @@
-import { Schedule } from "@/types/types";
 import styles from "./SwiperProjectTag.module.scss";
 
 interface SwiperProjectTagProps {
-  schedule: Schedule;
+  day1?: boolean;
+  day2?: boolean;
   projectTag?: string[];
 }
 
 export default function SwiperProjectTag({
-  schedule,
+  day1,
+  day2,
   projectTag,
 }: SwiperProjectTagProps) {
   let date: string | undefined;
   let dateTagClassName: string | undefined;
-  if (schedule.day1 && schedule.day2) {
+  if (day1 && day2) {
     date = "1・2日目";
     dateTagClassName = styles.swiperDayBothTag;
-  } else if (schedule.day1) {
+  } else if (day1) {
     date = "1日目";
     dateTagClassName = styles.swiperDay1Tag;
-  } else if (schedule.day2) {
+  } else if (day2) {
     date = "2日目";
     dateTagClassName = styles.swiperDay2Tag;
   }

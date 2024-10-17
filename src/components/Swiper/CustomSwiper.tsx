@@ -12,6 +12,7 @@ import SwiperNext from "./SwiperButtons/SwiperNext";
 import SwiperPrev from "./SwiperButtons/SwiperPrev";
 import ContentTitle from "../Content/ContentTitle/ContentTitle";
 import { templateProject } from "@/app/project/template/templateProject";
+import { convertProjectDataToSwiperCardProps } from "@/utils/converter";
 
 const projects = [
   templateProject,
@@ -57,14 +58,7 @@ export default function CustomSwiper({ title }: { title: string }) {
 
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
-            <SwiperCard
-              href={`/project/${project.link}/`}
-              url={`/62nd/project/${project.link}/brochure.webp`}
-              alt={project.name}
-              projectTag={project.tags}
-              schedule={project.schedule}
-              place={project.place}
-            />
+            <SwiperCard {...convertProjectDataToSwiperCardProps(project)} />
           </SwiperSlide>
         ))}
 
