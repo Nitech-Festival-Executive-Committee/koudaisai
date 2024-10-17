@@ -106,7 +106,7 @@ export default function Faq() {
       <ContentTitle title="お問い合わせ" size={1} bigTitle />
       <PageWrapper>
         <SectionBody>
-          <ContentTitle title="お問合せ先" size={2} />
+          <ContentTitle title="お問い合せ先" size={2} />
           <ContentBox title={""}>
             <p>
               お問い合わせの前に、このページに同じ内容が無いか確認の後、お問い合わせいただくようよろしくお願いします。
