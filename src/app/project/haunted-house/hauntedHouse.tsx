@@ -17,7 +17,7 @@ const schedule = {
 
 const place = "12号館 1221, 1222講義室";
 
-export const hauntedHouseProjectData: ProjectData = {
+export const hauntedHouse: ProjectData = {
   // ContentBoxに含まないデータ
   link: "haunted-house",
   name: "お化け屋敷",
