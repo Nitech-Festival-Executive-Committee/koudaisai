@@ -13,6 +13,11 @@ import {
 } from "@/const/const";
 import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
 
+export const metadata = {
+  title: `よくある質問 - 第${NITFES_EDITION}回工大祭`,
+  description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭 - 工大祭でよくある質問について掲載しています。`,
+};
+
 export default function Faq() {
   return (
     <>
@@ -23,7 +28,7 @@ export default function Faq() {
             <p>
               第{NITFES_EDITION}回工大祭「{NITFES_THEME}」は
               <Underline>
-                {NITFES_YEAR}年{NITFES_DATE_TEXT} {NITFES_TIME}
+                {NITFES_YEAR}年{NITFES_DATE_TEXT.BOTH} {NITFES_TIME}
               </Underline>
               に開催予定!!
             </p>
