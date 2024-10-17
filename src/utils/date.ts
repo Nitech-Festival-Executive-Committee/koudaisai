@@ -5,19 +5,23 @@ import {
   NITFES_YEAR,
 } from "@/const/const";
 
-export const createDate = (
-  dayNumber: 1 | 2,
-  hour: number,
-  minute: number
-): Date => {
-  const date = new Date();
+export const createDate = ({
+  date,
+  hour,
+  minute,
+}: {
+  date: 1 | 2;
+  hour: number;
+  minute: number;
+}): Date => {
+  const dateObj = new Date();
 
-  date.setFullYear(NITFES_YEAR);
-  date.setMonth(NITFES_MONTH - 1);
-  date.setDate(dayNumber === 1 ? NITFES_DATE1 : NITFES_DATE2);
-  date.setHours(hour);
-  date.setMinutes(minute);
-  date.setSeconds(0);
-  date.setMilliseconds(0);
-  return date;
+  dateObj.setFullYear(NITFES_YEAR);
+  dateObj.setMonth(NITFES_MONTH - 1);
+  dateObj.setDate(date === 1 ? NITFES_DATE1 : NITFES_DATE2);
+  dateObj.setHours(hour);
+  dateObj.setMinutes(minute);
+  dateObj.setSeconds(0);
+  dateObj.setMilliseconds(0);
+  return dateObj;
 };

@@ -12,13 +12,18 @@ interface ProjectProps {
   projectData: ProjectData;
   logoPath?: string; // 指定が無い場合は logo.webp
   brochurePath?: string; // 指定が無い場合は brochure.webp
+  projectTitleSize?: number; // 初期値は1(h1)
   children?: React.ReactNode;
 }
 
-export default function Project({ projectData, children }: ProjectProps) {
+export default function Project({
+  projectData,
+  children,
+  projectTitleSize = 1,
+}: ProjectProps) {
   return (
     <>
-      <ContentTitle title={projectData.name} size={1} bigTitle />
+      <ContentTitle title={projectData.name} size={projectTitleSize} bigTitle />
       <ProjectLogo
         img={`/62nd/project/${projectData.link}/logo.webp`}
         alt="Logo"

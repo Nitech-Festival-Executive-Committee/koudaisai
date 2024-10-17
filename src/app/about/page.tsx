@@ -12,6 +12,7 @@ export const metadata = {
   title: `工大祭について - 第${NITFES_EDITION}回工大祭`,
   description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭 - 工大祭ではどのようなことを行っているのかを掲載しています。`,
 };
+import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
 
 export default function About() {
   return (
@@ -50,7 +51,10 @@ export default function About() {
             </p>
           </ContentBox>
           <ContentBox title={"どのエリアを回ることができますか?"}>
-            <p>準備中</p>
+            <p>
+              <a href="../project">企画一覧はこちらから</a>
+            </p>
+            <DecoratedImage img="/62nd/img/map.webp" alt="エリア" />
           </ContentBox>
           <ContentBox title={"駐車場はありますか?"}>
             <p>

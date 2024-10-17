@@ -11,6 +11,7 @@ import {
   NITFES_TIME,
   NITFES_YEAR,
 } from "@/const/const";
+import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
 
 export const metadata = {
   title: `よくある質問 - 第${NITFES_EDITION}回工大祭`,
@@ -54,7 +55,10 @@ export default function Faq() {
             </p>
           </ContentBox>
           <ContentBox title={"どのエリアを回ることができますか?"}>
-            <p>準備中</p>
+            <p>
+              <a href="../project">企画一覧はこちらから</a>
+            </p>
+            <DecoratedImage img="/62nd/img/map.webp" alt="エリア" />
           </ContentBox>
         </SectionBody>
         <SectionBody>
@@ -106,7 +110,7 @@ export default function Faq() {
       <ContentTitle title="お問い合わせ" size={1} bigTitle />
       <PageWrapper>
         <SectionBody>
-          <ContentTitle title="お問合せ先" size={2} />
+          <ContentTitle title="お問い合せ先" size={2} />
           <ContentBox title={""}>
             <p>
               お問い合わせの前に、このページに同じ内容が無いか確認の後、お問い合わせいただくようよろしくお願いします。

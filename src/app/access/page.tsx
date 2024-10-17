@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
@@ -10,8 +10,9 @@ export const metadata = {
   title: `アクセス - 第${NITFES_EDITION}回工大祭`,
   description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭 - 最寄り駅は鶴舞駅で、JR中央線でお越しの方は名大病院口から徒歩約8分、地下鉄鶴舞線でお越しの方は鶴舞公園口から徒歩11分です。`,
 };
+import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
 
-const StyledIframe = {
+const StyledIframe: CSSProperties = {
   width: "100%",
   height: "50vh",
   margin: "1vh 0",
@@ -55,7 +56,10 @@ export default function Access() {
             </p>
           </ContentBox>
           <ContentBox title={"どのエリアを回ることができますか?"}>
-            <p>準備中</p>
+            <p>
+              <a href="../project">企画一覧はこちらから</a>
+            </p>
+            <DecoratedImage img="/62nd/img/map.webp" alt="エリア" />
           </ContentBox>
           <p style={{ textAlign: "right" }}>
             <a href="../faq/" aria-label="アクセス">

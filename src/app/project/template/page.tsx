@@ -4,19 +4,20 @@ import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Project from "@/components/Project/Project/Project";
 import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
-import { templateProjectData } from "./templateData";
+import { templateProject } from "./templateProject";
 import { timeScheduleDay1, timeScheduleDay2 } from "./templateSchedule";
 import RecommendedProjects from "@/components/RecommendedProjects/RecommendedProjects";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
 
 export const metadata = {
-  title: `${templateProjectData.name} - 第${NITFES_EDITION}回工大祭`,
-  description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭開催「${templateProjectData.name}」の詳細ページです`,
+  title: `${templateProject.name} - 第${NITFES_EDITION}回工大祭`,
+  description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭開催「${templateProject.name}」の詳細ページです`,
 };
 
-export default function ProjectTemplate() {
+// 関数名を変更(ex. MiniGame)
+export default function TemplateProject() {
   return (
-    <Project projectData={templateProjectData}>
+    <Project projectData={templateProject}>
       <SectionBody>
         <ContentTitle title="1日目" size={2} />
         <ProjectTable tableObject={timeScheduleDay1} />

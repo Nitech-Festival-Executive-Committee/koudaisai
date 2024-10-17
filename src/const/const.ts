@@ -9,8 +9,8 @@ export const NITFES_THEME = "Ignition" as const;
 export const NITFES_TIME = "10:00-18:00" as const;
 
 const days = ["日", "月", "火", "水", "木", "金", "土"];
-const date1 = createDate(1, 10, 0);
-const date2 = createDate(2, 10, 0);
+const date1 = createDate({ date: 1, hour: 16, minute: 0 });
+const date2 = createDate({ date: 2, hour: 16, minute: 0 });
 
 const NITFES_DAY1 = days[date1.getDay()];
 const NITFES_DAY2 = days[date2.getDay()];

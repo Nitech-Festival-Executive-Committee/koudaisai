@@ -7,21 +7,39 @@ import { createDate } from "@/utils/date";
 
 const schedule = {
   day1: {
-    startDate: createDate(1, 10, 0),
-    endDate: createDate(1, 16, 0),
+    startDate: createDate({
+      date: 1,
+      hour: 10,
+      minute: 0,
+    }),
+    endDate: createDate({
+      date: 1,
+      hour: 16,
+      minute: 0,
+    }),
   },
   day2: {
-    startDate: createDate(2, 10, 0),
-    endDate: createDate(2, 16, 0),
+    startDate: createDate({
+      date: 2,
+      hour: 10,
+      minute: 0,
+    }),
+    endDate: createDate({
+      date: 2,
+      hour: 16,
+      minute: 0,
+    }),
   },
 };
 
 const place = "2号館前ステージ";
 
-export const templateProjectData: ProjectData = {
+// 変数名を変更(ex. miniGame)
+// ファイル名も変更(ex. miniGame.tsx)
+export const templateProject: ProjectData = {
   // ContentBoxに含まないデータ
-  link: "template",
-  name: "人力ビットコインマイニング",
+  link: "template", // 複数単語の場合はハイフンつなぎで記述
+  name: "人力マイニング",
   tags: ["抽選券", "予約"],
   category: [
     CATEGORY.STAGE_PROJECT,
