@@ -34,10 +34,12 @@ const schedule = {
 
 const place = "2号館前ステージ";
 
-export const templateProjectData: ProjectData = {
+// 変数名を変更(ex. templateProject -> miniGame)
+// ファイル名も変更(ex. templateProject.tsx -> miniGame.tsx)
+export const templateProject: ProjectData = {
   // ContentBoxに含まないデータ
-  link: "template",
-  name: "人力ビットコインマイニング",
+  link: "template", // 複数単語の場合はハイフンつなぎで記述
+  name: "人力マイニング",
   tags: ["抽選券", "予約"],
   category: [
     CATEGORY.STAGE_PROJECT,
