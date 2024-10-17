@@ -23,7 +23,7 @@ const lineStampImageStyle: CSSProperties = {
 export default function Character() {
   return (
     <>
-      <ContentTitle title="キャラクター" size={1} bigTitle></ContentTitle>
+      <ContentTitle title="キャラクター" size={1} bigTitle />
       <PageWrapper>
         <SectionBody>
           <ContentTitle title="古墳マン" size={2} />
