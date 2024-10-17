@@ -22,7 +22,7 @@ const StyledIframe: CSSProperties = {
 export default function Access() {
   return (
     <>
-      <ContentTitle title="アクセス" size={1} bigTitle></ContentTitle>
+      <ContentTitle title="アクセス" size={1} bigTitle />
       <PageWrapper>
         <SectionBody>
           <ContentTitle title="場所" size={2} />
