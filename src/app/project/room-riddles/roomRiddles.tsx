@@ -90,10 +90,6 @@ export const roomRiddles: ProjectData = {
         </ul>
       ),
     },
-    {
-      title: "お問い合わせ先",
-      content: "企画局 山本崇太",
-    },
   ],
 
   swiperOption: {
