@@ -7,10 +7,22 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-import Card from "./Card";
+import SwiperCard from "./SwiperCard/SwiperCard";
 import SwiperNext from "./SwiperButtons/SwiperNext";
 import SwiperPrev from "./SwiperButtons/SwiperPrev";
 import ContentTitle from "../Content/ContentTitle/ContentTitle";
+import { templateProjectData } from "@/app/project/template/templateData";
+
+const projects = [
+  templateProjectData,
+  templateProjectData,
+  templateProjectData,
+  templateProjectData,
+  templateProjectData,
+  templateProjectData,
+  templateProjectData,
+  templateProjectData,
+];
 
 export default function CustomSwiper({ title }: { title: string }) {
   return (
@@ -42,30 +54,20 @@ export default function CustomSwiper({ title }: { title: string }) {
         modules={[Pagination, EffectCoverflow]}
       >
         <SwiperPrev />
-        <SwiperSlide className={styles.swiperSlideVertical}>
-          <Card url="/61st/project/haunted-house/brochure.webp" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlideVertical}>
-          <Card url="/61st/img/guest.webp" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlideVertical}>
-          <Card url="/61st/project/haunted-house/brochure.webp" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlideVertical}>
-          <Card url="/61st/img/guest.webp" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlideVertical}>
-          <Card url="/61st/project/haunted-house/brochure.webp" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlideVertical}>
-          <Card url="/61st/img/guest.webp" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlideVertical}>
-          <Card url="/61st/project/haunted-house/brochure.webp" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlideHorizontal}>
-          <Card url="/61st/project/gatikohun/brochure.webp" />
-        </SwiperSlide>
+
+        {projects.map((project, index) => (
+          <SwiperSlide key={index}>
+            <SwiperCard
+              href={`/project/${project.link}/`}
+              url={`/62nd/project/${project.link}/brochure.webp`}
+              alt={project.name}
+              projectTag={project.tags}
+              schedule={project.schedule}
+              place={project.place}
+            />
+          </SwiperSlide>
+        ))}
+
         <SwiperNext />
       </Swiper>
     </div>
