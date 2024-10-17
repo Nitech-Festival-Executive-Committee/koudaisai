@@ -51,6 +51,7 @@ export const convertProjectDataToSwiperCardProps = (
   project: ProjectData
 ): SwiperCardProps => {
   const props: SwiperCardProps = {
+    title: project.name,
     href: `/project/${project.link}/`,
     imageUrl: `/62nd/project/${project.link}/brochure.webp`,
     imageAlt: project.name,
@@ -58,6 +59,35 @@ export const convertProjectDataToSwiperCardProps = (
     schedule: convertScheduleToSummaryReactNode(project.schedule),
     place: project.place,
   };
+
+  if (!project.swiperOption) return props; // オプションがなければそのまま返す
+
+  // オプションがある場合は上書き
+  if (project.swiperOption.title) props.title = project.swiperOption.title;
+  if (project.swiperOption.dayTag) {
+    props.day1 = project.swiperOption.dayTag.day1;
+    props.day2 = project.swiperOption.dayTag.day2;
+  }
+  if (project.swiperOption.projectTag)
+    props.projectTag = project.swiperOption.projectTag;
+  if (project.swiperOption.place) props.place = project.swiperOption.place;
+  if (project.swiperOption.schedule) {
+    props.schedule = (
+      <span>
+        {project.swiperOption.schedule.day1 && (
+          <>
+            {NITFES_DATE_TEXT.DAY1}: {project.swiperOption.schedule.day1}
+            <br />
+          </>
+        )}
+        {project.swiperOption.schedule.day2 && (
+          <>
+            {NITFES_DATE_TEXT.DAY2}: {project.swiperOption.schedule.day2}
+          </>
+        )}
+      </span>
+    );
+  }
 
   return props;
 };

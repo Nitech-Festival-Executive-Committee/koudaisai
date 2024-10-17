@@ -4,6 +4,7 @@ import React, { ReactNode, useEffect } from "react";
 import SwiperInfo from "./SwiperInfo/SwiperInfo";
 
 export interface SwiperCardProps {
+  title: string;
   href?: string;
   imageUrl: string;
   imageAlt?: string;
@@ -25,6 +26,7 @@ function getImageAspectRatio(url: string): Promise<number> {
 }
 
 export default function SwiperCard({
+  title,
   href,
   imageUrl,
   imageAlt,
@@ -55,6 +57,7 @@ export default function SwiperCard({
       <div className={styles.swiperSlideDetail}>
         <SwiperProjectTag day1 day2 projectTag={projectTag} />
         <SwiperInfo
+          title={title}
           place={place}
           schedule={schedule}
           swiperNameHoveredClassName={styles.swiperNameHovered}
