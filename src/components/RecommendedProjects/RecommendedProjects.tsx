@@ -177,7 +177,7 @@ export default function RecommendedProjects() {
         </SectionBody>
         <p style={{ textAlign: "center" }}>
           <a href="/project" aria-label="アクセス">
-            その他のよくある質問はこちらから
+            企画一覧はこちらから
           </a>
         </p>
       </div>
