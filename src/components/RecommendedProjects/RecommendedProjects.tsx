@@ -31,6 +31,7 @@ const getSimilarProjects = (currentProject: ProjectData): ProjectData[] => {
   );
 };
 
+//時間帯の近い企画
 const getNearbyStageProjects = (
   projects: ProjectData[],
   currentProject: ProjectData
@@ -104,19 +105,23 @@ const getNearbyStageProjects = (
 
     return (
       (projectDay1Start &&
-        startWindowDay1 &&
+        startWindowDay1 !== null &&
+        endWindowDay1 !== null &&
         projectDay1Start >= startWindowDay1 &&
         projectDay1Start <= endWindowDay1) ||
       (projectDay1End &&
-        startWindowDay1 &&
+        startWindowDay1 !== null &&
+        endWindowDay1 !== null &&
         projectDay1End >= startWindowDay1 &&
         projectDay1End <= endWindowDay1) ||
       (projectDay2Start &&
-        startWindowDay2 &&
+        startWindowDay2 !== null &&
+        endWindowDay2 !== null &&
         projectDay2Start >= startWindowDay2 &&
         projectDay2Start <= endWindowDay2) ||
       (projectDay2End &&
-        startWindowDay2 &&
+        startWindowDay2 !== null &&
+        endWindowDay2 !== null &&
         projectDay2End >= startWindowDay2 &&
         projectDay2End <= endWindowDay2)
     );
@@ -132,6 +137,7 @@ const excludeSimilarProjects = (currentProject: ProjectData): ProjectData[] => {
   );
 };
 
+//おすすめ企画リスト
 const RecommendedProjectsList = (
   currentProject: ProjectData
 ): ProjectData[] => {
@@ -141,7 +147,11 @@ const RecommendedProjectsList = (
     nonSimilarProjects,
     currentProject
   );
-  return similarProjects.concat(nearbyStageProjects);
+  if (nearbyStageProjects.length === 0) {
+    return similarProjects.slice(0, 4);
+  }
+
+  return similarProjects.slice(0, 2).concat(nearbyStageProjects.slice(0, 2));
 };
 
 export default function RecommendedProjects() {
@@ -157,11 +167,19 @@ export default function RecommendedProjects() {
           {recommendedProjects.slice(0, 4).map((project) => (
             <ContentBox key={project.link} title={project.name}>
               <a href={project.link}>
-                <ContentImage img={`/62nd/project/template/brochure.webp`} />
+                <ContentImage
+                  img={`/62nd/project/template/brochure.webp`} //テンプレート写真
+                  imageStyle={{ border: "none", boxShadow: "none" }}
+                />
               </a>
             </ContentBox>
           ))}
         </SectionBody>
+        <p style={{ textAlign: "center" }}>
+          <a href="/project" aria-label="アクセス">
+            その他のよくある質問はこちらから
+          </a>
+        </p>
       </div>
     </div>
   );

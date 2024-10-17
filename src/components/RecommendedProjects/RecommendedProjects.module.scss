@@ -1,15 +1,12 @@
 .informationContentFlex {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between; /* アイテムの間に均等なスペースを追加 */
+  justify-content: space-between;
 }
 
 .informationContentFlex > div {
-  flex: 1 1 auto; /* 各アイテムのサイズを均等に調整 */
-  margin: 10px; /* 各アイテムの間に余白を追加 */
-}
-
-.informationContent {
+  flex: 1 1 auto;
+  margin: 10px;
 }
 
 .information {
@@ -20,7 +17,7 @@
 
 .informationBlock {
   align-items: center;
-  justify-content: space-between; /* アイテムの間に均等なスペースを追加 */
+  justify-content: space-between;
   width: 95%;
   margin: 0 2%;
   font-weight: 600;
