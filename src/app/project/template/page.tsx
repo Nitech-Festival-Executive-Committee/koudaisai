@@ -6,6 +6,7 @@ import Project from "@/components/Project/Project/Project";
 import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
 import { templateProject } from "./templateProject";
 import { timeScheduleDay1, timeScheduleDay2 } from "./templateSchedule";
+import RecommendedProjects from "@/components/RecommendedProjects/RecommendedProjects";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
 
 export const metadata = {
@@ -25,6 +26,7 @@ export default function TemplateProject() {
         <ContentTitle title="2日目" size={2} />
         <ProjectTable tableObject={timeScheduleDay2} />
       </SectionBody>
+      <RecommendedProjects />
     </Project>
   );
 }
