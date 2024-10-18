@@ -42,7 +42,6 @@ export const booth: ProjectData = {
   name: "ブース展",
   category: [
     CATEGORY.FAMILY,
-    CATEGORY.STUDENT,
     CATEGORY.EXPERIENCE,
     CATEGORY.EXHIBITION,
   ],
