@@ -6,8 +6,28 @@ import { createDate } from "@/utils/date";
 
 const schedule6 = {
   day1: {
-    startDate: createDate(1, 14, 0),
-    endDate: createDate(1, 16, 0),
+    startDate: createDate({
+      date: 1,
+      hour: 10,
+      minute: 0,
+    }),
+    endDate: createDate({
+      date: 1,
+      hour: 16,
+      minute: 0,
+    }),
+  },
+  day2: {
+    startDate: createDate({
+      date: 2,
+      hour: 10,
+      minute: 0,
+    }),
+    endDate: createDate({
+      date: 2,
+      hour: 16,
+      minute: 0,
+    }),
   },
 };
 

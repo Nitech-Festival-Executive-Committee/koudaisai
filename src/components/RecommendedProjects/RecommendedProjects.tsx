@@ -38,54 +38,48 @@ const getNearbyStageProjects = (
 ): ProjectData[] => {
   if (!currentProject.schedule) return [];
 
-  const oneHour = 3600000;
+  // const oneHour = 3600000;
 
-  const getStartEndTimes = (schedule: Schedule | undefined) => {
-    if (!schedule) return null;
-
+  const getStartEndTimes = (
+    schedule: Schedule
+  ): {
+    day1Start?: Date;
+    day1End?: Date;
+    day2Start?: Date;
+    day2End?: Date;
+  } => {
     // day1 のスケジュール
-    const day1Start = schedule.day1
-      ? new Date(
-          `2024-11-01T${schedule.day1.startDate.toISOString().slice(11, 16)}:00`
-        ).getTime()
-      : null;
-    const day1End = schedule.day1
-      ? new Date(
-          `2024-11-01T${schedule.day1.endDate.toISOString().slice(11, 16)}:00`
-        ).getTime()
-      : null;
+    const day1Start = schedule.day1?.startDate;
+    const day1End = schedule.day1?.endDate;
 
     // day2 のスケジュール
-    const day2Start = schedule.day2
-      ? new Date(
-          `2024-11-02T${schedule.day2.startDate.toISOString().slice(11, 16)}:00`
-        ).getTime()
-      : null;
-    const day2End = schedule.day2
-      ? new Date(
-          `2024-11-02T${schedule.day2.endDate.toISOString().slice(11, 16)}:00`
-        ).getTime()
-      : null;
+    const day2Start = schedule.day2?.startDate;
+    const day2End = schedule.day2?.endDate;
 
     return { day1Start, day1End, day2Start, day2End };
   };
 
-  const currentTimes = getStartEndTimes(currentProject.schedule);
-  if (!currentTimes) return [];
+  const {
+    day1Start: currentDay1Start,
+    day1End: currentDay1End,
+    day2Start: currentDay2Start,
+    day2End: currentDay2End,
+  } = getStartEndTimes(currentProject.schedule);
+  // if (!currentTimes) return [];
 
   return projects.filter((project) => {
-    if (!project.schedule) return false;
+    // if (!project.schedule) return false;
     if (project.link === currentProject.link) return false;
 
     const projectTimes = getStartEndTimes(project.schedule);
-    if (!projectTimes) return false;
+    // if (!projectTimes) return false;
 
-    const {
-      day1Start: currentDay1Start,
-      day1End: currentDay1End,
-      day2Start: currentDay2Start,
-      day2End: currentDay2End,
-    } = currentTimes;
+    // const {
+    //   day1Start: currentDay1Start,
+    //   day1End: currentDay1End,
+    //   day2Start: currentDay2Start,
+    //   day2End: currentDay2End,
+    // } = currentTimes;
     const {
       day1Start: projectDay1Start,
       day1End: projectDay1End,
@@ -94,34 +88,45 @@ const getNearbyStageProjects = (
     } = projectTimes;
 
     const startWindowDay1 = currentDay1Start
-      ? currentDay1Start - oneHour
-      : null;
-    const endWindowDay1 = currentDay1End ? currentDay1End + oneHour : null;
-
+      ? new Date(currentDay1Start)
+      : undefined;
+    if (startWindowDay1) {
+      startWindowDay1.setHours(startWindowDay1.getHours() + 1);
+    }
+    const endWindowDay1 = currentDay1End ? new Date(currentDay1End) : undefined;
+    if (endWindowDay1) {
+      endWindowDay1.setHours(endWindowDay1.getHours() + 1);
+    }
     const startWindowDay2 = currentDay2Start
-      ? currentDay2Start - oneHour
-      : null;
-    const endWindowDay2 = currentDay2End ? currentDay2End + oneHour : null;
+      ? new Date(currentDay2Start)
+      : undefined;
+    if (startWindowDay2) {
+      startWindowDay2.setHours(startWindowDay2.getHours() + 1);
+    }
+    const endWindowDay2 = currentDay2End ? new Date(currentDay2End) : undefined;
+    if (endWindowDay2) {
+      endWindowDay2.setHours(endWindowDay2.getHours() + 1);
+    }
 
     return (
       (projectDay1Start &&
-        startWindowDay1 !== null &&
-        endWindowDay1 !== null &&
-        projectDay1Start >= startWindowDay1 &&
+        startWindowDay1 &&
+        endWindowDay1 &&
+        startWindowDay1 <= projectDay1Start &&
         projectDay1Start <= endWindowDay1) ||
       (projectDay1End &&
-        startWindowDay1 !== null &&
-        endWindowDay1 !== null &&
+        startWindowDay1 &&
+        endWindowDay1 &&
         projectDay1End >= startWindowDay1 &&
         projectDay1End <= endWindowDay1) ||
       (projectDay2Start &&
-        startWindowDay2 !== null &&
-        endWindowDay2 !== null &&
+        startWindowDay2 &&
+        endWindowDay2 &&
         projectDay2Start >= startWindowDay2 &&
         projectDay2Start <= endWindowDay2) ||
       (projectDay2End &&
-        startWindowDay2 !== null &&
-        endWindowDay2 !== null &&
+        startWindowDay2 &&
+        endWindowDay2 &&
         projectDay2End >= startWindowDay2 &&
         projectDay2End <= endWindowDay2)
     );
