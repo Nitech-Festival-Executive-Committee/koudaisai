@@ -29,13 +29,12 @@ export const kouya: ProjectData = {
   // ContentBoxに含まないデータ
   link: "kouya", // 複数単語の場合はハイフンつなぎで記述
   name: "後夜祭",
-  tags: ["抽選券"],
+  tags: ["抽選会"],
   category: [
     CATEGORY.STAGE_PROJECT,
     CATEGORY.FAMILY,
     CATEGORY.STUDENT,
     CATEGORY.EXPERIENCE,
-    CATEGORY.EXHIBITION,
   ],
   summary:
     "工大祭の最後を飾るステージ企画",
