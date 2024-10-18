@@ -18,20 +18,28 @@ interface ProjectProps {
 
 export default function Project({
   projectData,
-  children,
+  logoPath,
+  brochurePath,
   projectTitleSize = 1,
+  children,
 }: ProjectProps) {
   return (
     <>
       <ContentTitle title={projectData.name} size={projectTitleSize} bigTitle />
       <ProjectLogo
-        img={`/62nd/project/${projectData.link}/logo.webp`}
+        img={
+          logoPath ? logoPath : `/62nd/project/${projectData.link}/logo.webp`
+        }
         alt="Logo"
       />
       <PageWrapper>
         <SectionBody>
           <BochureImage
-            img={`/62nd/project/${projectData.link}/brochure.webp`}
+            img={
+              brochurePath
+                ? brochurePath
+                : `/62nd/project/${projectData.link}/brochure.webp`
+            }
             alt="Brochure"
           />
         </SectionBody>
