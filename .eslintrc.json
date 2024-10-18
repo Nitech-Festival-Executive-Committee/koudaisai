@@ -29,6 +29,6 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react"],
-  "rules": {}
+  "plugins": ["react", "eslint-plugin-unused-imports"],
+  "rules": { "unused-imports/no-unused-imports": "error" }
 }
