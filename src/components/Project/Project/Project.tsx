@@ -18,30 +18,28 @@ interface ProjectProps {
 
 export default function Project({
   projectData,
-  logoPath,
-  brochurePath,
+  logoPath = "logo.webp", // 何も指定しない場合はlogo.webp, ""を指定すると非表示
+  brochurePath = "brochure.webp", // 何も指定しない場合はbrochure.webp, ""を指定すると非表示
   projectTitleSize = 1,
   children,
 }: ProjectProps) {
   return (
     <>
       <ContentTitle title={projectData.name} size={projectTitleSize} bigTitle />
-      <ProjectLogo
-        img={
-          logoPath ? logoPath : `/62nd/project/${projectData.link}/logo.webp`
-        }
-        alt="Logo"
-      />
+      {logoPath !== "" && (
+        <ProjectLogo
+          img={`/62nd/project/${projectData.link}/${logoPath}`}
+          alt="Logo"
+        />
+      )}
       <PageWrapper>
         <SectionBody>
-          <BochureImage
-            img={
-              brochurePath
-                ? brochurePath
-                : `/62nd/project/${projectData.link}/brochure.webp`
-            }
-            alt="Brochure"
-          />
+          {brochurePath !== "" && (
+            <BochureImage
+              img={`/62nd/project/${projectData.link}/${brochurePath}`}
+              alt="Brochure"
+            />
+          )}
         </SectionBody>
         <SectionBody>
           <ContentTitle title="hoge" size={2} />
