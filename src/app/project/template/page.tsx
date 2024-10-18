@@ -17,7 +17,8 @@ export const metadata = {
 // 関数名を変更(ex. MiniGame)
 export default function TemplateProject() {
   return (
-    <Project projectData={templateProject}>
+    <>
+      <Project projectData={templateProject}></Project>
       <ContentTitle title="チケット" size={2} bigTitle />
       <PageWrapper>
         <SectionBody>
@@ -29,6 +30,6 @@ export default function TemplateProject() {
           <ProjectTable tableObject={timeScheduleDay2} />
         </SectionBody>
       </PageWrapper>
-    </Project>
+    </>
   );
 }

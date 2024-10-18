@@ -44,8 +44,8 @@ export default function Project({
           />
           <ProjectContent projectBoxList={projectData.projectBoxList} />
         </SectionBody>
+        {children}
       </PageWrapper>
-      {children}
     </>
   );
 }
