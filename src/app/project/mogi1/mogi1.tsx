@@ -39,7 +39,7 @@ export const mogi1: ProjectData = {
   link: "mogi1", // 複数単語の場合はハイフンつなぎで記述
   name: "MOGI-1 グランプリ",
   tags: [],
-  category: [CATEGORY.STUDENT, CATEGORY.EXHIBITION],
+  category: [CATEGORY.FAMILY, CATEGORY.STUDENT, CATEGORY.EXHIBITION],
   summary: "模擬店の人気投票を行います",
 
   // ProjectBoxに変換する必要があるデータ
