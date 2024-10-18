@@ -5,22 +5,18 @@ interface ContentImageProps {
   img: string;
   alt?: string;
   style?: React.CSSProperties;
-  decorated?: boolean; // boxshadowをつけるかどうか
+  imageStyle?: React.CSSProperties;
 }
 
 export default function ContentImage({
   img,
   alt,
   style,
-  decorated = true,
+  imageStyle,
 }: ContentImageProps) {
   return (
     <div className={styles.contentImage} style={style}>
-      {decorated ? (
-        <DecoratedImage img={img} alt={alt} />
-      ) : (
-        <img src={img} alt={alt} />
-      )}
+      <DecoratedImage img={img} alt={alt} style={imageStyle} />
     </div>
   );
 }
