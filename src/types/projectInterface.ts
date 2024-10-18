@@ -21,4 +21,22 @@ export interface ProjectData {
 
   // 任意のデータ(こちらも企画ページにしか表示しない)
   projectBoxList: ProjectBox[];
+
+  // オプション
+  swiperOption?: {
+    title?: string;
+    dayTag?: {
+      day1?: boolean;
+      day2?: boolean;
+    };
+    projectTag?: string[];
+    place?: string;
+    schedule?: {
+      day1?: string;
+      day2?: string;
+    };
+  };
+  recommendOption?: {
+    schedule?: Schedule;
+  };
 }
