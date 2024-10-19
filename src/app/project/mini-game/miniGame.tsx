@@ -6,8 +6,16 @@ import { createDate } from "@/utils/date";
 
 const schedule = {
   day1: {
-    startDate: createDate(1, 15, 15),
-    endDate: createDate(1, 16, 30),
+    startDate: createDate({
+      date: 1,
+      hour: 15,
+      minute: 15,
+    }),
+    endDate: createDate({
+      date: 1,
+      hour: 16,
+      minute: 30,
+    }),
   },
 };
 
@@ -18,7 +26,12 @@ export const miniGame: ProjectData = {
   link: "mini-game",
   name: "NITechへの挑戦者",
   tags: [],
-  category: CATEGORY.EXPERIENCE,
+  category: [
+    CATEGORY.STAGE_PROJECT,
+    CATEGORY.FAMILY,
+    CATEGORY.STUDENT,
+    CATEGORY.EXPERIENCE,
+  ],
   summary:
     "ステージ上で開催の本格推理型ミニゲーム企画!!パズルを解き切り、真相を突き止めることはできるのか!?",
 
