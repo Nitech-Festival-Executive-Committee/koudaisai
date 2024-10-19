@@ -60,6 +60,14 @@ export const communityStreet: ProjectData = {
       ),
     },
     {
+      title: "ルール説明",
+      content: (
+        <p>
+          各ブースにスタンプが置いてあるので、すべてのスタンプを制覇して景品と交換する。
+        </p>
+      ),
+    },
+    {
       title: "開催日程",
       content: convertScheduleToReactNode(schedule),
     },
