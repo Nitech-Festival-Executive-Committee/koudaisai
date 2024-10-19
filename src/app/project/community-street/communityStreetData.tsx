@@ -6,12 +6,28 @@ import { createDate } from "@/utils/date";
 
 const schedule = {
   day1: {
-    startDate: createDate(1, 10, 0),
-    endDate: createDate(1, 16, 0),
+    startDate: createDate({
+      date: 1,
+      hour: 10,
+      minute: 0,
+    }),
+    endDate: createDate({
+      date: 1,
+      hour: 16,
+      minute: 0,
+    }),
   },
   day2: {
-    startDate: createDate(2, 10, 0),
-    endDate: createDate(2, 15, 30),
+    startDate: createDate({
+      date: 2,
+      hour: 10,
+      minute: 0,
+    }),
+    endDate: createDate({
+      date: 2,
+      hour: 15,
+      minute: 30,
+    }),
   },
 };
 
@@ -21,7 +37,7 @@ const place = "23号館前通路";
 // TODO: `public/62nd/project/community-street/logo.webp`を配置
 // TODO: swiper-slideにスライドを追加
 // TODO: 必要があればタグを追加
-export const communityStreetData: ProjectData = {
+export const communityStreet: ProjectData = {
   // ContentBoxに含まないデータ
   link: "community-street",
   name: "コミュニティーストリート",
@@ -53,7 +69,7 @@ export const communityStreetData: ProjectData = {
     },
     {
       title: "お問い合わせ先",
-      content: "地域局 三浦碧斗 aoto.miura@koudaisai.com",
+      content: "地域局 aoto.miura@koudaisai.com",
     },
   ],
 };
