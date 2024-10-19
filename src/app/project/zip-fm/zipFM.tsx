@@ -6,14 +6,14 @@ import { convertScheduleToReactNode } from "@/utils/converter";
 import { createDate } from "@/utils/date";
 
 const schedule = {
-  day1: {
+  day2: {
     startDate: createDate({
-      date: 1,
+      date: 2,
       hour: 14,
       minute: 30,
     }),
     endDate: createDate({
-      date: 1,
+      date: 2,
       hour: 16,
       minute: 0,
     }),
