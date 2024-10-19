@@ -1,4 +1,5 @@
 import { ProjectData } from "@/types/projectInterface";
+import { CATEGORY } from "@/types/types";
 import { createDate } from "@/utils/date";
 
 const schedule = {
@@ -30,14 +31,12 @@ const schedule = {
 
 const place = "52号館1階ゆめルーム";
 
-// TODO: タグの追加
-// TODO: カテゴリーの追加
 export const vsDealer: ProjectData = {
   // ContentBoxに含まないデータ
   link: "vs-dealer",
   name: "VS ディーラー",
   tags: [],
-  category: [],
+  category: [CATEGORY.STUDENT, CATEGORY.EXPERIENCE],
   summary: "",
 
   // ProjectBoxに変換する必要があるデータ
