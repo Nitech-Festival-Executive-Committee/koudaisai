@@ -8,7 +8,6 @@ export const metadata = {
   description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭開催「${roomRiddles.name}」の詳細ページです`,
 };
 
-// 関数名を変更(ex. MiniGame)
 export default function RoomRiddles() {
   return <Project projectData={roomRiddles} />;
 }

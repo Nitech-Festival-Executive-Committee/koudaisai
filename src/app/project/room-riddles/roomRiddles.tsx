@@ -30,7 +30,6 @@ const schedule = {
 };
 const place = "2331、2341講義室";
 
-// TODO: link確認
 export const roomRiddles: ProjectData = {
   // ContentBoxに含まないデータ
   link: "room-riddles", // 複数単語の場合はハイフンつなぎで記述
