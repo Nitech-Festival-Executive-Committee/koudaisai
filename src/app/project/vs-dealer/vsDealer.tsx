@@ -6,7 +6,7 @@ const schedule = {
     startDate: createDate({
       date: 1,
       hour: 10,
-      minute: 0,
+      minute: 30,
     }),
     endDate: createDate({
       date: 1,
@@ -58,9 +58,9 @@ export const vsDealer: ProjectData = {
       title: "開催日程",
       content: (
         <p>
-          11月16日(土) 10:00～、10:30～、11:30～、12:30～、13:30～、14:30～
+          11月16日(土) 10:30～、11:30～、12:30～、13:30～、14:30～
           <br />
-          11月17日(日)10:30～、11:30～、12:30～、13:30～、14:30～
+          11月17日(日) 10:30～、11:30～、12:30～、13:30～、14:30～
         </p>
       ),
     },
@@ -110,7 +110,7 @@ export const vsDealer: ProjectData = {
       day2: true,
     },
     schedule: {
-      day1: "初回10:00～",
+      day1: "初回10:30～",
       day2: "初回10:30～",
     },
   },
