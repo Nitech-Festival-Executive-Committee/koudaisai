@@ -1,21 +1,18 @@
 import styles from "./SwiperCard.module.scss";
 import SwiperProjectTag from "./SwiperProjectTag/SwiperProjectTag";
-import React, { useEffect } from "react";
+import React, { ReactNode, useEffect } from "react";
 import SwiperInfo from "./SwiperInfo/SwiperInfo";
-import { Period, Schedule } from "@/types/types";
 
-interface Time {
-  date: string;
-  time: Period;
-}
-
-interface SwiperCardProps {
+export interface SwiperCardProps {
+  title: string;
   href?: string;
-  url: string;
-  alt?: string;
-  schedule: Schedule;
+  imageUrl: string;
+  imageAlt?: string;
+  day1?: boolean;
+  day2?: boolean;
   projectTag?: string[];
   place?: string;
+  schedule: ReactNode;
 }
 
 function getImageAspectRatio(url: string): Promise<number> {
@@ -29,12 +26,13 @@ function getImageAspectRatio(url: string): Promise<number> {
 }
 
 export default function SwiperCard({
+  title,
   href,
-  url,
-  alt,
-  schedule,
+  imageUrl,
+  imageAlt,
   projectTag,
   place,
+  schedule,
 }: SwiperCardProps) {
   // 画像が縦長か横長かによってスタイルを変更
   const [cardClassName, setCardClassName] = React.useState<string>(
@@ -42,7 +40,7 @@ export default function SwiperCard({
   );
   useEffect(() => {
     const setCardClassNameByRatio = async () => {
-      const aspectRatio = await getImageAspectRatio(url);
+      const aspectRatio = await getImageAspectRatio(imageUrl);
       setCardClassName(
         aspectRatio > 1
           ? styles.swiperCardVertical
@@ -51,22 +49,17 @@ export default function SwiperCard({
     };
     setCardClassNameByRatio();
   }, []);
-  // 処理を楽にするため、day1, day2を配列にまとめる
-  // 例: day1="1日目", day2="2日目" -> days=["1日目", "2日目"]
-  // 例: day1=undefined, day2="2日目" -> days=["2日目"]
-  const days: Time[] = [];
-  if (schedule.day1) days.push({ date: "1日目", time: schedule.day1 });
-  if (schedule.day2) days.push({ date: "2日目", time: schedule.day2 });
 
   return (
     <a className={`${styles.swiperCardContainer} ${cardClassName}`} href={href}>
-      <img src={url} alt={alt} />
+      <img src={imageUrl} alt={imageAlt} />
       <div className={styles.swiperSlideMask} />
       <div className={styles.swiperSlideDetail}>
-        <SwiperProjectTag schedule={schedule} projectTag={projectTag} />
+        <SwiperProjectTag day1 day2 projectTag={projectTag} />
         <SwiperInfo
+          title={title}
           place={place}
-          days={days}
+          schedule={schedule}
           swiperNameHoveredClassName={styles.swiperNameHovered}
           swiperArrowHoveredClassName={styles.swiperArrowHovered}
         />
