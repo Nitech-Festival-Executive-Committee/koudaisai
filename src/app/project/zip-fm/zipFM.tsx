@@ -2,7 +2,6 @@
 import Underline from "@/components/Content/Underline/Underline";
 import { ProjectData } from "@/types/projectInterface";
 import { CATEGORY } from "@/types/types";
-import { convertScheduleToReactNode } from "@/utils/converter";
 import { createDate } from "@/utils/date";
 
 const schedule = {
@@ -53,7 +52,7 @@ export const zipFM: ProjectData = {
           <br />
           <Underline>スピーカー企画</Underline>
           <br />
-          スピーカーから音楽が流れるよ！ぜひ聴いてみてね
+          スピーカーから音楽が流れるよ!ぜひ聴いてみてね
         </p>
       ),
     },
@@ -76,7 +75,20 @@ export const zipFM: ProjectData = {
     },
     {
       title: "開催日程",
-      content: convertScheduleToReactNode(schedule),
+      content: (
+        <p>
+          <Underline>ステージ企画</Underline>
+          <br />
+          2日目(11/17(日)): 14:30～16:00
+          <br />
+          <br />
+          <Underline>スピーカー企画</Underline>
+          <br />
+          1日目(11/16(土)): 10:00～16:30
+          <br />
+          2日目(11/17(日)): 10:00～16:00
+        </p>
+      ),
     },
     {
       title: "開催場所",
