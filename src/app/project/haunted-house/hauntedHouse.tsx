@@ -6,12 +6,28 @@ import { createDate } from "@/utils/date";
 
 const schedule = {
   day1: {
-    startDate: createDate(1, 10, 0),
-    endDate: createDate(1, 16, 0),
+    startDate: createDate({
+      date: 1,
+      hour: 10,
+      minute: 0,
+    }),
+    endDate: createDate({
+      date: 1,
+      hour: 16,
+      minute: 0,
+    }),
   },
   day2: {
-    startDate: createDate(2, 10, 0),
-    endDate: createDate(2, 15, 30),
+    startDate: createDate({
+      date: 2,
+      hour: 10,
+      minute: 0,
+    }),
+    endDate: createDate({
+      date: 2,
+      hour: 15,
+      minute: 30,
+    }),
   },
 };
 
@@ -22,7 +38,7 @@ export const hauntedHouse: ProjectData = {
   link: "haunted-house",
   name: "お化け屋敷",
   tags: [],
-  category: [CATEGORY.STUDENT],
+  category: [CATEGORY.STUDENT, CATEGORY.EXPERIENCE, CATEGORY.FAMILY],
   summary: "",
 
   // ProjectBoxに変換する必要があるデータ
