@@ -9,5 +9,5 @@ export const metadata = {
 };
 
 export default function CommunityStreet() {
-  return <Project projectData={communityStreet} />;
+  return <Project projectData={communityStreet} projectTitleSize={4} />;
 }
