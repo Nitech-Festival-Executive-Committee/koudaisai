@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import React from "react";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
+import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Project from "@/components/Project/Project/Project";
 import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
@@ -16,15 +17,19 @@ export const metadata = {
 // 関数名を変更(ex. MiniGame)
 export default function TemplateProject() {
   return (
-    <Project projectData={templateProject}>
-      <SectionBody>
-        <ContentTitle title="1日目" size={2} />
-        <ProjectTable tableObject={timeScheduleDay1} />
-      </SectionBody>
-      <SectionBody>
-        <ContentTitle title="2日目" size={2} />
-        <ProjectTable tableObject={timeScheduleDay2} />
-      </SectionBody>
-    </Project>
+    <>
+      <Project projectData={templateProject}></Project>
+      <ContentTitle title="チケット" size={2} bigTitle />
+      <PageWrapper>
+        <SectionBody>
+          <ContentTitle title="1日目" size={2} />
+          <ProjectTable tableObject={timeScheduleDay1} />
+        </SectionBody>
+        <SectionBody>
+          <ContentTitle title="2日目" size={2} />
+          <ProjectTable tableObject={timeScheduleDay2} />
+        </SectionBody>
+      </PageWrapper>
+    </>
   );
 }
