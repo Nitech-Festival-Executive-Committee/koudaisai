@@ -5,9 +5,6 @@ import { CATEGORY } from "@/types/types";
 import { convertScheduleToReactNode } from "@/utils/converter";
 import { createDate } from "@/utils/date";
 
-// TODO: タグ確認
-// TODO:企画紹介文の!!確認
-
 const schedule = {
   day1: {
     startDate: createDate({
@@ -44,7 +41,7 @@ export const vrCoaster: ProjectData = {
   link: "vr-coaster", // 複数単語の場合はハイフンつなぎで記述
   name: "VRコースター",
   tags: [],
-  category: [CATEGORY.STUDENT, CATEGORY.EXPERIENCE],
+  category: [CATEGORY.STUDENT, CATEGORY.FAMILY, CATEGORY.EXPERIENCE],
   summary: "",
 
   // ProjectBoxに変換する必要があるデータ
@@ -57,6 +54,7 @@ export const vrCoaster: ProjectData = {
       content: (
         <p>
           迫力満点のVRコースターに乗ってみませんか⁈仮想現実の世界でスリル満点の体験を、リアルな動きと共に楽しめます！
+          <br />
           手作りの木製カートに乗り込み、心臓が高鳴るジェットコースターの世界をお楽しみください‼
         </p>
       ),
@@ -87,13 +85,7 @@ export const vrCoaster: ProjectData = {
     },
     {
       title: "お問い合わせ先",
-      content: (
-        <p>
-          名古屋工業大学第62回工大祭実行委員会企画局 齊木理途
-          <br />
-          メールアドレス: rito.saiki@koudaisai.com
-        </p>
-      ),
+      content: "企画局 rito.saiki@koudaisai.com",
     },
   ],
 };
