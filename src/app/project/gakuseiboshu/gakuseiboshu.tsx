@@ -63,7 +63,13 @@ export const gakuseiboshu: ProjectData = {
     },
     {
       title: "開催場所",
-      content: place,
+      content: (
+        <ul>
+          <li>52・53号館周辺</li>
+          <li>中庭</li>
+          <li>23号館2311講義室</li>
+        </ul>
+      ),
     },
   ],
 };
