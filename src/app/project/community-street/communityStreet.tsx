@@ -33,16 +33,13 @@ const schedule = {
 
 const place = "23号館前通路";
 
-// TODO: `public/62nd/project/community-street/brochure.webp`を配置
-// TODO: `public/62nd/project/community-street/logo.webp`を配置
 // TODO: swiper-slideにスライドを追加
-// TODO: 必要があればタグを追加
 export const communityStreet: ProjectData = {
   // ContentBoxに含まないデータ
   link: "community-street",
   name: "コミュニティーストリート",
   tags: [],
-  category: [CATEGORY.EXHIBITION],
+  category: [CATEGORY.FAMILY, CATEGORY.EXHIBITION],
   summary: "各テント内に設営されているブース出展を楽しんでください！",
 
   // ProjectBoxに変換する必要があるデータ
