@@ -1,3 +1,4 @@
+import Underline from "@/components/Content/Underline/Underline";
 import { ProjectData } from "@/types/projectInterface";
 import { CATEGORY } from "@/types/types";
 import { createDate } from "@/utils/date";
@@ -87,19 +88,17 @@ export const vsDealer: ProjectData = {
           <li>
             各回4組、6人ずつで分かれてもらうので他の参加者と同じ組になる可能性があります。
           </li>
-          <li>小学生未満の方は参加できません。ご了承ください。</li>
+          <li>
+            <Underline>
+              小学生未満の方は参加できません。ご了承ください。
+            </Underline>
+          </li>
         </ul>
       ),
     },
     {
       title: "お問い合わせ先",
-      content: (
-        <p>
-          名古屋工業大学第62回工大祭実行委員会企画局 野本意織
-          <br />
-          メールアドレス:iori.nomoto@koudaisai.com
-        </p>
-      ),
+      content: "企画局 iori.nomoto@koudaisai.com",
     },
   ],
 
