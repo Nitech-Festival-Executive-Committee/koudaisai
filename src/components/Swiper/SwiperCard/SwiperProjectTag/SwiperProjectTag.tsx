@@ -1,4 +1,5 @@
 import styles from "./SwiperProjectTag.module.scss";
+import React from "react";
 
 interface SwiperProjectTagProps {
   day1?: boolean;
@@ -35,15 +36,12 @@ export default function SwiperProjectTag({
       <br />
       {/* Project tag */}
       {projectTag?.map((tag, index) => (
-        <>
-          <span
-            key={index}
-            className={`${styles.swiperTag} ${styles.swiperProjectTag}`}
-          >
+        <React.Fragment key={index}>
+          <span className={`${styles.swiperTag} ${styles.swiperProjectTag}`}>
             {tag}
           </span>
           <br />
-        </>
+        </React.Fragment>
       ))}
     </>
   );
