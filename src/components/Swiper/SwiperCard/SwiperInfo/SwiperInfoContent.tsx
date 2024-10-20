@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styles from "./SwiperInfo.module.scss";
 import { IconType } from "react-icons";
 
 interface SwiperInfoContentProps {
   icon: IconType;
-  content: string[];
+  content: string | ReactNode;
 }
 
 export default function SwiperInfoContent({
@@ -14,14 +14,7 @@ export default function SwiperInfoContent({
   return (
     <p className={styles.swiperInfoWrapper}>
       <Icon />
-      <span className={styles.swiperInfo}>
-        {content.map((text, index) => (
-          <React.Fragment key={index}>
-            {text}
-            <br />
-          </React.Fragment>
-        ))}
-      </span>
+      <span className={styles.swiperInfo}>{content}</span>
     </p>
   );
 }
