@@ -1,3 +1,4 @@
+import Underline from "@/components/Content/Underline/Underline";
 import { ProjectData } from "@/types/projectInterface";
 import { CATEGORY } from "@/types/types";
 import { createDate } from "@/utils/date";
@@ -35,7 +36,7 @@ export const roomRiddles: ProjectData = {
   link: "room-riddles", // 複数単語の場合はハイフンつなぎで記述
   name: "謎解き~変化からの脱出~",
   tags: ["予約"],
-  category: [CATEGORY.STUDENT, CATEGORY.EXPERIENCE],
+  category: [CATEGORY.STUDENT, CATEGORY.FAMILY, CATEGORY.EXPERIENCE],
   summary: "制限時間内に、講義室にちりばめられた謎を解き脱出する。",
 
   // ProjectBoxに変換する必要があるデータ
@@ -81,7 +82,9 @@ export const roomRiddles: ProjectData = {
       content: (
         <ul>
           <li>
-            10:00より謎解き受付（2331講義室前）にて各公演の整理券を配布、なくなり次第終了。当日のみ受付。
+            <Underline>
+              10:00より謎解き受付（2331講義室前）にて各公演の整理券を配布、なくなり次第終了。当日のみ受付。
+            </Underline>
           </li>
           <li>1グループ約10人、1公演約1時間（謎解きの制限時間は40分）</li>
           <li>他の参加者の方々と協力して謎解きをする可能性あり。</li>
