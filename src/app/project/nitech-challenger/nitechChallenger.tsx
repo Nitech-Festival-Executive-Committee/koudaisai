@@ -21,9 +21,9 @@ const schedule = {
 
 const place = "2号館前ステージ";
 
-export const miniGame: ProjectData = {
+export const nitechChallenger: ProjectData = {
   // ContentBoxに含まないデータ
-  link: "mini-game",
+  link: "nitech-challenger",
   name: "NITechへの挑戦者",
   tags: [],
   category: [
