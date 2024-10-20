@@ -8,11 +8,11 @@ const schedule = {
     startDate: createDate({
       date: 1,
       hour: 10,
-      minute: 30,
+      minute: 0,
     }),
     endDate: createDate({
       date: 1,
-      hour: 15,
+      hour: 16,
       minute: 0,
     }),
   },
@@ -20,12 +20,12 @@ const schedule = {
     startDate: createDate({
       date: 2,
       hour: 10,
-      minute: 30,
+      minute: 0,
     }),
     endDate: createDate({
       date: 2,
       hour: 15,
-      minute: 0,
+      minute: 30,
     }),
   },
 };
@@ -101,15 +101,4 @@ export const vsDealer: ProjectData = {
       content: "企画局 iori.nomoto@koudaisai.com",
     },
   ],
-
-  swiperOption: {
-    dayTag: {
-      day1: true,
-      day2: true,
-    },
-    schedule: {
-      day1: "初回10:30～",
-      day2: "初回10:30～",
-    },
-  },
 };
