@@ -26,8 +26,8 @@ const schedule = {
     }),
     endDate: createDate({
       date: 2,
-      hour: 16,
-      minute: 0,
+      hour: 15,
+      minute: 30,
     }),
   },
 };
@@ -115,6 +115,7 @@ export const templateProject: ProjectData = {
     {
       title: "ほげ",
       content: "ほげ",
+      position: "left",
     },
   ],
 };

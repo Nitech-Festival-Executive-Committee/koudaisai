@@ -19,7 +19,7 @@ export default function TemplateProject() {
   return (
     <>
       <Project projectData={templateProject}></Project>
-      <ContentTitle title="チケット" size={2} bigTitle />
+      <ContentTitle title="hogefuga" size={2} bigTitle />
       <PageWrapper>
         <SectionBody>
           <ContentTitle title="1日目" size={2} />

@@ -5,6 +5,7 @@ import { CategoryType, Schedule } from "./types";
 export interface ProjectBox {
   title: string;
   content: string | ReactNode;
+  position?: "left" | "right";
 }
 
 export interface ProjectData {
