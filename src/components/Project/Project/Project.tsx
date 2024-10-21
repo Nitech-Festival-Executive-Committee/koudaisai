@@ -40,15 +40,24 @@ export default function Project({
               alt="Brochure"
             />
           )}
+          <ProjectContent
+            projectBoxList={projectData.projectBoxList.filter(
+              (box) => box.position === "left" // positionにleftが指定されているもののみ
+            )}
+          />
         </SectionBody>
         <SectionBody>
-          <ContentTitle title="hoge" size={2} />
+          <ContentTitle title="企画詳細" size={2} />
           <ProjectTag
             day1={projectData.schedule.day1 ? true : false}
             day2={projectData.schedule.day2 ? true : false}
             exclusiveText={projectData.tags ? projectData.tags : []}
           />
-          <ProjectContent projectBoxList={projectData.projectBoxList} />
+          <ProjectContent
+            projectBoxList={projectData.projectBoxList.filter(
+              (box) => !box.position || box.position === "right" // positionを指定していないか、rightが指定されているもののみ
+            )}
+          />
         </SectionBody>
         {children}
       </PageWrapper>
