@@ -12,11 +12,10 @@ const schedule = {
       hour: 16,
       minute: 10,
     }),
-    //TODO: 終了時間がない場合どうするのか
     endDate: createDate({
       date: 2,
       hour: 18,
-      minute: 0,
+      minute: 10,
     }),
   },
 };
