@@ -37,6 +37,23 @@
   a {
     text-decoration: underline;
   }
+
+  ul {
+    padding-left: 20px;
+    margin: 0;
+    @include phone {
+      padding-left: 15px;
+      font-size: 1rem;
+    }
+  }
+  ol {
+    padding-left: 20px;
+    margin: 0;
+    @include phone {
+      padding-left: 15px;
+      font-size: 1rem;
+    }
+  }
 }
 .contentBox ul {
   padding-left: 20px;
