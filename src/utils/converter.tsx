@@ -53,6 +53,7 @@ export const convertProjectDataToSwiperCardProps = (
 ): SwiperCardProps => {
   const props: SwiperCardProps = {
     title: project.name,
+    title: project.name,
     href: `/project/${project.link}/`,
     imageUrl: `/62nd/project/${project.link}/brochure.webp`,
     imageAlt: project.name,
