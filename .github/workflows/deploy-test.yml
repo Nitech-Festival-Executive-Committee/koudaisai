@@ -1,0 +1,68 @@
+name: Deploy for test
+
+on:
+  push:
+    branches:
+      - chore/218-test-deploy-workflow
+  # workflow_dispatch: # 手動で実行
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3 # 最新のリポジトリをチェックアウト
+        with:
+          ref: main # mainブランチをチェックアウト
+          fetch-depth: 0
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'senntou'
+          git config --global user.email '${{ secrets.EMAIL }}'
+
+      - name: 定義されたブランチを全てマージ
+        run: |
+          branches=(
+            text/55-mini-game
+            text/58-spark
+            text/59-nitech-king
+            text/65-artful-campus
+            text/66-haunted-house
+            text/71-community-street
+            text/72-stamp-rally
+            text/73-MOGI-1-Mogiten
+            text/145-seiyu
+            text/201-gakuseiboshu
+            text/221-shooting-guesser
+          )
+          for branch in "${branches[@]}"; do
+            git fetch origin $branch
+            git merge origin/$branch
+          done
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3 # Node.jsをインストール
+        with:
+          node-version: "18" # 必要なNodeのバージョンを指定
+
+      - name: Install dependencies
+        run: npm install # パッケージをインストール
+
+      - name: Build the project
+        run: npm run build # プロジェクトをビルド
+
+      - name: Upload files via SCP
+        run: |
+          echo "Setting up SSH key..."
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
+          chmod 600 private_key  # 秘密鍵のパーミッションを設定
+
+          rsync -avz --delete \
+          --exclude-from=./.github/workflows/rsync-exclude.txt \
+          -e "ssh -i private_key -p 8022 -o StrictHostKeyChecking=no" ./out/ $SFTP_USERNAME@$SFTP_HOST:/home/$SFTP_USERNAME/public_html/koudaisai.onamaeweb.jp/
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # 秘密鍵
+          SFTP_USERNAME: ${{ secrets.SSH_USER_NAME }} # ユーザー名
+          SFTP_HOST: ${{ secrets.SSH_HOST }} # 接続先ホスト
