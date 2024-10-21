@@ -14,7 +14,7 @@ export default function Tyuya() {
   return (
     <Project
       projectData={tyuya}
-      brochurePath={"/62nd/project/tyuya/gorgeous.webp"}
+      brochurePath="/62nd/project/tyuya/gorgeous.webp"
     ></Project>
   );
 }
