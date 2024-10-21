@@ -75,7 +75,7 @@ export const templateProject: ProjectData = {
     },
     {
       title: "定員",
-      content: "100人",
+      content: "???人",
     },
     {
       title: "注意事項",
