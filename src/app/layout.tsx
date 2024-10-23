@@ -1,3 +1,4 @@
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "@/styles/style.scss";
 
@@ -57,6 +58,9 @@ export default function RootLayout({
         <SnsIconList pcOnly />
         <PageTop />
         <Footer />
+
+        <GoogleTagManager gtmId="G-Z9XM0B1SGL" />
+        <GoogleAnalytics gaId="G-Z9XM0B1SGL" />
       </body>
     </html>
   );
