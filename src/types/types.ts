@@ -15,3 +15,12 @@ export const CATEGORY = {
   EXHIBITION: "EXHIBITION", // 展示
 } as const;
 export type CategoryType = (typeof CATEGORY)[keyof typeof CATEGORY];
+
+export const animationTypes = [
+  "left",
+  "right",
+  "center",
+  "bottom",
+  "top",
+] as const;
+export type AnimationType = (typeof animationTypes)[number];
