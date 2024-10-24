@@ -17,7 +17,7 @@ export default function ContentTitle({
 
   return (
     <HeadingTag
-      className={`${styles.contentTitle} ${styles.fontEffect} ${styles.retroShadow} ${bigTitle ? styles.bigTitle : ""}`}
+      className={`contentTitle ${styles.contentTitle} ${styles.fontEffect} ${styles.retroShadow} ${bigTitle ? styles.bigTitle : ""}`}
       style={style}
     >
       <span>{title}</span>

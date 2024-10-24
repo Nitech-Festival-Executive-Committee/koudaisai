@@ -3,6 +3,7 @@ import React from "react";
 import Project from "@/components/Project/Project/Project";
 import { hauntedHouse } from "./hauntedHouse";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
+import "@/app/project/haunted-house/haunted-house.scss";
 
 export const metadata = {
   title: `${hauntedHouse.name} - 第${NITFES_EDITION}回工大祭`,
@@ -10,5 +11,5 @@ export const metadata = {
 };
 
 export default function HauntedHouse() {
-  return <Project projectData={hauntedHouse}></Project>;
+  return <Project projectData={hauntedHouse} />;
 }
