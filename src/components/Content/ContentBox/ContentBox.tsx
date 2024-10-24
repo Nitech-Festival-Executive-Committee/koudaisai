@@ -12,7 +12,7 @@ export default function ContentBox({
   style,
 }: ContentBoxProps) {
   return (
-    <div className={styles.contentBox} style={style}>
+    <div className={`contentBox ${styles.contentBox}`} style={style}>
       <span className={styles.contentBoxTitle}>{title}</span>
       {children}
     </div>
