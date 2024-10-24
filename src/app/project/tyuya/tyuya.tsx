@@ -35,7 +35,12 @@ export const tyuya: ProjectData = {
     CATEGORY.STUDENT,
     CATEGORY.EXPERIENCE,
   ],
-  summary: "",
+  summary: (
+    <>
+      今年のゲストは<Underline>ゴー☆ジャス</Underline>
+      !観客の皆さんも一緒になって楽しめる企画を用意してお待ちしております!
+    </>
+  ),
 
   // ProjectBoxに変換する必要があるデータ
   schedule,
