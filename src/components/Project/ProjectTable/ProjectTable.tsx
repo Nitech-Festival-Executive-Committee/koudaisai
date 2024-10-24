@@ -42,15 +42,27 @@ export default function ProjectTable({ tableObject }: ProjectTableProps) {
               </th>
               {/* 残りの列を表示 */}
               {row.length < tableObject.column.length ? (
-                // データ数が不足している場合、残りの列数分colSpanを適用
-                <td
-                  colSpan={tableObject.column.length - 1}
-                  style={{
-                    width: `${(tableObject.widthWeight.slice(1).reduce((a, b) => a + b, 0) / totalWeight) * 100}%`,
-                  }}
-                >
-                  {row[1]}
-                </td>
+                // データが不足している場合、最後の要素を引き伸ばす
+                <>
+                  {row.slice(1, -1).map((cell, cellIndex) => (
+                    <td
+                      key={cellIndex}
+                      style={{
+                        width: `${(tableObject.widthWeight[cellIndex + 1] / totalWeight) * 100}%`,
+                      }}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                  <td
+                    colSpan={tableObject.column.length - row.length + 1}
+                    style={{
+                      width: `${(tableObject.widthWeight.slice(row.length - 1).reduce((a, b) => a + b, 0) / totalWeight) * 100}%`,
+                    }}
+                  >
+                    {row[row.length - 1]}
+                  </td>
+                </>
               ) : (
                 row.slice(1).map((cell, cellIndex) => (
                   <td
