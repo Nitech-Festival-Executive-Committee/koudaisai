@@ -71,9 +71,7 @@ export default function About() {
           <ContentTitle title="役割分担" size={2} />
           <ContentBox title={"委員長会"}>
             <p>
-              工大祭実行委員会のまとめ役で、委員長1人と副委員長4人の5人組で構成されています!
-              <br />
-              工大祭委員の企画を行う上での財務管理をしたり、委員1人1人の仕事の進捗具合を確認したりしています。
+              工大祭実行委員会のまとめ役で、イベントの統括や財務管理、委員1人1人の仕事の進捗具合を確認したりしています!
             </p>
           </ContentBox>
           <ContentBox title={"企画局"}>
