@@ -10,7 +10,7 @@ interface CenterIn {
 
 export default function CenterIn({
   children,
-  duration = 0.5,
+  duration = 0.7,
   delay = 0,
 }: CenterIn) {
   const ref = useRef<HTMLDivElement | null>(null);
