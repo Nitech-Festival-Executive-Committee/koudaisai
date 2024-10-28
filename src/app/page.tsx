@@ -5,6 +5,7 @@ import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Underline from "@/components/Content/Underline/Underline";
+import Flipdown from "@/components/Flipdown/Flipdown";
 import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
 
@@ -12,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <Canvas />
-      {/* countdown */}
+      <Flipdown year={2024} month={11} day={17} hour={9}></Flipdown>
       <CustomSwiper title="PICK UP" />
       {/* 速報 */}
       <PageWrapper>
