@@ -63,8 +63,12 @@ export const nitechChallenger: ProjectData = {
       content: place,
     },
     {
+      title: "景品",
+      content: "マリオットペアランチ券など多数のチケットを用意しております!",
+    },
+    {
       title: "定員",
-      content: "100人程度(用紙が無くなり次第終了です)",
+      content: "約130人(用紙が無くなり次第終了です)",
     },
     {
       title: "ルール説明",
@@ -72,7 +76,7 @@ export const nitechChallenger: ProjectData = {
         <p>
           参加する際には、事前に受付から配布される用紙をお受け取りください。以降の説明はオープニングにて行われます。
           <br />
-          持ち物は必要ありません、お気軽にお越しください!!
+          ペンと消しゴムが必要ですが、ある程度は準備してます。
         </p>
       ),
     },
