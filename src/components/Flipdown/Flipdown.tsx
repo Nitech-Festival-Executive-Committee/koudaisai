@@ -47,14 +47,15 @@ export default function Flipdown({
           labels={["Days", "Hours", "Minutes", "Seconds"]}
           labelStyle={{
             fontSize: 20,
-            fontWeight: 600,
+            fontWeight: 700,
             transform: "translate(-50%, 130%)",
+            textShadow: "4px 2px 6px rgba(80, 80, 80, 0.5)",
           }}
           digitBlockStyle={{
             backgroundColor: "#333333",
             fontWeight: 600,
             width: 60,
-            height: 100,
+            height: 95,
             fontSize: 70,
             borderRadius: 8,
             fontFamily: "Helvetica Neue, Helvetica, sans-serif",
