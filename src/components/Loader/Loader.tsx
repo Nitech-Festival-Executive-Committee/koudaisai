@@ -1,11 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import type { Container } from "@tsparticles/engine";
+import { Particles, initParticlesEngine } from "@tsparticles/react";
+import { type Container } from "@tsparticles/engine";
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import SvgText from "./SvgText";
 import styles from "./Loader.module.scss";
 
 export default function Loader() {
@@ -33,6 +34,10 @@ export default function Loader() {
   if (init) {
     return (
       <div className={styles.loaderContainer}>
+        <h1 className={styles.festivalTitle}>第62回 工大祭 2024</h1>
+        <div className={styles.svgText}>
+          <SvgText></SvgText>
+        </div>
         <Particles
           id="firePartifle"
           particlesLoaded={particlesLoaded}

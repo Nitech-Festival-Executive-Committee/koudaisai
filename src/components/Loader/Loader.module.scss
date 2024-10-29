@@ -5,5 +5,27 @@
   z-index: 200;
   width: 100vw;
   height: 100vh;
-  background: white;
+  background: linear-gradient(
+    180deg,
+    rgb(255 255 255) 0%,
+    rgb(255 241 233) 50%,
+    rgb(255 227 210) 100%
+  );
+}
+.festivalTitle {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  z-index: 210;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.svgText {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%);
 }
