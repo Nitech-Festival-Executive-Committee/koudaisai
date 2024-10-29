@@ -9,7 +9,7 @@ import Flipdown from "@/components/Flipdown/Flipdown";
 import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
 
-export default function Home() {
+export default function Top() {
   return (
     <div>
       <Canvas />

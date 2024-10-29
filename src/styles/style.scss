@@ -18,6 +18,9 @@
     --fcc-separator-size: 6px !important;
   }
 }
+html {
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -26,7 +29,6 @@ body {
 }
 main {
   padding-top: calc(var(--main-padding-top));
-  overflow-x: hidden;
   --main-padding-top: 60px;
   @include phone {
     --main-padding-top: 50px;
