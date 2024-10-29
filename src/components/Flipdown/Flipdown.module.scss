@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Playball&family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&family=Mochiy+Pop+P+One&display=swap");
+@import "variables";
 
 .when,
 .remaining {
@@ -36,4 +36,15 @@
   text-align: center;
   transition: 1s;
   transform: translate(-50%, -50%);
+}
+
+@include phone {
+  .when {
+    font-size: 1.3rem;
+  }
+
+  .complete {
+    width: 90vw;
+    font-size: 60px;
+  }
 }

@@ -11,6 +11,12 @@
   --twitter: black;
   --instagram: #ff59e3;
   --youtube: #ff0000;
+
+  --fcc-separator-size: 8px !important;
+  @include phone {
+    --fcc-spacing: 3px !important;
+    --fcc-separator-size: 6px !important;
+  }
 }
 body {
   margin: 0;

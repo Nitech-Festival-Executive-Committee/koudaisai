@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <Canvas />
-      <Flipdown year={2024} month={11} day={17} hour={9}></Flipdown>
+      <Flipdown year={2024} month={11} day={16} hour={10}></Flipdown>
       <CustomSwiper title="PICK UP" />
       {/* 速報 */}
       <PageWrapper>

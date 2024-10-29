@@ -35,7 +35,7 @@ export default function Flipdown({
     <>
       <h2
         className={styles.when}
-      >{`${year}年${month}月${day}・${++day}日 ${hour}時～ 開催!`}</h2>
+      >{`${year}年${month}月${day}・${day + 1}日 ${hour}時～ 開催!`}</h2>
       <div style={{ position: "relative" }}>
         <div
           style={{
@@ -63,24 +63,27 @@ export default function Flipdown({
               ).getTime()}
               labels={["Days", "Hours", "Minutes", "Seconds"]}
               labelStyle={{
-                fontSize: 20,
+                fontSize: 23,
                 fontWeight: 700,
-                transform: "translate(-50%, 130%)",
-                textShadow: "4px 2px 6px rgba(80, 80, 80, 0.5)",
+                transform: isMobile()
+                  ? "translate(-50%, 120%)"
+                  : "translate(-50%, 140%)",
+                textShadow: "3px 2px 4px rgba(80, 80, 80, 0.5)",
               }}
               digitBlockStyle={{
                 backgroundColor: "#333333",
                 fontWeight: 600,
-                width: 60,
-                height: 95,
-                fontSize: 70,
+                width: isMobile() ? 40 : 75,
+                height: isMobile() ? 65 : 115,
+                fontSize: isMobile() ? 50 : 90,
                 borderRadius: 8,
                 fontFamily: "Helvetica Neue, Helvetica, sans-serif",
                 color: "#cccccc",
               }}
               dividerStyle={{ color: "#1f1f1f" }}
               separatorStyle={{ color: "#000" }}
-              duration={0.6}
+              duration={0.7}
+              stopOnHiddenVisibility={false}
               hideOnComplete={false}
               onComplete={() => {
                 setTimeout(() => {
@@ -90,7 +93,6 @@ export default function Flipdown({
                   }, 800);
                 }, 800);
               }}
-              stopOnHiddenVisibility={false}
             />
           </div>
         </div>
@@ -100,4 +102,10 @@ export default function Flipdown({
       </div>
     </>
   );
+}
+
+function isMobile() {
+  if (process.browser) {
+    return window.innerWidth <= 600;
+  }
 }
