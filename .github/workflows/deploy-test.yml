@@ -25,17 +25,8 @@ jobs:
       - name: 定義されたブランチを全てマージ
         run: |
           branches=(
-            text/55-mini-game
-            text/58-spark
-            text/59-nitech-king
-            text/65-artful-campus
             text/66-haunted-house
-            text/71-community-street
-            text/72-stamp-rally
-            text/73-MOGI-1-Mogiten
-            text/145-seiyu
-            text/201-gakuseiboshu
-            text/221-shooting-guesser
+            feat/14-flipdown
           )
           for branch in "${branches[@]}"; do
             git fetch origin $branch
