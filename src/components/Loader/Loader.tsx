@@ -34,9 +34,11 @@ export default function Loader() {
   if (init) {
     return (
       <div className={styles.loaderContainer}>
-        <h1 className={styles.festivalTitle}>第62回 工大祭 2024</h1>
-        <div className={styles.svgText}>
-          <SvgText></SvgText>
+        <div className={styles.loaderTexts}>
+          <h1 className={styles.festivalTitle}>第62回 工大祭 2024</h1>
+          <div className={styles.svgText}>
+            <SvgText></SvgText>
+          </div>
         </div>
         <Particles
           id="firePartifle"
