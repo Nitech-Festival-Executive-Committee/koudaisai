@@ -11,21 +11,15 @@ import SwiperCard from "./SwiperCard/SwiperCard";
 import SwiperNext from "./SwiperButtons/SwiperNext";
 import SwiperPrev from "./SwiperButtons/SwiperPrev";
 import ContentTitle from "../Content/ContentTitle/ContentTitle";
-import { templateProject } from "@/app/project/template/templateProject";
 import { convertProjectDataToSwiperCardProps } from "@/utils/converter";
+import { ProjectData } from "@/types/projectInterface";
 
-const projects = [
-  templateProject,
-  templateProject,
-  templateProject,
-  templateProject,
-  templateProject,
-  templateProject,
-  templateProject,
-  templateProject,
-];
+interface CustomSwiperProps {
+  title: string;
+  projects: ProjectData[];
+}
 
-export default function CustomSwiper({ title }: { title: string }) {
+export default function CustomSwiper({ title, projects }: CustomSwiperProps) {
   return (
     <div className={styles.swiperContainer}>
       <ContentTitle title={title} size={2} bigTitle />

@@ -12,6 +12,19 @@
     max-height: 100%;
   }
 }
+
+.swiperCardHorizontalMini {
+  width: auto !important;
+  height: 38vh !important;
+  max-height: 100%;
+
+  @include phone {
+    width: 85vw !important;
+    max-width: 85vw;
+    height: auto !important;
+    max-height: 100%;
+  }
+}
 .swiperCardHorizontal {
   width: auto !important;
   height: 45vh !important;

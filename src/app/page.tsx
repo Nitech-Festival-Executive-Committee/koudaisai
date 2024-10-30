@@ -9,6 +9,29 @@ import Flipdown from "@/components/Flipdown/Flipdown";
 import Loader from "@/components/Loader/Loader";
 import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
+import { seiyu } from "./project/seiyu/seiyu";
+import { gakuseiboshu } from "./project/gakuseiboshu/gakuseiboshu";
+import { hauntedHouse } from "./project/haunted-house/hauntedHouse";
+import { roomRiddles } from "./project/room-riddles/roomRiddles";
+import { excursionRiddles } from "./project/excursion-riddles/ExcursionRiddles";
+import { vsDealer } from "./project/vs-dealer/vsDealer";
+import { vrCoaster } from "./project/vr-coaster/vrCoaster";
+import { tyuya } from "./project/tyuya/tyuya";
+import { nitechKing } from "./project/nitech-king/nitechKing";
+import { allProject } from "./allProjectData";
+
+const pickupProjects = [
+  allProject,
+  tyuya,
+  seiyu,
+  roomRiddles,
+  excursionRiddles,
+  vsDealer,
+  vrCoaster,
+  gakuseiboshu,
+  nitechKing,
+  hauntedHouse,
+];
 
 export default function Top() {
   return (
@@ -16,7 +39,7 @@ export default function Top() {
       <Loader /> {/* これを消すとトップでロード画面を流さないように出来る */}
       <Canvas />
       <Flipdown year={2024} month={11} day={16} hour={10}></Flipdown>
-      <CustomSwiper title="PICK UP" />
+      <CustomSwiper title="PICK UP" projects={pickupProjects} />
       {/* 速報 */}
       <PageWrapper>
         <SectionBody>

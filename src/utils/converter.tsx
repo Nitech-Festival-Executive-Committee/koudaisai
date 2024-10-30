@@ -30,6 +30,7 @@ export const convertScheduleToReactNode = (schedule: Schedule): ReactNode => {
 export const convertScheduleToSummaryReactNode = (
   schedule: Schedule
 ): ReactNode => {
+  if (!schedule.day1 && !schedule.day2) return null;
   return (
     <>
       {schedule.day1 && (
@@ -56,9 +57,12 @@ export const convertProjectDataToSwiperCardProps = (
     href: `/project/${project.link}/`,
     imageUrl: `/62nd/project/${project.link}/brochure.webp`,
     imageAlt: project.name,
+    day1: project.schedule?.day1 !== undefined,
+    day2: project.schedule?.day2 !== undefined,
     projectTag: project.tags,
     schedule: convertScheduleToSummaryReactNode(project.schedule),
     place: project.place,
+    brochureMini: false,
   };
 
   if (!project.swiperOption) return props; // オプションがなければそのまま返す
@@ -66,13 +70,18 @@ export const convertProjectDataToSwiperCardProps = (
   // オプションがある場合は上書き
   const {
     title,
+    href,
+    brochurePath,
     dayTag,
     projectTag: swiperProjectTag,
     place,
     schedule,
+    brochureMini,
   } = project.swiperOption;
 
   if (title) props.title = title;
+  if (href) props.href = href;
+  if (brochurePath) props.imageUrl = brochurePath;
   if (dayTag) {
     props.day1 = dayTag.day1;
     props.day2 = dayTag.day2;
@@ -96,6 +105,7 @@ export const convertProjectDataToSwiperCardProps = (
       </span>
     );
   }
+  if (brochureMini) props.brochureMini = brochureMini;
 
   return props;
 };

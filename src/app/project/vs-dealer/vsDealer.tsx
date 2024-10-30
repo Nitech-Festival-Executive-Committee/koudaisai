@@ -101,4 +101,8 @@ export const vsDealer: ProjectData = {
       content: "企画局 iori.nomoto@koudaisai.com",
     },
   ],
+
+  swiperOption: {
+    brochureMini: true,
+  },
 };

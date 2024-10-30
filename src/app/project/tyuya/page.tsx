@@ -11,5 +11,5 @@ export const metadata = {
 
 // 関数名を変更(ex. MiniGame)
 export default function Tyuya() {
-  return <Project projectData={tyuya} brochurePath={"gorgeous.webp"} />;
+  return <Project projectData={tyuya} />;
 }
