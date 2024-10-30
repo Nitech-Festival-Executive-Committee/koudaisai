@@ -1,9 +1,57 @@
 import React from "react";
 
 export default function svgText() {
+  const delay = "2s";
+  const duration = "3s";
+
   return (
     <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223.5 52.14">
-      <g>
+      <defs>
+        <linearGradient id="fireGradient" x1="10%" y1="100%" x2="90%" y2="0%">
+          <stop offset="0%" stopColor="#ff4c1b">
+            <animate
+              attributeName="offset"
+              from="0"
+              to="0.3"
+              begin={delay}
+              dur={duration}
+              fill="freeze"
+            />
+          </stop>
+          <stop offset="40%" stopColor="#ffa500">
+            <animate
+              attributeName="offset"
+              from="0.3"
+              to="0.6"
+              begin={delay}
+              dur={duration}
+              fill="freeze"
+            />
+          </stop>
+          <stop offset="80%" stopColor="#ffdd00">
+            <animate
+              attributeName="offset"
+              from="0.6"
+              to="0.9"
+              begin={delay}
+              dur={duration}
+              fill="freeze"
+            />
+          </stop>
+          <stop offset="100%" stopColor="#ff4c1b">
+            <animate
+              attributeName="offset"
+              from="0.9"
+              to="1.2"
+              begin={delay}
+              dur={duration}
+              fill="freeze"
+            />
+          </stop>
+        </linearGradient>
+      </defs>
+
+      <g fill="url(#fireGradient)">
         <path
           className="loader_i loader_red"
           d="M23.83,9.41l-.42,1.26c-1.85.1-3.07.32-3.67.64-.39.22-.72.54-.98.98-.31.56-1.22,3.53-2.73,8.91-.49,1.77-1.75,6.62-3.77,14.53,1.14.36,2.58.52,4.33.48l-.39,1.12c-.52.01-1.56-.05-3.13-.19-1.12-.1-2.44-.15-3.93-.15-2.07,0-3.97.14-5.7.43l.3-1.24c1.79-.26,3.15-.6,4.08-1.02.23-.11.41-.24.54-.4.25-.28.51-.84.8-1.69.29-.85,1.27-4.31,2.95-10.39.49-1.76,1.5-5.6,3.01-11.52-1.12-.03-2.5.11-4.13.43l.47-1.28c.68-.17,1.39-.29,2.1-.36.72-.07,2.34-.13,4.86-.19,2.36-.06,4.17-.18,5.43-.36Z"
