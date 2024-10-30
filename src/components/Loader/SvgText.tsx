@@ -2,7 +2,7 @@ import React from "react";
 
 export default function svgText() {
   const delay = "2s";
-  const duration = "3s";
+  const duration = "1s";
 
   return (
     <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223.5 52.14">
