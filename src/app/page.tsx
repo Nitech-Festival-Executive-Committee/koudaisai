@@ -9,16 +9,16 @@ import Flipdown from "@/components/Flipdown/Flipdown";
 import Loader from "@/components/Loader/Loader";
 import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
+import { allProject } from "./allProjectData";
+import { tyuya } from "./project/tyuya/tyuya";
 import { seiyu } from "./project/seiyu/seiyu";
-import { gakuseiboshu } from "./project/gakuseiboshu/gakuseiboshu";
-import { hauntedHouse } from "./project/haunted-house/hauntedHouse";
 import { roomRiddles } from "./project/room-riddles/roomRiddles";
 import { excursionRiddles } from "./project/excursion-riddles/ExcursionRiddles";
 import { vsDealer } from "./project/vs-dealer/vsDealer";
 import { vrCoaster } from "./project/vr-coaster/vrCoaster";
-import { tyuya } from "./project/tyuya/tyuya";
+import { gakuseiboshu } from "./project/gakuseiboshu/gakuseiboshu";
 import { nitechKing } from "./project/nitech-king/nitechKing";
-import { allProject } from "./allProjectData";
+import { hauntedHouse } from "./project/haunted-house/hauntedHouse";
 
 const pickupProjects = [
   allProject,
