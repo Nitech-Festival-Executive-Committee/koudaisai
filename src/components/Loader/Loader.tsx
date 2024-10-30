@@ -44,7 +44,7 @@ export default function Loader() {
           options={{
             particles: {
               number: {
-                value: 150,
+                value: 200,
               },
               color: {
                 value: "#ff4c1b",
