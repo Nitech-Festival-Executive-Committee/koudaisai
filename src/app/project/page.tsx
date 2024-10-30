@@ -8,7 +8,7 @@ import { laboratoryTour } from "./laboratory-tour/laboratoryTour";
 import { gakuseiboshu } from "./gakuseiboshu/gakuseiboshu";
 import { mogi1 } from "./mogi1/mogi1";
 import { roomRiddles } from "./room-riddles/roomRiddles";
-import { excursionRiddles } from "./excursion-riddles/ExcursionRiddles";
+import { excursionRiddles } from "./excursion-riddles/excursionRiddles";
 import { hauntedHouse } from "./haunted-house/hauntedHouse";
 import { kidsPark } from "./kids-park/kidsPark";
 import { nitechKing } from "./nitech-king/nitechKing";

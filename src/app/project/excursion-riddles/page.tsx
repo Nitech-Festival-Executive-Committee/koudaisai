@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-key */
 import React from "react";
 import Project from "@/components/Project/Project/Project";
-import { excursionRiddles } from "./ExcursionRiddles";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
+import { excursionRiddles } from "./excursionRiddles";
 
 export const metadata = {
   title: `${excursionRiddles.name} - 第${NITFES_EDITION}回工大祭`,

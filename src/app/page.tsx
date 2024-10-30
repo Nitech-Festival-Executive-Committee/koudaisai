@@ -13,7 +13,7 @@ import { allProject } from "./allProjectData";
 import { tyuya } from "./project/tyuya/tyuya";
 import { seiyu } from "./project/seiyu/seiyu";
 import { roomRiddles } from "./project/room-riddles/roomRiddles";
-import { excursionRiddles } from "./project/excursion-riddles/ExcursionRiddles";
+import { excursionRiddles } from "./project/excursion-riddles/excursionRiddles";
 import { vsDealer } from "./project/vs-dealer/vsDealer";
 import { vrCoaster } from "./project/vr-coaster/vrCoaster";
 import { gakuseiboshu } from "./project/gakuseiboshu/gakuseiboshu";
