@@ -5,12 +5,14 @@ import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Underline from "@/components/Content/Underline/Underline";
+import Loader from "@/components/Loader/Loader";
 import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
 
-export default function Home() {
+export default function Top() {
   return (
     <div>
+      <Loader /> {/* これを消すとトップでロード画面を流さないように出来る */}
       <Canvas />
       {/* countdown */}
       <CustomSwiper title="PICK UP" />
@@ -158,7 +160,6 @@ export default function Home() {
           </ContentBox>
         </SectionBody>
       </PageWrapper>
-
       <PreviousFestival />
     </div>
   );
