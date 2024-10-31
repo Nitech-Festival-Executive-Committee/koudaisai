@@ -79,9 +79,5 @@ export const mogi1: ProjectData = {
       content:
         "3号館南ゴミステーションテントの投票所で模擬店部門の投票シールとメニュー部門の投票用紙を配っています。",
     },
-    {
-      title: "お問い合わせ先",
-      content: "模擬局 takahiro.nakano@koudaisai.com",
-    },
   ],
 };

@@ -83,9 +83,5 @@ export const vrCoaster: ProjectData = {
         </ul>
       ),
     },
-    {
-      title: "お問い合わせ先",
-      content: "企画局 rito.saiki@koudaisai.com",
-    },
   ],
 };

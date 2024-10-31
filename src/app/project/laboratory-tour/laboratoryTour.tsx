@@ -109,9 +109,5 @@ export const laboratoryTour: ProjectData = {
         </ul>
       ),
     },
-    {
-      title: "お問い合わせ先",
-      content: "企画局 Takumi.kawada@koudaisai.com",
-    },
   ],
 };

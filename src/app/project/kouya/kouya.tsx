@@ -83,9 +83,5 @@ export const kouya: ProjectData = {
         </p>
       ),
     },
-    {
-      title: "お問い合わせ先",
-      content: "ステージ局 yusei.hashimoto@koudaisai.com",
-    },
   ],
 };

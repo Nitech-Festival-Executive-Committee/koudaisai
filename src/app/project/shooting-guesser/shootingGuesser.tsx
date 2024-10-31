@@ -96,9 +96,5 @@ export const shootingGuesser: ProjectData = {
       content:
         "企画中に移動してもらう場面が多くあります。他の方とぶつからないように注意して移動してください。",
     },
-    {
-      title: "お問い合わせ先",
-      content: "ステージ局 ichiro.hayashi@koudaisai.com",
-    },
   ],
 };

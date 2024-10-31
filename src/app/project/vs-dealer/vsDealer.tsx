@@ -96,10 +96,6 @@ export const vsDealer: ProjectData = {
         </ul>
       ),
     },
-    {
-      title: "お問い合わせ先",
-      content: "企画局 iori.nomoto@koudaisai.com",
-    },
   ],
 
   swiperOption: {

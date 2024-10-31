@@ -71,9 +71,5 @@ export const communityStreet: ProjectData = {
       title: "開催場所",
       content: place,
     },
-    {
-      title: "お問い合わせ先",
-      content: "地域局 aoto.miura@koudaisai.com",
-    },
   ],
 };

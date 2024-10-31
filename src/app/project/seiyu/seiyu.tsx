@@ -110,9 +110,5 @@ export const seiyu: ProjectData = {
         </ul>
       ),
     },
-    {
-      title: "お問い合わせ先",
-      content: "ステージ局 kakeru.adachi@koudaisai.com",
-    },
   ],
 };

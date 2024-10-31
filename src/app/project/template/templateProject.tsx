@@ -101,10 +101,6 @@ export const templateProject: ProjectData = {
       ),
     },
     {
-      title: "お問い合わせ先",
-      content: "局 @koudaisai.com",
-    },
-    {
       title: "景品",
       content: "1BTC (900万円相当)",
     },
