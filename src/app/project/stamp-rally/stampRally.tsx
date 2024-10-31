@@ -50,9 +50,7 @@ export const stampRally: ProjectData = {
   projectBoxList: [
     {
       title: "企画紹介",
-      content: (
-        <p>工大祭の企画をまわってスタンプを集めて景品をゲットしよう！</p>
-      ),
+      content: <p>工大祭の企画をまわってスタンプを集めて景品をゲットしよう!</p>,
     },
     {
       title: "開催日程",

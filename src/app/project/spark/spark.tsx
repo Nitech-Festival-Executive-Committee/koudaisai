@@ -42,7 +42,7 @@ export const spark: ProjectData = {
   tags: [],
   category: [CATEGORY.STAGE_PROJECT, CATEGORY.STUDENT],
   summary:
-    "大学生を中心とした部活・サークル等の団体がパフォーマンスをする企画を行います！ ",
+    "大学生を中心とした部活・サークル等の団体がパフォーマンスをする企画を行います! ",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,
@@ -53,7 +53,7 @@ export const spark: ProjectData = {
       title: "企画紹介",
       content: (
         <p>
-          大学生を中心とした部活・サークル等の団体がパフォーマンスをする企画を行います！
+          大学生を中心とした部活・サークル等の団体がパフォーマンスをする企画を行います!
         </p>
       ),
     },
