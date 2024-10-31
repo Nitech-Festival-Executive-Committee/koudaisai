@@ -1,39 +1,35 @@
 import React from "react";
 
 export default function svgText() {
-  const delay = "2s";
-  const duration = "1s";
+  const duration = "2s";
 
   return (
     <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223.5 52.14">
       <defs>
-        <linearGradient id="fireGradient" x1="10%" y1="100%" x2="90%" y2="0%">
+        <linearGradient id="fireGradient" x1="10%" y1="150%" x2="90%" y2="0%">
           <stop offset="0%" stopColor="#ff4c1b">
             <animate
               attributeName="offset"
               from="0"
               to="0.3"
-              begin={delay}
               dur={duration}
               fill="freeze"
             />
           </stop>
-          <stop offset="40%" stopColor="#ffa500">
+          <stop offset="20%" stopColor="#ffa500">
             <animate
               attributeName="offset"
               from="0.3"
               to="0.6"
-              begin={delay}
               dur={duration}
               fill="freeze"
             />
           </stop>
-          <stop offset="80%" stopColor="#ffdd00">
+          <stop offset="60%" stopColor="#ffdd00">
             <animate
               attributeName="offset"
               from="0.6"
               to="0.9"
-              begin={delay}
               dur={duration}
               fill="freeze"
             />
@@ -43,7 +39,6 @@ export default function svgText() {
               attributeName="offset"
               from="0.9"
               to="1.2"
-              begin={delay}
               dur={duration}
               fill="freeze"
             />
