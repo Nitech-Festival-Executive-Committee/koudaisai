@@ -51,7 +51,7 @@ export const booth: ProjectData = {
       title: "企画紹介",
       content: (
         <div>
-          <p>学外より企業の方や学生団体をお呼びして様々な体験ができます！</p>
+          <p>学外より企業の方や学生団体をお呼びして様々な体験ができます!</p>
           <ul>
             <li>POLA THE BEAUTY</li>
             <ul>
