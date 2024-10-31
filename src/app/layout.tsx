@@ -12,7 +12,6 @@ import {
   NITFES_THEME,
   NITFES_YEAR,
 } from "@/const/const";
-import Loader from "@/components/Loader/Loader";
 
 export const metadata: Metadata = {
   title: `第${NITFES_EDITION}回 工大祭 ${NITFES_YEAR}`,
@@ -62,7 +61,6 @@ export default function RootLayout({
         ></link>
       </head>
       <body>
-        <Loader />
         <Header />
         <main>{children}</main>
         <SnsIconList pcOnly />
