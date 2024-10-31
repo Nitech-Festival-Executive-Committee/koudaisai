@@ -20,7 +20,10 @@
   position: absolute;
   top: 38%;
   left: 50%;
+  z-index: 300;
   width: 100%;
+  filter: blur(100px);
+  transition: 0.8s cubic-bezier(0.18, 0.81, 0.3, 0.72);
   transform: translate(-50%);
   @include phone {
     top: 45%;

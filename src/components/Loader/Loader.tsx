@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Particles, initParticlesEngine } from "@tsparticles/react";
-import { type Container } from "@tsparticles/engine";
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
@@ -10,7 +9,23 @@ import SvgText from "./SvgText";
 import styles from "./Loader.module.scss";
 
 export default function Loader() {
-  const [init, setInit] = useState(false);
+  const [isParticleReady, setIsParticleReady] = useState(false);
+  const [isAnimatiomCompleted, setIsAnimatiomCompleted] = useState(false);
+  const [isFadeOutComplete, setIsFadeOutComplete] = useState(false);
+
+  const animationDuration = 2500; // フェードインが開始してからフェードアウトし始めるまで
+  const fadeDuration = 1300; // フェードアウトの長さ
+
+  // スクロール無効化
+  // useLayoutEffect(() => {
+  //   if (isAnimatiomCompleted) {
+  //     console.log(2);
+  //     document.body.style.overflow = "auto";
+  //   } else {
+  //     console.log(1);
+  //     document.body.style.overflow = "hidden";
+  //   }
+  // }, [isAnimatiomCompleted]);
 
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -23,30 +38,44 @@ export default function Loader() {
       await loadSlim(engine);
       //await loadBasic(engine);
     }).then(() => {
-      setInit(true);
+      setIsParticleReady(true);
+      setTimeout(() => {
+        setIsAnimatiomCompleted(true);
+        setTimeout(() => {
+          setIsFadeOutComplete(true);
+        }, fadeDuration);
+      }, animationDuration);
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
-
-  if (init) {
-    return (
-      <div className={styles.loaderContainer}>
-        <div className={styles.loaderTexts}>
-          <h1 className={styles.festivalTitle}>第62回 工大祭 2024</h1>
-          <div className={styles.svgText}>
-            <SvgText></SvgText>
-          </div>
+  return (
+    <div
+      className={styles.loaderContainer}
+      style={{
+        opacity: isAnimatiomCompleted ? 0 : 1,
+        transition: `opacity ${fadeDuration}ms cubic-bezier(0.26, 0.02, 0.22, 0.86)`,
+        display: isFadeOutComplete ? "none" : "block",
+      }}
+    >
+      <div
+        className={styles.loaderTexts}
+        style={{
+          filter: isParticleReady ? "blur(0px)" : "blur(30px)",
+          opacity: isParticleReady ? 1 : 0.3,
+        }}
+      >
+        <h1 className={styles.festivalTitle}>第62回 工大祭 2024</h1>
+        <div className={styles.svgText}>
+          <SvgText></SvgText>
         </div>
+      </div>
+      {isParticleReady && (
         <Particles
           id="firePartifle"
-          particlesLoaded={particlesLoaded}
           options={{
             particles: {
               number: {
-                value: 200,
+                value: 150,
               },
               color: {
                 value: "#ff4c1b",
@@ -62,7 +91,7 @@ export default function Loader() {
               },
               move: {
                 enable: true,
-                speed: 3,
+                speed: 4,
                 direction: "top",
                 random: false,
                 straight: false,
@@ -78,9 +107,7 @@ export default function Loader() {
             retina_detect: true,
           }}
         />
-      </div>
-    );
-  }
-
-  return <></>;
+      )}
+    </div>
+  );
 }
