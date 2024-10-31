@@ -45,5 +45,6 @@
 .preFestivalThum img {
   width: auto;
   height: 100%;
+  -webkit-object-fit: contain;
   object-fit: contain;
 }
