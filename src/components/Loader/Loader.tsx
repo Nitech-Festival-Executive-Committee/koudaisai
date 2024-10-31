@@ -19,9 +19,9 @@ export default function Loader() {
   // ローダー再生中はスクロール無効化
   useLayoutEffect(() => {
     if (isAnimatiomCompleted) {
-      document.documentElement.style.overflow = "auto";
+      document.documentElement.style.overflowY = "auto";
     } else {
-      document.documentElement.style.overflow = "hidden";
+      document.documentElement.style.overflowY = "hidden";
     }
   }, [isAnimatiomCompleted]);
 
