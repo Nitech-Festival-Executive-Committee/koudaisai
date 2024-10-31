@@ -18,6 +18,6 @@ export const allProject: ProjectData = {
   projectBoxList: [],
   swiperOption: {
     href: "/project/",
-    brochurePath: "62nd/project/seiyu/brochure.webp",
+    brochurePath: "62nd/timetable/timetable.webp",
   },
 };
