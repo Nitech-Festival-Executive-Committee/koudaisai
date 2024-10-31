@@ -14,7 +14,7 @@ export const createDate = ({
   hour: number;
   minute: number;
 }): Date => {
-  const dateObj = new Date();
+  const dateObj = new Date(0);
 
   dateObj.setFullYear(NITFES_YEAR);
   dateObj.setMonth(NITFES_MONTH - 1);
