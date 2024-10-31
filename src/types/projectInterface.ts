@@ -26,6 +26,9 @@ export interface ProjectData {
   // オプション
   swiperOption?: {
     title?: string;
+    href?: string;
+    brochurePath?: string;
+    brochureMini?: boolean;
     dayTag?: {
       day1?: boolean;
       day2?: boolean;

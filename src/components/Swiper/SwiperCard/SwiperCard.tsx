@@ -13,6 +13,7 @@ export interface SwiperCardProps {
   projectTag?: string[];
   place?: string;
   schedule: ReactNode;
+  brochureMini?: boolean;
 }
 
 function getImageAspectRatio(url: string): Promise<number> {
@@ -30,9 +31,12 @@ export default function SwiperCard({
   href,
   imageUrl,
   imageAlt,
+  day1,
+  day2,
   projectTag,
   place,
   schedule,
+  brochureMini,
 }: SwiperCardProps) {
   // 画像が縦長か横長かによってスタイルを変更
   const [cardClassName, setCardClassName] = React.useState<string>(
@@ -44,7 +48,9 @@ export default function SwiperCard({
       setCardClassName(
         aspectRatio > 1
           ? styles.swiperCardVertical
-          : styles.swiperCardHorizontal
+          : brochureMini
+            ? styles.swiperCardHorizontalMini
+            : styles.swiperCardHorizontal
       );
     };
     setCardClassNameByRatio();
@@ -55,7 +61,7 @@ export default function SwiperCard({
       <img src={imageUrl} alt={imageAlt} />
       <div className={styles.swiperSlideMask} />
       <div className={styles.swiperSlideDetail}>
-        <SwiperProjectTag day1 day2 projectTag={projectTag} />
+        <SwiperProjectTag day1={day1} day2={day2} projectTag={projectTag} />
         <SwiperInfo
           title={title}
           place={place}
