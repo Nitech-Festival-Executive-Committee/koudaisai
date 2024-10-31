@@ -48,6 +48,10 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         <link
+          href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Playball&family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&family=Mochiy+Pop+P+One&display=swap"
+          rel="stylesheet"
+        />
+        <link
           href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap"
           rel="stylesheet"
         />

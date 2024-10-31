@@ -1,0 +1,50 @@
+@import "variables";
+
+.when,
+.remaining {
+  font-family:
+    Mochiy Pop P One,
+    sans-serif;
+  text-align: center;
+  text-shadow: 4px 2px 6px rgba(80, 80, 80, 0.5);
+}
+
+.when {
+  margin: 20px 0 5px 0;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.remaining {
+  margin: 0 0 15px 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.complete {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  font-family:
+    Mochiy Pop P One,
+    sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+  transition: 1s;
+  transform: translate(-50%, -50%);
+}
+
+@include phone {
+  .when {
+    font-size: 1.3rem;
+  }
+
+  .complete {
+    width: 90vw;
+    font-size: 60px;
+  }
+}
