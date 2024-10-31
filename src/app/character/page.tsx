@@ -146,7 +146,7 @@ export default function Character() {
             <ContentImage img="/62nd/character/img/tamagochan2.webp"></ContentImage>
           </ContentBox>
 
-          <ContentTitle title="たまごちゃん" size={2} />
+          <ContentTitle title="LINEスタンプ" size={2} />
           <ContentBox title={"LINEスタンプ"}>
             <p>
               落単古墳マンのスタンプが発売中!!

@@ -19,7 +19,7 @@ export const metadata = {
 export default function Seiyu() {
   return (
     <>
-      <Project projectData={seiyu}></Project>
+      <Project projectData={seiyu} projectTitleSize={2} />
       <ContentTitle title="チケット" size={2} bigTitle />
       <PageWrapper>
         <SectionBody>
