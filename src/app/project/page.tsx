@@ -45,7 +45,7 @@ export default function ProjectPage() {
   return (
     <>
       <CustomSwiper title="ゲスト企画" projects={guestProjects} />
-      <CustomSwiper title="学内企画" projects={schoolProjects} />
+      <CustomSwiper title="学生企画" projects={schoolProjects} />
     </>
   );
 }

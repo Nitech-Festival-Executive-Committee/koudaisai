@@ -1,0 +1,37 @@
+name: Production - Build and Upload via SFTP
+
+on:
+  workflow_dispatch: # 手動で実行
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3 # 最新のリポジトリをチェックアウト
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3 # Node.jsをインストール
+        with:
+          node-version: "18" # 必要なNodeのバージョンを指定
+
+      - name: Install dependencies
+        run: npm install # パッケージをインストール
+
+      - name: Build the project
+        run: npm run build # プロジェクトをビルド
+
+      - name: Upload files via SCP
+        run: |
+          echo "Setting up SSH key..."
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
+          chmod 600 private_key  # 秘密鍵のパーミッションを設定
+
+          rsync -avz --delete \
+          --exclude-from=./.github/workflows/rsync-exclude.txt \
+          -e "ssh -i private_key -p 8022 -o StrictHostKeyChecking=no" ./out/ $SFTP_USERNAME@$SFTP_HOST:/home/$SFTP_USERNAME/public_html/koudaisai.com/
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # 秘密鍵
+          SFTP_USERNAME: ${{ secrets.SSH_USER_NAME }} # ユーザー名
+          SFTP_HOST: ${{ secrets.SSH_HOST }} # 接続先ホスト
