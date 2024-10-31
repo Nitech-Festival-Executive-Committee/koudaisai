@@ -44,7 +44,42 @@ export default function Top() {
       <PageWrapper>
         <SectionBody>
           <ContentTitle title="PROJECTS" size={1} />
-          <h1 style={{ textAlign: "center" }}>準備中</h1>
+          <ContentBox title={"声優トークショー"}>
+            <a
+              href="./project/seiyu"
+              style={{ display: "flex", justifyContent: "center" }}
+            >
+              <img
+                src="/62nd/project/seiyu/logo.webp"
+                style={{ maxWidth: "100%", maxHeight: "20vh" }}
+              />
+            </a>
+          </ContentBox>
+          <ContentBox title={"中夜祭"}>
+            <a
+              href="./project/tyuya"
+              style={{ display: "flex", justifyContent: "center" }}
+            >
+              <img
+                src="/62nd/project/tyuya/logo.webp"
+                style={{ maxWidth: "100%", maxHeight: "20vh" }}
+              />
+            </a>
+          </ContentBox>
+          <ContentBox title={"後夜祭"}>
+            <a
+              href="./project/kouya"
+              style={{ display: "flex", justifyContent: "center" }}
+            >
+              <img
+                src="/62nd/project/kouya/logo.webp"
+                style={{ maxWidth: "100%", maxHeight: "20vh" }}
+              />
+            </a>
+          </ContentBox>
+          <p style={{ textAlign: "right" }}>
+            <a href="./project">その他の企画ページはこちらから</a>
+          </p>
 
           <ContentTitle title="FAQ" size={1} />
           <ContentBox title={"第62回工大祭の開催日時は?"}>
@@ -88,6 +123,19 @@ export default function Top() {
         </SectionBody>
         <SectionBody>
           <ContentTitle title="NEWS" size={1} />
+          <ContentBox title={"2024.11.1"}>
+            <p>
+              工大祭Webサイトをリニューアルし、新しいロード画面の追加や利便性・パフォーマンスが向上しました!
+            </p>
+          </ContentBox>
+          <ContentBox title={"2024.11.1"}>
+            <p>
+              <a href="./project/" target="_blank" aria-label="企画ページ">
+                企画情報
+              </a>
+              を公開しました
+            </p>
+          </ContentBox>
           <ContentBox title={"2024.10.15"}>
             <p>
               <a href="./project/tyuya/" target="_blank" aria-label="中夜祭">
