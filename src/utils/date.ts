@@ -14,14 +14,16 @@ export const createDate = ({
   hour: number;
   minute: number;
 }): Date => {
-  const dateObj = new Date(0);
-
-  dateObj.setFullYear(NITFES_YEAR);
-  dateObj.setMonth(NITFES_MONTH - 1);
-  dateObj.setDate(date === 1 ? NITFES_DATE1 : NITFES_DATE2);
-  dateObj.setHours(hour);
-  dateObj.setMinutes(minute);
-  dateObj.setSeconds(0);
-  dateObj.setMilliseconds(0);
+  const dateObj = new Date(
+    Date.UTC(
+      NITFES_YEAR,
+      NITFES_MONTH - 1,
+      date === 1 ? NITFES_DATE1 : NITFES_DATE2,
+      hour,
+      minute,
+      0,
+      0
+    )
+  );
   return dateObj;
 };
