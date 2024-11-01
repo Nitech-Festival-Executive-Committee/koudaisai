@@ -38,7 +38,7 @@ export default function About() {
           </ContentBox>
           <ContentBox title={"来場予約や整理券は必要ですか?"}>
             <p>
-              今年から<Underline>来場予約は不要です!</Underline>
+              <Underline>来場予約は不要です!</Underline>
               是非ご来場ください!
               <br />
               また、<Underline>一部企画は整理券が必要です。</Underline>
