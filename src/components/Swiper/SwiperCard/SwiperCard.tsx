@@ -1,6 +1,6 @@
 import styles from "./SwiperCard.module.scss";
 import SwiperProjectTag from "./SwiperProjectTag/SwiperProjectTag";
-import React, { ReactNode, useEffect } from "react";
+import React, { ReactNode } from "react";
 import SwiperInfo from "./SwiperInfo/SwiperInfo";
 
 export interface SwiperCardProps {
@@ -16,16 +16,6 @@ export interface SwiperCardProps {
   brochureMini?: boolean;
 }
 
-function getImageAspectRatio(url: string): Promise<number> {
-  return new Promise((resolve) => {
-    const img = new Image();
-    img.src = url;
-    img.onload = () => {
-      resolve(img.height / img.width);
-    };
-  });
-}
-
 export default function SwiperCard({
   title,
   href,
@@ -36,28 +26,12 @@ export default function SwiperCard({
   projectTag,
   place,
   schedule,
-  brochureMini,
 }: SwiperCardProps) {
-  // 画像が縦長か横長かによってスタイルを変更
-  const [cardClassName, setCardClassName] = React.useState<string>(
-    styles.swiperCardVertical
-  );
-  useEffect(() => {
-    const setCardClassNameByRatio = async () => {
-      const aspectRatio = await getImageAspectRatio(imageUrl);
-      setCardClassName(
-        aspectRatio > 1
-          ? styles.swiperCardVertical
-          : brochureMini
-            ? styles.swiperCardHorizontalMini
-            : styles.swiperCardHorizontal
-      );
-    };
-    setCardClassNameByRatio();
-  }, []);
-
   return (
-    <a className={`${styles.swiperCardContainer} ${cardClassName}`} href={href}>
+    <a
+      className={`${styles.swiperCardContainer} ${styles.swiperCardHorizontal}`}
+      href={href}
+    >
       <img src={imageUrl} alt={imageAlt} />
       <div className={styles.swiperSlideMask} />
       <div className={styles.swiperSlideDetail}>
