@@ -10,5 +10,5 @@ export const metadata = {
 };
 
 export default function Mogi1() {
-  return <Project projectData={mogi1} />;
+  return <Project projectData={mogi1} projectTitleSize={3} />;
 }
