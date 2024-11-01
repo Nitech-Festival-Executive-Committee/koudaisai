@@ -1,3 +1,4 @@
+import React from "react";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
 import { artfulCampus } from "./artful-campus/artfulCampus";
@@ -14,6 +15,7 @@ import { kidsPark } from "./kids-park/kidsPark";
 import { nitechKing } from "./nitech-king/nitechKing";
 import { vrCoaster } from "./vr-coaster/vrCoaster";
 import { vsDealer } from "./vs-dealer/vsDealer";
+import { BentoUI } from "@/components/Project/BentoUI/BentoUI";
 
 export const metadata = {
   title: `企画一覧 - 第${NITFES_EDITION}回工大祭`,
@@ -46,6 +48,7 @@ export default function ProjectPage() {
     <>
       <CustomSwiper title="ゲスト企画" projects={guestProjects} />
       <CustomSwiper title="学生企画" projects={schoolProjects} />
+      <BentoUI />
     </>
   );
 }

@@ -19,6 +19,11 @@
     "@leenguyen/react-flip-clock-countdown": "^1.6.0",
     "@mui/material": "^6.1.4",
     "@next/third-parties": "^15.0.1",
+    "@tabler/icons-react": "^3.21.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.11",
+    "lucide-react": "^0.454.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",
     "framer-motion": "^11.6.0",
@@ -27,21 +32,26 @@
     "react-dom": "^18",
     "react-icons": "^5.3.0",
     "sass": "^1.79.3",
-    "swiper": "^11.1.14"
+    "swiper": "^11.1.14",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.13",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-universe": "^13.0.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-unused-imports": "^4.1.4",
+    "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "stylelint": "^16.9.0",
     "stylelint-config-recess-order": "^5.1.1",
+    "tailwindcss": "^3.4.14",
     "typescript": "^5"
   }
 }
