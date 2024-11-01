@@ -12,8 +12,8 @@ const days = ["日", "月", "火", "水", "木", "金", "土"];
 const date1 = createDate({ date: 1, hour: 16, minute: 0 });
 const date2 = createDate({ date: 2, hour: 16, minute: 0 });
 
-const NITFES_DAY1 = days[date1.getDay()];
-const NITFES_DAY2 = days[date2.getDay()];
+const NITFES_DAY1 = days[date1.getUTCDay()];
+const NITFES_DAY2 = days[date2.getUTCDay()];
 
 export const NITFES_DATE_TEXT = {
   DAY1: `${NITFES_MONTH}/${NITFES_DATE1}(${NITFES_DAY1})`,
