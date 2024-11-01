@@ -195,13 +195,13 @@ export default function Top() {
           <ContentBox title={"2024.6.1"}>
             <p>
               <a
-                href="./gakuseistage/"
+                href="./project/spark/"
                 target="_blank"
                 aria-label="学生ステージ企画"
               >
-                学生ステージ企画のページ
+                学生ステージ企画
               </a>
-              を公開しました
+              の募集を開始しました
             </p>
           </ContentBox>
           <ContentBox title={"2024.6.1"}>
