@@ -84,9 +84,5 @@ export const booth: ProjectData = {
       title: "開催場所",
       content: place,
     },
-    {
-      title: "お問い合わせ先",
-      content: "渉外局 yusuke.hiramatsu@koudaisai.com",
-    },
   ],
 };

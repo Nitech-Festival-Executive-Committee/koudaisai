@@ -69,9 +69,5 @@ export const artfulCampus: ProjectData = {
       title: "開催場所",
       content: place,
     },
-    {
-      title: "お問い合わせ先",
-      content: "情報工学類 准教授 田口亮 taguchi.ryo@nitech.ac.jp",
-    },
   ],
 };

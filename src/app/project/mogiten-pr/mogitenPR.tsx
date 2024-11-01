@@ -65,9 +65,5 @@ export const mogitenPR: ProjectData = {
       title: "開催場所",
       content: place,
     },
-    {
-      title: "お問い合わせ先",
-      content: "模擬局 takahiro.nakano@koudaisai.com",
-    },
   ],
 };

@@ -79,9 +79,5 @@ export const nitechKing: ProjectData = {
         </ul>
       ),
     },
-    {
-      title: "お問い合わせ先",
-      content: "ステージ局 makoto.ito@koudaisai.com",
-    },
   ],
 };

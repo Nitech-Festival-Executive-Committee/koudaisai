@@ -94,9 +94,5 @@ export const hauntedHouse: ProjectData = {
         </ul>
       ),
     },
-    {
-      title: "お問い合わせ先",
-      content: "企画局 rinako.tomioka@koudaisai.com",
-    },
   ],
 };

@@ -84,9 +84,5 @@ export const nitechChallenger: ProjectData = {
       title: "注意事項",
       content: <p>小学生以下は保護者同伴推奨です。</p>,
     },
-    {
-      title: "お問い合わせ先",
-      content: "ステージ局 yuma.hirata@koudaisai.com",
-    },
   ],
 };
