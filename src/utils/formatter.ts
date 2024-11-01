@@ -1,14 +1,14 @@
 import { Period } from "@/types/types";
 
 export const formatPeriod = (period: Period): string => {
-  const startTime = period.startDate.toLocaleTimeString("ja-JP", {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-  const endTime = period.endDate.toLocaleTimeString("ja-JP", {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  const formatTime = (date: Date): string => {
+    const hours = date.getHours().toString().padStart(2, "0");
+    const minutes = date.getMinutes().toString().padStart(2, "0");
+    return `${hours}:${minutes}`;
+  };
+
+  const startTime = formatTime(period.startDate);
+  const endTime = formatTime(period.endDate);
 
   return `${startTime}～${endTime}`;
 };
