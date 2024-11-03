@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from "react";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Project from "@/components/Project/Project/Project";

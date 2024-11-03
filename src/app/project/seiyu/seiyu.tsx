@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import ContentImage from "@/components/Content/ContentImage/ContentImage";
 import Underline from "@/components/Content/Underline/Underline";
 import { ProjectData } from "@/types/projectInterface";

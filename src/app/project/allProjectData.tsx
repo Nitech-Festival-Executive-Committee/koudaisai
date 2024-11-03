@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import { ProjectData } from "@/types/projectInterface";
 
 // 変数名を変更(ex. miniGame)

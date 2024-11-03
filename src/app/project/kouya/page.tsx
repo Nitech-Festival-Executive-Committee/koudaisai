@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from "react";
 import Project from "@/components/Project/Project/Project";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
