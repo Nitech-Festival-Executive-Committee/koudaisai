@@ -5,7 +5,7 @@ import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import ProjectContent from "../ProjectContent/ProjectContent";
 import ProjectLogo from "../ProjectLogo/ProjectLogo";
 import ProjectTag from "../ProjectTag/ProjectTag";
-import BochureImage from "../BrochureImage/BochureImage";
+import BrochureImage from "../BrochureImage/BrochureImage";
 import { ProjectData } from "@/types/projectInterface";
 
 interface ProjectProps {
@@ -35,7 +35,7 @@ export default function Project({
       <PageWrapper>
         <SectionBody>
           {brochurePath !== "" && (
-            <BochureImage
+            <BrochureImage
               img={`/62nd/project/${projectData.link}/${brochurePath}`}
               alt="Brochure"
             />
