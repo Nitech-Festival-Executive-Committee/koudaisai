@@ -18,6 +18,8 @@ export const allProject: ProjectData = {
   projectBoxList: [],
   swiperOption: {
     href: "/project/",
-    brochurePath: "62nd/timetable/timetable.webp",
+    brochurePath: "62nd/project/projectTop.webp",
   },
 };
+
+// トップページのスライドで企画ページへのリンク用のスライド
