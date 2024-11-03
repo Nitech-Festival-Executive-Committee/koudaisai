@@ -6,7 +6,18 @@ import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import Underline from "@/components/Content/Underline/Underline";
 import ContentImage from "@/components/Content/ContentImage/ContentImage";
-import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
+import {
+  NITFES_DATE1,
+  NITFES_DATE2,
+  NITFES_DAY1,
+  NITFES_DAY2,
+  NITFES_EDITION,
+  NITFES_MONTH,
+  NITFES_THEME,
+  NITFES_TIME_DATE1,
+  NITFES_TIME_DATE2,
+  NITFES_YEAR,
+} from "@/const/const";
 
 export const metadata = {
   title: `工大祭について - 第${NITFES_EDITION}回工大祭`,
@@ -26,11 +37,13 @@ export default function About() {
               工大祭実行委員会が主催する、名古屋工業大学で行われる大学祭、通称「工大祭」です。
             </p>
           </ContentBox>
-          <ContentBox title={"第62回工大祭の開催日時は?"}>
+          <ContentBox title={`第${NITFES_EDITION}回工大祭の開催日時は?`}>
             <p>
-              第62回工大祭「Ignition」は
-              <Underline>2024年11月16日(土)・17日(日) 10:00-18:00</Underline>
-              に開催予定!!
+              第{NITFES_EDITION}回工大祭「{NITFES_THEME}」は
+              <Underline>
+                {`${NITFES_YEAR}年${NITFES_MONTH}月${NITFES_DATE1}日(${NITFES_DAY1})${NITFES_TIME_DATE1}、${NITFES_DATE2}日(${NITFES_DAY2})${NITFES_TIME_DATE2}`}
+              </Underline>
+              に開催!!
             </p>
           </ContentBox>
           <ContentBox title={"今年の工大祭のテーマは何ですか?"}>
