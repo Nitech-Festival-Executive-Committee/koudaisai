@@ -16,11 +16,10 @@ import {
 export const metadata: Metadata = {
   title: `第${NITFES_EDITION}回 工大祭 ${NITFES_YEAR}`,
   description: `名古屋工業大学の大学祭「工大祭」の公式HP! 第${NITFES_EDITION}回工大祭「${NITFES_THEME}」は${NITFES_YEAR}年${NITFES_DATE_TEXT.BOTH}に開催予定!! 是非お越しください!!`,
-  keywords: `工大祭,第${NITFES_EDITION}回工大祭,名工祭,名古屋工業大学,名工大`,
-  authors: [{ name: "名古屋工業大学第62回工大祭実行委員会" }],
+  keywords: `工大祭,第${NITFES_EDITION}回,名工祭,名古屋工業大学,名工大,大学祭`,
+  authors: [{ name: `名古屋工業大学第${NITFES_EDITION}回工大祭実行委員会` }],
   other: {
-    copyright:
-      "Copyright (C) 2024 名古屋工業大学第62回工大祭実行委員会 All Rights Reserved.",
+    copyright: `Copyright (C) ${NITFES_YEAR} 名古屋工業大学第${NITFES_EDITION}回工大祭実行委員会 All Rights Reserved.`,
   },
 
   // icon
