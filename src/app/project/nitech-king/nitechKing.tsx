@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import { ProjectData } from "@/types/projectInterface";
 import { CATEGORY } from "@/types/types";
 import { convertScheduleToReactNode } from "@/utils/converter";
@@ -56,7 +55,7 @@ export const nitechKing: ProjectData = {
     },
     {
       title: "景品",
-      content: "未定",
+      content: "◯◯のペアチケット",
     },
     {
       title: "参加方法",
@@ -66,7 +65,7 @@ export const nitechKing: ProjectData = {
           <br />
           また、シートの半券を投票箱に投票することで名工大王予想に参加できます。
           <br />
-          商品券など豪華景品ゲットのチャンス!!
+          ペアチケット、ギフトカードなど豪華景品ゲットのチャンス!!
         </p>
       ),
     },

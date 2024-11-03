@@ -9,7 +9,8 @@ import Flipdown from "@/components/Flipdown/Flipdown";
 import Loader from "@/components/Loader/Loader";
 import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
-import { allProject } from "./allProjectData";
+import { allProject } from "./project/allProjectData";
+import { timetableData } from "./project/timetableData";
 import { tyuya } from "./project/tyuya/tyuya";
 import { seiyu } from "./project/seiyu/seiyu";
 import { roomRiddles } from "./project/room-riddles/roomRiddles";
@@ -19,9 +20,22 @@ import { vrCoaster } from "./project/vr-coaster/vrCoaster";
 import { gakuseiboshu } from "./project/gakuseiboshu/gakuseiboshu";
 import { nitechKing } from "./project/nitech-king/nitechKing";
 import { hauntedHouse } from "./project/haunted-house/hauntedHouse";
+import {
+  NITFES_EDITION,
+  NITFES_THEME,
+  NITFES_YEAR,
+  NITFES_MONTH,
+  NITFES_DATE1,
+  NITFES_DAY1,
+  NITFES_TIME_DATE1,
+  NITFES_DATE2,
+  NITFES_DAY2,
+  NITFES_TIME_DATE2,
+} from "@/const/const";
 
 const pickupProjects = [
   allProject,
+  timetableData,
   tyuya,
   seiyu,
   roomRiddles,
@@ -82,11 +96,13 @@ export default function Top() {
           </p>
 
           <ContentTitle title="FAQ" size={1} />
-          <ContentBox title={"第62回工大祭の開催日時は?"}>
+          <ContentBox title={`第${NITFES_EDITION}回工大祭の開催日時は?`}>
             <p>
-              第62回工大祭「Ignition」は
-              <Underline>2024年11月16日(土)・17日(日) 10:00-18:00</Underline>
-              に開催予定!!
+              第{NITFES_EDITION}回工大祭「{NITFES_THEME}」は
+              <Underline>
+                {`${NITFES_YEAR}年${NITFES_MONTH}月${NITFES_DATE1}日(${NITFES_DAY1})${NITFES_TIME_DATE1}、${NITFES_DATE2}日(${NITFES_DAY2})${NITFES_TIME_DATE2}`}
+              </Underline>
+              に開催!!
             </p>
           </ContentBox>
           <ContentBox title={"来場予約や整理券は必要ですか?"}>

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import Underline from "@/components/Content/Underline/Underline";
 import { ProjectData } from "@/types/projectInterface";
 import { CATEGORY } from "@/types/types";

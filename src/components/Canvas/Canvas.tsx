@@ -11,6 +11,7 @@ export default function Canvas() {
         alt="CanvasBackground"
         width={100}
         height={100}
+        priority={true}
       />
       <Image
         className={styles.canvasImg}
@@ -19,6 +20,7 @@ export default function Canvas() {
         layout="intrinsic"
         width={300}
         height={100}
+        priority={true}
       />
     </div>
   );

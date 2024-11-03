@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import { ProjectData } from "@/types/projectInterface";
 
 // 変数名を変更(ex. miniGame)
@@ -18,6 +17,8 @@ export const allProject: ProjectData = {
   projectBoxList: [],
   swiperOption: {
     href: "/project/",
-    brochurePath: "62nd/timetable/timetable.webp",
+    brochurePath: "62nd/project/projectTop.webp",
   },
 };
+
+// Swiperで企画ページへのリンク用のスライド

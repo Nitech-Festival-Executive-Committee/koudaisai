@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import { ProjectData } from "@/types/projectInterface";
 import { CATEGORY } from "@/types/types";
 import { createDate } from "@/utils/date";

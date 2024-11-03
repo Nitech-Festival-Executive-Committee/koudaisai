@@ -12,14 +12,14 @@ export const convertScheduleToReactNode = (schedule: Schedule): ReactNode => {
       {schedule.day1 && (
         <p>
           <span>
-            1日目({NITFES_DATE_TEXT.DAY1}): {formatPeriod(schedule.day1)}
+            1日目({NITFES_DATE_TEXT.DAY1_SLASH}): {formatPeriod(schedule.day1)}
           </span>
         </p>
       )}
       {schedule.day2 && (
         <p>
           <span>
-            2日目({NITFES_DATE_TEXT.DAY2}): {formatPeriod(schedule.day2)}
+            2日目({NITFES_DATE_TEXT.DAY2_SLASH}): {formatPeriod(schedule.day2)}
           </span>
         </p>
       )}
@@ -35,13 +35,13 @@ export const convertScheduleToSummaryReactNode = (
     <>
       {schedule.day1 && (
         <>
-          {NITFES_DATE_TEXT.DAY1}: {formatPeriod(schedule.day1)}
+          {NITFES_DATE_TEXT.DAY1_SLASH}: {formatPeriod(schedule.day1)}
           <br />
         </>
       )}
       {schedule.day2 && (
         <>
-          {NITFES_DATE_TEXT.DAY2}: {formatPeriod(schedule.day2)}
+          {NITFES_DATE_TEXT.DAY2_SLASH}: {formatPeriod(schedule.day2)}
           <br />
         </>
       )}

@@ -5,10 +5,15 @@ import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Underline from "@/components/Content/Underline/Underline";
 import {
-  NITFES_DATE_TEXT,
+  NITFES_DATE1,
+  NITFES_DATE2,
+  NITFES_DAY1,
+  NITFES_DAY2,
   NITFES_EDITION,
+  NITFES_MONTH,
   NITFES_THEME,
-  NITFES_TIME,
+  NITFES_TIME_DATE1,
+  NITFES_TIME_DATE2,
   NITFES_YEAR,
 } from "@/const/const";
 import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
@@ -28,9 +33,9 @@ export default function Faq() {
             <p>
               第{NITFES_EDITION}回工大祭「{NITFES_THEME}」は
               <Underline>
-                {NITFES_YEAR}年{NITFES_DATE_TEXT.BOTH} {NITFES_TIME}
+                {`${NITFES_YEAR}年${NITFES_MONTH}月${NITFES_DATE1}日(${NITFES_DAY1})${NITFES_TIME_DATE1}、${NITFES_DATE2}日(${NITFES_DAY2})${NITFES_TIME_DATE2}`}
               </Underline>
-              に開催予定!!
+              に開催!!
             </p>
           </ContentBox>
           <ContentBox title={"来場予約や整理券は必要ですか?"}>
