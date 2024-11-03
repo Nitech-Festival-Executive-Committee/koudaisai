@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-key */
 import React from "react";
 import Project from "@/components/Project/Project/Project";
-import { seiyu } from "./seiyu";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
+import { seiyu as ProjectData } from "./seiyu";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
@@ -11,15 +11,16 @@ import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import Button from "@mui/material/Button";
 
 export const metadata = {
-  title: `${seiyu.name} - 第${NITFES_EDITION}回工大祭`,
-  description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭開催「${seiyu.name}」の詳細ページです`,
+  title: `${ProjectData.name} - 第${NITFES_EDITION}回工大祭`,
+  description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭開催「${ProjectData.name}」の詳細ページです`,
 };
 
 // 関数名を変更(ex. TemplateProject -> MiniGame)
 export default function Seiyu() {
   return (
     <>
-      <Project projectData={seiyu} projectTitleSize={2} />
+      <Project projectData={ProjectData} projectTitleSize={2} />
+
       <ContentTitle title="チケット" size={2} bigTitle />
       <PageWrapper>
         <SectionBody>
