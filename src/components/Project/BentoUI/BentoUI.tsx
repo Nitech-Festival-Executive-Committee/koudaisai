@@ -6,59 +6,57 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
+import { seiyu } from "@/app/project/seiyu/seiyu";
+import { artfulCampus } from "@/app/project/artful-campus/artfulCampus";
 
 export function BentoUI() {
   return (
     <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-      {items.map((item, i) => (
+      {items.map((item, index) => (
         <BentoGridItem
-          style={{
-            background: "#ebebeb",
-            borderRadius: "10px",
-            boxShadow: "8px 6px 8px 0px #dadada",
-          }}
-          key={i}
+          key={index}
+          className={item.className}
           title={item.title}
           description={item.description}
-          header={item.header}
-          className={item.className}
           icon={item.icon}
+          style={{
+            borderRadius: "10px",
+            boxShadow: "8px 6px 8px 0px #dadada",
+            background: `url(${item.img}) no-repeat center / cover`,
+          }}
         />
       ))}
     </BentoGrid>
   );
 }
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
-);
 const items = [
   {
-    title: "The Dawn of Innovation",
+    title: seiyu.name,
     description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
     className: "md:col-span-2",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    img: `/62nd/project/${seiyu.link}/brochure.webp`,
   },
   {
     title: "The Digital Revolution",
     description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
     className: "md:col-span-1",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    img: `/62nd/project/${artfulCampus.link}/brochure.webp`,
   },
   {
     title: "The Art of Design",
     description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
     className: "md:col-span-1",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    img: `/62nd/project/${seiyu.link}/brochure.webp`,
   },
   {
     title: "The Power of Communication",
     description:
       "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    img: `/62nd/project/${seiyu.link}/brochure.webp`,
   },
 ];

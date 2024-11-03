@@ -1,6 +1,6 @@
 @import "variables";
 
-// ここからtailwindの設定
+/* ここからtailwindの設定 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -71,7 +71,7 @@
   }
 }
 
-// ここからscssの設定
+/* ここからscssの設定 */
 
 :root {
   --theme-color: #f7791e;
