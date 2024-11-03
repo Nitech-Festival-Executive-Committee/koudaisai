@@ -3,11 +3,11 @@ import { ProjectData } from "@/types/projectInterface";
 
 // 変数名を変更(ex. miniGame)
 // ファイル名も変更(ex. miniGame.tsx)
-export const allProject: ProjectData = {
+export const timetableData: ProjectData = {
   // ContentBoxに含まないデータ
-  link: "all-project", // 複数単語の場合はハイフンつなぎで記述
-  name: "企画一覧",
-  tags: ["企画"],
+  link: "timetable", // 複数単語の場合はハイフンつなぎで記述
+  name: "タイムテーブル",
+  tags: ["タイムテーブル"],
   category: [],
   summary: "",
 
@@ -17,9 +17,9 @@ export const allProject: ProjectData = {
 
   projectBoxList: [],
   swiperOption: {
-    href: "/project/",
-    brochurePath: "62nd/project/projectTop.webp",
+    href: "/timetable/",
+    brochurePath: "62nd/timetable/timetable.webp",
   },
 };
 
-// トップページのスライドで企画ページへのリンク用のスライド
+// Swipeでタイムテーブルのページへのリンク用のスライド

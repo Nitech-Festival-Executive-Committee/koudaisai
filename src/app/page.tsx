@@ -9,7 +9,8 @@ import Flipdown from "@/components/Flipdown/Flipdown";
 import Loader from "@/components/Loader/Loader";
 import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
-import { allProject } from "./allProjectData";
+import { allProject } from "./project/allProjectData";
+import { timetableData } from "./project/timetableData";
 import { tyuya } from "./project/tyuya/tyuya";
 import { seiyu } from "./project/seiyu/seiyu";
 import { roomRiddles } from "./project/room-riddles/roomRiddles";
@@ -34,6 +35,7 @@ import {
 
 const pickupProjects = [
   allProject,
+  timetableData,
   tyuya,
   seiyu,
   roomRiddles,
