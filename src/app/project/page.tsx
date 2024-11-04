@@ -1,5 +1,11 @@
 import React from "react";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
+import ProjectCard from "@/components/Project/ProjectCard/ProjectCard";
+import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
+import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
+import SectionBody from "@/components/Content/SectionBody/SectionBody";
+import ProjectCardWrapper from "@/components/Project/ProjectCardWrapper/ProjectCardWrapper";
+import styles from "./page.module.scss";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
 import { artfulCampus } from "./artful-campus/artfulCampus";
 import { booth } from "./booth/booth";
@@ -16,11 +22,6 @@ import { nitechKing } from "./nitech-king/nitechKing";
 import { vrCoaster } from "./vr-coaster/vrCoaster";
 import { vsDealer } from "./vs-dealer/vsDealer";
 import { nitechChallenger } from "./nitech-challenger/nitechChallenger";
-import ProjectCard from "@/components/Project/ProjectCard/ProjectCard";
-import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
-import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
-import SectionBody from "@/components/Content/SectionBody/SectionBody";
-import ProjectCardWrapper from "@/components/Project/ProjectCardWrapper/ProjectCardWrapper";
 import { communityStreet } from "./community-street/communityStreet";
 import { shootingGuesser } from "./shooting-guesser/shootingGuesser";
 import { spark } from "./spark/spark";
@@ -115,6 +116,14 @@ export default function ProjectPage() {
             />
           </ProjectCardWrapper>
         </SectionBody>
+      </PageWrapper>
+      <ContentTitle title={"会場マップ"} size={1} bigTitle />
+      <PageWrapper>
+        <img
+          src={"/62nd/img/map.webp"}
+          alt="会場マップ"
+          className={styles.map}
+        />
       </PageWrapper>
     </>
   );

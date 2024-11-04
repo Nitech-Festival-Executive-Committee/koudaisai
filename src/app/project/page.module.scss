@@ -1,0 +1,10 @@
+@import "variables";
+
+.map {
+  width: 60vw;
+  margin: 0 auto;
+  border: thin solid black;
+  @include phone {
+    width: 95vw;
+  }
+}
