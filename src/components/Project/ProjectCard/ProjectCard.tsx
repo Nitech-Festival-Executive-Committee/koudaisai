@@ -10,15 +10,19 @@ import styles from "./ProjectCard.module.scss";
 
 interface ProjectCardProps {
   projectList: ProjectData[];
+  linkOffset?: string;
 }
 
-export default function ProjectCard({ projectList }: ProjectCardProps) {
+export default function ProjectCard({
+  projectList,
+  linkOffset,
+}: ProjectCardProps) {
   return (
     <>
       {projectList.map((project, index) => (
         <a
           key={index}
-          href={`./${project.link}`}
+          href={`${linkOffset ? `${linkOffset}/` : "./"}${project.link}`}
           style={{ width: "auto", height: "auto", textDecoration: "none" }}
         >
           <Card className={styles.card}>
