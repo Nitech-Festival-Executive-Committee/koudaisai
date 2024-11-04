@@ -4,18 +4,22 @@ import Card from "@mui/joy/Card";
 import Typography from "@mui/joy/Typography";
 import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
+import CardOverflow from "@mui/joy/CardOverflow";
 import { ProjectData } from "@/types/projectInterface";
 import Image from "next/image";
 import styles from "./ProjectCard.module.scss";
+import { convertScheduleToSummaryReactNode } from "@/utils/converter";
 
 interface ProjectCardProps {
   projectList: ProjectData[];
   linkOffset?: string;
+  showTime?: boolean;
 }
 
 export default function ProjectCard({
   projectList,
   linkOffset,
+  showTime = false,
 }: ProjectCardProps) {
   return (
     <>
@@ -23,10 +27,10 @@ export default function ProjectCard({
         <a
           key={index}
           href={`${linkOffset ? `${linkOffset}/` : "./"}${project.link}`}
-          style={{ width: "auto", height: "auto", textDecoration: "none" }}
+          className={styles.cardLink}
         >
           <Card className={styles.card}>
-            <CardCover sx={{ boxShadow: "4px 4px 5px 0px #838383" }}>
+            <CardCover>
               <Image
                 src={`/62nd/project/${project.link}/brochure.webp`}
                 alt={project.name}
@@ -40,23 +44,42 @@ export default function ProjectCard({
                     target.src = `../62nd/project/noImage.webp`;
                   }
                 }}
-                style={{ objectFit: "cover" }}
                 width={180}
                 height={280}
               />
             </CardCover>
-            <CardCover
-              sx={{
-                background:
-                  "linear-gradient(to top, rgb(0 0 0 / 60%), rgb(0 0 0 / 0%) 60%)",
-              }}
-            />
-            <CardContent sx={{ justifyContent: "flex-end" }}>
+
+            <CardCover className={styles.cardOverlay} />
+
+            {/* 企画名と場所を表示 */}
+            <CardContent className={styles.cardContent}>
               <Typography level="title-lg" textColor="#fff">
                 {project.name}
               </Typography>
-              <Typography textColor="neutral.200">{project.place}</Typography>
+              <Typography className={styles.sub} textColor="neutral.100">
+                {project.place}
+              </Typography>
             </CardContent>
+
+            {/* 開催時間を表示 */}
+            <div>
+              {showTime && (
+                <CardOverflow
+                  variant="soft"
+                  sx={{ bgcolor: "background.level1" }}
+                  className={styles.cardDetail}
+                >
+                  <CardContent
+                    orientation="horizontal"
+                    className={styles.cardOverflowContent}
+                  >
+                    <Typography level="body-xs" className={styles.typography}>
+                      {convertScheduleToSummaryReactNode(project.schedule)}
+                    </Typography>
+                  </CardContent>
+                </CardOverflow>
+              )}
+            </div>
           </Card>
         </a>
       ))}

@@ -79,30 +79,39 @@ const projectList = [
   vsDealer,
 ];
 
+const stageProject = [
+  spark,
+  mogitenPR,
+  shootingGuesser,
+  nitechKing,
+  nitechChallenger,
+  tyuya,
+  kouya,
+];
+
 export default function ProjectPage() {
   return (
     <>
       <CustomSwiper title="ゲスト企画" projects={guestProjects} />
       <CustomSwiper title="学生企画" projects={schoolProjects} />
 
-      <ContentTitle title={"両日開催"} size={1} bigTitle />
+      <ContentTitle title={"ステージ企画"} size={1} bigTitle />
       <PageWrapper>
         <ProjectCardWrapper>
-          <ProjectCard
-            projectList={projectList.filter(
-              (project) => project.schedule?.day1 && project.schedule?.day2
-            )}
-          />
+          <ProjectCard projectList={stageProject} showTime />
         </ProjectCardWrapper>
       </PageWrapper>
+
       <PageWrapper>
         <SectionBody>
           <ContentTitle title={"1日目"} size={1} />
           <ProjectCardWrapper>
             <ProjectCard
               projectList={projectList.filter(
+                // 1日目のみ開催の企画を抽出
                 (project) => project.schedule?.day1 && !project.schedule?.day2
               )}
+              showTime
             />
           </ProjectCardWrapper>
         </SectionBody>
@@ -111,12 +120,27 @@ export default function ProjectPage() {
           <ProjectCardWrapper>
             <ProjectCard
               projectList={projectList.filter(
+                // 2日目のみ開催の企画を抽出
                 (project) => project.schedule?.day2 && !project.schedule?.day1
               )}
+              showTime
             />
           </ProjectCardWrapper>
         </SectionBody>
       </PageWrapper>
+
+      <ContentTitle title={"両日開催"} size={1} bigTitle />
+      <PageWrapper>
+        <ProjectCardWrapper>
+          <ProjectCard
+            projectList={projectList.filter(
+              // 両日開催の企画を抽出
+              (project) => project.schedule?.day1 && project.schedule?.day2
+            )}
+          />
+        </ProjectCardWrapper>
+      </PageWrapper>
+
       <ContentTitle title={"会場マップ"} size={1} bigTitle />
       <PageWrapper>
         <img

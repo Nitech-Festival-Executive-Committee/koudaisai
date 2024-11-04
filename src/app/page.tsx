@@ -72,6 +72,7 @@ export default function Top() {
                 excursionRiddles,
               ]}
               linkOffset={"./project"}
+              showTime
             />
           </ProjectCardWrapper>
           <p style={{ textAlign: "right" }}>
