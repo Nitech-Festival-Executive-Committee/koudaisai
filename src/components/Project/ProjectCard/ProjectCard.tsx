@@ -26,10 +26,15 @@ export default function ProjectCard({ projectList }: ProjectCardProps) {
               <Image
                 src={`/62nd/project/${project.link}/brochure.webp`}
                 alt={project.name}
-                // layout="fill"
                 onError={(e) => {
-                  e.currentTarget.onerror = null;
-                  e.currentTarget.src = "../62nd/project/noImage.webp";
+                  const target = e.currentTarget;
+                  if (target.src.includes("brochure.webp")) {
+                    // brochure.webpがエラーの場合、logoBrochure.webpに切り替え
+                    target.src = `../62nd/project/${project.link}/logoBrochure.webp`;
+                  } else if (target.src.includes("logoBrochure.webp")) {
+                    // logoBrochure.webpがエラーの場合、最終的にnoImage.webpに切り替え
+                    target.src = `../62nd/project/noImage.webp`;
+                  }
                 }}
                 style={{ objectFit: "cover" }}
                 width={180}
