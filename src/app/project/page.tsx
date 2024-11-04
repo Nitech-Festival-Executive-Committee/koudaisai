@@ -15,9 +15,18 @@ import { kidsPark } from "./kids-park/kidsPark";
 import { nitechKing } from "./nitech-king/nitechKing";
 import { vrCoaster } from "./vr-coaster/vrCoaster";
 import { vsDealer } from "./vs-dealer/vsDealer";
-import ProjectCard from "@/components/Project/ProjectCard/ProjectCard";
 import { nitechChallenger } from "./nitech-challenger/nitechChallenger";
+import ProjectCard from "@/components/Project/ProjectCard/ProjectCard";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
+import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
+import SectionBody from "@/components/Content/SectionBody/SectionBody";
+import ProjectCardWrapper from "@/components/Project/ProjectCardWrapper/ProjectCardWrapper";
+import { communityStreet } from "./community-street/communityStreet";
+import { shootingGuesser } from "./shooting-guesser/shootingGuesser";
+import { spark } from "./spark/spark";
+import { stampRally } from "./stamp-rally/stampRally";
+import { kouya } from "./kouya/kouya";
+import { mogitenPR } from "./mogiten-pr/mogitenPR";
 
 export const metadata = {
   title: `企画一覧 - 第${NITFES_EDITION}回工大祭`,
@@ -45,15 +54,26 @@ const schoolProjects = [
   vsDealer,
 ];
 
-const projectDay1 = [
+const projectList = [
+  artfulCampus,
+  booth,
+  communityStreet,
+  excursionRiddles,
+  gakuseiboshu,
+  hauntedHouse,
+  kidsPark,
+  kouya,
+  laboratoryTour,
+  mogi1,
+  mogitenPR,
+  nitechChallenger,
+  nitechKing,
+  roomRiddles,
+  shootingGuesser,
+  spark,
+  stampRally,
   seiyu,
   tyuya,
-  booth,
-  laboratoryTour,
-  gakuseiboshu,
-  mogi1,
-  nitechKing,
-  nitechChallenger,
   vrCoaster,
   vsDealer,
 ];
@@ -65,18 +85,38 @@ export default function ProjectPage() {
       <CustomSwiper title="学生企画" projects={schoolProjects} />
 
       <ContentTitle title={"企画一覧"} size={1} bigTitle />
-      <div
-        style={{
-          maxWidth: "70vw",
-          margin: "0 auto",
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "10px",
-          justifyContent: "center",
-        }}
-      >
-        <ProjectCard projectList={projectDay1} />
-      </div>
+      <PageWrapper>
+        <SectionBody>
+          <ContentTitle title={"1日目"} size={1} />
+          <ProjectCardWrapper>
+            <ProjectCard
+              projectList={projectList.filter(
+                (project) => project.schedule?.day1 && !project.schedule?.day2
+              )}
+            />
+          </ProjectCardWrapper>
+        </SectionBody>
+        <SectionBody>
+          <ContentTitle title={"2日目"} size={1} />
+          <ProjectCardWrapper>
+            <ProjectCard
+              projectList={projectList.filter(
+                (project) => project.schedule?.day2 && !project.schedule?.day1
+              )}
+            />
+          </ProjectCardWrapper>
+        </SectionBody>
+      </PageWrapper>
+      <ContentTitle title={"両日開催"} size={1} bigTitle />
+      <PageWrapper>
+        <ProjectCardWrapper>
+          <ProjectCard
+            projectList={projectList.filter(
+              (project) => project.schedule?.day1 && project.schedule?.day2
+            )}
+          />
+        </ProjectCardWrapper>
+      </PageWrapper>
     </>
   );
 }

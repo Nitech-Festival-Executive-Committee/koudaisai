@@ -6,6 +6,7 @@ import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
 import { ProjectData } from "@/types/projectInterface";
 import Image from "next/image";
+import styles from "./ProjectCard.module.scss";
 
 interface ProjectCardProps {
   projectList: ProjectData[];
@@ -15,39 +16,39 @@ export default function ProjectCard({ projectList }: ProjectCardProps) {
   return (
     <>
       {projectList.map((project, index) => (
-        <Card
+        <a
           key={index}
-          sx={{
-            minHeight: "300px",
-            width: "200px",
-            marginBottom: 2,
-            padding: "10px 15px",
-          }}
+          href={`./${project.link}`}
+          style={{ width: "auto", height: "auto", textDecoration: "none" }}
         >
-          <CardCover sx={{ boxShadow: "4px 4px 5px 0px #838383" }}>
-            <Image
-              src={`/62nd/project/${project.link}/brochure.webp`}
-              alt={project.name}
-              layout="fill"
-              objectFit="cover"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
+          <Card className={styles.card}>
+            <CardCover sx={{ boxShadow: "4px 4px 5px 0px #838383" }}>
+              <Image
+                src={`/62nd/project/${project.link}/brochure.webp`}
+                alt={project.name}
+                // layout="fill"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+                style={{ objectFit: "cover" }}
+                width={180}
+                height={280}
+              />
+            </CardCover>
+            <CardCover
+              sx={{
+                background:
+                  "linear-gradient(to top, rgb(0 0 0 / 60%), rgb(0 0 0 / 10%) 60%)",
               }}
             />
-          </CardCover>
-          <CardCover
-            sx={{
-              background:
-                "linear-gradient(to top, rgb(0 0 0 / 60%), rgb(0 0 0 / 10%) 60%)",
-            }}
-          />
-          <CardContent sx={{ justifyContent: "flex-end" }}>
-            <Typography level="title-lg" textColor="#fff">
-              {project.name}
-            </Typography>
-            <Typography textColor="neutral.100">{project.place}</Typography>
-          </CardContent>
-        </Card>
+            <CardContent sx={{ justifyContent: "flex-end" }}>
+              <Typography level="title-lg" textColor="#fff">
+                {project.name}
+              </Typography>
+              <Typography textColor="neutral.200">{project.place}</Typography>
+            </CardContent>
+          </Card>
+        </a>
       ))}
     </>
   );

@@ -1,0 +1,10 @@
+@import "variables";
+
+.card {
+  width: 180px;
+  height: 280px;
+  padding: 10px 15px;
+  margin-bottom: 2px;
+  @include phone {
+  }
+}
