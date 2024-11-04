@@ -84,7 +84,16 @@ export default function ProjectPage() {
       <CustomSwiper title="ゲスト企画" projects={guestProjects} />
       <CustomSwiper title="学生企画" projects={schoolProjects} />
 
-      <ContentTitle title={"企画一覧"} size={1} bigTitle />
+      <ContentTitle title={"両日開催"} size={1} bigTitle />
+      <PageWrapper>
+        <ProjectCardWrapper>
+          <ProjectCard
+            projectList={projectList.filter(
+              (project) => project.schedule?.day1 && project.schedule?.day2
+            )}
+          />
+        </ProjectCardWrapper>
+      </PageWrapper>
       <PageWrapper>
         <SectionBody>
           <ContentTitle title={"1日目"} size={1} />
@@ -106,16 +115,6 @@ export default function ProjectPage() {
             />
           </ProjectCardWrapper>
         </SectionBody>
-      </PageWrapper>
-      <ContentTitle title={"両日開催"} size={1} bigTitle />
-      <PageWrapper>
-        <ProjectCardWrapper>
-          <ProjectCard
-            projectList={projectList.filter(
-              (project) => project.schedule?.day1 && project.schedule?.day2
-            )}
-          />
-        </ProjectCardWrapper>
       </PageWrapper>
     </>
   );

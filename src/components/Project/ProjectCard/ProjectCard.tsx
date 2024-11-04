@@ -28,7 +28,8 @@ export default function ProjectCard({ projectList }: ProjectCardProps) {
                 alt={project.name}
                 // layout="fill"
                 onError={(e) => {
-                  e.currentTarget.style.display = "none";
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = "../62nd/project/noImage.webp";
                 }}
                 style={{ objectFit: "cover" }}
                 width={180}
@@ -38,7 +39,7 @@ export default function ProjectCard({ projectList }: ProjectCardProps) {
             <CardCover
               sx={{
                 background:
-                  "linear-gradient(to top, rgb(0 0 0 / 60%), rgb(0 0 0 / 10%) 60%)",
+                  "linear-gradient(to top, rgb(0 0 0 / 60%), rgb(0 0 0 / 0%) 60%)",
               }}
             />
             <CardContent sx={{ justifyContent: "flex-end" }}>
