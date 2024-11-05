@@ -1,24 +1,20 @@
 "use client";
+import { AnimationConfigs } from "@/types/types";
 import { motion, useInView } from "framer-motion";
-import { ReactNode, useRef } from "react";
+import { useRef } from "react";
 
-interface BottomInProps {
-  children: ReactNode;
-  duration?: number;
-  delay?: number;
-  distance?: number;
-}
-
+// 下からフェードイン
 export default function BottomIn({
   children,
   duration = 0.5,
   delay = 0,
   distance = 40,
-}: BottomInProps) {
+  margin = 50,
+}: AnimationConfigs) {
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, {
     once: true,
-    margin: "-100px 0px 0px 0px", // 画面に入ってから100px超えたら表示
+    margin: `${-margin}px`, // 画面に入ってからmargin分超えたら表示
   });
 
   return (

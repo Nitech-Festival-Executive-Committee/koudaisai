@@ -1,22 +1,19 @@
 "use client";
+import { AnimationConfigs } from "@/types/types";
 import { motion, useInView } from "framer-motion";
-import { ReactNode, useRef } from "react";
+import { useRef } from "react";
 
-interface CenterIn {
-  children: ReactNode;
-  duration?: number;
-  delay?: number;
-}
-
+// その場でフェードイン
 export default function CenterIn({
   children,
-  duration = 0.7,
+  duration = 0.5,
   delay = 0,
-}: CenterIn) {
+  margin = 50,
+}: AnimationConfigs) {
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, {
     once: true,
-    margin: "-100px 0px 0px 0px", // 画面に入ってから100px超えたら表示
+    margin: `${-margin}px`, // 画面に入ってからmargin分超えたら表示
   });
 
   return (
