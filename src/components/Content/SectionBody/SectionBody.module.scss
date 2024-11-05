@@ -1,29 +1,9 @@
 @import "variables";
 
 .contentBlock {
-  width: 38%;
-  margin: 0 2%;
+  width: 46%;
   font-weight: 600;
   @include phone {
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
   }
-}
-// TODO: 廃止するかも
-.information-block-wider {
-  width: 70%;
-  @include phone {
-    width: 98%;
-  }
-  .information-content-flex > div {
-    width: 24%;
-    @include phone {
-      width: 47%;
-    }
-  }
-}
-.information-block:not(.information-block-flex)
-  > div:first-child
-  > .information-title {
-  margin-top: 3vh;
 }

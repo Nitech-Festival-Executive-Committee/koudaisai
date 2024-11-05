@@ -5,11 +5,9 @@
   flex-wrap: wrap;
   gap: 15px 20px;
   justify-content: center;
-  max-width: 83vw;
   margin: 0 auto;
   @include phone {
     gap: 13px 0;
     justify-content: space-evenly;
-    max-width: 98vw;
   }
 }

@@ -36,7 +36,7 @@ export default function Flipdown({
       <h2
         className={styles.when}
       >{`${year}年${month}月${day}・${day + 1}日 ${hour}時～ 開催!`}</h2>
-      <div style={{ position: "relative" }}>
+      <div className={styles.content}>
         <div
           style={{
             transition: ".4s",
@@ -44,13 +44,7 @@ export default function Flipdown({
           }}
         >
           <h1 className={styles.remaining}>開催まで残り</h1>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+          <div className={styles.clock}>
             <FlipClockCountdown
               // to={new Date().getTime() + 3 * 1000} // テスト用
               to={new Date(
@@ -63,18 +57,18 @@ export default function Flipdown({
               ).getTime()}
               labels={["Days", "Hours", "Minutes", "Seconds"]}
               labelStyle={{
-                fontSize: 23,
+                fontSize: isMobile() ? 20 : 23,
                 fontWeight: 700,
                 transform: isMobile()
-                  ? "translate(-50%, 120%)"
+                  ? "translate(-50%, 130%)"
                   : "translate(-50%, 140%)",
                 textShadow: "3px 2px 4px rgba(80, 80, 80, 0.5)",
               }}
               digitBlockStyle={{
                 backgroundColor: "#333333",
                 fontWeight: 600,
-                width: isMobile() ? 40 : 75,
-                height: isMobile() ? 65 : 115,
+                width: isSmallMobile() ? 38 : isMobile() ? 42 : 75,
+                height: isSmallMobile() ? 65 : isMobile() ? 70 : 115,
                 fontSize: isMobile() ? 50 : 90,
                 borderRadius: 8,
                 fontFamily: "Helvetica Neue, Helvetica, sans-serif",
@@ -104,8 +98,14 @@ export default function Flipdown({
   );
 }
 
-function isMobile() {
+const isMobile = () => {
   if (process.browser) {
     return window.innerWidth <= 600;
   }
-}
+};
+
+const isSmallMobile = () => {
+  if (process.browser) {
+    return window.innerWidth <= 400;
+  }
+};
