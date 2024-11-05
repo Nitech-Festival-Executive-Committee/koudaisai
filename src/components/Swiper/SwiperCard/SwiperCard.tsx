@@ -32,7 +32,7 @@ export default function SwiperCard({
       className={`${styles.swiperCardContainer} ${styles.swiperCardHorizontal}`}
       href={href}
     >
-      <img src={imageUrl} alt={imageAlt} />
+      <img src={imageUrl} alt={imageAlt} loading="lazy" />
       <div className={styles.swiperSlideMask} />
       <div className={styles.swiperSlideDetail}>
         <SwiperProjectTag day1={day1} day2={day2} projectTag={projectTag} />

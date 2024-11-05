@@ -147,6 +147,7 @@ export default function ProjectPage() {
           src={"/62nd/img/map.webp"}
           alt="会場マップ"
           className={styles.map}
+          loading="lazy"
         />
       </PageWrapper>
     </>

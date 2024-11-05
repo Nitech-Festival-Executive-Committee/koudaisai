@@ -1,23 +1,14 @@
-import { CSSProperties } from "react";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import ContentImage from "@/components/Content/ContentImage/ContentImage";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
+import styles from "./page.module.scss";
 
 export const metadata = {
   title: `キャラクター - 第${NITFES_EDITION}回工大祭`,
   description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭 - 工大祭には、名工大の一本松古墳に登ると落単するという噂から「落単古墳マン」、鏡張りの2号館の下を歩くと直射日光と鏡の反射が暑すぎて夏には目玉焼きができるという噂が言霊になった妖精「2号館たまごちゃん」、落単古墳マンと同じく一本松古墳をモチーフにした「ハニワくん」の3種類の公式キャラクターがいます。`,
-};
-
-const lineStampStyle: CSSProperties = {
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "space-evenly",
-};
-const lineStampImageStyle: CSSProperties = {
-  width: "30%",
 };
 
 export default function Character() {
@@ -157,31 +148,36 @@ export default function Character() {
               <br />
             </p>
             <ContentBox title={"落単古墳マン"}>
-              <div style={lineStampStyle}>
+              <div className={styles.lineStampStyle}>
                 <img
                   src="/62nd/character/img/sticker1_1.webp"
                   alt=""
-                  style={lineStampImageStyle}
+                  className={styles.lineStampImageStyle}
+                  loading="lazy"
                 />
                 <img
                   src="/62nd/character/img/sticker1_2.webp"
                   alt=""
-                  style={lineStampImageStyle}
+                  className={styles.lineStampImageStyle}
+                  loading="lazy"
                 />
                 <img
                   src="/62nd/character/img/sticker1_3.webp"
                   alt=""
-                  style={lineStampImageStyle}
+                  className={styles.lineStampImageStyle}
+                  loading="lazy"
                 />
                 <img
                   src="/62nd/character/img/sticker1_4.webp"
                   alt=""
-                  style={lineStampImageStyle}
+                  className={styles.lineStampImageStyle}
+                  loading="lazy"
                 />
                 <img
                   src="/62nd/character/img/sticker1_5.webp"
                   alt=""
-                  style={lineStampImageStyle}
+                  className={styles.lineStampImageStyle}
+                  loading="lazy"
                 />
               </div>
               <a
@@ -194,31 +190,36 @@ export default function Character() {
               </a>
             </ContentBox>
             <ContentBox title={"落単古墳マン2"}>
-              <div style={lineStampStyle}>
+              <div className={styles.lineStampStyle}>
                 <img
                   src="/62nd/character/img/sticker2_1.webp"
                   alt=""
-                  style={lineStampImageStyle}
+                  className={styles.lineStampImageStyle}
+                  loading="lazy"
                 />
                 <img
                   src="/62nd/character/img/sticker2_2.webp"
                   alt=""
-                  style={lineStampImageStyle}
+                  className={styles.lineStampImageStyle}
+                  loading="lazy"
                 />
                 <img
                   src="/62nd/character/img/sticker2_3.webp"
                   alt=""
-                  style={lineStampImageStyle}
+                  className={styles.lineStampImageStyle}
+                  loading="lazy"
                 />
                 <img
                   src="/62nd/character/img/sticker2_4.webp"
                   alt=""
-                  style={lineStampImageStyle}
+                  className={styles.lineStampImageStyle}
+                  loading="lazy"
                 />
                 <img
                   src="/62nd/character/img/sticker2_5.webp"
                   alt=""
-                  style={lineStampImageStyle}
+                  className={styles.lineStampImageStyle}
+                  loading="lazy"
                 />
               </div>
               <a
