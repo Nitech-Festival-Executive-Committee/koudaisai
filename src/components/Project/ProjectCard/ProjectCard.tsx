@@ -29,7 +29,21 @@ export default function ProjectCard({
           href={`${linkOffset ? `${linkOffset}/` : "./"}${project.link}`}
           className={styles.cardLink}
         >
-          <Card className={styles.card}>
+          <Card
+            sx={{
+              // xsとsmの境目は600px
+              gap: 0,
+              width: { xs: "155px", sm: "190px" },
+              height: { xs: "230px", sm: "290px" },
+              padding: { xs: "10px 10px 5px", sm: "10px 15px 10px" },
+              marginBottom: "2px",
+              img: {
+                objectFit: "cover",
+                borderRadius: "5px",
+                boxShadow: "4px 5px 6px 0px #a3a3a3",
+              },
+            }}
+          >
             <CardCover>
               <Image
                 src={`/62nd/project/${project.link}/brochure.webp`}
@@ -49,37 +63,70 @@ export default function ProjectCard({
               />
             </CardCover>
 
-            <CardCover className={styles.cardOverlay} />
+            <CardCover
+              sx={{
+                background:
+                  "linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 60%)",
+              }}
+            />
 
-            {/* 企画名と場所を表示 */}
-            <CardContent className={styles.cardContent}>
-              <Typography level="title-lg" textColor="#fff">
+            <CardContent
+              sx={{
+                justifyContent: "flex-end",
+                fontSize: { xs: "16px", sm: "18px" },
+                color: "white",
+                textShadow: "1px 1px 1px rgb(0 0 0)",
+              }}
+            >
+              <Typography level="title-lg" sx={{ color: "#fff" }}>
                 {project.name}
               </Typography>
-              <Typography className={styles.sub} textColor="neutral.100">
+              <Typography
+                sx={{
+                  fontSize: { xs: "14px", sm: "16px" },
+                  textShadow: "1px 1px 1px rgb(57, 57, 57)",
+                  color: "neutral.100",
+                }}
+              >
                 {project.place}
               </Typography>
             </CardContent>
 
-            {/* 開催時間を表示 */}
-            <div>
-              {showTime && (
-                <CardOverflow
-                  variant="soft"
-                  sx={{ bgcolor: "background.level1" }}
-                  className={styles.cardDetail}
+            {showTime && (
+              <CardOverflow
+                variant="soft"
+                sx={{
+                  bgcolor: "background.level1",
+                  padding: { xs: "0 8px", sm: "0" },
+                  marginTop: "5px",
+                  marginRight: { xs: "-10px", sm: "-15px" },
+                  marginBottom: { xs: "-5px", sm: "-10px" },
+                  marginLeft: { xs: "-10px", sm: "-15px" },
+                  background:
+                    "linear-gradient(to bottom, rgba(30, 30, 30, 0.3), rgba(30, 30, 30, 0.5))",
+                  borderRadius: "0 0 5px 5px",
+                }}
+              >
+                <CardContent
+                  orientation="horizontal"
+                  sx={{
+                    justifyContent: "center",
+                    padding: "6px 0",
+                  }}
                 >
-                  <CardContent
-                    orientation="horizontal"
-                    className={styles.cardOverflowContent}
+                  <Typography
+                    level="body-xs"
+                    sx={{
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      color: "white",
+                    }}
                   >
-                    <Typography level="body-xs" className={styles.typography}>
-                      {convertScheduleToSummaryReactNode(project.schedule)}
-                    </Typography>
-                  </CardContent>
-                </CardOverflow>
-              )}
-            </div>
+                    {convertScheduleToSummaryReactNode(project.schedule)}
+                  </Typography>
+                </CardContent>
+              </CardOverflow>
+            )}
           </Card>
         </a>
       ))}
