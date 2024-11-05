@@ -37,6 +37,7 @@ export default function Loader() {
       //await loadBasic(engine);
     }).then(() => {
       setIsParticleReady(true);
+      window.scrollTo(0, 0);
       setTimeout(() => {
         setIsAnimatiomCompleted(true);
         setTimeout(() => {
