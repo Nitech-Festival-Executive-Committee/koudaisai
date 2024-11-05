@@ -15,7 +15,7 @@ const PrevFestivalCard: React.FC<SiteData> = ({ thisHref, thisImage }) => {
       rel="noopener noreferrer"
       aria-label="第51回工大祭のWebページを開く"
     >
-      <img src={thisImage} alt="工大祭の画像" />
+      <img src={thisImage} alt="工大祭の画像" loading="lazy" />
     </a>
   );
 };

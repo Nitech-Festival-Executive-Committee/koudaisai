@@ -73,7 +73,7 @@ export default function Access() {
             <h4 style={{ fontWeight: "bold", fontSize: "1.5rem", margin: "0" }}>
               <Underline>鶴舞駅</Underline>
             </h4>
-            <img src="/62nd/access/img/train.webp" alt="" />
+            <img src="/62nd/access/img/train.webp" alt="" loading="lazy" />
             <p style={{ textAlign: "right" }}>
               <a
                 href="https://maps.app.goo.gl/En9P1hgB1txHgNTz5"

@@ -19,7 +19,7 @@ export default function ContentImage({
       {decorated ? (
         <DecoratedImage img={img} alt={alt} />
       ) : (
-        <img src={img} alt={alt} />
+        <img src={img} alt={alt} loading="lazy" />
       )}
     </div>
   );

@@ -1,6 +1,7 @@
 import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "@/styles/style.scss";
+import "@fontsource/inter";
 
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";

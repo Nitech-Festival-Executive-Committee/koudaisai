@@ -9,6 +9,8 @@ import Flipdown from "@/components/Flipdown/Flipdown";
 import Loader from "@/components/Loader/Loader";
 import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
+import ProjectCard from "@/components/Project/ProjectCard/ProjectCard";
+import ProjectCardWrapper from "@/components/Project/ProjectCardWrapper/ProjectCardWrapper";
 import { allProject } from "./project/allProjectData";
 import { timetableData } from "./project/timetableData";
 import { tyuya } from "./project/tyuya/tyuya";
@@ -20,6 +22,7 @@ import { vrCoaster } from "./project/vr-coaster/vrCoaster";
 import { gakuseiboshu } from "./project/gakuseiboshu/gakuseiboshu";
 import { nitechKing } from "./project/nitech-king/nitechKing";
 import { hauntedHouse } from "./project/haunted-house/hauntedHouse";
+import { kouya } from "./project/kouya/kouya";
 import {
   NITFES_EDITION,
   NITFES_THEME,
@@ -58,43 +61,23 @@ export default function Top() {
       <PageWrapper>
         <SectionBody>
           <ContentTitle title="PROJECTS" size={1} />
-          <ContentBox title={"声優トークショー"}>
-            <a
-              href="./project/seiyu"
-              style={{ display: "flex", justifyContent: "center" }}
-            >
-              <img
-                src="/62nd/project/seiyu/logo.webp"
-                style={{ maxWidth: "100%", maxHeight: "20vh" }}
-              />
-            </a>
-          </ContentBox>
-          <ContentBox title={"中夜祭"}>
-            <a
-              href="./project/tyuya"
-              style={{ display: "flex", justifyContent: "center" }}
-            >
-              <img
-                src="/62nd/project/tyuya/logo.webp"
-                style={{ maxWidth: "100%", maxHeight: "20vh" }}
-              />
-            </a>
-          </ContentBox>
-          <ContentBox title={"後夜祭"}>
-            <a
-              href="./project/kouya"
-              style={{ display: "flex", justifyContent: "center" }}
-            >
-              <img
-                src="/62nd/project/kouya/logo.webp"
-                style={{ maxWidth: "100%", maxHeight: "20vh" }}
-              />
-            </a>
-          </ContentBox>
+          <ProjectCardWrapper>
+            <ProjectCard
+              projectList={[
+                seiyu,
+                tyuya,
+                kouya,
+                hauntedHouse,
+                roomRiddles,
+                excursionRiddles,
+              ]}
+              linkOffset={"./project"}
+              showTime
+            />
+          </ProjectCardWrapper>
           <p style={{ textAlign: "right" }}>
             <a href="./project">その他の企画ページはこちらから</a>
           </p>
-
           <ContentTitle title="FAQ" size={1} />
           <ContentBox title={`第${NITFES_EDITION}回工大祭の開催日時は?`}>
             <p>

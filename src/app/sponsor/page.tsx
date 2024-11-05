@@ -13,7 +13,7 @@ export const metadata = {
 export default function Sponsor() {
   return (
     <>
-      <ContentTitle title="協賛一覧" size={1} bigTitle></ContentTitle>
+      <ContentTitle title="協賛一覧" size={1} bigTitle />
       <p
         style={{
           paddingTop: "2vh",
@@ -26,7 +26,7 @@ export default function Sponsor() {
       </p>
       <PageWrapper>
         <SectionBody>
-          <ContentTitle title="企業の皆様へ" size={2}></ContentTitle>
+          <ContentTitle title="企業の皆様へ" size={2} />
           <ContentBox title={""}>
             <p>
               工大祭は毎年多くの企業の皆様や地域の皆様、卒業生の皆様のお力添えのもと運営することができています。
@@ -40,7 +40,7 @@ export default function Sponsor() {
           </ContentBox>
         </SectionBody>
         <SectionBody>
-          <ContentTitle title="協賛" size={2}></ContentTitle>
+          <ContentTitle title="協賛" size={2} />
           <ContentBox title={"協賛の種類"}>
             <ul>
               <li>
