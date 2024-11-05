@@ -2,22 +2,20 @@ import React from "react";
 import styles from "./PreviousFestival.module.scss";
 
 interface SiteData {
-  thisHref: string;
-  thisImage: string;
+  href: string;
+  src: string;
 }
 
-const PrevFestivalCard: React.FC<SiteData> = ({ thisHref, thisImage }) => {
+export default function PrevFestivalCard({ href, src }: SiteData) {
   return (
     <a
       className={styles.preFestivalThum}
-      href={thisHref}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="第51回工大祭のWebページを開く"
     >
-      <img src={thisImage} alt="工大祭の画像" loading="lazy" />
+      <img src={src} alt="工大祭の画像" loading="lazy" />
     </a>
   );
-};
-
-export default PrevFestivalCard;
+}
