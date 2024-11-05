@@ -10,10 +10,16 @@
 }
 
 .when {
-  margin: 20px 0 5px 0;
+  width: 100%;
+  margin: 20px 0 5px;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
+}
+
+.content {
+  position: relative;
+  width: 100%;
 }
 
 .remaining {
@@ -21,6 +27,15 @@
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.2;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > div {
+    gap: 5px;
+  }
 }
 
 .complete {

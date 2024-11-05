@@ -3,25 +3,11 @@
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  max-width: 80vw;
+  margin: 0 auto;
   @include phone {
     flex-direction: column;
-  }
-}
-
-// TODO: 廃止するかも
-.information-content-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  & > div {
-    width: 45%;
-    padding: 1% 1.5% 0.5% 1.5%;
-  }
-  .information-img {
-    padding: 0.5vh 0;
-    img {
-      max-width: 100%;
-    }
+    max-width: 95vw;
   }
 }

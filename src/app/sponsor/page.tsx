@@ -14,17 +14,15 @@ export default function Sponsor() {
   return (
     <>
       <ContentTitle title="協賛一覧" size={1} bigTitle />
-      <p
-        style={{
-          paddingTop: "2vh",
-          fontWeight: 800,
-          margin: "0 5vw",
-          textAlign: "center",
-        }}
-      >
-        その他多くの企業様から物品・広告協賛をいただいております。広告協賛は当日パンフレット・会場等に掲載されます。
-      </p>
       <PageWrapper>
+        <p
+          style={{
+            fontWeight: 800,
+            textAlign: "center",
+          }}
+        >
+          その他多くの企業様から物品・広告協賛をいただいております。広告協賛は当日パンフレット・会場等に掲載されます。
+        </p>
         <SectionBody>
           <ContentTitle title="企業の皆様へ" size={2} />
           <ContentBox title={""}>
