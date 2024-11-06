@@ -5,6 +5,7 @@ import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
 import { gakuseiboshu as ProjectData } from "./gakuseiboshu";
 import { guest1, guest2 } from "./guest";
+import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 
 export const metadata = {
   title: `${ProjectData.name} - 第${NITFES_EDITION}回工大祭`,
@@ -15,12 +16,14 @@ export const metadata = {
 export default function Gakuseiboshu() {
   return (
     <Project projectData={ProjectData}>
-      <SectionBody>
-        <ProjectTable tableObject={guest1} />
-      </SectionBody>
-      <SectionBody>
-        <ProjectTable tableObject={guest2} />
-      </SectionBody>
+      <PageWrapper>
+        <SectionBody>
+          <ProjectTable tableObject={guest1} />
+        </SectionBody>
+        <SectionBody>
+          <ProjectTable tableObject={guest2} />
+        </SectionBody>
+      </PageWrapper>
     </Project>
   );
 }
