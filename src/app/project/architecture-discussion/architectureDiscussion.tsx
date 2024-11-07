@@ -22,9 +22,9 @@ const place = "NITech Hall 2階 ラーニング・コモンズ";
 
 // 変数名を変更(ex. miniGame)
 // ファイル名も変更(ex. miniGame.tsx)
-export const nitechPavilion: ProjectData = {
+export const architectureDiscussion: ProjectData = {
   // ContentBoxに含まないデータ
-  link: "nitech-pavilion", // 複数単語の場合はハイフンつなぎで記述
+  link: "architectureDiscussion", // 複数単語の場合はハイフンつなぎで記述
   name: "「原寸制作と建築教育」討論会",
   tags: [],
   category: [CATEGORY.FAMILY, CATEGORY.STUDENT, CATEGORY.EXHIBITION],

@@ -29,7 +29,6 @@ import { stampRally } from "./stamp-rally/stampRally";
 import { kouya } from "./kouya/kouya";
 import { mogitenPR } from "./mogiten-pr/mogitenPR";
 import { zipFM } from "./zip-fm/zipFM";
-import { nitechPavilion } from "./nitech-pavilion/nitechPavilion";
 
 export const metadata = {
   title: `企画一覧 - 第${NITFES_EDITION}回工大祭`,
