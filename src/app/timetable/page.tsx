@@ -13,6 +13,7 @@ import { nitechChallenger } from "../project/nitech-challenger/nitechChallenger"
 import Underline from "@/components/Content/Underline/Underline";
 import { Period } from "@/types/types";
 import { mogitenPR } from "../project/mogiten-pr/mogitenPR";
+import { zipFM } from "../project/zip-fm/zipFM";
 
 export const metadata = {
   title: `タイムテーブル - 第${NITFES_EDITION}回工大祭`,
@@ -29,13 +30,7 @@ export default function Timetable() {
     tyuya,
   ];
 
-  const day2StageProjects = [
-    spark,
-    mogitenPR,
-    shootingGuesser,
-    // zipFM,
-    kouya,
-  ];
+  const day2StageProjects = [spark, mogitenPR, shootingGuesser, zipFM, kouya];
 
   return (
     <>
