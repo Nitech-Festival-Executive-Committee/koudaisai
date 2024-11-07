@@ -17,19 +17,19 @@ export const metadata = {
 export default function TemplateProject() {
   return (
     <>
-      <Project projectData={ProjectData} />
-
-      <ContentTitle title="hogefuga" size={2} bigTitle />
-      <PageWrapper>
-        <SectionBody>
-          <ContentTitle title="1日目" size={2} />
-          <ProjectTable tableObject={timeScheduleDay1} />
-        </SectionBody>
-        <SectionBody>
-          <ContentTitle title="2日目" size={2} />
-          <ProjectTable tableObject={timeScheduleDay2} />
-        </SectionBody>
-      </PageWrapper>
+      <Project projectData={ProjectData}>
+        <ContentTitle title="hogefuga" size={2} bigTitle />
+        <PageWrapper>
+          <SectionBody>
+            <ContentTitle title="1日目" size={2} />
+            <ProjectTable tableObject={timeScheduleDay1} />
+          </SectionBody>
+          <SectionBody>
+            <ContentTitle title="2日目" size={2} />
+            <ProjectTable tableObject={timeScheduleDay2} />
+          </SectionBody>
+        </PageWrapper>
+      </Project>
     </>
   );
 }

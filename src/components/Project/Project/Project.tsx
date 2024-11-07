@@ -59,8 +59,8 @@ export default function Project({
             )}
           />
         </SectionBody>
-        {children}
       </PageWrapper>
+      {children}
     </>
   );
 }

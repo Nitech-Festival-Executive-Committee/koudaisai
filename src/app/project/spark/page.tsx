@@ -9,6 +9,7 @@ import {
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
+import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 
 export const metadata = {
   title: `${ProjectData.name} - 第${NITFES_EDITION}回工大祭`,
@@ -19,14 +20,16 @@ export const metadata = {
 export default function Spark() {
   return (
     <Project projectData={ProjectData} brochurePath={""}>
-      <SectionBody>
-        <ContentTitle title="1日目" size={2} />
-        <ProjectTable tableObject={sparkScheduleDay1} />
-      </SectionBody>
-      <SectionBody>
-        <ContentTitle title="2日目" size={2} />
-        <ProjectTable tableObject={sparkScheduleDay2} />
-      </SectionBody>
+      <PageWrapper>
+        <SectionBody>
+          <ContentTitle title="1日目" size={2} />
+          <ProjectTable tableObject={sparkScheduleDay1} />
+        </SectionBody>
+        <SectionBody>
+          <ContentTitle title="2日目" size={2} />
+          <ProjectTable tableObject={sparkScheduleDay2} />
+        </SectionBody>
+      </PageWrapper>
     </Project>
   );
 }
