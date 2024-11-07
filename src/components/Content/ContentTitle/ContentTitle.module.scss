@@ -51,7 +51,7 @@ h1.fontEffect > span {
   }
 }
 h2.fontEffect > span {
-  font-size: 50px;
+  font-size: 51px;
   text-shadow:
     2px 2px 0px #d5d5d5,
     4px 4px 0px rgba(0, 0, 0, 0.2);
@@ -60,7 +60,7 @@ h2.fontEffect > span {
   }
 }
 h3.fontEffect > span {
-  font-size: 45px;
+  font-size: 47px;
   text-shadow:
     1.5px 1.5px 0px #d5d5d5,
     3px 3px 0px rgba(0, 0, 0, 0.2);
@@ -69,20 +69,20 @@ h3.fontEffect > span {
   }
 }
 h4.fontEffect > span {
-  font-size: 40px;
+  font-size: 43px;
   text-shadow:
     1.5px 1.5px 0px #d5d5d5,
     2.3px 2.3px 0px rgba(0, 0, 0, 0.2);
   @include phone {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 }
 h5.fontEffect > span {
-  font-size: 35px;
+  font-size: 39px;
   text-shadow:
     1.3px 1.3px 0px #d5d5d5,
     2px 2px 0px rgba(0, 0, 0, 0.2);
   @include phone {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
