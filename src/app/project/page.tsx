@@ -29,6 +29,8 @@ import { stampRally } from "./stamp-rally/stampRally";
 import { kouya } from "./kouya/kouya";
 import { mogitenPR } from "./mogiten-pr/mogitenPR";
 import { zipFM } from "./zip-fm/zipFM";
+import { architectureDiscussion } from "./architecture-discussion/architectureDiscussion";
+import { nitechPavilion } from "./nitech-pavilion/nitechPavilion";
 
 export const metadata = {
   title: `企画一覧 - 第${NITFES_EDITION}回工大祭`,
@@ -54,7 +56,6 @@ const schoolProjects = [
   excursionRiddles,
   nitechChallenger,
   hauntedHouse,
-  communityStreet,
   kidsPark,
   booth,
   nitechKing,
@@ -81,6 +82,7 @@ const projectList = [
   nitechChallenger,
   nitechKing,
   nitechPavilion,
+  architectureDiscussion,
   roomRiddles,
   shootingGuesser,
   spark,

@@ -1,6 +1,6 @@
 import React from "react";
 import Project from "@/components/Project/Project/Project";
-import { architectureDiscussion as ProjectData } from "./architectureDiscussion";
+import { nitechPavilion as ProjectData } from "./nitechPavilion";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
 
 export const metadata = {
@@ -9,10 +9,10 @@ export const metadata = {
 };
 
 // 関数名を変更(ex. MiniGame)
-export default function architectureDiscussion() {
+export default function TemplateProject() {
   return (
     <>
-      <Project projectData={ProjectData} logoPath={""} projectTitleSize={5} />
+      <Project projectData={ProjectData} logoPath={""} projectTitleSize={3} />
     </>
   );
 }
