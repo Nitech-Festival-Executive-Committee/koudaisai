@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface Period {
   startDate: Date;
   endDate: Date;
@@ -15,3 +17,20 @@ export const CATEGORY = {
   EXHIBITION: "EXHIBITION", // 展示
 } as const;
 export type CategoryType = (typeof CATEGORY)[keyof typeof CATEGORY];
+
+export const animationTypes = [
+  "left",
+  "right",
+  "center",
+  "bottom",
+  "top",
+] as const;
+export type AnimationType = (typeof animationTypes)[number];
+
+export interface AnimationConfigs {
+  children: ReactNode;
+  duration?: number;
+  delay?: number;
+  distance?: number; // アニメーションの移動距離(ex. 右に100px移動しながらフェードイン)
+  margin?: number; // 画面に入ってから何px超えたら表示するか
+}
