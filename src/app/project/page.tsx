@@ -28,14 +28,17 @@ import { spark } from "./spark/spark";
 import { stampRally } from "./stamp-rally/stampRally";
 import { kouya } from "./kouya/kouya";
 import { mogitenPR } from "./mogiten-pr/mogitenPR";
+import { zipFM } from "./zip-fm/zipFM";
 
 export const metadata = {
   title: `企画一覧 - 第${NITFES_EDITION}回工大祭`,
   description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭の企画一覧です。`,
 };
 
+// ここからSwiperに表示する企画
 const guestProjects = [
   seiyu,
+  // zipFM, // 画像が追加されたら表示
   tyuya,
   booth,
   laboratoryTour,
@@ -54,7 +57,9 @@ const schoolProjects = [
   vrCoaster,
   vsDealer,
 ];
+// ここまで
 
+// ここから企画一覧に表示する企画
 const projectList = [
   artfulCampus,
   booth,
@@ -77,17 +82,21 @@ const projectList = [
   tyuya,
   vrCoaster,
   vsDealer,
+  zipFM,
 ];
 
 const stageProject = [
   spark,
   mogitenPR,
+  zipFM,
   shootingGuesser,
   nitechKing,
   nitechChallenger,
   tyuya,
   kouya,
 ];
+
+// ここまで
 
 export default function ProjectPage() {
   return (

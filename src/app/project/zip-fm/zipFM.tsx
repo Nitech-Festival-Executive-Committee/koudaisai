@@ -47,7 +47,7 @@ export const zipFM: ProjectData = {
         <p>
           <Underline>ステージ企画</Underline>
           <br />
-          特設ステージで大人気ラジオ局ZIP-FMと内容盛りだくさんのコラボステージの開催します!
+          特設ステージで大人気ラジオ局ZIP-FMと内容盛りだくさんのコラボステージを開催します!
           <br />
           <Underline>
             ステージ企画はHillaryチーム VS まるりチームの対決型
