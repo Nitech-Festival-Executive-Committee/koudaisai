@@ -1,0 +1,8 @@
+@import "variables";
+
+.zipFMSectionBody {
+  width: 32%;
+  @include phone {
+    width: 100%;
+  }
+}
