@@ -7,6 +7,7 @@ import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import ContentImage from "@/components/Content/ContentImage/ContentImage";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
+import styles from "./page.module.scss";
 
 export const metadata = {
   title: `${projectData.name} - 第${NITFES_EDITION}回工大祭`,
@@ -19,7 +20,8 @@ export default function ZipFM() {
     <Project projectData={projectData} logoPath={""} brochurePath={""}>
       <ContentTitle title={"ナビゲーター紹介"} size={2} bigTitle />
       <PageWrapper>
-        <SectionBody>
+        {/* ナビゲーター3人を横に並べるためにwidthを変更 */}
+        <SectionBody className={styles.zipFMSectionBody}>
           <ContentBox title={"Hillary"}>
             <ContentImage
               img={"/62nd/project/zip-fm/Hillary.webp"}
@@ -40,7 +42,7 @@ export default function ZipFM() {
             </ul>
           </ContentBox>
         </SectionBody>
-        <SectionBody>
+        <SectionBody className={styles.zipFMSectionBody}>
           <ContentBox title={"まるり"}>
             <ContentImage
               img={"/62nd/project/zip-fm/Maruri.webp"}
@@ -62,7 +64,7 @@ export default function ZipFM() {
             </ul>
           </ContentBox>
         </SectionBody>
-        <SectionBody>
+        <SectionBody className={styles.zipFMSectionBody}>
           <ContentBox title={"中川大輔"}>
             <ContentImage
               img={"/62nd/project/zip-fm/Nakagawa.webp"}

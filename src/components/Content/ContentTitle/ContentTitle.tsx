@@ -7,6 +7,7 @@ interface ContentTitleProps {
   size: number;
   bigTitle?: boolean; // タイトルを横幅いっぱいに表示するかどうか
   style?: React.CSSProperties;
+  className?: string;
   animation?: AnimationType;
 }
 
@@ -15,6 +16,7 @@ export default function ContentTitle({
   size,
   bigTitle = false,
   style,
+  className,
   animation = "center",
 }: ContentTitleProps) {
   const HeadingTag = `h${size}` as keyof JSX.IntrinsicElements;
@@ -22,7 +24,7 @@ export default function ContentTitle({
   return (
     <Animation animationType={animation}>
       <HeadingTag
-        className={`${styles.contentTitle} ${styles.fontEffect} ${styles.retroShadow} ${bigTitle ? styles.bigTitle : ""}`}
+        className={`${styles.contentTitle} ${styles.fontEffect} ${styles.retroShadow} ${bigTitle ? styles.bigTitle : ""} ${className}`}
         style={style}
       >
         <span>{title}</span>
