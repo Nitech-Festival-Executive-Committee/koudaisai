@@ -35,12 +35,14 @@ import {
   NITFES_DAY2,
   NITFES_TIME_DATE2,
 } from "@/const/const";
+import { zipFM } from "./project/zip-fm/zipFM";
 
 const pickupProjects = [
   allProject,
   timetableData,
   tyuya,
   seiyu,
+  zipFM,
   roomRiddles,
   excursionRiddles,
   vsDealer,

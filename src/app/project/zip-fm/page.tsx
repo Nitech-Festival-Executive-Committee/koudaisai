@@ -17,7 +17,7 @@ export const metadata = {
 // 関数名を変更(ex. MiniGame)
 export default function ZipFM() {
   return (
-    <Project projectData={projectData} logoPath={""} brochurePath={""}>
+    <Project projectData={projectData} logoPath={""}>
       <ContentTitle title={"ナビゲーター紹介"} size={2} bigTitle />
       <PageWrapper>
         {/* ナビゲーター3人を横に並べるためにwidthを変更 */}
