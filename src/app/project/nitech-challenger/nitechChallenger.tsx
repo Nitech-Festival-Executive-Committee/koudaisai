@@ -32,7 +32,7 @@ export const nitechChallenger: ProjectData = {
     CATEGORY.EXPERIENCE,
   ],
   summary:
-    "ステージ上で開催の本格推理型ミニゲーム企画!!パズルを解き切り、真相を突き止めることはできるのか!?",
+    "ステージ上で開催の本格推理型ミニゲーム企画!!パズルを解き切り、真相を突き止めることはできるのか!?見事真相を暴いた方々には、抽選で素敵な景品が贈呈されます!",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,
