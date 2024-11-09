@@ -74,7 +74,7 @@ export default function Timetable() {
                 }
               >
                 <p>
-                  {project.summary}
+                  {project.timetableDescription}
                   <br />
                   詳細はこちらから:{" "}
                   <a href={`../project/${project.link}`}>{project.name}</a>

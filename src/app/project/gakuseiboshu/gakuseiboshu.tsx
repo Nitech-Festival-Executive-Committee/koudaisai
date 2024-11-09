@@ -45,7 +45,7 @@ export const gakuseiboshu: ProjectData = {
     CATEGORY.EXPERIENCE,
     CATEGORY.EXHIBITION,
   ],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

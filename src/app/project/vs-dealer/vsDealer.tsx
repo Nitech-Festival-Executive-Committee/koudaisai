@@ -38,7 +38,7 @@ export const vsDealer: ProjectData = {
   name: "VS ディーラー",
   tags: [],
   category: [CATEGORY.STUDENT, CATEGORY.EXPERIENCE],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

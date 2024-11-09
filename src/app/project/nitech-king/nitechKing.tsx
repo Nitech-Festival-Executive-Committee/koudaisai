@@ -26,7 +26,7 @@ export const nitechKing: ProjectData = {
   name: "名工大王",
   tags: [],
   category: [CATEGORY.STAGE_PROJECT, CATEGORY.STUDENT],
-  summary:
+  timetableDescription:
     "4名の挑戦者が、名工大王の座をかけてクイズに挑戦します。2代目名工大王予想で景品ゲットのチャンス!さらに、観覧者向けのオンラインクイズでも豪華景品が!?",
 
   // ProjectBoxに変換する必要があるデータ

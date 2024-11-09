@@ -38,7 +38,7 @@ export const hauntedHouse: ProjectData = {
   name: "お化け屋敷",
   tags: [],
   category: [CATEGORY.STUDENT, CATEGORY.EXPERIENCE, CATEGORY.FAMILY],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

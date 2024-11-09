@@ -37,7 +37,8 @@ export const roomRiddles: ProjectData = {
   name: "謎解き~変化からの脱出~",
   tags: ["予約"],
   category: [CATEGORY.STUDENT, CATEGORY.FAMILY, CATEGORY.EXPERIENCE],
-  summary: "制限時間内に、講義室にちりばめられた謎を解き脱出する。",
+  timetableDescription:
+    "制限時間内に、講義室にちりばめられた謎を解き脱出する。",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

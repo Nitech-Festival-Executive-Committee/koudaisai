@@ -8,7 +8,7 @@ export const allProject: ProjectData = {
   name: "企画一覧",
   tags: ["企画"],
   category: [],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule: {},

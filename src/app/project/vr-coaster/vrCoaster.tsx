@@ -41,7 +41,7 @@ export const vrCoaster: ProjectData = {
   name: "VRコースター",
   tags: [],
   category: [CATEGORY.STUDENT, CATEGORY.FAMILY, CATEGORY.EXPERIENCE],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

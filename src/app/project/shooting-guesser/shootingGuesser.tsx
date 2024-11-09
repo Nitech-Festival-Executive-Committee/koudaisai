@@ -46,7 +46,7 @@ export const shootingGuesser: ProjectData = {
     CATEGORY.STUDENT,
     CATEGORY.EXPERIENCE,
   ],
-  summary:
+  timetableDescription:
     "ステージ上で観客の方によるストラックアウトを行い、何番に当てるかを予想してもらいます!景品も用意しているのでぜひご参加ください!2日とも来るといいことがあるかも...",
 
   // ProjectBoxに変換する必要があるデータ
