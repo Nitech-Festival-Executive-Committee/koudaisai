@@ -73,6 +73,11 @@ export default function Faq() {
           {/* 特殊デザインの追加、お化け屋敷ページのこと */}
         </SectionBody>
       </PageWrapper>
+      <Animation>
+        <p className={styles.lastYear}>
+          <a href="/61st">昨年(第61回)のページを見に行く</a>
+        </p>
+      </Animation>
 
       <ContentTitle title="協力" size={1} bigTitle />
       <PageWrapper>
