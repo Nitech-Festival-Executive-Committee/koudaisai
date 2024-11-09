@@ -1,3 +1,4 @@
+import ContentImage from "@/components/Content/ContentImage/ContentImage";
 import Underline from "@/components/Content/Underline/Underline";
 import { ProjectData } from "@/types/projectInterface";
 import { CATEGORY } from "@/types/types";
@@ -44,32 +45,36 @@ export const zipFM: ProjectData = {
     {
       title: "企画紹介",
       content: (
-        <p>
-          <Underline>ステージ企画</Underline>
-          <br />
-          特設ステージで大人気ラジオ局ZIP-FMと内容盛りだくさんのコラボステージを開催します!
-          <br />
-          <Underline>
-            ステージ企画はHillaryチーム VS まるりチームの対決型
-          </Underline>
-          で、そこに来訪者が各ナビゲーターのチームに参加する形となります!
-          <br />
-          行う企画は、「以心伝心ゲーム」「50:50アンケート」や「〇×クイズ」「Beef
-          or Chicken」の4つです!ZIP-FMのナビゲーターの方と共に対決しよう!
-          <br />
-          また、企画に参加していただいた方は、もれなく、豪華な参加賞や景品がもらえます!
-          <br />
-          <Underline>
-            なんと、1万円分のプリペイドカードが当たるゲームもあるとか…!
-          </Underline>
-          <br />
-          みなさんのご来場、お待ちしています!
-          <br />
-          <br />
-          <Underline>スピーカー企画</Underline>
-          <br />
-          スピーカーから音楽が流れるよ!ぜひ聴いてみてね
-        </p>
+        <>
+          <p>
+            <Underline>ステージ企画</Underline>
+            <br />
+            特設ステージで大人気ラジオ局ZIP-FMと内容盛りだくさんのコラボステージを開催します!
+            <br />
+            <Underline>
+              ステージ企画はHillaryチーム VS まるりチームの対決型
+            </Underline>
+            で、そこに来訪者が各ナビゲーターのチームに参加する形となります!
+            <br />
+            行う企画は、「以心伝心ゲーム」「50:50アンケート」や「〇×クイズ」「Beef
+            or Chicken」の4つです!ZIP-FMのナビゲーターの方と共に対決しよう!
+            <br />
+            また、企画に参加していただいた方は、もれなく、豪華な参加賞や景品がもらえます!
+            <br />
+            <Underline>
+              なんと、1万円分のプリペイドカードが当たるゲームもあるとか…!
+            </Underline>
+            <br />
+            みなさんのご来場、お待ちしています!
+            <br />
+            <br />
+            <Underline>スピーカー企画</Underline>
+            <br />
+            スピーカーから音楽が流れるよ!ぜひ聴いてみてね
+            {/* TODO:できたら画像をビラの下に表示 */}
+          </p>
+          <ContentImage img="/62nd/project/zip-fm/speaker.webp" />
+        </>
       ),
     },
     {

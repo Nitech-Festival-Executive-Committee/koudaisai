@@ -38,7 +38,7 @@ export const metadata = {
 // ここからSwiperに表示する企画
 const guestProjects = [
   seiyu,
-  // zipFM, // 画像が追加されたら表示
+  zipFM,
   tyuya,
   booth,
   laboratoryTour,
