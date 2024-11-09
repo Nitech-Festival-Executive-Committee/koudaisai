@@ -45,7 +45,7 @@ export const mogitenPR: ProjectData = {
     CATEGORY.STUDENT,
     CATEGORY.EXHIBITION,
   ],
-  summary: "模擬店出店者がステージ上で模擬店のPRを行います!",
+  timetableDescription: "模擬店出店者がステージ上で模擬店のPRを行います!",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

@@ -41,7 +41,7 @@ export const artfulCampus: ProjectData = {
   name: "アートフルキャンパス成果展示",
   tags: [],
   category: [CATEGORY.STUDENT, CATEGORY.EXPERIENCE, CATEGORY.EXHIBITION],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

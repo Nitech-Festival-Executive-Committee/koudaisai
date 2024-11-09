@@ -41,7 +41,7 @@ export const spark: ProjectData = {
   name: "spark!!",
   tags: [],
   category: [CATEGORY.STAGE_PROJECT, CATEGORY.STUDENT],
-  summary:
+  timetableDescription:
     "大学生を中心とした部活・サークル等の団体がパフォーマンスをする企画を行います! ",
 
   // ProjectBoxに変換する必要があるデータ

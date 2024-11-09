@@ -39,7 +39,7 @@ export const mogi1: ProjectData = {
   name: "MOGI-1 グランプリ",
   tags: [],
   category: [CATEGORY.FAMILY, CATEGORY.STUDENT, CATEGORY.EXHIBITION],
-  summary: "模擬店の人気投票を行います",
+  timetableDescription: "模擬店の人気投票を行います",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

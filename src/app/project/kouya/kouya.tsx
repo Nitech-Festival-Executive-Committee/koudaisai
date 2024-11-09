@@ -34,7 +34,7 @@ export const kouya: ProjectData = {
     CATEGORY.STUDENT,
     CATEGORY.EXPERIENCE,
   ],
-  summary: (
+  timetableDescription: (
     <>
       工大祭の最後を飾るステージ企画です!
       <br />

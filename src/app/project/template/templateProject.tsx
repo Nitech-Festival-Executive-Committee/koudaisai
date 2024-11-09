@@ -47,7 +47,7 @@ export const templateProject: ProjectData = {
     CATEGORY.EXPERIENCE,
     CATEGORY.EXHIBITION,
   ],
-  summary:
+  timetableDescription:
     "仮想通貨ビットコインを人力でマイニングします。GPUより高速でハッシュを見つけよう。",
 
   // ProjectBoxに変換する必要があるデータ

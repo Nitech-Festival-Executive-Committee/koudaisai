@@ -30,7 +30,7 @@ export const seiyu: ProjectData = {
   tags: ["チケット"],
   // 当てはまるカテゴリを選択
   category: [CATEGORY.FAMILY, CATEGORY.STUDENT, CATEGORY.EXPERIENCE],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

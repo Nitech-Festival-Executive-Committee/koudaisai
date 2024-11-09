@@ -39,7 +39,8 @@ export const communityStreet: ProjectData = {
   name: "コミュニティーストリート",
   tags: [],
   category: [CATEGORY.FAMILY, CATEGORY.EXHIBITION],
-  summary: "各テント内に設営されているブース出展を楽しんでください!",
+  timetableDescription:
+    "各テント内に設営されているブース出展を楽しんでください!",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

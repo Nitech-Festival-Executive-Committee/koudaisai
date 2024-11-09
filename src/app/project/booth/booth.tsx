@@ -39,7 +39,7 @@ export const booth: ProjectData = {
   link: "booth", // 複数単語の場合はハイフンつなぎで記述
   name: "ブース展",
   category: [CATEGORY.FAMILY, CATEGORY.EXPERIENCE, CATEGORY.EXHIBITION],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

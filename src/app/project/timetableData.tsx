@@ -9,7 +9,7 @@ export const timetableData: ProjectData = {
   name: "タイムテーブル",
   tags: ["タイムテーブル"],
   category: [],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule: {},

@@ -40,7 +40,7 @@ export const kidsPark: ProjectData = {
   name: "キッズパーク",
   tags: [],
   category: [CATEGORY.FAMILY, CATEGORY.EXPERIENCE],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

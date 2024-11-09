@@ -40,7 +40,7 @@ export const laboratoryTour: ProjectData = {
   name: "研究室出展企画",
   tags: ["予約"],
   category: [CATEGORY.FAMILY, CATEGORY.STUDENT, CATEGORY.EXHIBITION],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,

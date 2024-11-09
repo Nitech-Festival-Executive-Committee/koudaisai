@@ -14,7 +14,7 @@ export interface ProjectData {
   name: string;
   tags?: string[];
   category: CategoryType[]; // ENUM
-  summary: string | ReactNode;
+  timetableDescription: string | ReactNode;
 
   // ProjectBoxに変換する必要があるデータ
   schedule: Schedule;

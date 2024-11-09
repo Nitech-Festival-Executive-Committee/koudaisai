@@ -40,7 +40,7 @@ export const excursionRiddles: ProjectData = {
   name: "謎解き-周遊型-",
   tags: [],
   category: [CATEGORY.FAMILY, CATEGORY.STUDENT, CATEGORY.EXPERIENCE],
-  summary: "",
+  timetableDescription: "",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,
