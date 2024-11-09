@@ -35,7 +35,7 @@ export const zipFM: ProjectData = {
     CATEGORY.EXPERIENCE,
   ],
   timetableDescription:
-    "特設ステージで大人気ラジオ局ZIP-FMと工大祭の内容盛りだくさんのコラボステージ!ナビゲーターのHillaryとまるり、そしてMCとして中川大輔が登場し、来場者参加型の企画や、GENZの公開録音を実施します",
+    "特設ステージで大人気ラジオ局ZIP-FMと工大祭の内容盛りだくさんのコラボステージ!ナビゲーターのHillaryさんとまるりさん、そしてMCとして中川大輔さんが登場し、来場者参加型の企画や、GENZの公開録音を実施します",
 
   // ProjectBoxに変換する必要があるデータ
   schedule,
