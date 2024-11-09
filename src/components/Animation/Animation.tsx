@@ -7,12 +7,12 @@ import BottomIn from "@/components/Animation/BottomIn";
 import CenterIn from "@/components/Animation/CenterIn";
 
 interface AnimationProps {
-  animationType: AnimationType;
+  animationType?: AnimationType;
   children: ReactNode;
 }
 
 export default function Animation({
-  animationType,
+  animationType = "center",
   children,
   ...configs
 }: AnimationProps & AnimationConfigs) {
