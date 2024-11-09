@@ -4,7 +4,6 @@ import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Animation from "@/components/Animation/Animation";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
-import AspectRatio from "@mui/joy/AspectRatio";
 import Button from "@mui/joy/Button";
 import Card from "@mui/joy/Card";
 import CardContent from "@mui/joy/CardContent";
@@ -28,31 +27,57 @@ export default function Faq() {
       <PageWrapper>
         <SectionBody>
           <WhatsNewCard
-            title="HTML/css/js -> Next.js/scss/tsへの移行"
-            text="なんかええ感じの文章、chatGPTに頼んだら書いてくれるかも"
+            title="HTML/CSS/JavaScript -> Next.js/SCSS/TypeScriptへの移行"
+            text={
+              <>
+                以前の工大祭Webサイトと比べ、より高速に表示されるようになりました。
+                <br />
+                また、より洗練されたデザインの使用や統一されたページの効率的な開発が可能になりました。
+              </>
+            }
           />
           <WhatsNewCard
-            title="ページパフォーマンス最適化"
-            text="あいうえおあいうえおあいうえおあいうえおあいうえおあいうえお"
+            title="企画カードの改善"
+            text="企画の表示を変更し、去年よりも見やすく・おしゃれになりました!"
+            img={"/62nd/whats-new/projectCard.webp"}
+          />
+          <WhatsNewCard
+            title="おすすめ機能の最適化"
+            text="開催時間やカテゴリ分けに基づいて、より関連した企画がおすすめに表示されるようになりました"
+            // TODO: おすすめ機能が実装されたら画像を追加
           />
         </SectionBody>
+
         <SectionBody>
           <WhatsNewCard
             title="3Dマップの作成"
-            text="hogefuga3D fuga fuga ganbatta fuga"
+            text="当日の企画開催場所をより視覚的に紹介します"
+            // 公開後に表示
+            // linkText="3Dマップに移動"
+            // link={"https://shika174.github.io/Nitech_3D-MAP/"}
           />
           <WhatsNewCard
-            title="ページパフォーマンス最適化"
-            text="あいうえおあいうえおあいうえおあいうえおあいうえおあいうえお"
+            title="企画ページのレイアウト変更"
+            text="企画ページのレイアウトを改善し、PC・スマホのどちらでもより見やすく、探している情報に到達しやすくなりました。"
             linkText="企画ページに移動"
+            link={"../project"}
           />
+          <WhatsNewCard
+            title="アニメーションの更新"
+            text="新たなアニメーションを追加し、ヘッダーやコンポーネントのアニメーションを改善しました"
+          />
+          <WhatsNewCard
+            title="開発環境の大幅な改善"
+            text="昨年のサイトをベースに、言語の変更・コンポーネントの再利用・GitHubによるバージョン管理やCIの導入・ドキュメントの整備などを行い、開発効率・コードの品質を向上させ、長期的な運用を見据えた環境の整備を行いました。"
+          />
+          {/* 特殊デザインの追加、お化け屋敷ページのこと */}
         </SectionBody>
       </PageWrapper>
 
       <ContentTitle title="協力" size={1} bigTitle />
       <PageWrapper>
         <SectionBody>
-          <ContentTitle title={"62回 Web作成"} size={3} />
+          <ContentTitle title={"62回 Web"} size={4} />
           <WhatsNewCard
             title={"村川 卓也"}
             text={
@@ -91,7 +116,7 @@ export default function Faq() {
           <WhatsNewCard title={"小林 央河"} text={"第60・61回広報局"} />
         </SectionBody>
         <SectionBody>
-          <ContentTitle title={"3Dマップ作成"} size={3} />
+          <ContentTitle title={"3Dマップ"} size={3} />
           <WhatsNewCard
             title={"北中 智也"}
             text={"第61回企画局・第62回広報局"}
@@ -128,18 +153,17 @@ function WhatsNewCard({
           background:
             "linear-gradient(150deg, #ffead8 0%, #ffffff 80%, #ffead8)",
           boxShadow: "6px 6px 8px 0px #dcdcdc",
+          border: "thin solid #ffddaf",
           ...style,
         }}
       >
         <div>
-          <Typography level="title-lg">{title}</Typography>
+          <Typography level="title-lg" sx={{ paddingBottom: "3px" }}>
+            {title}
+          </Typography>
           <Typography level="body-sm">{text}</Typography>
         </div>
-        {img && (
-          <AspectRatio minHeight="120px" maxHeight="200px">
-            <img src={img} srcSet={img} loading="lazy" alt="" />
-          </AspectRatio>
-        )}
+        {img && <img src={img} srcSet={img} loading="lazy" alt="" />}
         {linkText && (
           <CardContent orientation="horizontal">
             <Button
