@@ -36,7 +36,7 @@ export const tyuya: ProjectData = {
   ],
   timetableDescription: (
     <>
-      今年のゲストは<Underline>ゴー☆ジャス</Underline>
+      今年のゲストは<Underline>ゴー☆ジャスさん</Underline>
       !観客の皆さんも一緒になって楽しめる企画を用意してお待ちしております!
     </>
   ),
@@ -56,7 +56,7 @@ export const tyuya: ProjectData = {
           <Underline>芸人によるネタ披露・ミニゲーム ・抽選会</Underline>
           の3つの企画を行います!
           <br />
-          今年のゲストは<Underline>ゴー☆ジャス</Underline>
+          今年のゲストは<Underline>ゴー☆ジャスさん</Underline>
           !観客の皆さんも一緒になって楽しめる企画を用意してお待ちしております!
         </p>
       ),
