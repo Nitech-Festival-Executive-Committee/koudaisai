@@ -1,4 +1,3 @@
-import ContentImage from "@/components/Content/ContentImage/ContentImage";
 import Underline from "@/components/Content/Underline/Underline";
 import { ProjectData } from "@/types/projectInterface";
 import { CATEGORY } from "@/types/types";
@@ -73,7 +72,7 @@ export const zipFM: ProjectData = {
             スピーカーから音楽が流れるよ!ぜひ聴いてみてね
             {/* TODO:できたら画像をビラの下に表示 */}
           </p>
-          <ContentImage img="/62nd/project/zip-fm/speaker.webp" />
+          {/* <ContentImage img="/62nd/project/zip-fm/speaker.webp" /> */}
         </>
       ),
     },
