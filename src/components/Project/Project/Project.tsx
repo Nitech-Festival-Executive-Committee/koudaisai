@@ -33,12 +33,17 @@ export default function Project({
           alt="Logo"
         />
       )}
+      {/* ビラが無しに指定されている場合は"企画詳細"とタグが中央に来る */}
+      {brochurePath === "" && (
+        <PageWrapper>
+          <SectionBody>
+            <ProjectConentTitleAndTag projectData={projectData} isTagCenter />
+          </SectionBody>
+        </PageWrapper>
+      )}
       <PageWrapper>
         <SectionBody>
-          {/* ビラが無しに指定されている場合は"企画詳細"と企画タグを左に配置 */}
-          {brochurePath == "" ? (
-            <ProjectConentTitleAndTag projectData={projectData} />
-          ) : (
+          {brochurePath !== "" && (
             <BrochureImage
               img={`/62nd/project/${projectData.link}/${brochurePath}`}
               alt="Brochure"
@@ -56,6 +61,7 @@ export default function Project({
           {brochurePath != "" && (
             <ProjectConentTitleAndTag projectData={projectData} />
           )}
+
           <ProjectContent
             projectBoxList={projectData.projectBoxList.filter(
               (box) => !box.position || box.position === "right" // positionを指定していないか、rightが指定されているもののみ
@@ -70,8 +76,10 @@ export default function Project({
 
 const ProjectConentTitleAndTag = ({
   projectData,
+  isTagCenter = false,
 }: {
   projectData: ProjectData;
+  isTagCenter?: boolean;
 }) => (
   <>
     <ContentTitle title="企画詳細" size={2} />
@@ -80,6 +88,7 @@ const ProjectConentTitleAndTag = ({
         day1={projectData.schedule.day1 ? true : false}
         day2={projectData.schedule.day2 ? true : false}
         exclusiveText={projectData.tags ? projectData.tags : []}
+        style={isTagCenter ? { justifyContent: "center" } : undefined}
       />
     </Animation>
   </>
