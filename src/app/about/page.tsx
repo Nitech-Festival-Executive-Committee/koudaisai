@@ -6,6 +6,7 @@ import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import Underline from "@/components/Content/Underline/Underline";
 import ContentImage from "@/components/Content/ContentImage/ContentImage";
+import Animation from "@/components/Animation/Animation";
 import {
   NITFES_DATE1,
   NITFES_DATE2,
@@ -75,11 +76,13 @@ export default function About() {
               <a href="../access/">アクセス</a>をご覧ください。
             </p>
           </ContentBox>
-          <p style={{ textAlign: "right" }}>
-            <a href="../faq/" aria-label="アクセス">
-              その他のよくある質問はこちらから
-            </a>
-          </p>
+          <Animation>
+            <p style={{ textAlign: "right" }}>
+              <a href="../faq/" aria-label="アクセス">
+                その他のよくある質問はこちらから
+              </a>
+            </p>
+          </Animation>
 
           <ContentTitle title="役割分担" size={2} />
           <ContentBox title={"委員長会"}>
