@@ -16,6 +16,14 @@ jobs:
         with:
           node-version: "18" # 必要なNodeのバージョンを指定
 
+      - name: Cache .next build cache
+        uses: actions/cache@v2
+        with:
+          path: .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+
       - name: Install dependencies
         run: npm install # パッケージをインストール
 
