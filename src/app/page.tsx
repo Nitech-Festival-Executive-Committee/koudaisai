@@ -124,8 +124,22 @@ export default function Top() {
             </a>
           </p>
         </SectionBody>
+
         <SectionBody>
           <ContentTitle title="NEWS" size={1} />
+          <ContentBox title={"2024.11.11"}>
+            <p>
+              62回工大祭ホームページの変更点を
+              <a
+                href="./whats-new"
+                target="_blank"
+                aria-label="What's new?ページ"
+              >
+                What&apos;s new?ページ
+              </a>
+              にまとめました!
+            </p>
+          </ContentBox>
           <ContentBox title={"2024.11.1"}>
             <p>
               工大祭Webサイトをリニューアルし、新しいロード画面の追加や利便性・パフォーマンスが向上しました!
