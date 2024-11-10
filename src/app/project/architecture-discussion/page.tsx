@@ -1,7 +1,7 @@
 import React from "react";
 import Project from "@/components/Project/Project/Project";
+import { architectureDiscussion as ProjectData } from "./architectureDiscussion";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
-import { artfulCampus as ProjectData } from "./artfulCampus";
 
 export const metadata = {
   title: `${ProjectData.name} - 第${NITFES_EDITION}回工大祭`,
@@ -9,8 +9,10 @@ export const metadata = {
 };
 
 // 関数名を変更(ex. MiniGame)
-export default function ArtfulCampus() {
+export default function architectureDiscussion() {
   return (
-    <Project projectData={ProjectData} projectTitleSize={5} logoPath={""} />
+    <>
+      <Project projectData={ProjectData} logoPath={""} projectTitleSize={5} />
+    </>
   );
 }
