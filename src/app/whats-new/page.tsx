@@ -163,7 +163,7 @@ function WhatsNewCard({
         sx={{
           margin: "10px 5px 20px",
           background:
-            "linear-gradient(150deg, #ffead8 0%, #ffffff 80%, #ffead8)",
+            "linear-gradient(150deg, #ffefe2 0%, #ffffff 80%, #ffefe1)",
           boxShadow: "6px 6px 8px 0px #dcdcdc",
           border: "thin solid #ffddaf",
           ...style,
