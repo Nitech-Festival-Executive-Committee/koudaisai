@@ -1,0 +1,466 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" 　content="名古屋工業大学第60回工大祭実行委員会" />
+    <meta name="copyright" content="Copyright (C) 2022 名古屋工業大学第60回工大祭実行委員会 All Rights Reserved." />
+    <meta name="keywords" 　content="工大祭,第60回工大祭,名工祭,名古屋工業大学,名工大" />
+    <meta name="description" content="名古屋工業大学の大学祭ー「工大祭」の公式HP! 第60回工大祭は2022年11月19日(土)・20日(日)に開催します!! 是非お越しください!!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minmum-scale=1.0">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@nitfec" />
+    <meta property="og:url" content="http://www.koudaisai.com/" />
+    <meta property="og:title" content="第60回工大祭Webページ" />
+    <meta property="og:description" content="第60回工大祭のHPです。新着情報などを随時更新していきます！！" />
+    <meta property="og:image" content="http://www.koudaisai.com/img/Twitter.png" />
+    <!-- Twitter -->
+    <link rel="shortcut icon" href="http://www.koudaisai.com/favicon.ico" />
+    <link rel="stylesheet prefetch" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="http://mplus-webfonts.sourceforge.jp/mplus_webfonts.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="./css/pc.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/tablet.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/smart.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="android-chrome-192x192.png">
+    <title>企画一覧-第60回工大祭ホームページ</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <style>
+        #container {
+            /*background-image: url("../ppc/img/No1.png");*/
+            background-size: cover;
+        }
+
+        .white {
+            background: rgba(255, 255, 255, 0.5);
+            height: 100%;
+        }
+
+        .bar_box {
+            /*background-image: url("../ppc/img/No1.png");*/
+            background-size: cover;
+        }
+
+        .waku {
+            background: rgba(255, 140, 52, 100);
+            color: #ffffff;
+        }
+
+        @media (min-width: 600px) {
+            #parent {
+                display: flex;
+            }
+
+            #parent div {
+                margin: 3px;
+            }
+
+            #child1 {
+                flex-grow: 2;
+            }
+
+            #child2 {
+                flex-grow: 1;
+            }
+
+            #new {
+                background: rgba(238, 122, 9, 100);
+                color: #ffffff;
+            }
+
+            #more {
+                color: #ffffff;
+            }
+        }
+    </style>
+    <style>
+        .pic_frame {
+            position: relative;
+            /*相対配置*/
+
+            content: " ";
+            display: inline-block;
+            height: 20px;
+            width: 100px;
+            background-size: contain;
+            vertical-align: middle;
+            margin-right: 5px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+
+        .pic_frame img {
+            height: 100%;
+        }
+
+        table {
+            text-align: center;
+        }
+
+        .thumbnail {
+            display: inline-block;
+            /* ここがポイント */
+            height: 6vh;
+            margin-right: 1vm;
+            margin-bottom: 5px;
+        }
+
+        .thumbnail img {
+            height: 100%;
+        }
+
+        .kikaku {
+            display: inline-block;
+            /* ここがポイント */
+            height: 13vh;
+            margin-right: 2vh;
+            margin-left: 2vh;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+        }
+
+        .kikaku:hover {
+            display: inline-block;
+            /* ここがポイント */
+            transform: scale(1.2, 1.2);
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+            transition: 0.5s all;
+        }
+
+        .kikaku img {
+            height: 100%;
+            transition: 0.5s all;
+        }
+
+        .header {
+            background: url("./img/header.png") no-repeat;
+            background-position: left center;
+            background-size: auto 15px;
+        }
+    </style>
+</head>
+
+<!--左に出てくるBOX-->
+
+<body>
+    <div id="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top" id="menu">
+            <a href="../index.php">
+                <!--一番上の画像-->
+                <input type="image" src="../img/topiconImg.png" alt="工大祭ホームページ" id="rogo">
+            </a>
+
+            <ul id="menu-bar">
+                
+                <a href="../yoyaku">
+                    <li>
+                        <i class="fa fa-book fa-example fa-fw" aria-hidden="true"></i>
+                        <p class="menutext">ご予約</p>
+                    </li>
+                </a>
+
+                <a href="../about">
+                    <li>
+                        <i class="fa fa-question fa-example fa-fw" aria-hidden="true"></i>
+                        <p>工大祭とは？</p>
+                    </li>
+                </a>
+                <a href="../news">
+                    <li>
+                        <i class="fa fa-commenting fa-example fa-fw" aria-hidden="true"></i>
+                        <p>最新情報</p>
+                    </li>
+                </a>
+                <a href="../project">
+                    <li>
+                        <i class="fa fa-university fa-example fa-fw" aria-hidden="true"></i>
+                        <p>企画一覧</p>
+                    </li>
+                </a>
+                <a href="../tt">
+                    <li>
+                        <i class="fa fa-table fa-example fa-fw" aria-hidden="true"></i>
+                        <p>タイムテーブル</p>
+                    </li>
+                </a>
+
+                <a href="../access">
+                    <li>
+                        <i class="fa fa-map-marker fa-example fa-fw" aria-hidden="true"></i>
+                        <p>会場</p>
+                    </li>
+                </a>
+                <a href="../kohunman">
+                    <li>
+                        <i class="fa fa-smile-o fa-example fa-fw" aria-hidden="true"></i>
+                        <p>落単古墳マン</p>
+                    </li>
+                </a>
+                <a href="../com">
+                    <li>
+                        <i class="fa fa-handshake-o fa-example fa-fw" aria-hidden="true"></i>
+                        <p>企業の方へ</p>
+                    </li>
+                </a>
+                <a href="../inquiry">
+                    <li>
+                        <i class="fa fa-envelope fa-example fa-fw" aria-hidden="true"></i>
+                        <p>お問い合わせ</p>
+                    </li>
+                </a>
+                <a href="../link">
+                    <li>
+                        <i class="fa fa-link fa-example fa-fw" aria-hidden="true"></i>
+                        <p>協賛企業</p>
+                    </li>
+                </a>
+                <a href="../daisai">
+                    <li>
+                        <i class="fa fa-users fa-example fa-fw" aria-hidden="true"></i>
+                        <p>工大祭委員紹介</p>
+                    </li>
+                </a>
+                <a href="https://twitter.com/nitfes" target="_blank">
+                    <li>
+                        <i class="fa fa-twitter fa-example fa-fw" aria-hidden="true"></i>
+                        <p>Twitter</p>
+                    </li>
+                </a>
+                <a href="https://www.instagram.com/koudaisai" target="_blank">
+                    <li>
+                        <i class="fa fa-instagram fa-example fa-fw" aria-hidden="true"></i>
+                        <p>instagram</p>
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+        <!-- menu -->
+        <div class="bar_box">
+            <!--一番上の画像-->
+            <img id="bar_sm" src="../img/webBannerSm.png" alt="">
+            <!--スマホ-->
+            <img id="bar_pc" src="../img/webBanner.png" alt="">
+            <!--pc-->
+        </div>
+        <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+
+        <div id="container">
+            <div class="white" style="padding-top:100px">
+                <center>
+                    <img class="image" style="width:15vh" src="img/60thLo.png" alt="">
+                </center>
+                <div class="topic_box">
+                    <h2 class="topic1">企画一覧</h2>
+                    <h3 class="topic2">PROJTCTS</h3>
+                </div>
+                <div id="new" style="background: rgba(238,122,9,100); color: #ffffff;">
+                    <div class="topic_box">
+                        <h2 class="topic1" style="color:#fff">オンライン配信</h2>
+                        <h3 class="topic2" style="color:#fff">ONLINE</h3>
+                    </div>
+                    <div id="new" style="background: rgba(238,122,9,100); color: #ffffff;">
+                        <dl>
+                            <small>
+                                <div class="waku">
+                                    <div style="">
+                                        <dd>
+                                            <center>
+                                                <a class="kikaku" href="../zenya/"><img src="img/zenyalogo.png"
+                                                        alt=""></a>
+                                                <br>
+                                                <a class="kikaku" href=""><img src="img/band.png" alt=""></a>
+                                                <a class="kikaku" href=""><img src="img/bihinn.png" alt=""></a>
+                                                
+                                                <a class="kikaku" href=""><img src="img/kouhou.png" alt=""></a>
+                                                
+                                                <a class="kikaku" href=""><img src="img/meikoudansu.png" alt=""></a>
+                                                <a class="kikaku" href=""><img src="img/stage.png" alt=""></a>
+                                                <a class="kikaku" href=""><img src="img/syou.png" alt=""></a>
+                                                <a class="kikaku" href=""><img src="img/syousyoku.png" alt=""></a>
+                                                <a class="kikaku" href=""><img src="img/tiiki.png" alt=""></a>
+                        </dl>
+                        <div class="more" style="background: rgba(255,140,52,0.8); ">
+                            <a href="../zenya/" class="header" style="color: #ffffff;">前夜祭HPはこちら</a>
+                        </div>
+                        </center>
+                    </div>
+                    <div class="topic_box">
+                        <h2 class="topic1" style="color:#fff">ステージ企画1日目</h2>
+                        <h3 class="topic2" style="color:#fff">STAGE DAY1</h3>
+                    </div>
+                    <div id="new" style="background: rgba(238,122,9,100); color: #ffffff;">
+                        <dl>
+                            <div class="waku">
+                                <div style="">
+                                    <center>
+                                        <a class="kikaku" href="../gakuseikikaku/"><img src="img/gakuseikikaku.png"
+                                                alt=""></a>
+                                        <a class="kikaku" href="../mogiPR/"><img src="img/mogiPR.png" alt=""></a>
+                                        
+                                    <a class="kikaku" href="../zip-fm/"><img src="img/ziplogo.png" alt=""></a>
+                                    
+                                        <a class="kikaku" href="../tyuya/"><img src="img/tyuya.png" alt=""></a>
+                        </dl>
+                        
+                                    <div class="more" style="background: rgba(255,140,52,0.8); ">
+                                    <a href="../tt/" class="header" style="color: #ffffff;">タイムテーブルはこちら</a>
+                                    </div>
+                                
+                        </center>
+                    </div>
+                    <div id="child2">
+                        <div class="topic_box">
+                            <h2 class="topic1" style="color:#fff">ステージ企画2日目</h2>
+                            <h3 class="topic2" style="color:#fff">STAGE DAY2</h3>
+                        </div>
+                        <div id="new" style="background: rgba(238,122,9,100); color: #ffffff;">
+                            <dl>
+                                <div class="waku">
+                                    <div style="">
+                                        <center>
+                                            <a class="kikaku" href="../mogiPR/"><img src="img/mogiPR.png" alt="" "></a>
+                                    <a class=" kikaku" href="../tyuusenkai/"><img src="img/tyuusenkai.png" alt=""></a>
+                                            <a class="kikaku" href="../nitech25/"><img src="img/nitech25.png"
+                                                    alt=""></a>
+                                            <a class="kikaku" href="../kouya/"><img src="img/kouya.png" alt=""></a>
+                            </dl>
+                            
+                                    <div class="more" style="background: rgba(255,140,52,0.8); ">
+                                    <a href="../tt/" class="header" style="color: #ffffff;">タイムテーブルはこちら</a>
+                                    </div>
+                                     
+                            </center>
+                        </div>
+                    </div>
+
+
+                    <div id="child2">
+                        <div class="topic_box">
+                            <h2 class="topic1" style="color:#fff">その他</h2>
+                            <h3 class="topic2" style="color:#fff">OTHERS</h3>
+                        </div>
+                        <div id="new" style="background: rgba(238,122,9,100); color: #ffffff;">
+                            <dl>
+                                <div class="waku">
+                                    <div style="">
+                                        <center>
+                                            <a class="kikaku" href="../seiyu/"><img src="img/seiyu.png" alt=""></a>
+                                            <a class="kikaku" href="../booth/"><img src="img/booth.png" alt=""></a>
+                                            <a class="kikaku" href="../gakuseibosyu/"><img src="img/gakuseibosyu.png"
+                                                    alt=""></a>
+                                            <a class="kikaku" href="../game/"><img src="img/game.png" alt=""></a>
+                                            <a class="kikaku" href="../kenkyu/"><img src="img/kenkyu.png" alt=""></a>
+                                            <a class="kikaku" href="../kohun/"><img src="img/kohun.png" alt=""></a>
+                                            <a class="kikaku" href="../komyuSt/"><img src="img/komyuSt.png" alt=""></a>
+                                            <a class="kikaku" href="../mogi/"><img src="img/mogi.png" alt=""></a><br>
+                                            <a class="kikaku" href="../mogiOne/"><img src="img/mogiOne.png" alt=""></a>
+                                            <a class="kikaku" href="../nazo/"><img src="img/nazo.png" alt=""></a>
+                                            <a class="kikaku" href="../obake/"><img src="img/obake.png" alt=""></a>
+                                            <a class="kikaku" href="../omotya/"><img src="img/omotya.png" alt=""></a>
+                                            <a class="kikaku" href="../puraneta/"><img src="img/puraneta.png" alt=""></a>
+                                            <a class="kikaku" href="../stamp/"><img src="img/stamp.png" alt=""></a>
+                                            <a class="kikaku" href="../toraiasuron/"><img src="img/toraiasuron.png" alt=""></a>
+                                            <a class="kikaku" href="../band/"><img src="img/nitlive.png" alt=""></a>
+                            </dl>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                </small>
+                <br><br>
+                <p id=right>Copyright (C) 2022 名古屋工業大学第60回工大祭実行委員会 All Rights Reserved.</p>
+            </div>
+        </div>
+    </div> <!-- container -->
+    </div> <!-- wrapper -->
+    <script
+        src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var trigger = $('.hamburger'),
+                overlay = $('.overlay'),
+                isClosed = false,
+                flag = false;
+
+            trigger.click(function () {
+                hamburger_cross();
+            });
+
+            function hamburger_cross() {
+                if (isClosed == true) {
+                    overlay.hide();
+                    trigger.removeClass('is-open');
+                    trigger.addClass('is-closed');
+                    isClosed = false;
+                } else {
+                    overlay.show();
+                    trigger.removeClass('is-closed');
+                    trigger.addClass('is-open');
+                    isClosed = true;
+                }
+            }
+            $(window).off('.noScroll');
+            $('[data-toggle="offcanvas"]').click(function () {
+                $('#wrapper').toggleClass('toggled');
+
+                if (!flag) {
+                    // スクロール禁止
+                    // $(window).on('touchmove.noScroll', function(e) {
+                    //     e.preventDefault();
+                    // });
+                    $('body,html').css({ "overflow": "hidden", "height": "100%" });
+                    flag = true;
+                } else {
+                    // スクロール禁止 解除
+                    // $(window).off('.noScroll');
+                    $('body,html').css({ "overflow": "visible", "height": "auto" });
+                    flag = false;
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Lift card and show stats on Mouseover
+            $('.card').hover(function () {
+                $(this).addClass('animate');
+            }, function () {
+                $(this).removeClass('animate');
+            });
+        });
+    </script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            effect: "slide",
+            autoplay: 4000,
+            autoplayDisableOnInteraction: false,
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            // centeredSlides : true,
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+        })
+    </script>
+</body>
+
+</html>

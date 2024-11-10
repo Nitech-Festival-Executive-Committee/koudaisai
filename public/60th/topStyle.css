@@ -1,0 +1,107 @@
+#container{
+
+    background-size:cover;
+}
+.white {
+    background: rgba(255,255,255,0.5);
+    height: 100%;
+}
+.bar_box{
+    /*
+    background-image: url("./ppc/img/back1.png");
+    background-size:cover;
+    */
+}
+.waku{
+    background: rgba(255,140,52,100);
+    color: #ffffff;
+}
+
+/* media_exPhone */
+@media (min-width: 600px) {
+    #parent {
+        display: flex;
+    }
+    #parent div {
+        margin: 3px;
+    }
+    #child1 {
+        flex-grow: 2;
+    }
+    #child2 {
+        flex-grow: 1;
+    }
+    #new{
+        background: rgba(238,122,9,100);
+        color: #ffffff;
+    }
+    #more{
+        color: #ffffff;
+    }
+}
+
+.pic_frame {
+    position: relative;/*相対配置*/
+    content:" ";
+    display: inline-block;
+    height:20px;
+    width:100px;
+    background-size:contain;
+    vertical-align:middle;
+    margin-right: 5px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+      
+.pic_frame img {
+    height: 100%;
+}
+
+table {
+    text-align: center;
+}
+
+.thumbnail {
+    display: inline-block;  /*ここがポイント */
+    height: 7vh;
+    margin-right: 0.3vw;
+    margin-bottom: 3px;
+    margin-right: 15px;
+}
+
+.thumbnail img {
+    height: 100%;
+}
+
+.prevdaisai{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button{
+    display:inline-block;/*コレ*/
+    text-align:center;
+    background: rgba(238,122,9,0.8);
+    color: #ffffff;
+    font-size: 20px;
+    height:50px;
+    border: 2px solid #fff;
+    margin: 0px -3px;
+}
+
+button a {
+    padding: 0 0 0 20px;
+    color: #737373;
+}
+      
+button:hover {
+    border: 2px solid #eb6100;
+    background:  rgba(255,140,52,0.8);
+    transition:0.5s all;
+}
+
+button:hover a {
+    color: #eb6100;
+    background:  rgba(255,140,52,0.8);
+}

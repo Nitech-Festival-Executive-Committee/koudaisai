@@ -1,0 +1,609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+    <meta http-equiv="Content-Language" content="ja"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="名古屋工業大学第61回工大祭実行委員会"/>
+    <meta name="copyright" content="Copyright (C) 2023 名古屋工業大学第61回工大祭実行委員会 All Rights Reserved."/>
+    <meta name="keywords" content="工大祭,第61回工大祭,名工祭,名古屋工業大学,名工大"/>
+    <meta name="description" content="名古屋工業大学の大学祭ー「工大祭」の公式HP! 第61回工大祭は2023年11月18日(土)・19日(日)に開催します!! 是非お越しください!!"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minmum-scale=1.0">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@nitfec" />
+    <meta property="og:url" content="http://www.koudaisai.com/" />
+    <meta property="og:title" content="第61回工大祭Webページ" />
+    <meta property="og:description" content="第61回工大祭のHPです。新着情報などを随時更新していきます!!" />
+    <meta property="og:image" content="http://www.koudaisai.com/img/Twitter.png" />
+    <!-- Twitter -->
+    <link rel="shortcut icon" href="../../icon/favicon.ico" />
+    <link rel="stylesheet prefetch" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="http://mplus-webfonts.sourceforge.jp/mplus_webfonts.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="./css/pc.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/tablet.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/smart.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="../../icon/favicon.ico">
+    <link rel="apple-touch-icon" href="../../icon/apple-touch-icon.wbp">
+    <link rel="icon" type="image/wbp" href="../../icon/android-chrome-192x192.png">
+
+    <!--画像クリックで拡大するcss-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+    <title>新歓-第61回工大祭ホームページ</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <style>
+      #container{
+        /*background-image: url("img/back.png");*/
+        background-size:cover;
+      }
+      .white {
+        background: rgba(255,255,255,0.5);
+        height: 100%;
+      }
+      .bar_box{
+        /*background-image: url("../ppc/img/back1.png");*/
+        background-size:cover;
+      }
+      .waku{
+        background-color: #ffffff;
+        margin-top: 5%;
+      }
+      @media (min-width: 600px) {
+        #parent {
+        }
+        #parent div {
+          margin: 3px;
+        }
+        #child1 {
+          flex-grow: 1;
+        }
+        #child2 {
+          flex-grow: 1;
+        }
+        #child3 {
+          flex-grow: 1;
+        }
+        #new{
+          background: rgba(238,122,9,100);
+          color: #ffffff;
+        }
+        #more{
+          color: #ffffff;
+        }
+      }
+
+      .pic_frame {
+        display: inline-block;
+        text-align: center;
+        padding: 10px 0;
+        width: 100px;
+      }
+      .pic_frame img {
+        height: 100%;
+      }
+      table {
+        text-align: center;
+      }
+      .thumbnail {
+        display: inline-block; /* ここがポイント */
+        height: 20vw;
+        margin-right: 1vm;
+        margin-bottom: 5px;
+      }
+      .thumbnail img {
+        height: 100%;
+      }
+      .kikaku {
+        display: inline-block; /* ここがポイント */
+        height: 12vh;
+        margin-right: 1vm;
+        margin-bottom: 5px;
+      }
+      .kikaku img {
+        height: 100%;
+      }
+      .header {
+        font-size: 20px;
+        background: url("../img/header.png") no-repeat;
+        background-position: left center;
+        background-size: auto 15px;
+      }
+      .subtitle {
+        margin: 0 auto;
+        padding: 8px 20px;
+        position: relative;
+        border-left: 6px solid #ccc;
+        font-size: 25px;
+        text-align: left;
+        background: rgba(238,122,9,100);
+        color: #ffffff;
+      }
+      .subtitle::before {
+        position: absolute;
+        left: -6px;
+        bottom: 0;
+        content: '';
+        width: 6px;
+        height: 50%;
+        background: rgba(238,122,9,100);
+        color: #ffffff;
+      }
+      .subtitle::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: '';
+        width: 100%;
+        height: 0;
+        border-bottom: 1px solid #ccc;
+        background: rgba(238,122,9,100);
+        color:#ffffff;
+      }
+      .dot {
+        text-indent:-1em;
+      }
+      .kyoutyou{
+        font-weight:bold;
+        text-shadow:1px 1px 0 #D35400,-1px 1px 0 #D35400,1px -1px 0 #D35400,-1px -1px 0 #D35400;
+      }
+
+      .description{
+        color: black;
+        padding: 5% 3% 0 3%;
+      }
+      .form{
+        width: 100%;
+        /* height: 80vh; */
+        height: 0;
+        margin: 5% 0 3% 0;
+        transition: 0.5s;
+      }
+      .index{
+        margin-top: 3%;
+        font-size: 2.5vh;
+      }
+      .totop{
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-260977123-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-260977123-1');
+    </script>
+</head>
+
+<!--左に出てくるBOX-->
+<body>
+    <div id="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top" id="menu">
+            <a href="https://www.koudaisai.com/">
+              <!--一番上の画像-->
+              <input type="image" src="../../img/topiconImg.webp" alt="工大祭ホームページ" id="rogo">
+            </a>
+        </div>
+
+        <a class="bar_box" href="https://www.koudaisai.com/">
+          <!--一番上の画像-->
+          <img id="bar_sm" src="../../img/banner.webp" alt=""> <!--スマホ-->
+          <img id="bar_pc" src="../../img/banner.webp" alt=""> <!--pc-->
+        </a>
+        <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+          <span class="hamb-top"></span>
+          <span class="hamb-middle"></span>
+          <span class="hamb-bottom"></span>
+        </button>
+
+        <div id="container">
+            <div class="white" style="padding-top:50px">
+            <div class="topic_box">
+                <h2 class="topic1">新歓 2022</h2>
+                <h3 class="hihn"></h3>
+                <h3 class="topic2">Sinkan</h3>
+            </div>
+            <center>
+            </center>
+            <!-- <h2 class="subtitle">新歓カレンダー</h2>
+            <div id="new" style="color: rgba(238,122,9,100); background-color: #ffffff;">
+            <dl>
+              <div class="waku">
+                <div style="margin-left:30px; margin-right:30px; background-color: #ffffff">
+                  <br>
+                  <p class="mainText">以下の日程で新歓を実施します!</p>
+                </div>
+              </div>
+            </div> -->
+        <h2 class="subtitle">紹介</h2>
+        <div class="Master">
+        <div id="new" style="color: rgba(238,122,9,100); background-color: #ffffff;">
+        <dl>
+
+        <div class="index">
+          <ul>
+            <li><a href="#Painting">一致団結! お絵描き伝言新歓(募集終了)</a></li>
+            <li><a href="#Subway">地下鉄新歓(募集終了)</a></li>
+            <li><a href="#Bowling">ボウリング新歓(募集終了)</a></li>
+            <li><a href="#Mock">模擬講義新歓(募集終了)</a></li>
+            <li><a href="#Woman">女子新歓(募集終了)</a></li>
+          </ul>
+        </div>
+
+        <div id="Painting" class="waku">
+          <div id="parent">
+            <div id="child1">
+              <div style="margin-left:10px">
+                <dt class="header">一致団結! お絵描き伝言新歓</dt>
+              </div>
+              <div class="flexMas">
+                <div class="flex1">
+                  <div style="margin-left:30px; margin-right:10px;">
+                    <p class="mainText">
+                      募集期間: 3/8 ~ 4/7<br>
+                      募集人数: 70人<br>
+                      選考方法: 先着<br><br>
+
+                      日時: 4月8日(土) 13:00 ~ 16:10<br>
+                      開催場所: 名工大 51号館 1階 5111講義室<br>
+                      持ち物: 筆記用具<br>
+                      参加費: 無料<br><br>
+
+                      <!-- 参加申込は<a href="https://docs.google.com/forms/d/e/1FAIpQLSc4hOufV4inm5LsPFKp5DxEF8iOa-SM492rZ2h82gmrxlkSCw/viewform?usp=sf_link" target="_blank">こちら</a>、または下のGoogle Formから!<br><br> -->
+
+                      <span style="text-decoration: line-through;">
+                        参加申込はこちら、または下のGoogle Formから!
+                      </span>
+                      <br><span style="color: red;">定員に達したため、応募終了しました。</span><br><br>
+
+                      お問合せ先: yutaka.funahasi@koudaisai.com
+                    </p>
+                  </div>
+                  <div class="flex2">
+                    <img src="./img/painting.png" class="post">
+                  </div>
+                </div>
+                <div class="description">
+                  合格おめでとうございます! 工大祭実行委員会主催のお絵描き伝言新歓新歓です!<br>
+                  こちらの新歓では、お絵描き伝言ゲームとビンゴを行います! お絵描き伝言ゲームでは一緒に合格した新入生と上級生がチームとなってゲームを行いながら、新入生同士で仲良くなり、大学生活においてのアドバイスや工大祭について、上級生が教えてくれます! お題も難しくはないので、絵を描くのに不安な人も大丈夫です! ビンゴではなんと景品をもらうことができます!<br><br>
+                  大学生活のスタートダッシュもうまく切れるので、すこしでも悩んだり、気になったりしましたらぜひ参加してください! 皆さんの参加を心よりお待ちしております!
+                </div>
+              </div>
+              <!-- <div class="button_container">
+                <div class="button">
+                  <div class="button__line" onclick="expand('Painting_Form')"></div>
+                  <div class="button__line" onclick="expand('Painting_Form')"></div>
+                  <span class="button__text" onclick="expand('Painting_Form')">ご予約はこちらから</span>
+                  <div class="button__drow1"></div>
+                  <div class="button__drow2"></div>
+                </div>
+              </div>
+              <iframe id="Painting_Form" class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSc4hOufV4inm5LsPFKp5DxEF8iOa-SM492rZ2h82gmrxlkSCw/viewform?embedded=true"> 読み込んでいます...</iframe> -->
+              <a class="totop" href="#">ページ先頭へ</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="Subway" class="waku">
+          <div id="parent">
+            <div id="child1">
+              <div style="margin-left:10px">
+                <dt class="header">地下鉄新歓</dt>
+              </div>
+              <div class="flexMas">
+                <div class="flex1">
+                  <div style="margin-left:30px; margin-right:10px;">
+                    <p class="mainText">
+                      募集期間: 3/7 ~ 4/8<br>
+                      募集人数: 70人<br>
+                      選考方法: 先着<br><br>
+
+                      日時: 4月15日(土) 10:00 ~ 16:00<br>
+                      集合場所: 52号館 2階 5221講義室<br>
+                      開催場所: 名古屋市営地下鉄<br>
+                      持ち物: なし<br>
+                      参加費: 無料<br><br>
+
+                      <!-- 参加申込は<a href="https://docs.google.com/forms/d/e/1FAIpQLSe9jCSDSlVTJwJKlZkTvwi5hOSRCY9qXotG9ZSIO0h_1oAyKg/viewform" target="_blank">こちら</a>、または下のGoogle Formから!<br><br> -->
+
+                      <span style="text-decoration: line-through;">
+                        参加申込はこちら、または下のGoogle Formから!
+                      </span>
+                      <br><span style="color: red;">定員に達したため、応募終了しました。</span><br><br>
+                      
+                      お問合せ先: junsei.tsuchida@koudaisai.com
+                    </p>
+                  </div>
+                  <div class="flex2">
+                    <img src="./img/subway.png" class="post">
+                  </div>
+                </div>
+                <div class="description">
+                  工大祭実行委員会主催の地下鉄新歓です!<br>
+                  名古屋市営地下鉄を利用した陣取り合戦を楽しんでもらいます!名工大周辺の地形に詳しくなれるのはもちろんのこと、新入生3人と上級生1人の班で行動してもらうため、様々なお題をクリアする中で新入生同士で仲良くなってもらったり、大学生活で不安なことなどを先輩に聞けたりできます!<br>
+                  お題の例としては簡単なものから、大学生っぽい写真を撮るなど班で相談して1枚を撮るなど様々なものを用意しています!<br><br>
+                  少しでも気になったらぜひ参加して下さい! 皆さんの参加を心よりお待ちしています!
+                </div>
+              </div>
+              <!-- <div class="button_container">
+                <div class="button">
+                  <div class="button__line" onclick="expand('Subway_Form')"></div>
+                  <div class="button__line" onclick="expand('Subway_Form')"></div>
+                  <span class="button__text" onclick="expand('Subway_Form')">ご予約はこちらから</span>
+                  <div class="button__drow1"></div>
+                  <div class="button__drow2"></div>
+                </div>
+              </div>
+              <iframe id="Subway_Form" class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSe9jCSDSlVTJwJKlZkTvwi5hOSRCY9qXotG9ZSIO0h_1oAyKg/viewform?embedded=true">読み込んでいます...</iframe> -->
+              <a class="totop" href="#">ページ先頭へ</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="Bowling" class="waku">
+          <div id="parent">
+            <div id="child1">
+              <div style="margin-left:10px">
+                <dt class="header">ボウリング新歓</dt>
+              </div>
+              <div class="flexMas">
+                <div class="flex1">
+                  <div style="margin-left:30px; margin-right:10px;">
+                    <p class="mainText">
+                      募集期間: 3/9 ~ 3/27<br>
+                      募集期間: 80人<br>
+                      選考方法: 先着<br><br>
+
+                      日時: 3月30日(木) 14:00~<br>
+                      集合場所: 名工大2号館前<br>
+                      開催場所: スポルト<br>
+                      持ち物: 保険証(コピーでも可), 高校の時の学生証<br>
+                      参加費: 1000円<br><br>
+
+                      <!-- 参加申込は<a href="https://docs.google.com/forms/d/e/1FAIpQLSecZIxXZyhiWfw_yZLSRUolHpMsFfdhIkNEgT02Ck4KsqtMzw/viewform" target="_blank">こちら</a>、または下のGoogle Formから!<br><br> -->
+
+                      <span style="text-decoration: line-through;">
+                        参加申込はこちら、または下のGoogle Formから!
+                      </span>
+                      <br><span style="color: red;">定員に達したため、応募終了しました。</span><br><br>
+                      既にGoogle Formから応募した方のみ<a href="https://line.me/ti/g2/hpGGEv_pLZHxis40IwTW0eZYSrBbMD_U_8BoCw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank">こちら</a>から<br>LINEオープンチャットに参加してください。<br>
+                      <span style="color: red;">応募していない場合、当日の受付ができません。</span><br><br>
+
+                      お問合せ先: sota.horiuchi@koudaisai.com
+                    </p>
+                  </div>
+                  <div class="flex2">
+                    <img src="./img/bowling.png" class="post">
+                  </div>
+                </div>
+                <div class="description">
+                  大学に入って友達ができるか不安に感じているそこの君! この新歓を機に入学前にたくさん友達を作れば入学式も怖くない!<br>
+                  先輩との繋がりを作る場としても利用してもよし! ただみんなとボウリングを楽しんでもよし!そして工大祭委員会の雰囲気を感じることが出来ます^^<br>
+                  当日は新入生4人と先輩1人でチームを組んで、ボウリングを楽しんでもらいます。ボウリングの成績が良かったり、運がよかったら? 景品がもらえる!<br>
+                  この新歓でみんなの大学生活でのいいスタートダッシュを決める手助けになれたらうれしいです。多分とっても絶対に超絶楽しいよ〜 ぜひ来てね!
+                </div>
+              </div>
+              <!-- <div class="button_container">
+                <div class="button">
+                  <div class="button__line" onclick="expand('Bowling_Form')"></div>
+                  <div class="button__line" onclick="expand('Bowling_Form')"></div>
+                  <span class="button__text" onclick="expand('Bowling_Form')">ご予約はこちらから</span>
+                  <div class="button__drow1"></div>
+                  <div class="button__drow2"></div>
+                </div>
+              </div>
+              <iframe id="Bowling_Form" class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSecZIxXZyhiWfw_yZLSRUolHpMsFfdhIkNEgT02Ck4KsqtMzw/viewform">読み込んでいます…</iframe> -->
+              <a class="totop" href="#">ページ先頭へ</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="Mock" class="waku">
+          <div id="parent">
+            <div id="child1">
+              <div style="margin-left:10px">
+                <dt class="header">模擬講義新歓</dt>
+              </div>
+              <div class="flexMas">
+                <div class="flex1">
+                  <div style="margin-left:30px; margin-right:10px;">
+                    <p class="mainText">
+                      募集期間: 3/7 ~ 3/27<br>
+                      募集人数: 50人<br>
+                      選考方法: 抽選<br><br>
+
+                      日時: 4月3日(月) 10:30 ~ 13:30<br>
+                      開催場所: 名工大 23号館 3階 2331講義室<br>
+                      持ち物: 昼食, 筆記用具, メモやノート<br>
+                      参加費: 無料<br><br>
+
+                      <!-- 参加申込は<a href="https://docs.google.com/forms/d/e/1FAIpQLScuiMMoFFTGFW2mMw85-MGijSGQQTRcjxfqTCxR0AaPHWfePA/viewform" target="_blank">こちら</a>、または下のGoogle Formから!<br><br> -->
+
+                      <span style="text-decoration: line-through;">
+                        参加申込はこちら、または下のGoogle Formから!
+                      </span>
+                      <br><span style="color: red;">定員に達したため、応募終了しました。</span><br><br>
+
+                      お問合せ先: shin.kaneda@koudaisai.com
+                    </p>
+                  </div>
+                  <div class="flex2">
+                    <img src="./img/mock.png" class="post">
+                  </div>
+                </div>
+                <div class="description">
+                  工大祭実行委員会が開催する模擬講義新歓です!<br>
+                  新入生の皆さんは4月から始まる大学生活のイメージはできていますか? もしできていなくても安心してください、本年度はこの模擬講義新歓で一足早く大学での講義を体験しながら、大学生活について学ぶことができます!<br>
+                  内容は大学での生活、履修登録、実際の講義、学内の施設、さらに人間関係やアルバイトなどなど...入学の際によくある不安や疑問を解消できるものになっています。もちろん質問も大歓迎です!<br>
+                  また、講義のほかに新入生同士での親睦を深めるミニゲームも開催します! 景品もありますのでぜひ参加してみてくださいね!<br>
+                  最後に、この模擬講義新歓では新入生の皆さんと一緒に工大祭実行委員の先輩も参加します! 少し踏み込んだ質問も、ちょっとした質問もすぐそばで答えてくれるはずなので、バイト先や過去問の相談もしてみてはいかがでしょうか?
+                </div>
+              </div>
+              <!-- <div class="button_container">
+                <div class="button">
+                  <div class="button__line" onclick="expand('Mock_Form')"></div>
+                  <div class="button__line" onclick="expand('Mock_Form')"></div>
+                  <span class="button__text" onclick="expand('Mock_Form')">ご予約はこちらから</span>
+                  <div class="button__drow1"></div>
+                  <div class="button__drow2"></div>
+                </div>
+              </div>
+              <iframe id="Mock_Form" class="form" src="https://docs.google.com/forms/d/e/1FAIpQLScuiMMoFFTGFW2mMw85-MGijSGQQTRcjxfqTCxR0AaPHWfePA/viewform?embedded=true">読み込んでいます…</iframe> -->
+              <a class="totop" href="#">ページ先頭へ</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="Woman" class="waku">
+          <div id="parent">
+            <div id="child1">
+              <div style="margin-left:10px">
+                <dt class="header">女子新歓</dt>
+              </div>
+              <div class="flexMas">
+                <div class="flex1">
+                  <div style="margin-left:30px; margin-right:10px;">
+                    <p class="mainText">
+                      募集期間: 3/7 ~ 4/10<br>
+                      募集人数: 20人<br>
+                      選考方法: 先着<br><br>
+
+                      日時: 4月16日(日) 13:00 ~ 17:00<br>
+                      開催場所: 52号館 1階 5214講義室<br><br>
+
+                      <!-- 参加申込は<a href="https://docs.google.com/forms/d/e/1FAIpQLSfXe1_8ZO6bCF5a-zT7UKzN-mOo9cbhLz0sNNiC_s1l4lpZMA/viewform" target="_blank">こちら</a>、または下のGoogle Formから!<br><br> -->
+
+                      <span style="text-decoration: line-through;">
+                        参加申込はこちら、または下のGoogle Formから!
+                      </span>
+                      <br><span style="color: red;">定員に達したため、応募終了しました。</span><br><br>
+
+                      お問合せ先: riho.kuno@koudaisai.com<br>
+                      <span style="color: red;">画像のメールアドレスは間違っています。<br>上記のメールアドレスが正しいです。</span>
+                    </p>
+                  </div>
+                  <div class="flex2">
+                    <img src="./img/woman.png" class="post">
+                  </div>
+                </div>
+                <div class="description">
+                  工大祭実行委員主催の女子新歓です。<span style="color: #ff79b2;">参加者は女子限定で、先輩も全員女子です! </span>勉強、講義についての質問はもちろん、女子ならではの<span style="color: #ff79b2;">メイクやファッション</span>の悩みも一緒に解決しましょう。<br>
+                  実際、みんなどのくらいメイクに力入れているの? 1限の日にメイクは可能? 名工大生の女子はどのくらいおしゃれに気を配っている? などなど、何でも先輩に聞くチャンス!<br>
+                  <span style="color: #26d5ee;">パーソナルカラー&骨格診断</span>では、<span style="color: #0fff5e;">自分に似合うメイクやコーデ</span>が見つかります。また、それに合わせて、<span style="color: #0fff5e;">それぞれのタイプに似合うメイクやコーデの紹介</span>もしていきます。もう自分のタイプを知っているよ!という子も、ぜひ参加してください。他にも<span style="color: #0fff5e;">名工大周辺のカフェ紹介</span>も行います。大学での新しい友達と一緒に行って仲良くなりましょう! <span style="color: #ff79b2;">インスタ映え間違いなしです!</span><br>
+                  女子新歓で新しい友達を見つけ、先輩とも仲良くなりましょう。同じ学科の先輩とたくさんお話できます。この新歓を通して、皆さんの大学生活がより華やかで楽しいものになれたら幸いです!
+                </div>
+              </div>
+            </div>
+            <!-- <iframe id="Form" class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSfXe1_8ZO6bCF5a-zT7UKzN-mOo9cbhLz0sNNiC_s1l4lpZMA/viewform?embedded=true">読み込んでいます...</iframe> -->
+            <a class="totop" href="#">ページ先頭へ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<hr>
+<p id=right>Copyright (C) 2023 名古屋工業大学第61回工大祭実行委員会 All Rights Reserved.</p>
+</div>
+</div>
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var trigger = $('.hamburger'),
+                overlay = $('.overlay'),
+                isClosed = false,
+                flag     = false;
+
+            trigger.click(function () {
+                hamburger_cross();
+            });
+
+            function hamburger_cross() {
+                if (isClosed == true) {
+                    overlay.hide();
+                    trigger.removeClass('is-open');
+                    trigger.addClass('is-closed');
+                    isClosed = false;
+                } else {
+                    overlay.show();
+                    trigger.removeClass('is-closed');
+                    trigger.addClass('is-open');
+                    isClosed = true;
+                }
+            }
+            $(window).off('.noScroll');
+            $('[data-toggle="offcanvas"]').click(function () {
+                $('#wrapper').toggleClass('toggled');
+
+                if (!flag) {
+                    // スクロール禁止
+                    // $(window).on('touchmove.noScroll', function(e) {
+                    //     e.preventDefault();
+                    // });
+                    $('body,html').css({"overflow":"hidden","height":"100%"});
+                    flag = true;
+                } else {
+                    // スクロール禁止 解除
+                    // $(window).off('.noScroll');
+                    $('body,html').css({"overflow":"visible","height":"auto"});
+                    flag = false;
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Lift card and show stats on Mouseover
+            $('.card').hover(function(){
+                    $(this).addClass('animate');
+                }, function(){
+                    $(this).removeClass('animate');
+            });
+        });
+    </script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            effect: "slide",
+            autoplay: 4000,
+            autoplayDisableOnInteraction: false,
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            // centeredSlides : true,
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+        })
+    </script>
+    <script type="text/javascript">
+      function expand(id){
+        if (document.getElementById(id).style.height == '80vh'){
+          document.getElementById(id).style.height = "0";
+        }else{
+          document.getElementById(id).style.height = "80vh";
+        }
+      }
+
+      $('a[href^="#"]').click(function () {
+        const speed = 500;
+        let href = $(this).attr("href");
+        let target = $(href == "#" || href == "" ? "html" : href);
+        let position = target.offset().top - 80;
+        $("body,html").animate({ scrollTop: position }, speed, "swing");
+        return false;
+      });
+    </script>
+</body>
+</html>
