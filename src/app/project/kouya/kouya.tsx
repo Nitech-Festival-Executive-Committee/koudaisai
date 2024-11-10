@@ -51,14 +51,17 @@ export const kouya: ProjectData = {
           豪華景品が当たる抽選会やみんなで踊る名工ダンスなど全員が一体となって楽しめる企画を開催します!
         </p>
       ),
+      position: "left",
     },
     {
       title: "開催日程",
       content: convertScheduleToReactNode(schedule),
+      position: "left",
     },
     {
       title: "開催場所",
       content: place,
+      position: "left",
     },
     {
       title: "注意事項",
