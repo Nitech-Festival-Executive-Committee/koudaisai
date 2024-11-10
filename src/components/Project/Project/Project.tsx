@@ -70,6 +70,7 @@ export default function Project({
           />
         </SectionBody>
       </PageWrapper>
+      {children}
       <RecommendedProjects currentProject={projectData} />
     </>
   );

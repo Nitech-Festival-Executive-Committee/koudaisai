@@ -1,31 +1,39 @@
 import React from "react";
-import ContentTitle from "../Content/ContentTitle/ContentTitle";
+import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
+import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
+import ProjectCardWrapper from "@/components/Project/ProjectCardWrapper/ProjectCardWrapper";
+import ProjectCard from "@/components/Project/ProjectCard/ProjectCard";
+import Animation from "@/components/Animation/Animation";
 import { ProjectData } from "@/types/projectInterface";
-import PageWrapper from "../Content/PageWrapper/PageWrapper";
-import ProjectCardWrapper from "../Project/ProjectCardWrapper/ProjectCardWrapper";
-import ProjectCard from "../Project/ProjectCard/ProjectCard";
 import { projectList as projects } from "@/app/project/page";
+
 interface RecommendedProjectsProps {
   currentProject: ProjectData;
 }
 
 // 似ている企画を取得
 const getSimilarProjects = (currentProject: ProjectData): ProjectData[] => {
-  return projects.filter(
-    (project) =>
-      // 自分自身の企画でない
-      project.link !== currentProject.link &&
-      // 一致するカテゴリーがある
-      project.category.some((cat) => currentProject.category.includes(cat))
-  );
+  return projects
+    .filter(
+      (project) =>
+        // 自分自身の企画でない
+        project.link !== currentProject.link &&
+        // 一致するカテゴリーがある
+        project.category.some((cat) => currentProject.category.includes(cat))
+    )
+    .sort(() => Math.random() - 0.5); // ランダムにソート
 };
 
 // 時間帯が近い企画を取得
 const getTimeNearbyProjects = (currentProject: ProjectData): ProjectData[] => {
   const currentProjectStartDate = currentProject.schedule.day1?.startDate;
   if (!currentProjectStartDate) return [];
-  // 似ていない企画の中から、時間帯が近いものを取得 <- ステージ企画はカテゴリ同じだけど大丈夫?
-  return projects
+  const nonSimilarProjects = projects.filter((project) => {
+    return !project.category.some((cat) =>
+      currentProject.category.includes(cat)
+    );
+  });
+  return nonSimilarProjects
     .map((project) => {
       if (project.link === currentProject.link)
         return { project, timeDifference: Infinity };
@@ -52,18 +60,33 @@ const getProjectList = (
 ): ProjectData[] => {
   const similarProjects = getSimilarProjects(currentProject); // カテゴリが同じ企画
   const timeNearbyProjects = getTimeNearbyProjects(currentProject); // 開催時刻が近い企画
-  // hint: 例えばrecommendedProjectListからここで4つ取り出して、4つ未満の場合はランダムな企画を選択するとか
-  return isStageOrOneday ? timeNearbyProjects : similarProjects; // hint: ここでtimeNearbyProjects * 2, similarProjects * 2ずつ返す or similarProjects * 4返すとかにするといいかも
-  // hint: カテゴリに関してはprojectListの並び順で前のほうの企画ばっかり選ばれる可能性があるので、similarProjectsだけランダムにソートしてもいいかも
+
+  const combinedProjects = isStageOrOneday
+    ? [...timeNearbyProjects.slice(0, 2), ...similarProjects.slice(0, 2)]
+    : similarProjects.slice(0, 4);
+
+  // 4つ未満の場合はランダムな企画を追加
+  while (combinedProjects.length < 4) {
+    const randomProject = projects[Math.floor(Math.random() * projects.length)];
+    if (
+      !combinedProjects.includes(randomProject) &&
+      randomProject.link !== currentProject.link
+    ) {
+      combinedProjects.push(randomProject);
+    }
+  }
+
+  return combinedProjects;
 };
 
-const isStageOrOnedayProject = (currentProject: ProjectData): boolean => {
+const isStage = (currentProject: ProjectData): boolean => {
   return currentProject.category.includes("STAGE");
 };
+
 export default function RecommendedProjects({
   currentProject,
 }: RecommendedProjectsProps) {
-  const isStageOrOneday = isStageOrOnedayProject(currentProject); // ステージ企画か両日開催ではない企画
+  const isStageOrOneday = isStage(currentProject); // ステージ企画か両日開催ではない企画
   const recommendedProjectList = getProjectList(
     currentProject,
     isStageOrOneday
@@ -75,16 +98,18 @@ export default function RecommendedProjects({
         <ProjectCardWrapper>
           <ProjectCard
             projectList={recommendedProjectList.slice(0, 4)}
-            // hint: recommendedProjectListが4つ未満の可能性は無い?もしあるならその場合はランダムな企画を入れておいてもいいかも。
             showTime
+            linkOffset={"../"}
           />
         </ProjectCardWrapper>
       </PageWrapper>
-      <p style={{ textAlign: "center", fontWeight: "600" }}>
-        <a href="/project" aria-label="企画一覧">
-          企画一覧はこちらから
-        </a>
-      </p>
+      <Animation>
+        <p style={{ textAlign: "center", fontWeight: "600" }}>
+          <a href="/project" aria-label="企画一覧">
+            企画一覧はこちらから
+          </a>
+        </p>
+      </Animation>
     </div>
   );
 }

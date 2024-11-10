@@ -7,7 +7,6 @@ import ProjectTable from "@/components/Project/ProjectTable/ProjectTable";
 import { templateProject as ProjectData } from "./templateProject";
 import { timeScheduleDay1, timeScheduleDay2 } from "./templateSchedule";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
-import RecommendedProjects from "@/components/RecommendedProjects/RecommendedProjects";
 
 export const metadata = {
   title: `${ProjectData.name} - 第${NITFES_EDITION}回工大祭`,
@@ -18,20 +17,19 @@ export const metadata = {
 export default function TemplateProject() {
   return (
     <>
-      <Project projectData={ProjectData} />
-
-      <ContentTitle title="hogefuga" size={2} bigTitle />
-      <PageWrapper>
-        <SectionBody>
-          <ContentTitle title="1日目" size={2} />
-          <ProjectTable tableObject={timeScheduleDay1} />
-        </SectionBody>
-        <SectionBody>
-          <ContentTitle title="2日目" size={2} />
-          <ProjectTable tableObject={timeScheduleDay2} />
-        </SectionBody>
-      </PageWrapper>
-      <RecommendedProjects />
+      <Project projectData={ProjectData}>
+        <ContentTitle title="hogefuga" size={2} bigTitle />
+        <PageWrapper>
+          <SectionBody>
+            <ContentTitle title="1日目" size={2} />
+            <ProjectTable tableObject={timeScheduleDay1} />
+          </SectionBody>
+          <SectionBody>
+            <ContentTitle title="2日目" size={2} />
+            <ProjectTable tableObject={timeScheduleDay2} />
+          </SectionBody>
+        </PageWrapper>
+      </Project>
     </>
   );
 }
