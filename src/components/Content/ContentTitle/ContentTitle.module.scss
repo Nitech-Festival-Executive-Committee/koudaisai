@@ -86,3 +86,13 @@ h5.fontEffect > span {
     font-size: 1.4rem;
   }
 }
+
+h6.fontEffect > span {
+  font-size: 26px;
+  text-shadow:
+    1px 1px 0px #d5d5d5,
+    1.8px 1.8px 0px rgba(0, 0, 0, 0.2);
+  @include phone {
+    font-size: 1.1rem;
+  }
+}
