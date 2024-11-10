@@ -21,7 +21,10 @@ export default function ContentBox({
 }: ContentBoxProps & AnimationConfigs) {
   return (
     <Animation animationType={animation} {...configs}>
-      <div className={`${styles.contentBox} ${className}`} style={style}>
+      <div
+        className={`${styles.contentBox} ${className} contentBox`}
+        style={style}
+      >
         <span className={styles.contentBoxTitle}>{title}</span>
         {children}
       </div>

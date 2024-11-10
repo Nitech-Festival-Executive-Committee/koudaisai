@@ -1,0 +1,21 @@
+.page {
+  :global {
+    .contentTitle {
+      &:before {
+        display: none;
+      }
+      span {
+        color: white;
+        text-shadow:
+          3px 3px 0px #885858,
+          6px 6px 0px rgb(255 61 61 / 20%) !important;
+        background: none;
+      }
+    }
+    .contentBox {
+      > span:first-child {
+        background: rgb(14, 18, 31);
+      }
+    }
+  }
+}
