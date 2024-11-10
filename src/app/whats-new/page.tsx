@@ -63,6 +63,13 @@ export default function Faq() {
             link={"../project"}
           />
           <WhatsNewCard
+            title="企画ページの特別デザイン作成"
+            text="一部ページにおいて特殊なデザインが適用されました!"
+            img={"/62nd/whats-new/hauntedHouse.webp"}
+            linkText="お化け屋敷ページに移動"
+            link={"../project/haunted-house"}
+          />
+          <WhatsNewCard
             title="アニメーションの更新"
             text="新たなアニメーションを追加し、ヘッダーやコンポーネントのアニメーションを改善しました"
           />
