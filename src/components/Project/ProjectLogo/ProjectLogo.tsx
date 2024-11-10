@@ -1,4 +1,5 @@
 import styles from "./ProjectLogo.module.scss";
+import Animation from "@/components/Animation/Animation";
 
 interface ProjectLogoProps {
   img: string;
@@ -7,8 +8,10 @@ interface ProjectLogoProps {
 
 export default function ProjectLogo({ img, alt }: ProjectLogoProps) {
   return (
-    <div className={styles.projectLogo}>
-      <img src={img} alt={alt} loading="lazy" />
-    </div>
+    <Animation>
+      <div className={styles.projectLogo}>
+        <img src={img} alt={alt} loading="lazy" />
+      </div>
+    </Animation>
   );
 }

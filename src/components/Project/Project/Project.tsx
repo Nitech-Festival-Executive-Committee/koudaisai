@@ -6,6 +6,7 @@ import ProjectContent from "../ProjectContent/ProjectContent";
 import ProjectLogo from "../ProjectLogo/ProjectLogo";
 import ProjectTag from "../ProjectTag/ProjectTag";
 import BrochureImage from "../BrochureImage/BrochureImage";
+import Animation from "@/components/Animation/Animation";
 import { ProjectData } from "@/types/projectInterface";
 
 interface ProjectProps {
@@ -34,25 +35,27 @@ export default function Project({
       )}
       <PageWrapper>
         <SectionBody>
-          {brochurePath !== "" && (
+          {/* ビラが無しに指定されている場合は"企画詳細"と企画タグを左に配置 */}
+          {brochurePath == "" ? (
+            <ProjectConentTitleAndTag projectData={projectData} />
+          ) : (
             <BrochureImage
               img={`/62nd/project/${projectData.link}/${brochurePath}`}
               alt="Brochure"
             />
           )}
+
           <ProjectContent
             projectBoxList={projectData.projectBoxList.filter(
               (box) => box.position === "left" // positionにleftが指定されているもののみ
             )}
           />
         </SectionBody>
+
         <SectionBody>
-          <ContentTitle title="企画詳細" size={2} />
-          <ProjectTag
-            day1={projectData.schedule.day1 ? true : false}
-            day2={projectData.schedule.day2 ? true : false}
-            exclusiveText={projectData.tags ? projectData.tags : []}
-          />
+          {brochurePath != "" && (
+            <ProjectConentTitleAndTag projectData={projectData} />
+          )}
           <ProjectContent
             projectBoxList={projectData.projectBoxList.filter(
               (box) => !box.position || box.position === "right" // positionを指定していないか、rightが指定されているもののみ
@@ -64,3 +67,20 @@ export default function Project({
     </>
   );
 }
+
+const ProjectConentTitleAndTag = ({
+  projectData,
+}: {
+  projectData: ProjectData;
+}) => (
+  <>
+    <ContentTitle title="企画詳細" size={2} />
+    <Animation>
+      <ProjectTag
+        day1={projectData.schedule.day1 ? true : false}
+        day2={projectData.schedule.day2 ? true : false}
+        exclusiveText={projectData.tags ? projectData.tags : []}
+      />
+    </Animation>
+  </>
+);
