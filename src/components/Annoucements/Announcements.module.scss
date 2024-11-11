@@ -1,5 +1,10 @@
 @import "variables";
 
+.announcementsButton {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
 .newsContainer {
   display: flex;
   flex-direction: column;
@@ -7,11 +12,6 @@
 
   width: 100%;
   max-width: 70vw;
-  max-height: 22rem;
-
-  overflow-y: scroll;
-  scrollbar-color: var(--theme-color) transparent;
-  scrollbar-width: thin;
 
   @include phone {
     max-width: 100%;
