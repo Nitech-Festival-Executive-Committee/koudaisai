@@ -1,14 +1,13 @@
-import styles from "./Announcements.module.scss";
+import styles from "./NewsAccordion.module.scss";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
   Divider,
-  ListItemText,
-  Typography,
 } from "@mui/material";
 import { Announcement } from "@/types/types";
 import { MdExpandMore } from "react-icons/md";
+import AccordionTitle from "./AccordionTitle";
 
 export default function NewsAccordion({
   title,
@@ -16,27 +15,19 @@ export default function NewsAccordion({
   date,
   category = "default",
 }: Announcement) {
-  const color = category === "default" ? "#FFEF6C" : "#ED1C24";
+  if (!content) {
+    return (
+      <Accordion className={styles.accordion}>
+        <AccordionSummary disabled>
+          <AccordionTitle {...{ title, date, category }} />
+        </AccordionSummary>
+      </Accordion>
+    );
+  }
   return (
     <Accordion>
       <AccordionSummary expandIcon={<MdExpandMore />}>
-        <div className={styles.titleContainer}>
-          {/* 日付部分 */}
-          <Typography
-            className={styles.typography}
-            variant="body2"
-            style={{
-              backgroundColor: color,
-              padding: "2px 8px",
-              textAlign: "center",
-              alignSelf: "center",
-            }}
-          >
-            {date}
-          </Typography>
-          {/* お知らせのタイトル部分 */}
-          <ListItemText primary={title} />
-        </div>
+        <AccordionTitle {...{ title, date, category }} />
       </AccordionSummary>
       <AccordionDetails>
         <Divider sx={{ borderBottomWidth: "2px", borderStyle: "dashed" }} />

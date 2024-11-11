@@ -1,0 +1,27 @@
+@import "variables";
+
+.accordion {
+  :global {
+    .Mui-disabled {
+      opacity: 1 !important;
+    }
+  }
+}
+
+.titleContainer {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.typography {
+  white-space: nowrap;
+}
+
+.accordionDetailWrapper {
+  padding: 2rem;
+  padding-bottom: 1rem;
+
+  p {
+    font-weight: 600;
+  }
+}
