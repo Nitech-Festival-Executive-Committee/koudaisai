@@ -34,3 +34,10 @@ export interface AnimationConfigs {
   distance?: number; // アニメーションの移動距離(ex. 右に100px移動しながらフェードイン)
   margin?: number; // 画面に入ってから何px超えたら表示するか
 }
+
+export interface Announcement {
+  title: string | ReactNode;
+  content?: string | ReactNode;
+  date: string;
+  category?: "important" | "default";
+}

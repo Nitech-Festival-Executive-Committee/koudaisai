@@ -6,7 +6,6 @@ import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Underline from "@/components/Content/Underline/Underline";
 import Flipdown from "@/components/Flipdown/Flipdown";
-import Loader from "@/components/Loader/Loader";
 import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
 import ProjectCard from "@/components/Project/ProjectCard/ProjectCard";
@@ -36,6 +35,8 @@ import {
   NITFES_TIME_DATE2,
 } from "@/const/const";
 import { zipFM } from "./project/zip-fm/zipFM";
+import Announcements from "@/components/Annoucements/Annoumcements";
+import Loader from "@/components/Loader/Loader";
 
 const pickupProjects = [
   allProject,
@@ -60,6 +61,7 @@ export default function Top() {
       <PageWrapper>
         <Flipdown year={2024} month={11} day={16} hour={10}></Flipdown>
       </PageWrapper>
+      <Announcements />
       <CustomSwiper title="PICK UP" projects={pickupProjects} />
       {/* 速報 */}
       <PageWrapper>
