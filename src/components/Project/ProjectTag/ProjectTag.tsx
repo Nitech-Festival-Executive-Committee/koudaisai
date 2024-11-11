@@ -3,7 +3,7 @@ import styles from "./ProjectTag.module.scss";
 
 interface ProjectTagProps {
   day1?: boolean; // 1日目は開催するか
-  day2?: boolean; // 1日目は開催するか
+  day2?: boolean; // 2日目は開催するか
   exclusiveText?: string[];
   style?: React.CSSProperties;
 }

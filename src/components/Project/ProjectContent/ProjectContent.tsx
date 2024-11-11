@@ -12,14 +12,16 @@ export default function ProjectContent({
   return (
     <>
       {projectData.map((data, index) => {
-        // contentが文字列またはReactNodeの場合
         if (data?.content) {
           return (
             <Animation key={index} animationType={data.position || "right"}>
+              {/* positionがleftなら左から、rightなら右からフェードアニメーション */}
               <ContentBox title={data.title}>
                 {typeof data.content === "string" ? (
+                  // contentがstringの場合は<p>で囲む
                   <p>{data.content}</p>
                 ) : (
+                  // contentがReactNodeの場合はそのまま表示
                   data.content
                 )}
               </ContentBox>
