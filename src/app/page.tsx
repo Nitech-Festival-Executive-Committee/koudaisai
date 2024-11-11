@@ -84,6 +84,9 @@ export default function Top() {
           <p style={{ textAlign: "right" }}>
             <a href="./project">その他の企画ページはこちらから</a>
           </p>
+        </SectionBody>
+
+        <SectionBody>
           <ContentTitle title="FAQ" size={1} />
           <ContentBox title={`第${NITFES_EDITION}回工大祭の開催日時は?`}>
             <p>
@@ -125,130 +128,6 @@ export default function Top() {
               その他のよくある質問はこちらから
             </a>
           </p>
-        </SectionBody>
-
-        <SectionBody>
-          <ContentTitle title="NEWS" size={1} />
-          <ContentBox title={"2024.11.11"}>
-            <p>
-              62回工大祭ホームページの変更点を
-              <a
-                href="./whats-new"
-                target="_blank"
-                aria-label="What's new?ページ"
-              >
-                What&apos;s new?ページ
-              </a>
-              にまとめました!
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.11.1"}>
-            <p>
-              工大祭Webサイトをリニューアルし、新しいロード画面の追加や利便性・パフォーマンスが向上しました!
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.11.1"}>
-            <p>
-              <a href="./project/" target="_blank" aria-label="企画ページ">
-                企画情報
-              </a>
-              を公開しました
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.10.15"}>
-            <p>
-              <a href="./project/tyuya/" target="_blank" aria-label="中夜祭">
-                中夜祭のページ
-              </a>
-              を更新しました
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.10.10"}>
-            <p>
-              <a
-                href="./project/seiyu/"
-                target="_blank"
-                aria-label="声優トークショー"
-              >
-                声優トークショーのページ
-              </a>
-              を更新しました
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.10.1"}>
-            <p>
-              <a
-                href="https://x.com/nitfes/status/1840949759592558721"
-                target="_blank"
-                aria-label="パンフレットコンテスト"
-              >
-                パンフレットコンテストの結果
-              </a>
-              を発表しました
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.7.28"}>
-            <p>
-              <a
-                href="./pfc/"
-                target="_blank"
-                aria-label="パンフレットコンテスト"
-              >
-                パンフレットコンテスト決勝戦
-              </a>
-              を更新しました
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.6.30"}>
-            <p>
-              <a
-                href="./pfc/"
-                target="_blank"
-                aria-label="パンフレットコンテスト"
-              >
-                パンフレットコンテストのページ
-              </a>
-              を公開しました
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.6.1"}>
-            <p>
-              <a
-                href="./project/spark/"
-                target="_blank"
-                aria-label="学生ステージ企画"
-              >
-                学生ステージ企画
-              </a>
-              の募集を開始しました
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.6.1"}>
-            <p>
-              水無月杯の延期が決定しました
-              <br />
-              水無月杯で開催予定だったソフトボール部門の中止が決定しました
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.4.8"}>
-            <p>
-              <a href="./minaduki/" target="_blank" aria-label="水無月杯">
-                水無月杯のページ
-              </a>
-              を公開しました
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.3.19"}>
-            <p>
-              <a href="./sinkan/" target="_blank" aria-label="新歓">
-                新歓のページ
-              </a>
-              を公開しました
-            </p>
-          </ContentBox>
-          <ContentBox title={"2024.3.8"}>
-            <p>掲載情報を第62回に更新しました</p>
-          </ContentBox>
         </SectionBody>
       </PageWrapper>
       <PreviousFestival />
