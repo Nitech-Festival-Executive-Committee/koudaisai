@@ -7,7 +7,7 @@ export default function AccordionTitle({
   date,
   category = "default",
 }: Announcement) {
-  const color = category === "default" ? "#FFEF6C" : "#ED1C24";
+  const color = category === "default" ? "#FFEF6C" : "#FF7070";
   return (
     <div className={styles.titleContainer}>
       {/* 日付部分 */}
