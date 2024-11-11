@@ -30,6 +30,7 @@ body {
 main {
   padding-top: calc(var(--main-padding-top));
   --main-padding-top: 60px;
+  overflow-x: hidden;
   @include phone {
     --main-padding-top: 50px;
   }
