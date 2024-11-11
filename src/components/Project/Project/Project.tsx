@@ -37,7 +37,7 @@ export default function Project({
       {brochurePath === "" && (
         <PageWrapper>
           <SectionBody>
-            <ProjectConentTitleAndTag projectData={projectData} isTagCenter />
+            <ProjectConentTitleAndTag projectData={projectData} />
           </SectionBody>
         </PageWrapper>
       )}
@@ -76,10 +76,8 @@ export default function Project({
 
 const ProjectConentTitleAndTag = ({
   projectData,
-  isTagCenter = false,
 }: {
   projectData: ProjectData;
-  isTagCenter?: boolean;
 }) => (
   <>
     <ContentTitle title="企画詳細" size={2} />
@@ -88,7 +86,6 @@ const ProjectConentTitleAndTag = ({
         day1={projectData.schedule.day1 ? true : false}
         day2={projectData.schedule.day2 ? true : false}
         exclusiveText={projectData.tags ? projectData.tags : []}
-        style={isTagCenter ? { justifyContent: "center" } : undefined}
       />
     </Animation>
   </>
