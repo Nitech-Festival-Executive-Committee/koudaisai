@@ -19,12 +19,11 @@ export const announcements: Announcement[] = [
       </p>
     ),
     date: "2024-11-11",
-    category: "important",
   },
   {
     title: (
       <p>
-        諸事情により2日目後夜祭のラストを飾るプロジェクションマッピングは中止となりました。
+        諸事情により2日目後夜祭のラストを飾るプロジェクションマッピングは中止となりました
       </p>
     ),
     date: "2024-11-11",

@@ -16,8 +16,14 @@ export default function NewsAccordion({
   category = "default",
 }: Announcement) {
   if (!content) {
+    // 展開しないタイプ
     return (
-      <Accordion className={styles.accordion}>
+      <Accordion
+        className={styles.accordion}
+        sx={{
+          border: "thin solid #e9e9e9",
+        }}
+      >
         <AccordionSummary disabled>
           <AccordionTitle {...{ title, date, category }} />
         </AccordionSummary>
@@ -25,7 +31,12 @@ export default function NewsAccordion({
     );
   }
   return (
-    <Accordion>
+    // 展開するタイプ
+    <Accordion
+      sx={{
+        border: "thin solid #e9e9e9",
+      }}
+    >
       <AccordionSummary expandIcon={<MdExpandMore />}>
         <AccordionTitle {...{ title, date, category }} />
       </AccordionSummary>

@@ -7,7 +7,7 @@ export default function AccordionTitle({
   date,
   category = "default",
 }: Announcement) {
-  const color = category === "default" ? "#FFEF6C" : "#FF7070";
+  const color = category === "default" ? "#caf5ff" : "#ffd1d1";
   return (
     <div className={styles.titleContainer}>
       {/* 日付部分 */}
@@ -19,6 +19,7 @@ export default function AccordionTitle({
           padding: "2px 8px",
           textAlign: "center",
           alignSelf: "center",
+          borderRadius: "15px",
         }}
       >
         {date}
