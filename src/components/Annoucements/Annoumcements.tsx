@@ -24,6 +24,13 @@ export default function Announcements() {
                 {announcements.map((announcement, index) => (
                   <NewsAccordion key={index} {...announcement} />
                 ))}
+                <Button
+                  className={styles.announcementsButton}
+                  onClick={onClickHandler}
+                >
+                  閉じる
+                  <IoMdArrowDropdown style={{ transform: "rotate(180deg)" }} />
+                </Button>
               </>
             ) : (
               <>
