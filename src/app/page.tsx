@@ -108,9 +108,8 @@ export default function Top() {
               是非ご来場ください!
               <br />
               また、<Underline>一部企画は整理券が必要です。</Underline>
-              <br />
               詳しくは
-              <a href="../project/" aria-label="企画一覧を開く">
+              <a href="./project/" aria-label="企画一覧を開く">
                 企画一覧
               </a>
               をご覧ください
@@ -124,8 +123,10 @@ export default function Top() {
           </ContentBox>
           <ContentBox title={"駐車場はありますか?"}>
             <p>
-              学内に来訪者用の駐車場はございません。近くの有料駐車場、もしくは公共交通機関をご利用ください。公共交通機関は
-              <a href="../access/">アクセス</a>をご覧ください。
+              学内に一般の来訪者用の駐車場はございませんが、徒歩や公共交通機関などでのご来場が困難な方のために身体障害者用駐車スペースをご用意しています。詳細は
+              <a href="./faq#BarrierFree">バリアフリーに関して</a>
+              をご確認ください。なお、一般の方は近くの有料駐車場、もしくは公共交通機関をご利用ください。公共交通機関は
+              <a href="./access">アクセス</a>をご覧ください。
             </p>
           </ContentBox>
           <Animation>
