@@ -65,14 +65,17 @@ export const shootingGuesser: ProjectData = {
           <Underline>2日とも来るといいことがあるかも...</Underline>
         </p>
       ),
+      position: "left",
     },
     {
       title: "開催日程",
       content: convertScheduleToReactNode(schedule),
+      position: "left",
     },
     {
       title: "開催場所",
       content: place,
+      position: "left",
     },
     {
       title: "ルール説明",
