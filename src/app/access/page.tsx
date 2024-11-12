@@ -4,6 +4,7 @@ import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Underline from "@/components/Content/Underline/Underline";
+import Animation from "@/components/Animation/Animation";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
 
 export const metadata = {
@@ -26,22 +27,24 @@ export default function Access() {
       <PageWrapper>
         <SectionBody>
           <ContentTitle title="場所" size={2} />
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6681.244952864808!2d136.92073005812458!3d35.157057709660414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f20!3m3!1m2!1s0x600370971a3cde13%3A0xbb16e801b5651df1!2z5ZCN5Y-k5bGL5bel5qWt5aSn5a2m!5e1!3m2!1sja!2sjp!4v1695572107381!5m2!1sja!2sjp"
-            style={StyledIframe}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <p style={{ textAlign: "right" }}>
-            <a
-              href="https://maps.app.goo.gl/bLEH5TFA7pD16uUR6"
-              target="_blank"
-              aria-label="Google Mapで開く"
-            >
-              Google Mapで開く
-            </a>
-          </p>
+          <Animation>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6681.244952864808!2d136.92073005812458!3d35.157057709660414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f20!3m3!1m2!1s0x600370971a3cde13%3A0xbb16e801b5651df1!2z5ZCN5Y-k5bGL5bel5qWt5aSn5a2m!5e1!3m2!1sja!2sjp!4v1695572107381!5m2!1sja!2sjp"
+              style={StyledIframe}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <p style={{ textAlign: "right" }}>
+              <a
+                href="https://maps.app.goo.gl/bLEH5TFA7pD16uUR6"
+                target="_blank"
+                aria-label="Google Mapで開く"
+              >
+                Google Mapで開く
+              </a>
+            </p>
+          </Animation>
 
           <ContentTitle title="FAQ" size={2} />
           <ContentBox title={"駐車場はありますか?"}>
@@ -61,12 +64,15 @@ export default function Access() {
             </p>
             <DecoratedImage img="/62nd/img/map.webp" alt="エリア" />
           </ContentBox>
-          <p style={{ textAlign: "right" }}>
-            <a href="../faq/" aria-label="アクセス">
-              その他のよくある質問はこちらから
-            </a>
-          </p>
+          <Animation>
+            <p style={{ textAlign: "right" }}>
+              <a href="../faq/" aria-label="アクセス">
+                その他のよくある質問はこちらから
+              </a>
+            </p>
+          </Animation>
         </SectionBody>
+
         <SectionBody>
           <ContentTitle title="公共交通機関" size={2} />
           <ContentBox title={"最寄り駅"}>

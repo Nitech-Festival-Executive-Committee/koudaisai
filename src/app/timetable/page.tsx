@@ -2,6 +2,7 @@ import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
+import Animation from "@/components/Animation/Animation";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
 import { tyuya } from "@/app/project/tyuya/tyuya";
 import { kouya } from "../project/kouya/kouya";
@@ -37,11 +38,13 @@ export default function Timetable() {
       <ContentTitle title={"タイムテーブル"} size={2} bigTitle />
       {/* 画像 */}
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <img
-          src="/62nd/timetable/timetable.webp"
-          alt={"timetable"}
-          style={{ maxWidth: "90%", maxHeight: "65vh" }}
-        ></img>
+        <Animation>
+          <img
+            src="/62nd/timetable/timetable.webp"
+            alt={"timetable"}
+            style={{ maxWidth: "90%", maxHeight: "65vh" }}
+          ></img>
+        </Animation>
       </div>
       <PageWrapper>
         {[

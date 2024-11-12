@@ -11,6 +11,7 @@ import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 import CustomSwiper from "@/components/Swiper/CustomSwiper";
 import ProjectCard from "@/components/Project/ProjectCard/ProjectCard";
 import ProjectCardWrapper from "@/components/Project/ProjectCardWrapper/ProjectCardWrapper";
+import Animation from "@/components/Animation/Animation";
 import { allProject } from "./project/allProjectData";
 import { timetableData } from "./project/timetableData";
 import { tyuya } from "./project/tyuya/tyuya";
@@ -58,7 +59,9 @@ export default function Top() {
       <Loader /> {/* これを消すとトップでロード画面を流さないように出来る */}
       <Canvas />
       <PageWrapper>
-        <Flipdown year={2024} month={11} day={16} hour={10}></Flipdown>
+        <Animation>
+          <Flipdown year={2024} month={11} day={16} hour={10}></Flipdown>
+        </Animation>
       </PageWrapper>
       <CustomSwiper title="PICK UP" projects={pickupProjects} />
       {/* 速報 */}
@@ -79,9 +82,12 @@ export default function Top() {
               showTime
             />
           </ProjectCardWrapper>
-          <p style={{ textAlign: "right" }}>
-            <a href="./project">その他の企画ページはこちらから</a>
-          </p>
+          <Animation>
+            <p style={{ textAlign: "right" }}>
+              <a href="./project">その他の企画ページはこちらから</a>
+            </p>
+          </Animation>
+
           <ContentTitle title="FAQ" size={1} />
           <ContentBox title={`第${NITFES_EDITION}回工大祭の開催日時は?`}>
             <p>
@@ -118,11 +124,13 @@ export default function Top() {
               <a href="../access/">アクセス</a>をご覧ください。
             </p>
           </ContentBox>
-          <p style={{ textAlign: "right" }}>
-            <a href="../faq/" aria-label="アクセス">
-              その他のよくある質問はこちらから
-            </a>
-          </p>
+          <Animation>
+            <p style={{ textAlign: "right" }}>
+              <a href="../faq/" aria-label="アクセス">
+                その他のよくある質問はこちらから
+              </a>
+            </p>
+          </Animation>
         </SectionBody>
 
         <SectionBody>

@@ -3,6 +3,7 @@ import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
 import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
+import Animation from "@/components/Animation/Animation";
 import { NITFES_EDITION, NITFES_YEAR } from "@/const/const";
 
 export const metadata = {
@@ -15,14 +16,16 @@ export default function Sponsor() {
     <>
       <ContentTitle title="協賛一覧" size={1} bigTitle />
       <PageWrapper>
-        <p
-          style={{
-            fontWeight: 800,
-            textAlign: "center",
-          }}
-        >
-          その他多くの企業様から物品・広告協賛をいただいております。広告協賛は当日パンフレット・会場等に掲載されます。
-        </p>
+        <Animation>
+          <p
+            style={{
+              fontWeight: 800,
+              textAlign: "center",
+            }}
+          >
+            その他多くの企業様から物品・広告協賛をいただいております。広告協賛は当日パンフレット・会場等に掲載されます。
+          </p>
+        </Animation>
         <SectionBody>
           <ContentTitle title="企業の皆様へ" size={2} />
           <ContentBox title={""}>

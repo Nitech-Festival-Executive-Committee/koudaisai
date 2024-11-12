@@ -6,7 +6,7 @@ import { useRef } from "react";
 // その場でフェードイン
 export default function CenterIn({
   children,
-  duration = 0.5,
+  duration = 0.8,
   delay = 0,
   margin = 50,
 }: AnimationConfigs) {
