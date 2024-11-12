@@ -56,14 +56,40 @@ export const spark: ProjectData = {
           大学生を中心とした部活・サークル等の団体がパフォーマンスをする企画を行います!
         </p>
       ),
+      position: "left",
     },
     {
       title: "開催日程",
       content: convertScheduleToReactNode(schedule),
+      position: "left",
     },
     {
       title: "開催場所",
       content: place,
+      position: "left",
+    },
+    {
+      title: "ゲスト",
+      content: (
+        <p>
+          <span>① 名古屋工業大学吹奏楽団</span>
+          <br />
+          <span>② 金城学院大学アイドルコピーダンスサークル əspoir</span>
+          <br />
+          <span>③ 紅のナポリタン</span>
+          <br />
+          <span>④ 金城学院大学ダンス部 BEAT</span>
+          <br />
+          <span>⑤ DFC</span>
+          <br />
+          <span>⑥ glitter</span>
+          <br />
+          <span>⑦ 名古屋工業大学アカペラサークル Grazie!!</span>
+          <br />
+          <span>⑧ NIT PACOD</span>
+        </p>
+      ),
+      position: "left",
     },
     {
       title: "注意事項",
@@ -91,28 +117,6 @@ export const spark: ProjectData = {
             スタッフの指示に従い、ご協力をお願いいたしします。
           </p>
         </>
-      ),
-    },
-    {
-      title: "ゲスト",
-      content: (
-        <p>
-          <span>① 名古屋工業大学吹奏楽団</span>
-          <br />
-          <span>② 金城学院大学アイドルコピーダンスサークル əspoir</span>
-          <br />
-          <span>③ 紅のナポリタン</span>
-          <br />
-          <span>④ 金城学院大学ダンス部 BEAT</span>
-          <br />
-          <span>⑤ DFC</span>
-          <br />
-          <span>⑥ glitter</span>
-          <br />
-          <span>⑦ 名古屋工業大学アカペラサークル Grazie!!</span>
-          <br />
-          <span>⑧ NIT PACOD</span>
-        </p>
       ),
     },
   ],

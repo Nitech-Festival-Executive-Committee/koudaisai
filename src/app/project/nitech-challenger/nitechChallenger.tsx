@@ -52,14 +52,17 @@ export const nitechChallenger: ProjectData = {
           挑戦者求ム‼
         </p>
       ),
+      position: "left",
     },
     {
       title: "開催日程",
       content: convertScheduleToReactNode(schedule),
+      position: "left",
     },
     {
       title: "開催場所",
       content: place,
+      position: "left",
     },
     {
       title: "景品",

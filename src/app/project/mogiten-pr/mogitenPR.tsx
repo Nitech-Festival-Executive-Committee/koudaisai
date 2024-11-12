@@ -55,6 +55,7 @@ export const mogitenPR: ProjectData = {
     {
       title: "企画紹介",
       content: "模擬店出店者がステージ上で模擬店のPRを行います!",
+      position: "left",
     },
     {
       title: "開催日程",
