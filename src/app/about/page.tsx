@@ -1,11 +1,11 @@
 import React from "react";
 import PreviousFestival from "@/components/PreviousFestival/PreviousFestival";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
+import ContentBox from "@/components/Content/ContentBox/ContentBox";
+import ContentImage from "@/components/Content/ContentImage/ContentImage";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
-import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import Underline from "@/components/Content/Underline/Underline";
-import ContentImage from "@/components/Content/ContentImage/ContentImage";
 import Animation from "@/components/Animation/Animation";
 import {
   NITFES_DATE1,
@@ -24,7 +24,6 @@ export const metadata = {
   title: `工大祭について - 第${NITFES_EDITION}回工大祭`,
   description: `${NITFES_YEAR}年 第${NITFES_EDITION}回工大祭 - 工大祭ではどのようなことを行っているのかを掲載しています。`,
 };
-import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
 
 export default function About() {
   return (
@@ -68,7 +67,7 @@ export default function About() {
             <p>
               <a href="../project">企画一覧はこちらから</a>
             </p>
-            <DecoratedImage img="/62nd/img/map.webp" alt="エリア" />
+            <ContentImage img="/62nd/img/map.webp" alt="エリア" />
           </ContentBox>
           <ContentBox title={"駐車場はありますか?"}>
             <p>

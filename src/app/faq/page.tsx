@@ -1,6 +1,7 @@
 import React from "react";
-import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
+import ContentBox from "@/components/Content/ContentBox/ContentBox";
+import ContentImage from "@/components/Content/ContentImage/ContentImage";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Underline from "@/components/Content/Underline/Underline";
@@ -16,8 +17,6 @@ import {
   NITFES_TIME_DATE2,
   NITFES_YEAR,
 } from "@/const/const";
-import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
-import ContentImage from "@/components/Content/ContentImage/ContentImage";
 
 export const metadata = {
   title: `よくある質問 - 第${NITFES_EDITION}回工大祭`,
@@ -64,7 +63,7 @@ export default function Faq() {
             <p>
               <a href="../project">企画一覧はこちらから</a>
             </p>
-            <DecoratedImage img="/62nd/img/map.webp" alt="エリア" />
+            <ContentImage img="/62nd/img/map.webp" alt="エリア" />
           </ContentBox>
         </SectionBody>
         <SectionBody>

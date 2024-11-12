@@ -1,7 +1,7 @@
 import Canvas from "@/components/Canvas/Canvas";
-import ContentBox from "@/components/Content/ContentBox/ContentBox";
 import ContentTitle from "@/components/Content/ContentTitle/ContentTitle";
-import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
+import ContentBox from "@/components/Content/ContentBox/ContentBox";
+import ContentImage from "@/components/Content/ContentImage/ContentImage";
 import PageWrapper from "@/components/Content/PageWrapper/PageWrapper";
 import SectionBody from "@/components/Content/SectionBody/SectionBody";
 import Underline from "@/components/Content/Underline/Underline";
@@ -11,6 +11,8 @@ import CustomSwiper from "@/components/Swiper/CustomSwiper";
 import ProjectCard from "@/components/Project/ProjectCard/ProjectCard";
 import ProjectCardWrapper from "@/components/Project/ProjectCardWrapper/ProjectCardWrapper";
 import Animation from "@/components/Animation/Animation";
+import Announcements from "@/components/Annoucements/Annoumcements";
+import Loader from "@/components/Loader/Loader";
 import { allProject } from "./project/allProjectData";
 import { timetableData } from "./project/timetableData";
 import { tyuya } from "./project/tyuya/tyuya";
@@ -23,6 +25,7 @@ import { gakuseiboshu } from "./project/gakuseiboshu/gakuseiboshu";
 import { nitechKing } from "./project/nitech-king/nitechKing";
 import { hauntedHouse } from "./project/haunted-house/hauntedHouse";
 import { kouya } from "./project/kouya/kouya";
+import { zipFM } from "./project/zip-fm/zipFM";
 import {
   NITFES_EDITION,
   NITFES_THEME,
@@ -35,9 +38,6 @@ import {
   NITFES_DAY2,
   NITFES_TIME_DATE2,
 } from "@/const/const";
-import { zipFM } from "./project/zip-fm/zipFM";
-import Announcements from "@/components/Annoucements/Annoumcements";
-import Loader from "@/components/Loader/Loader";
 
 const pickupProjects = [
   allProject,
@@ -119,7 +119,7 @@ export default function Top() {
             <p>
               <a href="./project">企画一覧はこちらから</a>
             </p>
-            <DecoratedImage img="/62nd/img/map.webp" alt="エリア" />
+            <ContentImage img="/62nd/img/map.webp" alt="エリア" />
           </ContentBox>
           <ContentBox title={"駐車場はありますか?"}>
             <p>
