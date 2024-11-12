@@ -13,24 +13,30 @@ export default function Announcements() {
 
   const onClickHandler = () => setExpanded((prev) => !prev);
 
+  if (announcements.length === 0) return null;
+
   return (
     <>
       <ContentTitle title="お知らせ" size={2} bigTitle />
       <PageWrapper>
         <div className={styles.newsContainer}>
           <div className={styles.accordionContainer}>
-            {expanded ? (
+            {expanded || announcements.length <= 5 ? (
               <>
                 {announcements.map((announcement, index) => (
                   <NewsAccordion key={index} {...announcement} />
                 ))}
-                <Button
-                  className={styles.announcementsButton}
-                  onClick={onClickHandler}
-                >
-                  閉じる
-                  <IoMdArrowDropdown style={{ transform: "rotate(180deg)" }} />
-                </Button>
+                {expanded && (
+                  <Button
+                    className={styles.announcementsButton}
+                    onClick={onClickHandler}
+                  >
+                    閉じる
+                    <IoMdArrowDropdown
+                      style={{ transform: "rotate(180deg)" }}
+                    />
+                  </Button>
+                )}
               </>
             ) : (
               <>
