@@ -67,7 +67,7 @@ export default function Flipdown({
               digitBlockStyle={{
                 backgroundColor: "#333333",
                 fontWeight: 600,
-                width: isSmallMobile() ? 38 : isMobile() ? 42 : 75,
+                width: isSmallMobile() ? 38 : isMobile() ? 40 : 75,
                 height: isSmallMobile() ? 65 : isMobile() ? 70 : 115,
                 fontSize: isMobile() ? 50 : 90,
                 borderRadius: 8,

@@ -34,7 +34,10 @@
   align-items: center;
   justify-content: center;
   & > div {
-    gap: 5px;
+    gap: 8px;
+    @include phone {
+      gap: 3px;
+    }
   }
 }
 
