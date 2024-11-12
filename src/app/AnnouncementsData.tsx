@@ -4,6 +4,23 @@ export const announcements: Announcement[] = [
   {
     title: (
       <p>
+        <a
+          href="./faq#BarrierFree"
+          target="_blank"
+          aria-label="FAQページのバリアフリー"
+        >
+          バリアフリーに関する情報
+        </a>
+        を追加しました
+      </p>
+    ),
+    content: <p>身体障害者用駐車スペースのご利用には事前予約が必要です。</p>,
+    date: "2024-11-11",
+    category: "important",
+  },
+  {
+    title: (
+      <p>
         <a href="./whats-new" target="_blank" aria-label="What's new?ページ">
           What&apos;s new?ページ
         </a>
