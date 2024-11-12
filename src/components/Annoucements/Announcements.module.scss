@@ -1,0 +1,31 @@
+@import "variables";
+
+.announcementsButton {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.newsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 70vw;
+
+  @include phone {
+    max-width: 100%;
+  }
+}
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 0.5rem;
+
+  p {
+    margin: 2px;
+    font-weight: 600;
+  }
+}
