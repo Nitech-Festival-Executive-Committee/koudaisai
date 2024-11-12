@@ -17,6 +17,7 @@ import {
   NITFES_YEAR,
 } from "@/const/const";
 import DecoratedImage from "@/components/Content/DecoratedImage/DecoratedImage";
+import ContentImage from "@/components/Content/ContentImage/ContentImage";
 
 export const metadata = {
   title: `よくある質問 - 第${NITFES_EDITION}回工大祭`,
@@ -86,7 +87,9 @@ export default function Faq() {
           </ContentBox>
           <ContentBox title={"駐車場はありますか?"}>
             <p>
-              学内に来訪者用の駐車場はございません。近くの有料駐車場、もしくは公共交通機関をご利用ください。公共交通機関は
+              学内に一般の来訪者用の駐車場はございませんが、徒歩や公共交通機関などでのご来場が困難な方のために身体障害者用駐車スペースをご用意しています。詳細は
+              <a href="#BarrierFree">バリアフリーに関して</a>
+              をご確認ください。なお、一般の方は近くの有料駐車場、もしくは公共交通機関をご利用ください。公共交通機関は
               <a href="../access">アクセス</a>をご覧ください。
             </p>
           </ContentBox>
@@ -108,6 +111,60 @@ export default function Faq() {
           </ContentBox>
           <ContentBox title={"学内の自動販売機を使うことはできますか?"}>
             <p>利用可能です。</p>
+          </ContentBox>
+        </SectionBody>
+      </PageWrapper>
+
+      <div id={"BarrierFree"}>
+        <ContentTitle title="バリアフリーに関して" size={3} bigTitle />
+      </div>
+      <PageWrapper>
+        <SectionBody>
+          <ContentBox title={"委員の補助"}>
+            建物や教室に入る際、工大祭実行委員が補助いたします。
+            <br />
+            最寄りのインフォメーションやオレンジ色の工大祭STAFFジャンパーを着ている委員にお声がけください。
+          </ContentBox>
+          <ContentBox title={"多目的トイレ"}>
+            以下の会場地図に多目的トイレの位置を掲載しております。なお、このマップは当日頒布する工大祭パンフレットにも掲載されております。
+            <ContentImage img="/62nd/img/map.webp" alt="マップ" />
+          </ContentBox>
+          <ContentBox title={"車いす貸し出し"}>
+            インフォメーションにて車いすの貸し出しを行っております。ただし、数に限りがございます。貸し出しできない場合がございますので、あらかじめご了承ください。
+          </ContentBox>
+          <ContentBox title={"筆談などによるご案内"}>
+            インフォメーションにて、筆談用ボードや音声書き起こしアプリを用いた案内をいたします。
+          </ContentBox>
+        </SectionBody>
+
+        <SectionBody>
+          <ContentTitle title={"身体障害者用駐車スペース"} size={6} />
+          <ContentBox title={""}>
+            <p>
+              工大祭期間中、一般来場者用の駐車場はご用意しておりませんが、徒歩での来場が困難な方のために、障害者用の駐車スペースを数台分ご用意しております。なお、ご利用には
+              <Underline>事前予約が必要</Underline>
+              ですので、希望される方は以下の必要事項をご記入のうえ、メール（info@koudaisai.com）にてお申込みください。
+            </p>
+          </ContentBox>
+          <ContentBox title={"必要事項"}>
+            <ul>
+              <li>ご予約される方のお名前</li>
+              <li>ご来場されるお車のナンバー</li>
+              <li>車種</li>
+              <li>色</li>
+              <li>来場予定日（両日予約も可能）</li>
+            </ul>
+          </ContentBox>
+          <ContentBox title={"注意事項"}>
+            <p>
+              <Underline>予約期間は工大祭前日(11月15日(金))まで</Underline>
+              とさせていただきます。駐車枠には限りがございますので、満車になり次第、予約受付を終了させていただきます。
+              <br />
+              <Underline>
+                一般の来訪者用の駐車場は学内にございません。
+              </Underline>
+              近くの有料駐車場、もしくは公共交通機関をご利用ください。
+            </p>
           </ContentBox>
         </SectionBody>
       </PageWrapper>
