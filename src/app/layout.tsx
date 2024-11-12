@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/icon/favicon.ico" },
-      { url: "icon/android-chrome-192x192.png", type: "image/webp" },
+      // { url: "icon/android-chrome-192x192.png", type: "image/webp" },
     ],
     apple: "/icon/apple-touch-icon.png",
   },
