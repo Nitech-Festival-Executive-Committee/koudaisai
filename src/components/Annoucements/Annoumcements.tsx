@@ -3,7 +3,7 @@ import { useState } from "react";
 import ContentTitle from "../Content/ContentTitle/ContentTitle";
 import PageWrapper from "../Content/PageWrapper/PageWrapper";
 import styles from "./Announcements.module.scss";
-import { announcements } from "./AnnouncementsData";
+import { announcements } from "../../app/AnnouncementsData";
 import NewsAccordion from "./NewsAccordion/NewsAccordion";
 import { Button } from "@mui/material";
 import { IoMdArrowDropdown } from "react-icons/io";
