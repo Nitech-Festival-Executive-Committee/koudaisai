@@ -1,7 +1,8 @@
 "use client";
 import dynamic from "next/dynamic";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Flipdown.module.scss";
+import { sideCannonConfetti } from "@/utils/sideCannonConfetti";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 
 interface FlipdownProps {
@@ -31,6 +32,14 @@ export default function Flipdown({
   const [displayCountdown, setdisplayCountdown] = useState(true);
   const [isComplete, setIsComplete] = useState(false);
 
+  // カウントダウンが0になったらエフェクトを発動
+  useEffect(() => {
+    if (isComplete) {
+      const duration = 3;
+      sideCannonConfetti(duration);
+    }
+  }, [isComplete]);
+
   return (
     <>
       <h2
@@ -46,15 +55,15 @@ export default function Flipdown({
           <h1 className={styles.remaining}>開催まで残り</h1>
           <div className={styles.clock}>
             <FlipClockCountdown
-              // to={new Date().getTime() + 3 * 1000} // テスト用
-              to={new Date(
-                year,
-                month - 1,
-                day,
-                hour,
-                minute,
-                second
-              ).getTime()}
+              to={new Date().getTime() + 5 * 1000} // テスト用
+              // to={new Date(
+              //   year,
+              //   month - 1,
+              //   day,
+              //   hour,
+              //   minute,
+              //   second
+              // ).getTime()}
               labels={["Days", "Hours", "Minutes", "Seconds"]}
               labelStyle={{
                 fontSize: isMobile() ? 20 : 23,
@@ -90,7 +99,11 @@ export default function Flipdown({
             />
           </div>
         </div>
-        <h1 className={styles.complete} style={{ opacity: isComplete ? 1 : 0 }}>
+        <h1
+          id={"koudaisaiStart"}
+          className={styles.complete}
+          style={{ opacity: isComplete ? 1 : 0 }}
+        >
           工大祭開催!
         </h1>
       </div>
