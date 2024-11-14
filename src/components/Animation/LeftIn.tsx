@@ -6,7 +6,7 @@ import { useRef } from "react";
 // 左からフェードイン
 export default function LeftIn({
   children,
-  duration = 0.5,
+  duration = 0.7,
   delay = 0,
   distance = 60,
   margin = 50,

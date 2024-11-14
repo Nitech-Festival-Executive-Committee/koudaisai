@@ -6,7 +6,7 @@ import { useRef } from "react";
 // 下からフェードイン
 export default function BottomIn({
   children,
-  duration = 0.5,
+  duration = 0.7,
   delay = 0,
   distance = 40,
   margin = 50,
