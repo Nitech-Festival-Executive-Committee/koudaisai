@@ -53,8 +53,11 @@
   font-size: 70px;
   font-weight: 400;
   text-align: center;
+  background: linear-gradient(to right, #ffbf00, var(--theme-color), #ff35af);
+  -webkit-background-clip: text;
   transition: 1s;
   transform: translate(-50%, -50%);
+  -webkit-text-fill-color: transparent;
 }
 
 @include phone {

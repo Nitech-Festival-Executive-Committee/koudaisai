@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Flipdown.module.scss";
 import { sideCannonConfetti } from "@/utils/sideCannonConfetti";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
+import { isMobile, isSmallMobile } from "@/utils/isMoile";
 
 interface FlipdownProps {
   year: number;
@@ -48,7 +49,7 @@ export default function Flipdown({
       <div className={styles.content}>
         <div
           style={{
-            transition: ".4s",
+            transition: ".3s",
             opacity: displayCountdown ? 1 : 0,
           }}
         >
@@ -76,7 +77,7 @@ export default function Flipdown({
               digitBlockStyle={{
                 backgroundColor: "#333333",
                 fontWeight: 600,
-                width: isSmallMobile() ? 38 : isMobile() ? 40 : 75,
+                width: isSmallMobile() ? 38 : isMobile() ? 41 : 75,
                 height: isSmallMobile() ? 65 : isMobile() ? 70 : 115,
                 fontSize: isMobile() ? 50 : 90,
                 borderRadius: 8,
@@ -110,15 +111,3 @@ export default function Flipdown({
     </>
   );
 }
-
-const isMobile = () => {
-  if (process.browser) {
-    return window.innerWidth <= 600;
-  }
-};
-
-const isSmallMobile = () => {
-  if (process.browser) {
-    return window.innerWidth <= 400;
-  }
-};

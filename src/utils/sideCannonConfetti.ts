@@ -1,4 +1,5 @@
 import confetti from "canvas-confetti";
+import { isMobile } from "./isMoile";
 
 export const sideCannonConfetti = (duration: number) => {
   const end = Date.now() + duration * 1000;
@@ -40,19 +41,25 @@ export const sideCannonConfetti = (duration: number) => {
   }
 
   // 両側から継続的に出すエフェクト
+  const particles = isMobile() ? 1 : 3;
+  const spread = isMobile() ? 30 : 55;
+  const startVelocity = isMobile() ? 30 : 60;
+  const y = isMobile() ? 0.6 : 0.7;
   (function frame() {
     confetti({
-      particleCount: 2,
+      particleCount: particles,
       angle: 60,
-      spread: 55,
-      origin: { x: 0 },
+      spread: spread,
+      origin: { x: 0, y: y },
+      startVelocity: startVelocity,
       colors: getRandomColors(),
     });
     confetti({
-      particleCount: 2,
+      particleCount: particles,
       angle: 120,
-      spread: 55,
-      origin: { x: 1 },
+      spread: spread,
+      origin: { x: 1, y: y },
+      startVelocity: startVelocity,
       colors: getRandomColors(),
     });
 
