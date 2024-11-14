@@ -6,8 +6,8 @@ import styles from "./SnsIconList.module.scss";
 
 export default function SnsIconList({ pcOnly }: { pcOnly?: boolean }) {
   return (
-    <div className={`${styles.snsIconList} ${pcOnly && styles.pcOnly}`}>
-      <Animation>
+    <Animation>
+      <div className={`${styles.snsIconList} ${pcOnly && styles.pcOnly}`}>
         <SnsIcon
           icon={BsTwitterX}
           color="#000000"
@@ -23,7 +23,7 @@ export default function SnsIconList({ pcOnly }: { pcOnly?: boolean }) {
           color="#FF0000"
           url="https://www.youtube.com/channel/UCplFRWLMUlNqYM081KZ7Juw"
         />
-      </Animation>
-    </div>
+      </div>
+    </Animation>
   );
 }
