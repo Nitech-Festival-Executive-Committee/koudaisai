@@ -18,10 +18,6 @@
   http-server out
   ```
 
-  ビルド時に`.next`配下のファイルに対して権限エラーが出た場合や、`npm run dev`で`Starting...`から進まないなどのエラーが発生した場合は以下を試して再実行
-  - `npm run dev`を停止  
-    `npm run dev`を使用中も`.next`ディレクトリを使用しているので両方同時にはできない
-  - `.next`ディレクトリを削除
 
 ### フォーマット・ESLint
 - フォーマット  
@@ -59,3 +55,20 @@
 - [Staging - Build and Upload via SFTP](https://github.com/Nitech-Festival-Executive-Committee/koudaisai/actions/workflows/staging-deploy.yml)  
   ステージング環境へのデプロイ  
   `Deploy for test`とは異なり、ひとつのブランチに対してのみデプロイ可能
+
+# トラブルシューティング
+- `Module not found: Can't resolve '...'`
+  ```
+  npm install
+  ```
+  を実行して必要なパッケージをインストールする  
+  そもそも`package.json`に記述されていない(=インストールしたことがない)場合は
+  ```
+  npm install パッケージ名
+  ```
+  でインストールする
+- ビルド時に`.next`配下のファイルに対して権限エラーが出た場合・`npm run dev`で`Starting...`から進まない場合  
+  以下の手順を試す
+  - `npm run dev`を停止  
+    `npm run dev`を使用中も`.next`ディレクトリを使用しているので、両方同時にはできない
+  - `.next`ディレクトリを削除
