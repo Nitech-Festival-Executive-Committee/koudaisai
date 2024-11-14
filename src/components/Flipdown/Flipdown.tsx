@@ -41,6 +41,23 @@ export default function Flipdown({
     }
   }, [isComplete]);
 
+  let countDownEnd = new Date(
+    year,
+    month - 1,
+    day,
+    hour,
+    minute,
+    second
+  ).getTime();
+  // もしカウントダウンが0になるのが過去だったら5秒後に設定
+  countDownEnd =
+    countDownEnd > new Date().getTime()
+      ? countDownEnd
+      : new Date().getTime() + 5 * 1000;
+
+  // テスト用
+  // countDownEnd = new Date().getTime() + 5 * 1000;
+
   return (
     <>
       <h2
@@ -56,15 +73,7 @@ export default function Flipdown({
           <h1 className={styles.remaining}>開催まで残り</h1>
           <div className={styles.clock}>
             <FlipClockCountdown
-              to={new Date().getTime() + 5 * 1000} // テスト用
-              // to={new Date(
-              //   year,
-              //   month - 1,
-              //   day,
-              //   hour,
-              //   minute,
-              //   second
-              // ).getTime()}
+              to={countDownEnd}
               labels={["Days", "Hours", "Minutes", "Seconds"]}
               labelStyle={{
                 fontSize: isMobile() ? 20 : 23,
