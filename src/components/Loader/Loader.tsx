@@ -103,6 +103,7 @@ export default function Loader() {
                 enable: false,
               },
             },
+            style: { filter: "blur(1px)" },
             retina_detect: true,
           }}
         />
