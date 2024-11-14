@@ -44,3 +44,18 @@
 ### ステージング環境へのデプロイ
 [Staging - Build and Upload via SFTP](https://github.com/Nitech-Festival-Executive-Committee/koudaisai/actions/workflows/staging-deploy.yml)をテストしたいブランチに対して実行  
 手動でデプロイは本番環境と同じ  
+
+# GitHub Actions
+## ワークフロー
+- [Block merging fixup commits](https://github.com/Nitech-Festival-Executive-Committee/koudaisai/actions/workflows/block-merging-fixup-commits.yml)  
+  Fixupコミットがmainにマージされないようにする  
+  Fixupコミットが残っている場合はrebaseして結合するように促す
+- [Deploy for test](https://github.com/Nitech-Festival-Executive-Committee/koudaisai/actions/workflows/deploy-test.yml)  
+  ステージング環境へのデプロイ  
+  `Staging - Build and Upload via SFTP`とは異なり、複数のブランチを結合した状態で確認する  
+  企画ページを大量に作成した後の確認などに使用
+- [Production - Build and Upload via SFTP](https://github.com/Nitech-Festival-Executive-Committee/koudaisai/actions/workflows/production-deploy.yml)  
+  本番環境へのデプロイ
+- [Staging - Build and Upload via SFTP](https://github.com/Nitech-Festival-Executive-Committee/koudaisai/actions/workflows/staging-deploy.yml)  
+  ステージング環境へのデプロイ  
+  `Deploy for test`とは異なり、ひとつのブランチに対してのみデプロイ可能
