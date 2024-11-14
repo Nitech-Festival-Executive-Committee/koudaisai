@@ -66,8 +66,7 @@ const schoolProjects = [
 ];
 // ここまで
 
-// ここから企画一覧に表示する企画
-const projectList = [
+export const projectList = [
   artfulCampus,
   booth,
   communityStreet,

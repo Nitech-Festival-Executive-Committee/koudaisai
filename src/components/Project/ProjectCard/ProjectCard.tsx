@@ -53,10 +53,10 @@ export default function ProjectCard({
                     const target = e.currentTarget;
                     if (target.src.includes("brochure.webp")) {
                       // brochure.webpがエラーの場合、logoBrochure.webpに切り替え
-                      target.src = `../62nd/project/${project.link}/logoBrochure.webp`;
+                      target.src = `/62nd/project/${project.link}/logoBrochure.webp`;
                     } else if (target.src.includes("logoBrochure.webp")) {
                       // logoBrochure.webpがエラーの場合、最終的にnoImage.webpに切り替え
-                      target.src = `../62nd/project/noImage.webp`;
+                      target.src = `/62nd/project/noImage.webp`;
                     }
                   }}
                   width={180}

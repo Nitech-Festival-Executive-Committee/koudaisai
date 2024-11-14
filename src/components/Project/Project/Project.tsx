@@ -8,6 +8,7 @@ import ProjectTag from "../ProjectTag/ProjectTag";
 import BrochureImage from "../BrochureImage/BrochureImage";
 import Animation from "@/components/Animation/Animation";
 import { ProjectData } from "@/types/projectInterface";
+import RecommendedProjects from "@/components/RecommendedProjects/RecommendedProjects";
 
 interface ProjectProps {
   projectData: ProjectData;
@@ -70,6 +71,7 @@ export default function Project({
         </SectionBody>
       </PageWrapper>
       {children}
+      <RecommendedProjects currentProject={projectData} />
     </>
   );
 }
