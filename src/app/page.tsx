@@ -38,10 +38,12 @@ import {
   NITFES_DAY2,
   NITFES_TIME_DATE2,
 } from "@/const/const";
+import { threeDimentionMmap } from "./3dmap";
 
 const pickupProjects = [
   allProject,
   timetableData,
+  threeDimentionMmap,
   tyuya,
   seiyu,
   zipFM,
