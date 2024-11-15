@@ -35,10 +35,10 @@ export default function Faq() {
           />
           <WhatsNewCard
             title="3Dマップの作成"
-            text="当日の企画開催場所をより視覚的に紹介します!"
-            // 公開後に表示
-            // linkText="3Dマップに移動"
-            // link={"https://shika174.github.io/Nitech_3D-MAP/"}
+            text="当日の企画開催場所をより視覚的に紹介します!企画詳細も3Dマップからみることができます!"
+            img="/62nd/whats-new/3dmap.webp"
+            linkText="3Dマップに移動"
+            link={"https://shika174.github.io/Nitech_3D-MAP/"}
           />
           <WhatsNewCard
             title="お知らせの表示変更"
@@ -113,7 +113,7 @@ export default function Faq() {
             }
             link={"https://github.com/MurakawaTakuya"}
             linkText={"GitHub"}
-            underText={"201 commits"}
+            underText={"214 commits"}
             flexButton
           />
           <WhatsNewCard
@@ -129,7 +129,7 @@ export default function Faq() {
             link={"https://github.com/ViniciusBrJp"}
             text={"エンジニア協力"}
             linkText={"GitHub"}
-            underText={"13 commits"}
+            underText={"17 commits"}
             flexButton
           />
           <WhatsNewCard

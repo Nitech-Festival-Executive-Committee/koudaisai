@@ -31,6 +31,7 @@ import { mogitenPR } from "./mogiten-pr/mogitenPR";
 import { zipFM } from "./zip-fm/zipFM";
 import { architectureDiscussion } from "./architecture-discussion/architectureDiscussion";
 import { nitechPavilion } from "./nitech-pavilion/nitechPavilion";
+import { threeDimentionMmap } from "../3dmap";
 
 export const metadata = {
   title: `企画一覧 - 第${NITFES_EDITION}回工大祭`,
@@ -53,6 +54,7 @@ const guestProjects = [
 const schoolProjects = [
   kouya,
   roomRiddles,
+  threeDimentionMmap,
   excursionRiddles,
   nitechChallenger,
   hauntedHouse,

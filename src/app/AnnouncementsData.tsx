@@ -5,6 +5,22 @@ export const announcements: Announcement[] = [
     title: (
       <p>
         <a
+          href="https://shika174.github.io/Nitech_3D-MAP/"
+          target="_blank"
+          aria-label="3Dマップ"
+        >
+          3Dマップ
+        </a>
+        を公開しました!
+      </p>
+    ),
+    date: "2024-11-15",
+    category: "important",
+  },
+  {
+    title: (
+      <p>
+        <a
           href="./faq#BarrierFree"
           target="_blank"
           aria-label="FAQページのバリアフリー"
