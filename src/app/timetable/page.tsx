@@ -37,15 +37,15 @@ export default function Timetable() {
     <>
       <ContentTitle title={"タイムテーブル"} size={2} bigTitle />
       {/* 画像 */}
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <Animation>
+      <Animation>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <img
             src="/62nd/timetable/timetable.webp"
             alt={"timetable"}
             style={{ maxWidth: "90%", maxHeight: "65vh" }}
           ></img>
-        </Animation>
-      </div>
+        </div>
+      </Animation>
       <PageWrapper>
         {[
           { title: "1日目", projects: day1StageProjects },
