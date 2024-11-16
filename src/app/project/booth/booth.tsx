@@ -30,7 +30,7 @@ const schedule = {
   },
 };
 
-const place = "4号館";
+const place = "4号館 1, 2階";
 
 // 変数名を変更(ex. miniGame)
 // ファイル名も変更(ex. miniGame.tsx)
