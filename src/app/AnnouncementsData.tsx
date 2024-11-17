@@ -4,6 +4,15 @@ export const announcements: Announcement[] = [
   {
     title: (
       <p>
+        お昼ごろから3Dマップが利用できなくなっております。ご不便をおかけします。
+      </p>
+    ),
+    date: "2024-11-17",
+    category: "important",
+  },
+  {
+    title: (
+      <p>
         <a
           href="https://shika174.github.io/Nitech_3D-MAP/"
           target="_blank"
