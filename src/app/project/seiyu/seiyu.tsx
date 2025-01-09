@@ -69,7 +69,6 @@ export const seiyu: ProjectData = {
       ),
     },
     {
-      // TODO: SwiperOptionが実装されたら変更
       title: "開催日程",
       content: (
         <p>

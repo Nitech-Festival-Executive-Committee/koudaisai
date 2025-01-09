@@ -3,6 +3,17 @@
     "rvest.vs-code-prettier-eslint",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "stylelint.vscode-stylelint"
+    "stylelint.vscode-stylelint",
+    "formulahendry.auto-rename-tag",
+    "dsznajder.es7-react-js-snippets",
+    "mhutchie.git-graph",
+    "donjayamanne.githistory",
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "eamodio.gitlens",
+    "vincaslt.highlight-matching-tag",
+    "SirTori.indenticator",
+    "ms-vscode.vscode-typescript-next",
+    "skyran.js-jsx-snippets"
   ]
 }

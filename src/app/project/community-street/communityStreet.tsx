@@ -32,7 +32,6 @@ const schedule = {
 
 const place = "23号館前通路";
 
-// TODO: swiper-slideにスライドを追加
 export const communityStreet: ProjectData = {
   // ContentBoxに含まないデータ
   link: "community-street",
