@@ -71,7 +71,6 @@ export const zipFM: ProjectData = {
             <Underline>スピーカー企画</Underline>
             <br />
             スピーカーから音楽が流れるよ!ぜひ聴いてみてね
-            {/* TODO:できたら画像をビラの下に表示 */}
           </p>
           <ContentImage img="/62nd/project/zip-fm/speaker.webp" />
         </>

@@ -67,7 +67,6 @@ export default function Faq() {
           <WhatsNewCard
             title="おすすめ機能の最適化"
             text="開催時間やカテゴリ分けに基づいて、より関連した企画がおすすめに表示されるようになりました!"
-            // TODO: おすすめ機能が実装されたら画像を追加
           />
           <WhatsNewCard
             title="企画ページのレイアウト変更"
